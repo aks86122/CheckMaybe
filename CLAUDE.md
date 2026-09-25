@@ -2,6 +2,10 @@
 
 CheckMaybe planning workspace. No website or app code yet — product plans, research and copy live here.
 
+## Product template
+
+Every CheckMaybe toolkit (new product or revision) follows `templates/toolkit-product-template.md`: its 7-step workflow (official sources saved by the founder → draft → claim-by-claim verification → page-by-page revision script), page structure, traffic-light signals, citation and branding rules, and pre-publish checklist. Planning outputs go in `planning/<YYYY-MM>-<product>/`.
+
 ## J AI Agency v1.1
 
 This repo uses the J AI Agency operating pack in `.agents/j-ai-agency/`. Its rules apply to every task:
