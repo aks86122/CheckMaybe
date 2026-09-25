@@ -16,7 +16,8 @@
 | 4. 逐條核對 | 每一句事實對照官方原文，分 ✅ ⚠️ ❌ ❓ | 法遵檢查員 | `0X-verification.md` |
 | 5. 逐頁修改稿 | 原文 → 改成 → 原因，創辦人照著換字 | 內容創作者 | `0X-revision.md` |
 | 6. 上架前檢查 | 跑完第四節「上架前檢查清單」 | 創辦人 | — |
-| 7. 發布 | 創辦人自己上傳 Gumroad／Beacons（團隊不代發） | 創辦人 | — |
+| 7. 上架素材 | 商品說明、封面圖／預覽圖／精選內容圖、Gumroad 方形縮圖、Gumroad 欄位（Additional details、Button text ≤26 字、Custom message ≤500 字） | 內容創作者 | `products/listings/`、`products/images/`、`products/gumroad/` |
+| 8. 發布 | 創辦人自己上傳 Gumroad／Beacons（團隊不代發） | 創辦人 | — |
 
 **規則：** 沒有 ✅ 或官方依據的句子不上架；❓ 的句子要改成「VERIFY BEFORE RELYING」或刪掉。
 
@@ -85,6 +86,8 @@
 - [ ] 至少有一頁市集規則（Etsy 起跳）
 - [ ] 每個情境都有燈號 + WHY + What could change this
 - [ ] Gumroad／Beacons 的商品說明和 PDF 內容一致（版本號、承諾）
+- [ ] Gumroad 欄位齊全：Additional details（Format、Includes、Best for、Language、Version、Note）、Button text、Custom message（寫明從第幾頁開始、不是法律建議），字數在限制內
+- [ ] Gumroad 方形縮圖（≥600×600）放在 `products/gumroad/thumbnails/`
 
 ---
 
