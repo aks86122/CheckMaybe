@@ -1,0 +1,892 @@
+{
+ "meta": {
+  "product": "Can I Sell This?",
+  "subtitle": "A Commercial Use Toolkit for Canva Sellers",
+  "footer": "CAN I SELL THIS? — COMMERCIAL USE TOOLKIT FOR CANVA SELLERS · CHECKMAYBE",
+  "version": "3.1"
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "kicker": "CHECKMAYBE",
+   "tag": "VERSION 3.1",
+   "topline": "INDEPENDENT EDUCATIONAL RESOURCE — NOT AFFILIATED WITH CANVA",
+   "title": "Can I Sell This?",
+   "subtitle": "A Commercial Use Toolkit for Canva Sellers",
+   "value": "A practical first-pass decision guide for digital product sellers, creators, and small businesses working out what they can actually publish.",
+   "quote": "Know what you used, know what you’re selling, verify before you list it.",
+   "steps": [
+    "IDENTIFY",
+    "CLASSIFY",
+    "VERIFY",
+    "PUBLISH"
+   ],
+   "inside": [
+    "DECISION PATH",
+    "QUICK MAPS",
+    "20 TRAFFIC-LIGHT SCENARIOS",
+    "ETSY CHECKS + WORKSHEETS"
+   ],
+   "legal": [
+    "VERSION 3.1 · CHECKMAYBE",
+    "SOURCES VERIFIED 25 SEPTEMBER 2026",
+    "EDUCATIONAL INFORMATION — NOT LEGAL ADVICE",
+    "CANVA IS A TRADEMARK OF ITS RESPECTIVE OWNER"
+   ]
+  },
+  {
+   "type": "steps",
+   "kicker": "00 · START HERE",
+   "tag": "START HERE",
+   "title": "How to use this toolkit",
+   "lead": "Use this as a decision aid, not as a substitute for the current official license terms. Every verdict is a first-pass signal, never a guarantee.",
+   "style": "flow",
+   "steps": [
+    {
+     "title": "Identify",
+     "text": "Identify the source and label of every asset (open its source info via the ⋯ menu)."
+    },
+    {
+     "title": "Define the deliverable",
+     "text": "Confirm whether the buyer receives a finished product, physical item, or editable/source file."
+    },
+    {
+     "title": "Test the risk",
+     "text": "Check standalone extractability, the most restrictive content label, and your sales platform’s own rules (e.g. Etsy)."
+    }
+   ],
+   "callout": {
+    "label": "FAST RULE",
+    "text": "A finished design and an editable template are not the same licensing problem.",
+    "tone": "dark"
+   },
+   "legend": [
+    {
+     "signal": "GREEN",
+     "label": "GREEN-LEANING",
+     "text": "Likely fits the license as described"
+    },
+    {
+     "signal": "AMBER",
+     "label": "AMBER",
+     "text": "Fix or confirm first"
+    },
+    {
+     "signal": "RED",
+     "label": "RED",
+     "text": "Stop or redesign"
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "kicker": "01 · AUDIT",
+   "tag": "AUDIT",
+   "title": "The 5-minute pre-publish audit",
+   "style": "numbered",
+   "steps": [
+    {
+     "title": "Question 1",
+     "text": "What did I use — and what label does each item carry?"
+    },
+    {
+     "title": "Question 2",
+     "text": "What exactly am I selling?"
+    },
+    {
+     "title": "Question 3",
+     "text": "What files or rights does the buyer receive?"
+    },
+    {
+     "title": "Question 4",
+     "text": "Can any Canva Content be extracted or reused standalone?"
+    },
+    {
+     "title": "Question 5",
+     "text": "Which label is most restrictive — and which account and plan did I export from?"
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "kicker": "02 · DECISION PATH",
+   "tag": "DECISION PATH",
+   "title": "Can I sell this?",
+   "style": "letters",
+   "steps": [
+    {
+     "title": "Question A",
+     "text": "Does the design contain Canva library Content (including a Canva template)?"
+    },
+    {
+     "title": "Question B",
+     "text": "Is any item labelled Education (“Resource”), Branded, Disney, or Editorial Use Only?"
+    },
+    {
+     "title": "Question C",
+     "text": "Is any item Pro (crown icon on the thumbnail)?"
+    },
+    {
+     "title": "Question D",
+     "text": "Will the buyer receive an editable template or source file?"
+    },
+    {
+     "title": "Question E",
+     "text": "Could the buyer extract any Canva item as a standalone file?"
+    }
+   ],
+   "callout": {
+    "label": "IF B OR E = YES — RED",
+    "text": "B = not licensed for commercial use (CLA §5B–5D, §9). E = prohibited extraction (CLA §9). Redesign with assets you own or can redistribute. If C and D are both YES: Pro may ship only as a Canva template link (Licensing Explained).",
+    "tone": "red"
+   },
+   "legend": [
+    {
+     "signal": "GREEN",
+     "label": "GREEN-LEANING",
+     "text": "Likely fits the license as described"
+    },
+    {
+     "signal": "AMBER",
+     "label": "AMBER",
+     "text": "Fix or confirm first"
+    },
+    {
+     "signal": "RED",
+     "label": "RED",
+     "text": "Stop or redesign"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "kicker": "03 · QUICK MAP",
+   "tag": "QUICK MAP",
+   "title": "Finished products vs. editable products",
+   "columns": [
+    "PRODUCT TYPE",
+    "FIRST-PASS SIGNAL (NOT PERMISSION)"
+   ],
+   "rows": [
+    [
+     "Flattened PDF",
+     {
+      "signal": "GREEN",
+      "label": "GREEN-LEANING · UNEDITED PRO ≤ 480,000 PX"
+     }
+    ],
+    [
+     "Printed merchandise",
+     {
+      "signal": "GREEN",
+      "label": "GREEN-LEANING · A REAL DESIGN, NOT ONE ITEM"
+     }
+    ],
+    [
+     "Editable template",
+     {
+      "signal": "AMBER",
+      "label": "AMBER · PRO ONLY VIA A CANVA LINK"
+     }
+    ],
+    [
+     "Client design",
+     {
+      "signal": "GREEN",
+      "label": "GREEN-LEANING · ONE CLIENT, WRITTEN TERMS"
+     }
+    ],
+    [
+     "Standalone asset resale",
+     {
+      "signal": "RED",
+      "label": "RED · NOT PERMITTED FOR CANVA CONTENT"
+     }
+    ]
+   ],
+   "note": "Flattening alone does not stop extraction (CLA §9). Pro in a PPTX, PSD or other non-Canva template = RED (Licensing Explained). CC0/Pixabay/Pexels items: check their own license."
+  },
+  {
+   "type": "cards",
+   "kicker": "04 · LABELS",
+   "tag": "LABELS",
+   "title": "Read the label before you design",
+   "lead": "Hover over an item, click the three dots (⋯) and read its source information. If a design mixes labels, the most restrictive one applies to the entire design (CLA §1): Education → Branded → Pro → Free.",
+   "cards": [
+    {
+     "label": "FREE · PRO (CROWN ICON)",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "text": "Free — GREEN-LEANING · Extra template and resale-template rights (CLA §6), lost if the design contains any Pro.\nPro (crown icon) — GREEN-LEANING in finished designs · Templates: Canva link only · Never standalone (CLA §3; Licensing Explained)."
+    },
+    {
+     "label": "AI-GENERATED · CC0 / PUBLIC DOMAIN / PIXABAY / PEXELS",
+     "text": "AI-generated — Follows its Free or Pro label (CLA §3A).\nCC0 / Public Domain / Pixabay / Pexels — Check that item’s own license (CLA §2, §9)."
+    },
+    {
+     "label": "EDUCATION · BRANDED · DISNEY · EDITORIAL · POPULAR MUSIC",
+     "signal": "RED",
+     "signal_label": "RED",
+     "text": "Education (“Resource” badge) — RED · Non-commercial use only (CLA §5C).\nBranded — RED · Personal use only unless its source info says otherwise (CLA §5B).\nDisney — RED · Personal or educational use only (CLA §5D).\nEditorial Use Only — RED · No commercial, promotional or merchandising use (CLA §9).\nPopular Music — RED · “Can’t be used for any commercial purposes” (Licensing Explained)."
+    },
+    {
+     "label": "CANVA LIBRARY TEMPLATE",
+     "signal": "AMBER",
+     "signal_label": "AMBER",
+     "text": "Canva library template — AMBER · It is Content itself: a lightly edited copy is not your template to resell (CLA §1, §3)."
+    }
+   ],
+   "callout": {
+    "label": "WHEN THE LICENSE STARTS",
+    "tone": "dark",
+    "text": "A license is issued when you Export. One Pro license covers one design; a new or Magic Resized design needs a new one (CLA §4). Pro plans get these automatically; free users pay per item. Attribution: Licensing Explained says none is required, but CLA §9 requires “[Contributor’s Name] via Canva.com” for editorial use. The sources differ, so credit editorial uses."
+   }
+  },
+  {
+   "type": "cards",
+   "kicker": "05–08 · GUIDE",
+   "tag": "REFERENCE",
+   "title": "Know the rules before you list it",
+   "cards": [
+    {
+     "label": "CASE 05 · KNOW YOUR CONTENT",
+     "text": "Each Canva item carries a label with its own rules. Under CLA §1, the most restrictive category applies to the entire design. From most to least restrictive: Education, Branded, Pro, Free.",
+     "source": "CLA §1, §2",
+     "note": "Verified 25 Sep 2026 · Re-check before you publish"
+    },
+    {
+     "label": "CASE 06 · FREE VS. PRO",
+     "text": "Free Content has extra rights under CLA §6, including templates for distribution or sale. If a design contains any Pro Content, those §6 rights do not apply to that design. Pro Content may never be copied or distributed as a standalone item (CLA §3).",
+     "source": "CLA §3, §6",
+     "note": "Verified 25 Sep 2026 · Re-check before you publish"
+    },
+    {
+     "label": "CASE 07 · FINISHED VS. EDITABLE",
+     "text": "A flattened PDF, image, printed item and editable template are different licensing situations. Canva defines a template as “a design that has a pre-determined layout and style and is intended to be further edited or customised by another person” (Licensing Explained). FINISHED means the buyer receives the final output.",
+     "source": "CLA §5, §6 · Licensing Explained",
+     "note": "Verified 25 Sep 2026"
+    },
+    {
+     "label": "CASE 08 · TEMPLATE RULES",
+     "signal": "AMBER",
+     "signal_label": "AMBER · PRO ONLY VIA A CANVA LINK",
+     "text": "Pro Content may appear only in templates made for use on Canva (CLA §5; Licensing Explained). Templates in any other format (PPTX, PSD, etc.) may contain Free Content only (CLA §6). Canva fonts cannot be used outside Canva (CLA §9A).",
+     "source": "CLA §5, §6, §9A · Licensing Explained",
+     "note": "Verified 25 Sep 2026"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "kicker": "09–11 · GUIDE",
+   "tag": "REFERENCE",
+   "title": "Know the rules before you list it",
+   "cards": [
+    {
+     "label": "CASE 09 · MERCHANDISE & POD",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING · A REAL DESIGN, NOT ONE ITEM",
+     "text": "Designs printed on t-shirts, mugs, books and other merchandise for sale are permitted (Licensing Explained FAQ). A Canva item used on its own, “without any other design elements”, cannot be sold on print-on-demand products (CLA §9).",
+     "source": "CLA §5, §9 · Licensing Explained FAQ",
+     "note": "Verified 25 Sep 2026"
+    },
+    {
+     "label": "CASE 10 · EBOOKS & PDFS",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING · UNEDITED PRO ≤ 480,000 PX",
+     "text": "Books, ebooks and electronic publications are permitted uses (CLA §5). In digital publications, each unedited Pro media file is capped at 480,000 total pixels, e.g. 600 × 800 px (CLA §5A). Printed books have no pixel cap.",
+     "source": "CLA §5, §5A",
+     "note": "Verified 25 Sep 2026 · Re-check before you publish"
+    },
+    {
+     "label": "CASE 11 · CLIENT WORK",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING · ONE CLIENT, WRITTEN TERMS",
+     "text": "You may transfer a design containing Free or Pro Content to a single client, under a written agreement limiting use to that client. You remain solely responsible for their compliance. Never hand over standalone Canva Content (CLA §4A).",
+     "source": "CLA §4A",
+     "note": "Verified 25 Sep 2026 · Re-check before you publish"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "kicker": "12–14 · GUIDE",
+   "tag": "REFERENCE",
+   "title": "Know the rules before you list it",
+   "cards": [
+    {
+     "label": "CASE 12 · LOGOS & TRADEMARKS",
+     "signal": "RED",
+     "signal_label": "RED",
+     "text": "Licensing Explained says you “cannot use any Free or Pro content from Canva’s library in a trademark (except for fonts, simple shapes and lines)”. The binding CLA §9 excludes only fonts. The sources differ, so the safest logo uses Canva fonts plus graphics you made or commissioned.",
+     "source": "CLA §9 · Licensing Explained",
+     "note": "Verified 25 Sep 2026"
+    },
+    {
+     "label": "CASE 13 · EDUCATION, BRANDED & SPECIAL LABELS",
+     "signal": "RED",
+     "signal_label": "RED",
+     "text": "Education (“Resource” badge): non-commercial only (§5C). Branded: personal use only unless its source info says otherwise (§5B). Disney: no commercial use (§5D). Editorial Use Only: no commercial use (§9). Pro used on an Education account is non-commercial (§8).",
+     "source": "CLA §1, §5B–5D, §8, §9",
+     "note": "Verified 25 Sep 2026. For commercial work, CLA §8 says use a separate account; Licensing Explained says a second team. The sources differ."
+    },
+    {
+     "label": "CASE 14 · AI-GENERATED CONTENT",
+     "text": "Canva’s library AI Content is marked Free or Pro and follows that label’s rules (CLA §3A). Output from Canva’s AI tools is covered by separate AI Product Terms (Terms of Use §6); read them before selling. No Content may be used for AI or machine-learning purposes (CLA §9).",
+     "source": "CLA §3A, §9 · Terms of Use §6",
+     "note": "Verified 25 Sep 2026. Selling on Etsy? Disclose AI use (see Etsy page)."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 01–02",
+   "tag": "01–02 / 20",
+   "title": "Real-world seller scenarios",
+   "lead": "First-pass signals, not permission.",
+   "items": [
+    {
+     "title": "Printable planner PDF",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "A finished PDF is a permitted electronic publication (CLA §5).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: my original design, not a PDF of others’ work"
+     ],
+     "change": "AMBER if unedited Pro images exceed 480,000 px or can be pulled out as files (§5A, §9). RED with any Education, Branded or Disney item, or a page that is just one library image."
+    },
+    {
+     "title": "Editable planner template",
+     "signal": "AMBER",
+     "signal_label": "AMBER",
+     "why": "Template rights depend on format and labels (CLA §5, §6; Licensing Explained).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: my own layout, not an edited Canva template"
+     ],
+     "change": "GREEN-LEANING if delivered only as a Canva template link. RED if it contains Pro and ships in another format, or if it is a resold Canva library template."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 03–04",
+   "tag": "03–04 / 20",
+   "title": "Real-world seller scenarios",
+   "lead": "First-pass signals, not permission.",
+   "items": [
+    {
+     "title": "T-shirt design",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "Merchandise with your design on it is permitted (Licensing Explained FAQ).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: disclose production partner + ship-from location"
+     ],
+     "change": "RED if the shirt is one Canva item with no other design elements (CLA §9), or uses Branded or Disney Content. AMBER if it shows real people, brands or artworks (no releases, CLA §12)."
+    },
+    {
+     "title": "Mug design",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "Same as T-shirts, a genuine design on a product is permitted (Licensing Explained FAQ).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: disclose production partner + ship-from location"
+     ],
+     "change": "RED if a single library item is simply placed on the mug (CLA §9) or it uses Branded or Disney Content (§5B, §5D)."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 05–06",
+   "tag": "05–06 / 20",
+   "title": "Real-world seller scenarios",
+   "lead": "First-pass signals, not permission.",
+   "items": [
+    {
+     "title": "Ebook cover",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "Books and book covers are permitted uses (CLA §5).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: premade covers are my original designs"
+     ],
+     "change": "AMBER if you sell premade covers to authors (one design per client with written terms, CLA §4A, or a Canva template link). RED if the cover art becomes an author or series logo (CLA §9)."
+    },
+    {
+     "title": "Ebook interior",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "Ebooks are permitted electronic publications (CLA §5).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: the book is my own work, not someone else’s PDF"
+     ],
+     "change": "AMBER if an unedited Pro image exceeds 480,000 total pixels per file, e.g. 600 × 800 px (§5A). RED if images can be extracted as reusable files (§9)."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 07–08",
+   "tag": "07–08 / 20",
+   "title": "Real-world seller scenarios",
+   "lead": "First-pass signals, not permission.",
+   "items": [
+    {
+     "title": "Client Instagram pack",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "CLA §4A lets you transfer a design to one client under a written agreement, with you responsible for their compliance.",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Written client agreement signed"
+     ],
+     "change": "RED if the same pack goes to more than one client (that makes it a template) or you hand over standalone Content."
+    },
+    {
+     "title": "Logo for a client",
+     "signal": "RED",
+     "signal_label": "RED",
+     "why": "No Free or Pro library content may be used in a trademark (Licensing Explained; CLA §9).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Only fonts + own graphics used"
+     ],
+     "change": "GREEN-LEANING only with Canva fonts plus your own or commissioned graphics. Simple shapes and lines: allowed by Licensing Explained, not CLA §9. Never promise exclusivity."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 09–10",
+   "tag": "09–10 / 20",
+   "title": "Real-world seller scenarios",
+   "lead": "First-pass signals, not permission.",
+   "items": [
+    {
+     "title": "Canva template with Free Content",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "CLA §6 lets Free Content be used in templates for sale; a Canva template link is the cleanest delivery.",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: my own original template design"
+     ],
+     "change": "AMBER in other formats (files may be extractable, §9; fonts can’t leave Canva, §9A). RED if any item is really Pro, Branded or Education."
+    },
+    {
+     "title": "Canva template with Pro Content",
+     "signal": "AMBER",
+     "signal_label": "AMBER",
+     "why": "Pro may appear only in templates made for use on Canva (Licensing Explained; CLA §5).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Listing says Pro elements need Canva Pro"
+     ],
+     "change": "RED in any non-Canva format (PPTX, PSD, editable PDF). With a Canva link, tell buyers: “Pro elements show a watermark on free plans; buyers need Canva Pro or a one-off license.”"
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 11–12",
+   "tag": "11–12 / 20",
+   "title": "Real-world seller scenarios",
+   "lead": "First-pass signals, not permission.",
+   "items": [
+    {
+     "title": "Standalone stock photo printable",
+     "signal": "RED",
+     "signal_label": "RED",
+     "why": "Selling a Canva item on its own is prohibited (CLA §3, §9; Licensing Explained “Don’t resell, redistribute”).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: a PDF of someone else’s work doesn’t qualify"
+     ],
+     "change": "Only if the item is CC0, Pixabay or Pexels and its own license allows it. Check that license (CLA §9)."
+    },
+    {
+     "title": "Social media post for own business",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "Social media and promotion are permitted uses (CLA §5).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Music + sensitive-ad limits checked"
+     ],
+     "change": "RED for images of people in tobacco, dating, political or health/supplement ads (§9); Pro Music in paid TV, radio, podcast or billboard ads (§7). RED for Popular Music in any commercial use (Licensing Explained)."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 13–14",
+   "tag": "13–14 / 20",
+   "title": "Real-world seller scenarios",
+   "lead": "First-pass signals, not permission.",
+   "items": [
+    {
+     "title": "Course workbook PDF",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "A finished publication is a permitted use (CLA §5).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Exported from a commercial (non-Education) account"
+     ],
+     "change": "RED if it was made with Pro on a Canva Education account (§8) or contains Education (“Resource”) items (§5C). AMBER if unedited Pro images exceed 480,000 px (§5A)."
+    },
+    {
+     "title": "Lead magnet PDF",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "Promotional materials are permitted (CLA §5), and free distribution follows the same rules as paid.",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Same checks as a paid PDF"
+     ],
+     "change": "AMBER if unedited Pro images exceed 480,000 px or can be extracted (§5A, §9). RED with Branded, Education or Disney items."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 15–16",
+   "tag": "15–16 / 20",
+   "title": "Real-world seller scenarios",
+   "lead": "First-pass signals, not permission.",
+   "items": [
+    {
+     "title": "PLR/MRR bundle",
+     "signal": "RED",
+     "signal_label": "RED",
+     "why": "PLR/MRR grants resale or sublicensing rights, which CLA §9 and Terms of Use §2e(i) prohibit for Canva Content. Breaches of those use restrictions fall outside Canva’s liability cap (ToU §14).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: bundles of others’ work don’t qualify"
+     ],
+     "change": "Only after replacing all Canva Content with assets you own."
+    },
+    {
+     "title": "Presentation template",
+     "signal": "AMBER",
+     "signal_label": "AMBER",
+     "why": "Same template rules as Scenario 02 (CLA §5, §6; Licensing Explained).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Delivery format: Canva link only"
+     ],
+     "change": "GREEN-LEANING if delivered as a Canva template link. RED if Pro Content ships as PPTX, Keynote or Google Slides, or any item is Education or Branded."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 17–18",
+   "tag": "17–18 / 20",
+   "title": "Real-world seller scenarios",
+   "lead": "First-pass signals, not permission.",
+   "items": [
+    {
+     "title": "Website graphic",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "Web pages are permitted electronic publications (CLA §5).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Unedited Pro ≤ 480,000 px (e.g. 600 × 800)"
+     ],
+     "change": "AMBER if an unedited Pro image exceeds 480,000 px per file. There is no cap on Canva Websites or embedded Canva designs (§5A). RED if the site offers Content for download (§9)."
+    },
+    {
+     "title": "Business card template",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "CLA §6 names “business card templates” as an allowed use of Free Content.",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: my own original card layout"
+     ],
+     "change": "AMBER if it contains Pro (Canva link only; buyers may need Pro). RED if Pro ships in another format (Licensing Explained) or it is a resold Canva library template."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 19–20",
+   "tag": "19–20 / 20",
+   "title": "Real-world seller scenarios",
+   "lead": "First-pass signals, not permission.",
+   "items": [
+    {
+     "title": "Printed book",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "Books are permitted uses, and print is not subject to the §5A pixel cap (CLA §5).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: disclose print partner if third-party printed"
+     ],
+     "change": "The ebook edition follows Scenario 06. RED with any Branded, Education or Disney item."
+    },
+    {
+     "title": "Digital sticker pack",
+     "signal": "RED",
+     "signal_label": "RED",
+     "why": "Delivering individual Canva graphics as separate files is standalone redistribution (CLA §3, §9; Licensing Explained).",
+     "checks": [
+      "Content category & source",
+      "Standalone extractability",
+      "What buyer receives",
+      "Etsy: stickers are my original designs"
+     ],
+     "change": "GREEN-LEANING only if every sticker is your own artwork, drawn by you or commissioned with rights."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "kicker": "15 · CHECKLIST",
+   "tag": "CHECKLIST",
+   "title": "Pre-publish checklist",
+   "lead": "Run this before every listing.",
+   "style": "checklist",
+   "items": [
+    "I identified every asset and removed any I can’t trace.",
+    "I opened the source info (⋯) and label of every Canva item.",
+    "I know whether the buyer receives a finished output or editable/source file.",
+    "No Canva item can be extracted as a file or sold on its own.",
+    "No item is Education, Branded, Disney or Editorial Use Only.",
+    "Unedited Pro media is ≤ 480,000 px; Pro templates ship only as Canva links.",
+    "I exported with an active Pro plan (or paid per Pro item) on a non-Education account.",
+    "I checked the current official terms, not old articles or other listings, and saved the date.",
+    "I checked my platform’s rules (Etsy: original design, partner and AI disclosure).",
+    "No PLR/MRR/resale rights promised, and my buyer Read Me says so."
+   ]
+  },
+  {
+   "type": "list",
+   "kicker": "16 · RED FLAGS",
+   "tag": "RED FLAGS",
+   "title": "Stop before you publish",
+   "style": "redflags",
+   "items": [
+    "You are selling a Canva item on its own, without other design elements.",
+    "Your editable template contains Pro Content but relies on Free Content’s additional template permissions.",
+    "You cannot identify the source of an image, icon, font, or illustration.",
+    "You use another seller’s listing as proof that a use is permitted.",
+    "You promise PLR, MRR, resale, or sublicensing rights over content you do not own.",
+    "You use Education, Branded, Disney or “Editorial Use Only” Content in anything commercial or promotional.",
+    "The product’s real value is effectively giving the buyer access to the original Canva asset."
+   ],
+   "callout": {
+    "label": "SIMPLIFY BEFORE YOU SELL",
+    "text": "If the licensing story requires a chain of assumptions, simplify the product before you sell it.",
+    "tone": "red"
+   }
+  },
+  {
+   "type": "cards",
+   "kicker": "17 · MARKETPLACE",
+   "tag": "MARKETPLACE",
+   "title": "Etsy checks & what’s at stake",
+   "lead": "Canva’s license and your marketplace’s rules are two separate tests. Pass both. (Etsy Creativity Standards, last updated 10 June 2025.)",
+   "cards": [
+    {
+     "label": "ETSY — FIVE CHECKS · 1–2",
+     "text": "1. Original design. Canva-made downloads and print-on-demand items fall under “Designed by a seller”: they must be your original designs. “A bundle, collection, scan, or PDF of someone else’s work” does not qualify, and that includes unmodified Canva templates or library graphics.\n2. Production partner. Printed by a third party (POD shirts, mugs, books)? Disclose the production partner and where the item ships from.",
+     "source": "Etsy Creativity Standards"
+    },
+    {
+     "label": "ETSY — FIVE CHECKS · 3–5",
+     "text": "3. AI disclosure. Made with AI tools? Say so in the listing description. Our cautious reading: also disclose Canva library items marked AI-generated.\n4. Personalised items. For custom items, the first image must show a finished, customised item, not placeholder text like “Your Text Here”.\n5. Removal. Etsy may remove listings that break its policies, and listing fees remain payable.",
+     "source": "Etsy Creativity Standards"
+    },
+    {
+     "label": "WHAT’S AT STAKE ON CANVA’S SIDE · 1–2",
+     "text": "Canva may delete designs, suspend or terminate your account, or permanently ban you (Terms of Use §15b).\nAfter termination for a violation: no refund, and no new account without Canva’s written permission (ToU §15c).",
+     "source": "Terms of Use §15b, §15c"
+    },
+    {
+     "label": "WHAT’S AT STAKE ON CANVA’S SIDE · 3–4",
+     "text": "If your license ends, you must stop using and delete the Content and designs (CLA §10).\nBreaching the “Restrictions on Use of the Service” is excluded from the liability cap, and you indemnify Canva (ToU §13–14).",
+     "source": "CLA §10 · ToU §13–14"
+    }
+   ],
+   "callout": {
+    "label": "GUMROAD · BEACONS",
+    "text": "Selling on Gumroad, Beacons or elsewhere? Check that platform’s own rules separately.",
+    "tone": "amber"
+   }
+  },
+  {
+   "type": "worksheet",
+   "kicker": "W1 · WORKSHEET",
+   "tag": "TRACKER",
+   "title": "License source tracker",
+   "layout": "table",
+   "columns": [
+    "ASSET",
+    "SOURCE",
+    "LICENSE / LABEL",
+    "DATE CHECKED",
+    "SIGNAL / ACTION"
+   ],
+   "rows": 10
+  },
+  {
+   "type": "worksheet",
+   "kicker": "W2 · WORKSHEET",
+   "tag": "AUDIT",
+   "title": "Product audit worksheet",
+   "layout": "fields",
+   "fields": [
+    "PRODUCT NAME",
+    "WHAT THE BUYER RECEIVES",
+    "FINISHED OR EDITABLE?",
+    "CANVA CONTENT USED + EXPORT ACCOUNT / PLAN",
+    "MOST RESTRICTIVE LABEL (APPLIES TO WHOLE DESIGN)",
+    "CAN CONTENT BE EXTRACTED?",
+    "SALES CHANNEL + ITS RULES CHECKED (E.G. ETSY)",
+    "OFFICIAL TERMS CHECKED ON",
+    "SIGNAL (GREEN-LEANING / AMBER / RED) + CHANGES REQUIRED"
+   ]
+  },
+  {
+   "type": "worksheet",
+   "kicker": "W3 · WORKSHEET",
+   "tag": "RIGHTS",
+   "title": "Buyer-facing rights statement builder",
+   "lead": "Use this page only to describe rights you actually control in your original material. Canva Content inside your product stays under Canva’s license; you cannot grant rights over it.",
+   "layout": "fields",
+   "fields": [
+    "WHAT MAY THE BUYER DO?",
+    "WHAT MAY THE BUYER NOT DO?",
+    "IS COMMERCIAL USE ALLOWED, AND UNDER WHAT CONDITIONS?",
+    "MAY THE BUYER MODIFY THE PRODUCT?",
+    "MAY THE BUYER RESELL OR REDISTRIBUTE IT? IF NOT, SAY SO CLEARLY.",
+    "WHICH THIRD-PARTY ASSETS (E.G. CANVA CONTENT) REMAIN UNDER SEPARATE TERMS?"
+   ]
+  },
+  {
+   "type": "hierarchy",
+   "kicker": "18 · QUICK REFERENCE",
+   "tag": "HIERARCHY",
+   "title": "A safer product-building hierarchy",
+   "lead": "Move from clearer rights at the top toward higher-friction situations at the bottom.",
+   "levels": [
+    {
+     "label": "LOWER FRICTION",
+     "signal": "GREEN",
+     "text": "Original text + original graphics + your own photos/illustrations"
+    },
+    {
+     "label": "LOWER FRICTION",
+     "signal": "GREEN",
+     "text": "Original layout + external assets with clear commercial/redistribution rights"
+    },
+    {
+     "label": "GREEN-LEANING",
+     "signal": "GREEN",
+     "text": "Finished designs using Canva Free/Pro Content within permitted uses (CLA §5)"
+    },
+    {
+     "label": "AMBER",
+     "signal": "AMBER",
+     "text": "Editable templates: Free-only, or Pro delivered only as a Canva link"
+    },
+    {
+     "label": "RED",
+     "signal": "RED",
+     "text": "Pro in non-Canva template formats, or any Education, Branded or Disney Content in a product for sale"
+    },
+    {
+     "label": "AVOID",
+     "signal": "RED",
+     "text": "Treating Canva Content itself as a resellable or sublicensable asset"
+    }
+   ]
+  },
+  {
+   "type": "sources",
+   "kicker": "19 · SOURCES",
+   "tag": "SOURCES",
+   "title": "Official references & update note",
+   "lead": "Prepared against the official sources below, each verified on 25 September 2026. Where Canva’s binding agreement and its explainer differ, this guide follows the stricter reading and says so.",
+   "sources": [
+    {
+     "name": "Canva Content License Agreement (binding)",
+     "url": "https://www.canva.com/policies/content-license-agreement/",
+     "date": "Verified 25 September 2026"
+    },
+    {
+     "name": "Canva Licensing Explained (Canva’s explainer)",
+     "url": "https://www.canva.com/licensing-explained/",
+     "date": "Verified 25 September 2026"
+    },
+    {
+     "name": "Canva Terms of Use (effective 19 August 2026)",
+     "url": "https://www.canva.com/policies/terms-of-use/",
+     "date": "Verified 25 September 2026"
+    },
+    {
+     "name": "Etsy Creativity Standards (last updated 10 June 2025)",
+     "url": "https://www.etsy.com/legal/creativity/",
+     "date": "Verified 25 September 2026"
+    }
+   ],
+   "notes": [
+    "Rules change: re-check before publishing and after policy updates.",
+    "Not covered here, so read them if relevant: Canva AI Product Terms, Popular Music License, Acceptable Use Policy, and your sales platform’s own policies."
+   ],
+   "closing": {
+    "label": "VERSION 3.1 · CHECKMAYBE",
+    "text": "Canva is a trademark of its respective owner. This independent guide is not sponsored, approved, or endorsed by Canva."
+   }
+  }
+ ]
+}

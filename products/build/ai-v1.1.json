@@ -1,0 +1,774 @@
+{
+  "meta": {
+    "product": "Can I Use This?",
+    "subtitle": "AI Content Commercial Use Toolkit",
+    "footer": "CAN I USE THIS? — AI CONTENT COMMERCIAL USE TOOLKIT · CHECKMAYBE",
+    "version": "1.1"
+  },
+  "pages": [
+    {
+      "type": "cover",
+      "kicker": "CHECKMAYBE",
+      "tag": "VERSION 1.1",
+      "topline": "CHECKMAYBE — EDUCATIONAL RESOURCE, NOT LEGAL ADVICE",
+      "title": "Can I Use This?",
+      "subtitle": "AI Content Commercial Use Toolkit",
+      "value": "A practical decision guide for creators using AI-generated content in their commercial work.",
+      "quote": "“Not legal advice. A practical way to know what to check next.”",
+      "steps": ["WHAT YOU USED", "WHAT YOU CREATED", "WHAT YOU’RE SELLING", "VERIFY, THEN PUBLISH"],
+      "inside": ["5-CHECK FRAMEWORK", "PLATFORM TERMS SNAPSHOTS", "15 SCENARIOS", "CHECKLIST + WORKSHEETS"],
+      "legal": ["VERSION 1.1", "FOR EDUCATIONAL AND INFORMATIONAL PURPOSES ONLY", "DOES NOT CONSTITUTE LEGAL ADVICE"]
+    },
+    {
+      "type": "cards",
+      "kicker": "00 · BEFORE YOU START",
+      "tag": "START HERE",
+      "title": "Before you start",
+      "lead": "“Can I use AI content commercially?” is not one simple question. The same AI-generated output can raise different considerations depending on where it ends up.",
+      "cards": [
+        {
+          "label": "COMMERCIAL USE VS. COPYRIGHT OWNERSHIP",
+          "text": "A platform can contractually let you use an output commercially while the output itself remains unprotected by copyright — and a third party’s rights in your input can create risk regardless of what the platform’s terms say about your output."
+        }
+      ],
+      "bullets": [
+        "Social media content",
+        "An ebook",
+        "A logo",
+        "Print-on-demand merchandise",
+        "Client work",
+        "A digital product",
+        "A resold asset",
+        "Merchandise at scale"
+      ],
+      "callout": {
+        "label": "KEEP THIS DISTINCTION IN MIND",
+        "text": "Commercial use is not the same question as copyright ownership.",
+        "tone": "dark"
+      }
+    },
+    {
+      "type": "cards",
+      "kicker": "00 · DISCLAIMER",
+      "tag": "READ THIS FIRST",
+      "title": "Important disclaimer",
+      "cards": [
+        {
+          "label": "EDUCATIONAL & INFORMATIONAL PURPOSES ONLY",
+          "text": "This toolkit is for educational and informational purposes only and does not constitute legal advice. It does not guarantee commercial-use rights, copyright ownership, or compliance with any platform’s terms."
+        }
+      ],
+      "bullets": [
+        "AI platform terms can change — some changes take effect as soon as they are posted, and continued use may count as acceptance.",
+        "Laws differ between jurisdictions, and AI copyright law continues to develop.",
+        "You are responsible for verifying the current official terms before you rely on them.",
+        "High-value or high-risk commercial uses may warrant qualified professional advice.",
+        "Nothing in this toolkit should be read as a guarantee that any specific use is permitted."
+      ],
+      "callout": {
+        "label": "READ THIS FIRST",
+        "text": "This is a decision aid, not a verdict.",
+        "tone": "red"
+      }
+    },
+    {
+      "type": "steps",
+      "kicker": "01 · QUICK DECISION SYSTEM",
+      "tag": "5-CHECK FRAMEWORK",
+      "title": "The 5-Check Framework",
+      "lead": "Move around the wheel before you publish or sell anything AI-assisted.",
+      "style": "numbered",
+      "steps": [
+        {"title": "TOOL", "text": "What tool did you use?"},
+        {"title": "OUTPUT", "text": "What did you create?"},
+        {"title": "INPUT", "text": "What went into it?"},
+        {"title": "USE", "text": "What are you doing with it, and where?"},
+        {"title": "VERIFY", "text": "What needs verification?"}
+      ]
+    },
+    {
+      "type": "steps",
+      "kicker": "01 · QUICK DECISION SYSTEM",
+      "tag": "DECISION MAP",
+      "title": "Quick decision map",
+      "style": "numbered",
+      "steps": [
+        {"title": "AI USE", "text": "Did you create this using AI?"},
+        {"title": "SERVICE AND PLAN", "text": "Which AI service and plan?"},
+        {"title": "UPLOADED MATERIAL", "text": "Did you upload third-party material?"},
+        {"title": "OUTPUT TYPE", "text": "What type of output was generated?"},
+        {"title": "INTENDED USE", "text": "How will the output be used?"},
+        {"title": "PROVIDER AND MARKETPLACE TERMS", "text": "Do the provider’s and marketplace’s current terms permit the intended use?"},
+        {"title": "THIRD-PARTY RIGHTS", "text": "Are third-party rights involved?"},
+        {"title": "VERIFY", "text": "Verify before publishing or selling."}
+      ],
+      "legend": [
+        {"signal": "GREEN", "label": "LOWER CONCERN", "text": "Lower concern for this use — still run the 5 checks before you publish or sell."},
+        {"signal": "AMBER", "label": "CHECK FIRST", "text": "Check the AI tool’s terms, your inputs and your marketplace’s rules before you sell."},
+        {"signal": "RED", "label": "HIGHER CONCERN", "text": "Slow down, check further, or get a second opinion before you sell."},
+        {"signal": "RED", "label": "PROFESSIONAL REVIEW RECOMMENDED", "text": "Stop and review; qualified professional advice may be warranted."},
+        {"signal": "RED", "label": "NOT ALLOWED ON ETSY", "text": "Not allowed under Etsy’s Creativity Standards — do not list it on Etsy."},
+        {"signal": "VERIFY", "label": "VERIFY BEFORE RELYING", "text": "Not rechecked against official text this round — verify the current terms yourself."}
+      ]
+    },
+    {
+      "type": "cards",
+      "kicker": "01 · QUICK DECISION SYSTEM",
+      "tag": "5 QUESTIONS",
+      "title": "Five questions that are not the same",
+      "lead": "Creators often collapse these into one question. Don’t — each has a different answer, from a different source.",
+      "cards": [
+        {
+          "label": "QUESTION 1",
+          "title": "Does the AI provider permit this commercial use?",
+          "text": "A contractual question. Answered by the platform’s terms of service and usage policy."
+        },
+        {
+          "label": "QUESTION 2",
+          "title": "What contractual rights does the provider grant in output?",
+          "text": "What contractual rights does the provider grant regarding the output? Also contractual — but distinct from permission to use. This is about who is assigned what."
+        },
+        {
+          "label": "QUESTION 3",
+          "title": "Is the output copyrightable in the relevant jurisdiction?",
+          "text": "Is the output eligible for copyright protection in the relevant jurisdiction? A legal question about copyright law, not the platform’s terms. The U.S. Copyright Office’s position: purely AI-generated material, without sufficient human authorship, is not protected."
+        },
+        {
+          "label": "QUESTION 4",
+          "title": "Could using the output infringe third-party rights?",
+          "text": "A risk question, independent of the platform’s terms. Depends on your input and the output’s resemblance to existing work."
+        }
+      ],
+      "callout": {
+        "label": "QUESTION 5",
+        "text": "Does the marketplace where you sell allow it, and what must you disclose? A platform-policy question, independent of the AI tool’s terms. Etsy, for example, requires AI disclosure in the listing description.",
+        "tone": "amber"
+      }
+    },
+    {
+      "type": "snapshot",
+      "kicker": "02 · KNOW YOUR AI TOOL",
+      "tag": "SNAPSHOT 1/5",
+      "title": "OpenAI — ChatGPT & API",
+      "status": {"signal": "GREEN", "label": "SOURCE-CHECKED"},
+      "rows": [
+        ["PRODUCT", "ChatGPT (consumer), OpenAI API (developer/business)"],
+        ["PLAN DIFFERENCES", "The API and ChatGPT Business/Enterprise fall under OpenAI’s Business Terms; this snapshot covers the US consumer Terms of Use. EEA, Switzerland and UK residents have separate terms."],
+        ["COMMERCIAL-USE LANGUAGE", "Terms of Use assign OpenAI’s rights in Output to the user; no blanket statement that every downstream commercial use is pre-approved."],
+        ["OUTPUT-RIGHTS LANGUAGE", "“As between you and OpenAI, and to the extent permitted by applicable law, you (a) retain your ownership rights in Input and (b) own the Output. We hereby assign to you all our right, title, and interest, if any, in and to Output.”"],
+        ["RESTRICTIONS", "May not represent Output as human-generated when it was not; may not use Output to develop competing models; may not automatically or programmatically extract data or Output."],
+        ["THIRD-PARTY RIGHTS WARNING", "You are responsible for Content (Input and Output) and represent that you have all rights needed to provide your Input. If you use the Services as a business, you also indemnify OpenAI against related third-party claims."],
+        ["OFFICIAL SOURCE", "openai.com/policies/terms-of-use (US; Effective January 1, 2026). EEA/Switzerland/UK residents: see OpenAI’s separate terms for those regions. Other countries: check which version applies to you."],
+        ["STATUS", "Checked against the official US Terms of Use on 25 September 2026"]
+      ]
+    },
+    {
+      "type": "snapshot",
+      "kicker": "02 · KNOW YOUR AI TOOL",
+      "tag": "SNAPSHOT 2/5",
+      "title": "Adobe Firefly",
+      "status": {"signal": "VERIFY", "label": "VERIFY BEFORE RELYING"},
+      "rows": [
+        ["PRODUCT", "Firefly (web, and embedded in Photoshop, Illustrator, Express)"],
+        ["PLAN DIFFERENCES", "Non-beta generative features: commercial use generally permitted. Beta-labelled features: personal use only unless stated otherwise."],
+        ["COMMERCIAL-USE LANGUAGE", "Adobe support documentation states outputs from non-beta generative features may be used in commercial projects."],
+        ["OUTPUT-RIGHTS LANGUAGE", "Guidelines assign no explicit output-ownership clause in the text reviewed; commercial permission is described at the feature/product level, not as a blanket IP grant."],
+        ["RESTRICTIONS", "Must not generate content that infringes third-party copyright, trademark, or privacy rights; must not remove Content Credentials."],
+        ["THIRD-PARTY RIGHTS WARNING", "Uploading a reference image containing someone else’s copyrighted content for generation is explicitly listed as prohibited."],
+        ["OFFICIAL SOURCE", "adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html (Last updated May 15, 2026)"],
+        ["STATUS", "VERIFY BEFORE RELYING — last reviewed September 2026"]
+      ]
+    },
+    {
+      "type": "snapshot",
+      "kicker": "02 · KNOW YOUR AI TOOL",
+      "tag": "SNAPSHOT 3/5",
+      "title": "Midjourney",
+      "status": {"signal": "VERIFY", "label": "VERIFY BEFORE RELYING"},
+      "rows": [
+        ["PRODUCT", "Midjourney (Discord and web app)"],
+        ["PLAN DIFFERENCES", "Free/Trial: no ownership of Assets. Paid plans (Basic/Standard/Pro/Mega): you own Assets. Companies over US$1M annual revenue must be on Pro or Mega to own Assets."],
+        ["COMMERCIAL-USE LANGUAGE", "Ownership is the mechanism for commercial use here — if you don’t own the Asset, you don’t have a basis to sell it."],
+        ["OUTPUT-RIGHTS LANGUAGE", "“You own all Assets You create with the Services to the fullest extent possible under applicable law” — subject to the revenue-based plan exception."],
+        ["RESTRICTIONS", "You also grant Midjourney a broad perpetual license to reproduce and distribute your Content; default settings make your creations publicly viewable and remixable by others."],
+        ["THIRD-PARTY RIGHTS WARNING", "Upscaling someone else’s image does not transfer ownership of that image to you."],
+        ["OFFICIAL SOURCE", "docs.midjourney.com/docs/terms-of-service (Version effective May 27, 2026)"],
+        ["STATUS", "VERIFY BEFORE RELYING — last reviewed September 2026"]
+      ]
+    },
+    {
+      "type": "snapshot",
+      "kicker": "02 · KNOW YOUR AI TOOL",
+      "tag": "SNAPSHOT 4/5",
+      "title": "Google Gemini",
+      "status": {"signal": "VERIFY", "label": "PENDING FULL REVIEW"},
+      "rows": [
+        ["PRODUCT", "Gemini app (consumer), Gemini API / Vertex AI (developer)"],
+        ["PLAN DIFFERENCES", "General Google Terms of Service now cover Gemini (the standalone Generative AI Additional Terms folded into the main ToS in May 2024, except for signed business partners)."],
+        ["COMMERCIAL-USE LANGUAGE", "No single clearly-worded clause dedicated to Gemini output commercial rights was located in the general Google Terms of Service during this research pass."],
+        ["OUTPUT-RIGHTS LANGUAGE", "General Google ToS: “Your content remains yours” for content you submit; API/Enterprise tiers reportedly carry stronger, separately-documented commercial terms."],
+        ["RESTRICTIONS", "Generative AI Prohibited Use Policy separately restricts harmful, deceptive, or high-stakes uses (e.g. medical, legal contexts) without human oversight."],
+        ["THIRD-PARTY RIGHTS WARNING", "Verification required — confirm current Gemini API / Workspace-specific commercial terms directly before publishing a claim."],
+        ["OFFICIAL SOURCE", "policies.google.com/terms · policies.google.com/terms/generative-ai/use-policy"],
+        ["STATUS", "PENDING FULL REVIEW — last reviewed September 2026"]
+      ]
+    },
+    {
+      "type": "snapshot",
+      "kicker": "02 · KNOW YOUR AI TOOL",
+      "tag": "SNAPSHOT 5/5",
+      "title": "Anthropic Claude",
+      "status": {"signal": "GREEN", "label": "SOURCE-CHECKED"},
+      "rows": [
+        ["PRODUCT", "Claude.ai / Claude Pro (consumer), Claude API / Console (commercial)"],
+        ["PLAN DIFFERENCES", "Consumer Terms cover Claude.ai and Claude Pro. Anthropic API keys and Console use fall under the separate Commercial Terms of Service — check that document directly for its ownership and indemnity terms."],
+        ["COMMERCIAL-USE LANGUAGE", "Consumer Terms contain no explicit commercial-use clause. Subject to your compliance with the Terms, Anthropic assigns you its rights, if any, in Outputs. Evaluation access is for personal, non-commercial use only."],
+        ["OUTPUT-RIGHTS LANGUAGE", "“As between you and Anthropic, and to the extent permitted by applicable law, you retain any right, title, and interest that you have in the Inputs you submit. Subject to your compliance with our Terms, we assign to you all of our right, title, and interest—if any—in Outputs.”"],
+        ["RESTRICTIONS", "Governed by Anthropic’s Acceptable Use Policy (Usage Policy) and Supported Regions Policy. Data use: Materials (Inputs and Outputs) may be used for training unless you opt out — and even then if you give Feedback (e.g. thumbs up/down) or they are flagged for safety review."],
+        ["THIRD-PARTY RIGHTS WARNING", "You are responsible for all Inputs and must have the rights to any material you upload. You also agree to indemnify Anthropic, including for products you offer using the Services."],
+        ["OFFICIAL SOURCE", "anthropic.com/legal/consumer-terms (Effective October 8, 2025)"],
+        ["STATUS", "Checked against the official Consumer Terms on 25 September 2026"]
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 01 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI image in an ebook",
+      "items": [
+        {
+          "title": "AI image in an ebook",
+          "signal": "AMBER",
+          "signal_label": "CHECK FIRST",
+          "situation": "You generated illustrations with an AI image tool and want to include them in an ebook you plan to sell.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Beta-labelled features on some platforms restrict commercial use even when the main product allows it.",
+            "Prompting with a named living artist’s style increases the odds of a resemblance dispute.",
+            "Etsy, for example, requires sellers to disclose AI use within the listing description."
+          ],
+          "steps": [
+            "Confirm the AI tool’s current terms for your plan and your marketplace’s AI-disclosure rule.",
+            "Check whether any prompt referenced a real artist, brand, or copyrighted character by name.",
+            "Record the platform, plan, and generation date for this project (Worksheet 1)."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 02 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI image on a T-shirt",
+      "items": [
+        {
+          "title": "AI image on a T-shirt",
+          "signal": "RED",
+          "signal_label": "HIGHER CONCERN",
+          "situation": "You want to print an AI-generated design on shirts and sell them.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Merchandise at scale increases exposure if the output resembles existing IP.",
+            "Marketplaces and POD services can add their own rules. On Etsy, disclose AI use and the production partner, including where it ships from.",
+            "AI-generated logos or wordmarks can unintentionally mimic real brands."
+          ],
+          "steps": [
+            "Check the AI tool’s terms, your POD service’s content policy, and your marketplace’s disclosure rules.",
+            "Screen the design for resemblance to existing logos, characters, or trademarks.",
+            "Consider a reverse image search before committing to a print run."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 03 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI-generated printable",
+      "items": [
+        {
+          "title": "AI-generated printable",
+          "signal": "GREEN",
+          "signal_label": "LOWER CONCERN",
+          "situation": "You’re making a simple AI-assisted printable (e.g. a planner page) to sell as a digital download.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Decorative AI elements should be checked for style-mimicry of a named artist.",
+            "AI-generated template text should be reviewed for accidental overlap with another seller’s copy.",
+            "If you used design-tool assets (e.g. Canva), that tool’s license applies too."
+          ],
+          "steps": [
+            "Check your AI tool’s terms allow this use, and disclose AI in the listing description (Etsy requires this).",
+            "Spot-check any decorative AI imagery against platform restrictions.",
+            "Save a terms snapshot for this product (Worksheet 2)."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 04 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI-generated social media graphics",
+      "items": [
+        {
+          "title": "AI-generated social media graphics",
+          "signal": "GREEN",
+          "signal_label": "LOWER CONCERN",
+          "situation": "You’re using AI to create graphics and captions for your own brand’s social posts.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Confirm no real person’s likeness appears without consent.",
+            "Disclosure norms for AI content vary by platform, including restrictions on political or health content."
+          ],
+          "steps": [
+            "Confirm no real individual’s face or likeness was generated without rights.",
+            "Check the AI platform’s usage policy for content-category restrictions."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 05 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI-generated client work",
+      "items": [
+        {
+          "title": "AI-generated client work",
+          "signal": "AMBER",
+          "signal_label": "CHECK FIRST",
+          "situation": "You’re using AI to help produce a deliverable for a paying client.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Client contracts may promise IP assignment you cannot fully guarantee if the output isn’t copyrightable.",
+            "Clients may resell or relicense the deliverable further, increasing your exposure.",
+            "Disclosing AI involvement may be a contractual or professional expectation."
+          ],
+          "steps": [
+            "Review your contract’s IP-assignment language against what you can actually guarantee.",
+            "Disclose AI involvement to the client where relevant.",
+            "Keep verification records in case the client asks later."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 06 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI-generated logo",
+      "items": [
+        {
+          "title": "AI-generated logo",
+          "signal": "RED",
+          "signal_label": "PROFESSIONAL REVIEW RECOMMENDED",
+          "situation": "You’re generating a logo with AI for a brand identity.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Logos are exactly the case where copyright and trademark exclusivity matter most.",
+            "AI-generated marks may be too close to existing registered trademarks.",
+            "Purely AI-generated logo art may lack copyright protection; trademark rights depend on use and distinctiveness."
+          ],
+          "steps": [
+            "Run a trademark clearance search before committing to the logo.",
+            "Have a human meaningfully modify and finalize the mark.",
+            "For a primary brand identity, consider professional trademark advice."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 07 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI-generated book cover",
+      "items": [
+        {
+          "title": "AI-generated book cover",
+          "signal": "AMBER",
+          "signal_label": "CHECK FIRST",
+          "situation": "You’re using an AI image as a commercial book cover.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Genre-typical prompts referencing a famous illustrator by name raise style-mimicry concerns.",
+            "AI-suggested cover typography may involve fonts with their own licensing terms."
+          ],
+          "steps": [
+            "Confirm the platform permits this output type for commercial publication.",
+            "Avoid named-illustrator style prompts.",
+            "Verify any fonts used on the cover are properly licensed."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 08 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI-written ebook",
+      "items": [
+        {
+          "title": "AI-written ebook",
+          "signal": "AMBER",
+          "signal_label": "CHECK FIRST",
+          "situation": "You’re using AI to draft most or all of an ebook’s text for sale.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Purely AI-generated text may not be copyrightable, limiting your ability to stop copying.",
+            "Factual claims generated by AI need independent verification.",
+            "Etsy, for example, requires AI disclosure within the listing description."
+          ],
+          "steps": [
+            "Add substantial human editing, structure, and original material.",
+            "Fact-check AI-generated claims before publishing.",
+            "Check your sales platform’s AI-disclosure rules; don’t present AI text as fully human-written."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 09 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI-written blog or article",
+      "items": [
+        {
+          "title": "AI-written blog or article",
+          "signal": "GREEN",
+          "signal_label": "LOWER CONCERN",
+          "situation": "You’re publishing an AI-assisted article on your own site or as content marketing.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Factual accuracy is your responsibility, not the AI provider’s.",
+            "Some platforms and search engines have policies on undisclosed AI content.",
+            "Feeding another site’s article into the prompt as a reference increases plagiarism risk."
+          ],
+          "steps": [
+            "Fact-check before publishing.",
+            "Add your own original analysis and voice.",
+            "Check platform-specific AI-content disclosure norms."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 10 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI-generated stock-style images",
+      "items": [
+        {
+          "title": "AI-generated stock-style images",
+          "signal": "RED",
+          "signal_label": "HIGHER CONCERN",
+          "situation": "You’re generating a batch of images intended to be resold as a reusable stock or asset library.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Some AI tools’ terms may limit reselling outputs as standalone assets. OpenAI’s and Anthropic’s consumer terms restrict reselling the Services, not Outputs.",
+            "“Stock-style” prompts risk mimicking a real stock photographer’s recognizable body of work.",
+            "Buyers may assume exclusivity — but OpenAI notes other users may receive similar output."
+          ],
+          "steps": [
+            "Check specifically whether the platform allows resale of outputs as standalone assets.",
+            "Avoid prompts referencing specific real photographers or stock agencies.",
+            "Write a clear buyer-facing rights statement (Worksheet 2)."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 11 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI image modified in Canva",
+      "items": [
+        {
+          "title": "AI image modified in Canva",
+          "signal": "AMBER",
+          "signal_label": "CHECK FIRST",
+          "situation": "You’re taking an AI-generated image and substantially editing or combining it in Canva or a similar tool before selling.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Two sets of terms now apply: the AI tool’s and the design tool’s.",
+            "The design tool’s own content-license rules (e.g. Free vs. Pro content) apply independently."
+          ],
+          "steps": [
+            "Check both platforms’ terms, not just the AI tool’s.",
+            "Document what you changed or added during editing.",
+            "Treat the result as a combined-source asset, not a single-source one."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 12 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI-generated print-on-demand products at scale",
+      "items": [
+        {
+          "title": "AI-generated print-on-demand products at scale",
+          "signal": "RED",
+          "signal_label": "HIGHER CONCERN",
+          "situation": "You’re running an ongoing POD storefront using AI-generated designs across many products.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Volume increases both IP-resemblance risk and platform scrutiny.",
+            "Etsy can remove non-compliant listings (fees still owed); repeat issues may affect your whole shop.",
+            "Revenue-based ownership thresholds on some platforms may apply once you scale."
+          ],
+          "steps": [
+            "Re-check your AI plan tier against any revenue thresholds as you scale.",
+            "Screen new designs on a rolling basis, not only at launch.",
+            "Keep a per-design log, including AI and production-partner disclosures (Worksheet 1)."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 13 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "Selling AI prompts",
+      "items": [
+        {
+          "title": "Selling AI prompts",
+          "signal": "RED",
+          "signal_label": "NOT ALLOWED ON ETSY",
+          "situation": "You’re packaging and selling prompt text itself, rather than the AI-generated output, as a digital product.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Claims about guaranteed output quality or results can create consumer-protection exposure.",
+            "Etsy’s Creativity Standards list “AI prompt bundles” as not “designed by a seller”, so they are not allowed on Etsy.",
+            "Buyers may misunderstand what they are purchasing."
+          ],
+          "steps": [
+            "Check each marketplace’s rules first — do not list AI prompt bundles on Etsy.",
+            "Make clear in your listing that you’re selling prompt text, not generated output.",
+            "Avoid named-living-artist styles and don’t guarantee specific results."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 14 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI output resembling a famous character, person, or brand",
+      "items": [
+        {
+          "title": "AI output resembling a famous character, person, or brand",
+          "signal": "RED",
+          "signal_label": "PROFESSIONAL REVIEW RECOMMENDED",
+          "situation": "An AI output turns out to resemble a celebrity, fictional character, or brand.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "This is one of the highest-risk categories regardless of the platform’s general terms.",
+            "Platform permission to use output commercially does not override third-party trademark, publicity, or character rights.",
+            "Even unintentional resemblance can trigger a claim."
+          ],
+          "steps": [
+            "Do not publish or sell the output as-is.",
+            "Regenerate or substantially alter the output to remove the resemblance.",
+            "Treat any borderline case as a stop-and-review situation (see Part 8)."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scenarios",
+      "kicker": "03 · SCENARIO 15 / 15",
+      "tag": "REAL-WORLD SCENARIO",
+      "title": "AI output created using uploaded third-party material",
+      "items": [
+        {
+          "title": "AI output created using uploaded third-party material",
+          "signal": "RED",
+          "signal_label": "PROFESSIONAL REVIEW RECOMMENDED",
+          "situation": "You uploaded someone else’s image or content as a reference or input to generate the output.",
+          "checks": ["Platform terms", "Input rights", "Output rights", "Third-party rights", "Intended commercial use"],
+          "watch": [
+            "Output risk can come from your input, even when the output itself looks new.",
+            "You generally need rights to whatever you upload, not just to what comes out.",
+            "Confidential inputs may be used for training unless you opt out (Anthropic: even then, for Feedback or safety review)."
+          ],
+          "steps": [
+            "Confirm you had the right to upload the reference material in the first place.",
+            "If it was client or confidential material, check your confidentiality obligations and your account’s training settings first.",
+            "When in doubt about a third-party input, don’t commercialize the output until resolved."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "kicker": "04 · RED FLAGS",
+      "tag": "RED FLAGS",
+      "title": "AI commercial-use red flags",
+      "lead": "Any one of these means: slow down, check further, or get a second opinion before you sell.",
+      "style": "redflags",
+      "items": [
+        "Celebrity or personality likeness appears in the output.",
+        "Famous fictional characters appear, even unintentionally.",
+        "Brand logos or trademarks appear in the output.",
+        "You uploaded copyrighted images as reference material.",
+        "You uploaded client-confidential material as input.",
+        "You’re reselling raw outputs as reusable, standalone assets.",
+        "You’re assuming a paid plan automatically means you own the copyright.",
+        "You don’t know which AI generated the source material.",
+        "The provider’s terms changed after you created the content.",
+        "You’re listing without a required AI disclosure (e.g. Etsy’s listing-description rule).",
+        "You’re listing AI prompt bundles on Etsy, or labelling AI work as handmade."
+      ]
+    },
+    {
+      "type": "list",
+      "kicker": "05 · BEFORE YOU SELL",
+      "tag": "CHECKLIST",
+      "title": "Before you sell checklist",
+      "lead": "Run this before every listing.",
+      "style": "checklist",
+      "items": [
+        "I know which AI service created the output.",
+        "I know which account or plan I used.",
+        "I checked the provider’s current official terms.",
+        "I reviewed everything used as input.",
+        "I checked for relevant third-party rights.",
+        "I checked the marketplace’s own rules and made any required AI and production-partner disclosures.",
+        "I know exactly what the customer will receive.",
+        "I considered trademark and likeness issues.",
+        "I’m not presenting AI output as human-made.",
+        "I saved evidence of the relevant terms.",
+        "I recorded the verification date.",
+        "I know when professional advice may be appropriate."
+      ]
+    },
+    {
+      "type": "worksheet",
+      "kicker": "06 · WORKSHEET",
+      "tag": "CONTENT RECORD",
+      "title": "AI content record worksheet",
+      "lead": "One record per project. Fill this in as you create, not after the fact.",
+      "layout": "fields",
+      "fields": [
+        "PROJECT NAME",
+        "AI TOOL",
+        "PLAN",
+        "CREATION DATE",
+        "PROMPT (SUMMARY)",
+        "UPLOADED MATERIALS",
+        "OUTPUT TYPE",
+        "INTENDED USE",
+        "SALES PLATFORM / MARKETPLACE",
+        "DISCLOSURES MADE (AI / PRODUCTION PARTNER — WHERE)",
+        "COMMERCIAL USE TERMS CHECKED",
+        "OFFICIAL TERMS URL",
+        "VERIFICATION DATE",
+        "POTENTIAL THIRD-PARTY RIGHTS",
+        "NOTES",
+        "FINAL DECISION"
+      ]
+    },
+    {
+      "type": "worksheet",
+      "kicker": "07 · WORKSHEET",
+      "tag": "TERMS VERIFICATION",
+      "title": "Terms verification worksheet",
+      "lead": "Reusable for any AI provider or marketplace you check — keep one per platform per major terms update.",
+      "layout": "fields",
+      "fields": [
+        "AI PROVIDER / MARKETPLACE",
+        "PRODUCT",
+        "PLAN",
+        "OFFICIAL TERMS URL",
+        "COMMERCIAL USE LANGUAGE",
+        "OUTPUT RIGHTS LANGUAGE",
+        "RESTRICTIONS",
+        "THIRD-PARTY RIGHTS WARNING",
+        "CHECKED ON",
+        "RECHECK REQUIRED BY",
+        "NOTES"
+      ]
+    },
+    {
+      "type": "list",
+      "kicker": "08 · STOP BEFORE YOU SELL",
+      "tag": "STOP & VERIFY",
+      "title": "Stop before you sell",
+      "lead": "These situations warrant additional verification — and often, a second opinion — before you publish or sell.",
+      "style": "grid",
+      "items": [
+        "Famous people",
+        "Brand names or logos",
+        "Protected fictional characters",
+        "Third-party artwork",
+        "Client logos",
+        "High-value commercial licensing",
+        "Large-scale merchandising",
+        "Reselling reusable assets",
+        "Unclear source material",
+        "Unclear ownership or rights"
+      ],
+      "callout": {
+        "label": "STOP & VERIFY",
+        "text": "When in doubt, don’t ship it yet.",
+        "tone": "red"
+      }
+    },
+    {
+      "type": "sources",
+      "kicker": "09 · SOURCES",
+      "tag": "OFFICIAL SOURCES",
+      "title": "Official sources & evidence hierarchy",
+      "lead": "This toolkit prioritizes official terms of service and government guidance over blogs, forums, or social posts. Platform terms change — always verify the current version before relying on it.",
+      "sources": [
+        {
+          "name": "OpenAI Terms of Use (US; EEA/Switzerland/UK residents have separate terms)",
+          "url": "https://openai.com/policies/terms-of-use",
+          "date": "Checked 25 September 2026",
+          "note": "Effective January 1, 2026"
+        },
+        {
+          "name": "Adobe Generative AI User Guidelines",
+          "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
+          "date": "Last reviewed September 2026",
+          "note": "Verify before relying"
+        },
+        {
+          "name": "Midjourney Terms of Service",
+          "url": "https://docs.midjourney.com/docs/terms-of-service",
+          "date": "Last reviewed September 2026",
+          "note": "Verify before relying"
+        },
+        {
+          "name": "Google Terms of Service",
+          "url": "https://policies.google.com/terms",
+          "date": "Last reviewed September 2026",
+          "note": "Pending full review"
+        },
+        {
+          "name": "Anthropic Consumer Terms of Service",
+          "url": "https://www.anthropic.com/legal/consumer-terms",
+          "date": "Checked 25 September 2026",
+          "note": "Effective October 8, 2025"
+        },
+        {
+          "name": "Etsy Creativity Standards",
+          "url": "https://www.etsy.com/legal/creativity",
+          "date": "Checked 25 September 2026",
+          "note": "Last updated June 10, 2025"
+        },
+        {
+          "name": "U.S. Copyright Office — Copyright and AI, Part 2: Copyrightability",
+          "url": "https://www.copyright.gov",
+          "date": "January 2025 report"
+        }
+      ],
+      "closing": {
+        "label": "VERSION 1.1 — SEPTEMBER 2026",
+        "text": "This is an independent educational resource. It is not affiliated with, sponsored by, or endorsed by OpenAI, Adobe, Midjourney, Google, Anthropic, or Etsy. It does not constitute legal advice."
+      }
+    }
+  ]
+}
