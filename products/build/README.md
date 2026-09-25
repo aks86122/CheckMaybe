@@ -11,3 +11,7 @@ Every CheckMaybe toolkit PDF is generated from a content JSON file with this sha
 | `build.sh <name>` | Full build: `<name>.json` → `<name>.pdf`, QA report, page PNGs, contact sheet |
 
 New product: write `<name>.json` following `SCHEMA.md`, run `./build.sh <name>`, fix anything the report flags, then review the rendered pages visually before release.
+
+## Listing images
+
+`mk.py` + `shot.mjs` generate three 1280×720 listing images per product (exported at 2×, 2560×1440): cover, preview (4 interior pages) and featured (one page with numbered callouts). They reuse the product's own page renders (`mk/<name>-pNN.png`, 160 dpi from the built PDF). `pos.mjs` returns element positions on a page so callout markers can be placed precisely. Add a product entry to `PRODUCTS` in `mk.py`, then run `python3 mk.py && node shot.mjs`.
