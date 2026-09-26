@@ -1,5 +1,41 @@
 # Beacons 頁面文案 v2：長頁面版（2026-09-26）
 
+# 最終排法（2026-09-26，以此為準）
+
+三個分頁：**HOME**（新訪客：認識你、領免費工具）｜**TOOLKITS**（想買的人：看產品）｜**中文**（台灣受眾）。
+下方「區塊 1–9」是文案本身；這裡是每頁要放哪些區塊。
+
+## HOME
+1. Header — CheckMaybe + 短簡介
+2. Scrolling text — Check before you sell ✦ Official sources, no guesswork ✦ Decision toolkits for creators ✦
+3. Text — 區塊 1 開場
+4. Text — 區塊 2 Sound familiar?
+5. Digital products — 只放免費 5-Minute Pre-Publish Audit（$0）
+6. Text — 區塊 7 Who’s behind CheckMaybe
+7. Links — See all toolkits →（TOOLKITS 分頁）、Instagram、Threads
+8. Text — 區塊 9 頁尾
+
+## TOOLKITS
+1. Text — Pick the toolkit that matches your question.
+2. Digital products — 免費 Audit
+3. Text — Decision toolkits
+4. Digital products — Can I Sell This? / Can I Use This? / Can I Resell This?
+5. Image（可選）— 任一本 preview.png
+6. Text — 區塊 6 What’s inside
+7. Text — 區塊 5 Who is CheckMaybe for?
+8. Text — 區塊 9 頁尾
+
+## 中文
+1. Text — 中文分頁文案（本檔最下方）
+2. Digital products — 免費 Audit（註明內容為英文）
+3. Digital products — 三本工具包
+4. Text — 中文免責聲明
+
+免費工具：在 Beacons Products 上架為 $0 數位商品，訪客留 Email 即可下載，Email 會進 Audience 名單；不需另設 Email 表單。
+
+---
+
+
 參考了一個長頁面的「結構」：短句置中、先痛點後解法、誰適合、目錄圖、創辦人是誰、免費領取表單、產品卡、頁尾說明。
 沒有沿用對方的內容，也沒有沿用收入數字或佣金比例這類賣點。
 英文為主（海外受眾），另外有一個「中文」分頁給台灣受眾。
@@ -51,7 +87,7 @@ a refund request, or a closed shop.
 
 ---
 
-## 區塊 3：免費領取表單（Beacons Email 表單，等免費工具做好再開）
+## 區塊 3：（已改用 $0 商品取代 Email 表單，見最上方）
 
 **圖片：** 免費工具封面
 **標題：** Free: The 5-Minute Pre-Publish Audit
