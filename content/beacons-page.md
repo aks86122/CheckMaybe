@@ -1,60 +1,169 @@
-# Beacons 頁面文案（2026-09-26）
+# Beacons 頁面文案 v2：長頁面版（2026-09-26）
 
-照 Beacons 頁面由上到下的順序排列。英文為主（目標：海外受眾），台灣身分放在簡介。
-原則：不寫收入承諾、不寫「保證」、不點名其他賣家。
-
----
-
-## 1. 頭像下方
-
-**Name（名稱）**
-CheckMaybe
-
-**Bio（簡介，約 150 字元內）**
-Check before you sell. 🔍
-Simple decision toolkits for creators who sell Canva, AI & digital products.
-By a creator in Taiwan 🇹🇼
-
-（中文備用版，如果想加一行給台灣受眾）
-上架前先確認：給數位創作者的授權檢查工具包
+參考了一個長頁面的「結構」：短句置中、先痛點後解法、誰適合、目錄圖、創辦人是誰、免費領取表單、產品卡、頁尾說明。
+沒有沿用對方的內容，也沒有沿用收入數字或佣金比例這類賣點。
+英文為主（海外受眾），另外有一個「中文」分頁給台灣受眾。
+**【 】裡的內容請換成你自己的真實經歷**，不要用我編的故事。
 
 ---
 
-## 2. 區塊標題：Start here
-
-**Text block（文字區塊）**
-Not sure if you can sell it? Each toolkit gives you a first-pass signal (GREEN-LEANING, AMBER or RED), the reason, and the official source, so you can check before you list.
-
----
-
-## 3. 區塊標題：Decision toolkits
-
-| 按鈕標題 | 副標（一行） |
-| --- | --- |
-| Can I Sell This? — for Canva Sellers | Check Canva licence rules before you list a template, printable or POD design. |
-| Can I Use This? — AI Content Toolkit | Five checks before you sell anything made with AI. |
-| Can I Resell This? — Buyer’s Checklist *(上架後再加)* | Check a resell-rights pack before you buy it, and again before you list anything from it. |
-
-（之後做好免費工具，放在這一區最上面）
-| Free: 5-Minute Pre-Publish Audit | A one-page check to run before every listing. Free. |
+## 頁首
+- **名稱：** CheckMaybe
+- **社群圖示：** Instagram、Threads
+- **分頁（Tabs）：** HOME ｜ TOOLKITS ｜ 中文
 
 ---
 
-## 4. 區塊標題：Follow
+# HOME 分頁
 
-- Threads → @checkmaybetw
-- Instagram → @checkmaybetw
+## 區塊 1：開場（文字區塊，置中、一句一行）
+
+Hi, I’m **【你的名字或暱稱】** 👋
+
+You made something in Canva.
+Or with AI.
+Or you bought a pack with “resell rights”.
+
+**Then the question hits:**
+**Can I actually sell this?**
+
+The answer is buried in licence pages,
+platform rules and fine print
+that change without notice.
+
+So I built **CheckMaybe**:
+simple toolkits that show you
+what to check *before* you list,
+with the official source for every answer.
 
 ---
 
-## 5. 頁尾小字（Text block）
+## 區塊 2：常見問題（文字區塊，標題加粗）
 
-Educational information, not legal advice. Independent resource, not affiliated with Canva, Etsy, Gumroad or any AI provider. Always confirm the current official terms.
+**Sound familiar?**
+
+▪ **You used a Canva template.** Can you sell the printable?
+▪ **You made it with AI.** Who owns the output, and do you need to disclose it?
+▪ **You bought a resell-rights pack.** Does the licence actually let you list it on Gumroad or Etsy?
+
+One wrong listing can mean a takedown,
+a refund request, or a closed shop.
 
 ---
 
-## 放置建議
-1. 產品按鈕最多 3–4 個。太多選擇會讓人什麼都不點（參考商店 A：30 個商品，有評價的只有 5 個）。
-2. 最常被問的產品放第一個；目前是 Can I Sell This?。
-3. 每個按鈕副標都從「買家的問題」開頭，不要從「產品有多厲害」開頭。
-4. 貼文連結用 UTM（見 `content/utm-links.md`），就能看出流量是從哪個平台來的。
+## 區塊 3：免費領取表單（Beacons Email 表單，等免費工具做好再開）
+
+**圖片：** 免費工具封面
+**標題：** Free: The 5-Minute Pre-Publish Audit
+**副標：** Five questions to run before every listing. No spam, unsubscribe anytime.
+**欄位：** First Name、Email
+**按鈕：** Send me the checklist
+
+---
+
+## 區塊 4：產品卡（Beacons 商品區塊）
+
+| 標題 | 副標 | 價格 | 按鈕 |
+| --- | --- | --- | --- |
+| Can I Sell This? | A Commercial Use Toolkit for Canva Sellers | $15 | Get the toolkit |
+| Can I Use This? | AI Content Commercial Use Toolkit | $15 | Get the toolkit |
+| Can I Resell This? *(上架後再加)* | A Buyer’s Checklist Before You Buy Resell Rights | $15 | Get the checklist |
+
+---
+
+## 區塊 5：Who it’s for（標題 + 4 組短句）
+
+**Who is CheckMaybe for?**
+
+▪ **Etsy & Gumroad sellers**
+You sell printables, templates or planners and want to know the rules before you list.
+
+▪ **Print-on-demand shops**
+You put designs on mugs and T-shirts and need to know what the licence covers.
+
+▪ **Creators using AI**
+You make content with AI tools and want a clear routine instead of guesswork.
+
+▪ **Anyone about to buy a “resell rights” pack**
+You want to check what you’re really getting before you pay.
+
+---
+
+## 區塊 6：What’s inside（產品內頁拼貼圖 + 短句）
+
+**圖片：** 用現成的預覽圖（products/images/*-preview.png）
+
+**Every toolkit gives you:**
+✔ A traffic-light signal: GREEN-LEANING, AMBER or RED
+✔ The reason, in plain English
+✔ The official clause it comes from, with dates
+✔ “What could change this”, so you know when to re-check
+✔ Checklists and worksheets to keep a record
+
+---
+
+## 區塊 7：Who’s behind CheckMaybe?（創辦人區塊）
+
+**Who’s behind CheckMaybe?**
+
+I’m **【名字】**, a creator in Taiwan 🇹🇼
+【一句你的背景，例如：我自己也在賣數位產品／做內容幾年了】
+
+I kept seeing creators lose listings
+over rules nobody explained clearly.
+
+So I read the official terms,
+saved every source,
+and turned them into checklists
+anyone can follow.
+
+**No hype. No income promises.**
+**Just: check first, then sell.**
+
+---
+
+## 區塊 8：聯絡（連結按鈕）
+
+**Questions?**
+Message me on Instagram. I reply myself.
+**按鈕：** DM me on Instagram → instagram.com/checkmaybetw
+
+---
+
+## 區塊 9：頁尾小字
+
+Educational information, not legal advice. CheckMaybe is an independent resource, not affiliated with Canva, Etsy, Gumroad, Beacons or any AI provider. Rules change: always confirm the current official terms. Digital downloads: see the refund policy on the checkout page.
+
+---
+
+# 中文 分頁（給台灣受眾，短版）
+
+嗨，我是 **【名字】** 👋
+
+用 Canva 做了模板，
+用 AI 生了圖，
+或買了一包「可轉售」的素材……
+
+**到底能不能拿去賣？**
+
+CheckMaybe 把官方條款整理成檢查清單，
+上架前先確認，
+每個答案都附官方出處。
+
+▪ Can I Sell This?：Canva 商用授權
+▪ Can I Use This?：AI 內容商用
+▪ Can I Resell This?：買轉售權之前先檢查
+
+（工具包內容為英文）
+
+**不保證賺錢，只幫你少踩雷。**
+
+教育資訊，非法律建議。與 Canva、Etsy、Gumroad、Beacons 等平台無關聯。
+
+---
+
+## 設定備註
+1. **退款說明先不寫法條。** 對方頁面引用了《消費者保護法》第 19 條的數位內容例外。要引用的話，先把官方條文存檔給團隊核對，再決定怎麼寫。
+2. **Email 表單。** 用 Beacons Email 前，先看 Beacons Email Marketing 規範（sources 已存）：只寄給自己收集到的名單、不買名單。
+3. **分頁數。** 頁首分頁最多 3 個；產品卡最多 3–4 張。
+4. **照片。** 對方用本人照片當頁首。你想不露臉的話，可以用 CheckMaybe 的 logo，或產品封面拼貼。
