@@ -8,13 +8,15 @@ All three CheckMaybe decision toolkits in one bundle: Canva licences, AI content
 
 ## Description (Gumroad)
 
-**Three questions. One bundle.**
+**You sell digital products. Some you design in Canva, some you make with AI, and sometimes a “resell rights” pack looks like a shortcut.**
+
+Each comes with its own rulebook: Canva’s licence, the AI tool’s terms, the licence of the pack you bought, and on top of all three, the rules of the platform you sell on. Checking one isn’t checking all of them.
 
 Can I sell what I made in Canva?
 Can I sell what I made with AI?
 Can I resell the pack I just bought?
 
-Each question has its own rules, from its own sources. This bundle gives you all three CheckMaybe toolkits, so you can check before you list, whatever you made and however you made it.
+This bundle gives you all three CheckMaybe toolkits, so whatever you made and however you made it, you know what to check before you list.
 
 **What’s included**
 - **Can I Sell This? — A Commercial Use Toolkit for Canva Sellers** (27 pages, v3.1). Canva content labels, finished vs editable, templates, print-on-demand, client work and 20 seller scenarios.
@@ -52,7 +54,7 @@ Format: 4 PDFs (81 pages + 6-page bonus), A4. Instant download.
 The Complete Toolkit Bundle (3 Toolkits + Bonus)
 
 ## Description
-**Three questions. One bundle.**
+**Canva, AI, resell rights: three rulebooks, and your platform’s rules on top.**
 Can I sell what I made in Canva? Can I sell what I made with AI? Can I resell the pack I just bought?
 
 ✔ Can I Sell This? — Canva commercial use (27 pages)

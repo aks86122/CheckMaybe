@@ -8,11 +8,13 @@ A 27-page PDF decision guide for selling products you designed in Canva: check t
 
 ## Description
 
-**You designed it in Canva. Can you sell it?**
+**Your Canva design is finished. The listing is ready. Then one question stops you: can you actually sell this?**
 
-It depends on what you used and what the buyer gets. A finished PDF, a printed mug, an editable template and a client logo are four different licensing situations. Mix one Pro element, one Education item or one Branded graphic into a design, and the rules for the whole design can change.
+You used a template, a few Pro elements, maybe a photo from Canva’s library. The answer is somewhere in Canva’s licence, but you don’t have an afternoon to read it, and you don’t want to find out from a takedown.
 
-**Can I Sell This?** gives you a first-pass signal for your product (GREEN-LEANING, AMBER or RED), the reason behind it, and the official clause it comes from, so you can fix problems before you list instead of after a takedown.
+It isn’t one answer, either. A finished PDF, a printed mug, an editable template and a client logo are four different licensing situations, and one Pro, Education or Branded element can change the rules for the whole design.
+
+**Can I Sell This?** gives you a first-pass signal for your product (GREEN-LEANING, AMBER or RED), the reason behind it and the official clause it comes from, so you can fix problems before you list instead of after.
 
 **What’s inside (27 pages)**
 - **The 5-minute pre-publish audit**: five questions to run on every product.

@@ -8,7 +8,9 @@ A 22-page PDF checklist for anyone about to buy a pack with “resell rights”:
 
 ## Description
 
-**The pack says “resell rights”. Does that mean you can sell it?**
+**The sales page says “resell rights”. You’re one click away from buying.**
+
+Before you pay, ask one thing: will you actually be allowed to sell what’s inside, where you plan to sell it?
 
 Not always. The licence you actually receive, the rules of the platform you sell on, and the content inside the pack are three separate checks. A pack can pass one and fail the others: some platforms name these products in their prohibited lists, and a Canva graphic, stock photo or brand logo inside the pack comes with its own terms.
 
@@ -45,9 +47,9 @@ Format: PDF, 22 pages, A4. Instant download.
 Can I Resell This? — A Buyer’s Checklist Before You Buy Resell Rights
 
 ## Description
-**The pack says “resell rights”. Does that mean you can sell it?**
+**The sales page says “resell rights”. You’re one click away from buying.**
 
-Not always. The licence you receive, the platform’s rules and the content inside the pack are three separate checks.
+Will you actually be allowed to sell what’s inside? Not always. The licence you receive, the platform’s rules and the content inside the pack are three separate checks.
 
 This 22-page checklist walks you through them before you buy, and again before you list:
 ✔ 7 questions to ask before you pay

@@ -8,9 +8,11 @@ A 32-page PDF decision guide for creators who sell things made with AI: what to 
 
 ## Description
 
-**You made it with AI. Can you sell it?**
+**You made the cover with AI. Or the illustrations. Or half the ebook. Now you want to sell it, or hand it to a client.**
 
-That isn’t one question. It’s five: what the AI provider allows, what rights it gives you in the output, whether the output is protected by copyright, whether it could infringe someone else’s rights, and what your marketplace requires you to disclose. Each one has a different answer, from a different source.
+That’s when the questions start. Does your AI plan allow commercial use? What rights do you have in the output? Does your marketplace want you to say it’s AI? Could it look too much like someone else’s work? Most creators guess, and hope nobody asks.
+
+Those are five separate questions: what the provider allows, what rights it gives you in the output, whether the output is protected by copyright, whether it could infringe someone else’s rights, and what your marketplace requires you to disclose. Each has a different answer, from a different source.
 
 **Can I Use This?** walks you through all five before you list an AI-assisted ebook, printable, print-on-demand design, logo or client project.
 
