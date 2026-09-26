@@ -286,28 +286,31 @@
    "kicker": "06 · CLAIMS & DISCLOSURE",
    "tag": "CLAIMS & DISCLOSURE",
    "title": "Income screenshots, testimonials and disclosure",
-   "lead": "Three US FTC topics matter here but have not yet been checked against official FTC pages, so they are marked VERIFY. This guide makes no income claims.",
+   "lead": "FTC pages saved 26 Sep 2026. US rules; other countries differ. FTC staff guidance “can’t be definitive”. No income claims; no business model judged.",
    "cards": [
     {
-     "label": "US FTC · ENDORSEMENT DISCLOSURE",
-     "signal": "VERIFY",
-     "signal_label": "VERIFY BEFORE RELYING",
-     "text": "The US Federal Trade Commission has guidance on endorsements, including disclosing a paid or commission relationship such as an affiliate link. This edition has not checked the official FTC text, so no wording, section or date is given here.",
-     "note": "VERIFY BEFORE RELYING — official FTC page not yet checked"
+     "label": "US FTC · AFFILIATE DISCLOSURE",
+     "signal": "AMBER",
+     "signal_label": "AMBER · DISCLOSE CLEARLY",
+     "text": "Affiliates “should disclose your relationship to the retailer clearly and conspicuously”. “The closer the disclosure is to your recommendation, the better.” In a post’s comments it is “easily avoidable and thus not clear and conspicuous”.",
+     "source": "FTC, Endorsement Guides: What People Are Asking (June 2023)",
+     "note": "BEFORE POSTING — A video description alone is “not enough on its own”; a hyperlinked disclosure is “easily avoidable”."
     },
     {
-     "label": "US FTC · FAKE OR MISLEADING TESTIMONIALS",
-     "signal": "VERIFY",
-     "signal_label": "VERIFY BEFORE RELYING",
-     "text": "The FTC also has rules on fake or misleading reviews and testimonials. Reusing a seller’s testimonials, or presenting other people’s results as your customers’, may be relevant. Not yet checked against the official FTC text.",
-     "note": "VERIFY BEFORE RELYING — official FTC page not yet checked"
+     "label": "US FTC · FAKE OR FALSE TESTIMONIALS",
+     "signal": "RED",
+     "signal_label": "RED · FAKE OR FALSE",
+     "text": "The rule “went into effect on October 21, 2024” and “authorizes courts to impose civil penalties for knowing violations”. A business that puts testimonials on its own website “is disseminating them”: “If those testimonials are fake or false, the business could be liable.”",
+     "source": "FTC, Consumer Reviews and Testimonials Rule: Q&A (November 2024)",
+     "note": "BEFORE POSTING — Never present a seller’s testimonials or results as your own customers’."
     },
     {
-     "label": "US FTC · EARNINGS CLAIMS",
+     "label": "US FTC · EARNINGS & RESULTS CLAIMS",
      "signal": "VERIFY",
-     "signal_label": "VERIFY BEFORE RELYING",
-     "text": "An FTC Earnings Claim Rule has been proposed. This edition has not checked its current status, or any other FTC rule on earnings claims, against official FTC text. Check the current FTC position before you make any income statement.",
-     "note": "VERIFY BEFORE RELYING — official FTC page not yet checked"
+     "signal_label": "VERIFY · RULE STATUS",
+     "text": "On January 13, 2025 the FTC proposed an Earnings Claim Rule and Business Opportunity Rule changes, noting “deceptive earnings claims are already illegal”. Endorsed results usually read as what “others can also expect”.",
+     "source": "FTC press release (Jan 13, 2025) · Endorsement Guides Q&A (June 2023)",
+     "note": "VERIFY BEFORE RELYING — proposed in January 2025; check its current status."
     },
     {
      "label": "PLATFORM RULES · INCOME SCREENSHOTS",
@@ -460,7 +463,7 @@
       "Is the course mainly about earning by promoting it?",
       "How many commission levels are there?",
       "Must you buy before you can promote?",
-      "Commission disclosed (FTC — VERIFY)"
+      "Commission disclosed clearly, next to the link?"
      ],
      "change": "GREEN-LEANING for an ordinary product, clearly disclosed. RED if the offer falls in Beacons’ prohibited list."
     }
@@ -477,15 +480,15 @@
      "title": "Reuse the seller’s income screenshots",
      "signal": "RED",
      "signal_label": "RED · HIGH CONCERN",
-     "why": "They show someone else’s results, not yours or what a buyer can expect. Gumroad lists “deceptive marketing practices”; FTC rules are relevant (VERIFY).",
+     "why": "They show someone else’s results, not yours or what a buyer can expect. Gumroad lists “deceptive marketing practices”; FTC staff say results claims usually read as what “others can also expect”.",
      "checks": [
       "Provided for you to use, in writing?",
       "Would viewers think they’re your results?",
       "Can you prove every figure you show?",
       "Are typical results stated?",
-      "FTC earnings and testimonial rules — VERIFY"
+      "FTC testimonial and results points (page 8)?"
      ],
-     "change": "Use no income figures. If you must, show only your own verifiable records, after checking the FTC pages (VERIFY)."
+     "change": "Use no income figures. If you must, show only your own verifiable records, after checking page 8 (FTC earnings-rule status: VERIFY)."
     },
     {
      "title": "A Canva template pack with “full resell rights”",
@@ -625,7 +628,7 @@
     "I know every Canva, AI, stock, music and font asset inside, and its terms.",
     "No brand logos, recognisable people or characters I don’t have rights to.",
     "No income figures or screenshots I can’t prove from my own records.",
-    "Any affiliate relationship is clearly disclosed (FTC — VERIFY).",
+    "Any affiliate relationship is disclosed clearly and conspicuously, near the link — not only in comments or behind a hyperlink.",
     "My listing tells buyers exactly what rights they get — and don’t get.",
     "I filled in the worksheets (pages 18–19)."
    ]
@@ -713,7 +716,7 @@
    "kicker": "10 · SOURCES",
    "tag": "SOURCES",
    "title": "Sources & update note",
-   "lead": "Quotes come from founder-saved copies of the official pages below. Rules change, sometimes without notice: re-check each page before you buy or list.",
+   "lead": "From founder-saved official pages. Rules change without notice: re-check.",
    "sources": [
     {
      "name": "Gumroad — Prohibited Products and Activities",
@@ -752,20 +755,30 @@
      "note": "Effective October 8, 2025"
     },
     {
-     "name": "US Federal Trade Commission — endorsements, testimonials, earnings claims",
-     "url": "https://www.ftc.gov",
-     "date": "To be verified",
-     "note": "Not yet checked against official text. Earnings Claim Rule: proposed; current status not checked."
+     "name": "US FTC — Endorsement Guides: What People Are Asking",
+     "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+     "date": "Saved 26 September 2026",
+     "note": "Page dated June 2023. Staff guidance"
+    },
+    {
+     "name": "US FTC — Consumer Reviews and Testimonials Rule: Q&A",
+     "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+     "date": "Saved 26 September 2026",
+     "note": "Page dated November 2024. Rule in effect October 21, 2024"
+    },
+    {
+     "name": "US FTC — press release, proposed earnings-claim rules",
+     "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-proposes-rule-changes-new-rule-deter-deceptive-earnings-claims-multilevel-marketers-money-making",
+     "date": "Saved 26 September 2026",
+     "note": "Jan 13, 2025 · proposed only; current status: VERIFY"
     }
    ],
    "notes": [
-    "Quotes are word for word; only quotation marks and apostrophes are set in curly style.",
-    "Where a rule could be read more than one way, this guide follows the stricter reading.",
-    "Not covered: other platforms’ rules, payment-provider rules, and any country’s laws (US FTC topics are marked VERIFY)."
+    "Quotes are verbatim (only quote marks and apostrophes set curly); unclear rules get the stricter reading. Not covered: other platforms’ or payment rules, non-FTC law. US rules; other countries differ."
    ],
    "closing": {
     "label": "VERSION 1.0 · CHECKMAYBE",
-    "text": "Independent educational resource. Not affiliated with, sponsored or endorsed by Gumroad, Beacons, Etsy, Canva, OpenAI, Anthropic or the FTC. Not legal advice. Personal use only: this guide grants no resale, PLR or MRR rights."
+    "text": "Independent educational resource, not affiliated with or endorsed by any company or agency named. Not legal advice. Personal use only: grants no resale, PLR or MRR rights."
    }
   }
  ]

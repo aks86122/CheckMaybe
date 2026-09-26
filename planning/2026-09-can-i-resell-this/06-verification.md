@@ -161,3 +161,47 @@ JSON 修改：共 11 個字串（10 項修正），`python3 -c "import json;json
 3. **結構**：模板要求 15–20 個情境，本稿只有 14 個。要補一個，或由創辦人決定這次破例。
 4. **上架決策**：03 判定為 HOLD，必要修正第 2 點是「不在現有 Gumroad 帳號新增含 PLR／MRR 字樣的商品」。本產品的副標就含 “PLR, MRR”，上架與否、在哪個帳號上架，要由創辦人決定。
 5. 下一步（模板第 5 步）：內容創作者依本報告產出 `07-revision.md`，渲染後確認 p6、p7 沒有溢出版面。
+
+---
+
+## FTC 更新（2026-09-26）
+
+- 證據（只用這三份官方存檔，都在 scratchpad `ftc/`）：
+  - `1d955b08.txt`：FTC’s Endorsement Guides: What People Are Asking（https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking），頁面日期 June 2023，存檔 2026-09-26。
+  - `reviews-qa.txt`：The Consumer Reviews and Testimonials Rule: Questions and Answers（https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers），頁面日期 November 2024，抓取 2026-09-26。
+  - `8b500782.txt`：FTC 新聞稿，January 13, 2025（存檔裡**沒有完整網址**，Sources 頁暫寫 “full link not in saved copy”）。
+  - `a7cc305a.txt`、`ab481b7c.txt`（搜尋結果頁）和 `f2e62727.txt`（索引頁）都沒有引用。
+- 方法：把 JSON 裡 p8 三張 FTC 卡、情境 8／9、檢查清單和 Sources 頁的每一段 “…” 引文抽出來。存檔裡的亂碼（`���`）和彎／直引號都視為同一個字元，再對存檔做全文比對，**11 段全部逐字找到**。頁面日期（June 2023、November 2024、January 13, 2025）也在存檔中找到。
+- 範圍：只寫美國規則，p8 lead 寫明 “US rules; other countries differ”。不對任何商業模式、MLM 或金字塔下結論，沒有收入宣稱，沒有點名賣家。
+- Build：`./build.sh resell-v1.0` 的結果是 failing=0。p8 zoom 0.9；p21 zoom 0.88。
+
+| # | 位置 | 新句子／引文 | 燈號 | 狀態 | 存檔片段 |
+| --- | --- | --- | --- | --- | --- |
+| F5 | p8 lead | “can’t be definitive”；US rules; other countries differ | — | ✅ | 1d955b08：`Our staff guidance can’t be definitive because the context…` |
+| F6 | p8 卡 1 | Affiliates “should disclose your relationship to the retailer clearly and conspicuously” | AMBER · DISCLOSE CLEARLY | ✅ | 1d955b08（What About Affiliate or Network Marketing?）：`You should disclose your relationship to the retailer clearly and conspicuously on your site…` |
+| F7 | p8 卡 1 | “The closer the disclosure is to your recommendation, the better.” | 同上 | ✅ | 同一段：`As for where to place a disclosure, the guiding principle is that it has to be clear and conspicuous. The closer the disclosure is to your recommendation, the better.` |
+| F8 | p8 卡 1 | 貼文留言區的揭露 “easily avoidable and thus not clear and conspicuous” | 同上 | ✅ | `A disclosure in the comments to a post is easily avoidable and thus not clear and conspicuous.` |
+| F9 | p8 卡 1 note | 影片說明欄 “not enough on its own”；超連結式揭露 “easily avoidable” | 同上 | ✅ | YouTube 說明欄：`You can, but that’s not enough on its own…`；`A hyperlinked disclosure like that is easily avoidable…` |
+| F10 | p8 卡 2 | 規則 “went into effect on October 21, 2024”，並 “authorizes courts to impose civil penalties for knowing violations” | RED · FAKE OR FALSE | ✅ | reviews-qa 第一段原文 |
+| F11 | p8 卡 2 | 在自己網站放見證的商家 “is disseminating them”；“If those testimonials are fake or false, the business could be liable.” | 同上 | ✅ | `A business that puts testimonials on its own website is disseminating them and is not merely “hosting” them. If those testimonials are fake or false, the business could be liable.` 引文保留了 “could be” |
+| F12 | p8 卡 3 | FTC 在 January 13, 2025 **提議**（proposed）新的 Earnings Claim Rule 和 Business Opportunity Rule 修正 | VERIFY · RULE STATUS | ✅（提議這件事） | 8b500782：`January 13, 2025`；`…seeking comment on proposed changes to the Business Opportunity Rule and a proposed new Earnings Claim Rule…` |
+| F13 | p8 卡 3 | “deceptive earnings claims are already illegal” | 同上 | ✅ | `While deceptive earnings claims are already illegal, the proposed changes…` |
+| F14 | p8 卡 3、情境 9 why | 背書中的成果通常會被解讀為 “others can also expect” | 同上／RED（情境 9 不變） | ✅ | 1d955b08：`Endorsements claiming specific results usually will be interpreted to mean that the endorser’s experience reflects what others can also expect.` 保留了 “usually” |
+| F15 | p8 卡 3 note、情境 9 change、p21 | 兩條規則**現在的狀態**（已定案、撤回或仍在提議中） | VERIFY | ❓ 仍待確認 | 新聞稿只能證明 2025-01-13 提出，**不能**證明現況。文案寫 “proposed in January 2025; check its current status.” |
+| F16 | 情境 8 checks | “Commission disclosed clearly, next to the link?” | AMBER（不變） | ✅ | 依據 F6／F7 |
+| F17 | p17 清單 | “disclosed clearly and conspicuously, near the link — not only in comments or behind a hyperlink” | — | ✅ | 依據 F6–F9 |
+| F18 | p21 Sources | FTC 拆成 3 筆，每筆有名稱、網址、`Saved 26 September 2026`、頁面日期；notes 裡的「FTC topics are VERIFY」改成只把 Earnings Claim Rule 的狀態標 VERIFY | — | ✅（新聞稿網址 ❓） | 見上方證據清單 |
+
+原本的 F1、F2（背書、假評論標 VERIFY）已經被 F6–F11 取代。F3（Earnings Claim Rule 現況）縮小為 F15，**只剩「現況」這一點是 VERIFY**。
+
+**為了版面而改短的文字（意思不變）**
+
+- p21 lead 改成 “From founder-saved official pages. Rules change without notice: re-check.”
+- p21 兩行 notes 合成一行（仍保留「只有引號和撇號改成彎引號」「採較嚴格解讀」「US rules; other countries differ」）。
+- p8 卡 3 刪掉了 “Results not typical” 那句引文。
+
+**需要創辦人處理**
+
+1. 補上 2025-01-13 新聞稿的完整網址（存檔裡沒有）。
+2. 如果要把 F15 從 VERIFY 升級，要再存一份能說明規則現況的 FTC 官方頁面。
+3. 決定要不要把 “Results not typical” 的原文放回某個情境。
