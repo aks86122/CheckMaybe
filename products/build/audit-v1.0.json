@@ -1,0 +1,184 @@
+{
+ "meta": {
+  "product": "The 5-Minute Pre-Publish Audit",
+  "subtitle": "A Free Checklist for Digital Product Sellers",
+  "footer": "THE 5-MINUTE PRE-PUBLISH AUDIT — A FREE CHECKLIST FOR DIGITAL PRODUCT SELLERS · CHECKMAYBE",
+  "version": "1.0"
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "kicker": "CHECKMAYBE",
+   "tag": "FREE · VERSION 1.0",
+   "topline": "INDEPENDENT EDUCATIONAL RESOURCE — NOT AFFILIATED WITH ANY PLATFORM NAMED",
+   "title": "The 5-Minute Pre-Publish Audit",
+   "subtitle": "A Free Checklist for Digital Product Sellers",
+   "value": "Five questions to run before you list any template, printable, ebook or AI-assisted product.",
+   "quote": "Check first, then list.",
+   "steps": [
+    "WHAT WENT IN",
+    "WHICH LICENCE",
+    "WHAT YOU SELL",
+    "WHERE + DISCLOSE"
+   ],
+   "inside": [
+    "THE 5 QUESTIONS",
+    "RED FLAGS",
+    "ONE-PAGE RECORD",
+    "WHERE TO GO DEEPER"
+   ],
+   "legal": [
+    "VERSION 1.0 · CHECKMAYBE · EDUCATIONAL INFORMATION — NOT LEGAL ADVICE",
+    "FREE FOR PERSONAL USE — PLEASE SHARE THE LINK, NOT THE FILE",
+    "PLATFORM NAMES ARE TRADEMARKS OF THEIR RESPECTIVE OWNERS"
+   ]
+  },
+  {
+   "type": "steps",
+   "kicker": "01 · THE AUDIT",
+   "tag": "5 QUESTIONS",
+   "title": "The five questions",
+   "lead": "Run these on every product, before every listing. If you can’t answer one, stop there: that is the part to check.",
+   "style": "numbered",
+   "steps": [
+    {
+     "title": "What went into it?",
+     "text": "List every piece: templates, library graphics, photos, fonts, music, AI output, and anything from a PLR or resell-rights pack."
+    },
+    {
+     "title": "Which licence covers each piece?",
+     "text": "Find the written licence or terms for each one. Save the page and the date you checked it. A sales-page promise is not a licence."
+    },
+    {
+     "title": "What exactly am I selling?",
+     "text": "A finished file, an editable template, a printed item or resale rights? Each is a different use, and licences often treat them differently."
+    },
+    {
+     "title": "Where will I sell it?",
+     "text": "Etsy, Gumroad, Beacons and your own site each have their own rules, on top of the licences. Read the rules of the place you list."
+    },
+    {
+     "title": "What must I disclose?",
+     "text": "AI use, a production partner or an affiliate link may need to be disclosed. Check what your platform and your country require."
+    }
+   ],
+   "legend": [
+    {
+     "signal": "GREEN",
+     "label": "GREEN-LEANING",
+     "text": "All five answered, in writing, and they fit together"
+    },
+    {
+     "signal": "AMBER",
+     "label": "AMBER",
+     "text": "One answer depends on a condition you still need to check"
+    },
+    {
+     "signal": "RED",
+     "label": "RED",
+     "text": "A licence or platform rule says no: don’t list it"
+    }
+   ],
+   "callout": {
+    "label": "FAST RULE",
+    "text": "The most restrictive piece sets the rule for the whole product. One unlicensed photo can block an otherwise clean listing.",
+    "tone": "dark"
+   }
+  },
+  {
+   "type": "list",
+   "kicker": "02 · RED FLAGS",
+   "tag": "RED FLAGS",
+   "title": "Stop and check if you see any of these",
+   "lead": "A red flag doesn’t prove you can’t sell it. It means you don’t yet have enough to decide.",
+   "style": "redflags",
+   "items": [
+    "You can’t say where a graphic, photo or font came from.",
+    "The only “licence” is a line on a sales page or in a DM.",
+    "You’re reselling a template or library graphic without real changes of your own.",
+    "The product shows brand logos, characters or a real person’s likeness.",
+    "You bought it with “resell rights” but never saw the licence text.",
+    "“No watermark” or “royalty-free” is being treated as permission to resell.",
+    "AI output you haven’t checked for lookalikes of existing work.",
+    "Your listing uses income figures or testimonials you can’t prove.",
+    "The platform you plan to use has rules you haven’t read."
+   ],
+   "callout": {
+    "label": "ETSY EXAMPLE",
+    "text": "Etsy’s Creativity Standards say “A bundle, collection, scan, or PDF of someone else’s work” does not qualify as a seller’s own design, and “Sellers must disclose within their listing description if an item is created with the use of AI.”",
+    "tone": "red"
+   }
+  },
+  {
+   "type": "worksheet",
+   "kicker": "03 · RECORD",
+   "tag": "RECORD",
+   "title": "One-page product record",
+   "lead": "Fill one row per piece that went into the product. Keep it with your files: it’s your proof of what you checked, and when.",
+   "layout": "table",
+   "columns": [
+    "PIECE USED",
+    "WHERE IT CAME FROM",
+    "LICENCE / RULE (LINK)",
+    "DATE CHECKED",
+    "SIGNAL + ACTION"
+   ],
+   "rows": 12
+  },
+  {
+   "type": "cards",
+   "kicker": "04 · GO DEEPER",
+   "tag": "NEXT STEP",
+   "title": "When the five questions aren’t enough",
+   "lead": "Each CheckMaybe toolkit takes one of these questions further, with scenarios, signals and the official source for every answer.",
+   "cards": [
+    {
+     "label": "MADE IT IN CANVA?",
+     "title": "Can I Sell This?",
+     "text": "A Commercial Use Toolkit for Canva Sellers: content labels, finished vs editable, templates, print-on-demand, client work and 20 real seller scenarios."
+    },
+    {
+     "label": "MADE IT WITH AI?",
+     "title": "Can I Use This?",
+     "text": "AI Content Commercial Use Toolkit: provider terms, output rights, copyright, third-party risk and marketplace disclosure, with 15 scenarios."
+    },
+    {
+     "label": "ABOUT TO BUY RESELL RIGHTS?",
+     "title": "Can I Resell This?",
+     "text": "A Buyer’s Checklist Before You Buy Resell Rights: licence terms, platform rules, what’s inside the pack, and affiliate vs resell."
+    }
+   ],
+   "callout": {
+    "label": "ALL TOOLKITS",
+    "text": "checkmaybe.gumroad.com",
+    "tone": "amber"
+   }
+  },
+  {
+   "type": "sources",
+   "kicker": "05 · SOURCES",
+   "tag": "SOURCES",
+   "title": "How to use this & sources",
+   "lead": "Quoted from a founder-saved copy of the official page. Rules change: re-check before you list.",
+   "sources": [
+    {
+     "name": "Etsy — Creativity Standards",
+     "url": "https://www.etsy.com/legal/creativity/",
+     "date": "Saved 25 September 2026",
+     "note": "Last updated on Jun 10, 2025"
+    }
+   ],
+   "notes": [
+    "Print page 4 once per product, or copy it into a spreadsheet. One row per piece that went into the product.",
+    "Re-run the five questions when you update a product, switch platforms, or when a tool or platform changes its terms.",
+    "Keep screenshots or saved copies of each licence page, with the date. Pages change; your record shows what they said when you checked.",
+    "If an answer stays AMBER, ask the licence owner or platform in writing, and keep the reply.",
+    "The five questions are a general routine, not a statement of any platform’s rules. Always read the current terms of the tools and platforms you use."
+   ],
+   "closing": {
+    "label": "VERSION 1.0 · CHECKMAYBE",
+    "text": "Independent educational resource, not affiliated with or endorsed by any company named. Not legal advice. Free for personal use: please share the download link rather than the file."
+   }
+  }
+ ]
+}
