@@ -3,12 +3,10 @@
 ## Additional details (Product tab)
 | Label | Value |
 | --- | --- |
-| Format | Instant PDF download · 27 pages · A4 |
+| Format | Instant PDF Download |
 | Includes | Pre-publish audit, decision path, quick map, 20 scenarios, checklist, 3 worksheets |
 | Best for | Canva, Etsy & print-on-demand sellers |
 | Language | English |
-| Version | v3.1 · sources checked 25 Sep 2026 |
-| Note | Educational resource, not legal advice |
 
 ## Button text (Receipt tab) — 21/26 characters
 ```

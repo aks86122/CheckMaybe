@@ -86,7 +86,7 @@
 - [ ] 至少有一頁市集規則（Etsy 起跳）
 - [ ] 每個情境都有燈號 + WHY + What could change this
 - [ ] Gumroad／Beacons 的商品說明和 PDF 內容一致（版本號、承諾）
-- [ ] Gumroad 欄位齊全：Additional details（Format、Includes、Best for、Language、Version、Note）、Button text、Custom message（寫明從第幾頁開始、不是法律建議），字數在限制內
+- [ ] Gumroad 欄位齊全：Additional details 只放 4 欄：Format 固定寫「Instant PDF Download」（頁數、版本、免責等資訊已在說明欄，不重複）、Includes、Best for、Language、Button text、Custom message（寫明從第幾頁開始、不是法律建議），字數在限制內
 - [ ] Gumroad 方形縮圖（≥600×600）放在 `products/gumroad/thumbnails/`
 
 ---

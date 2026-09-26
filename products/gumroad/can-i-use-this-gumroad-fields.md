@@ -3,12 +3,10 @@
 ## Additional details (Product tab)
 | Label | Value |
 | --- | --- |
-| Format | Instant PDF download · 32 pages · A4 |
+| Format | Instant PDF Download |
 | Includes | 5-Check Framework, 5 AI tool snapshots, 15 scenarios, checklist, 2 worksheets |
 | Best for | Creators & digital sellers using AI tools |
 | Language | English |
-| Version | v1.1 · September 2026 |
-| Note | Educational resource, not legal advice |
 
 ## Button text (Receipt tab) — 21/26 characters
 ```
