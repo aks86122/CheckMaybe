@@ -205,3 +205,11 @@ JSON 修改：共 11 個字串（10 項修正），`python3 -c "import json;json
 1. 補上 2025-01-13 新聞稿的完整網址（存檔裡沒有）。
 2. 如果要把 F15 從 VERIFY 升級，要再存一份能說明規則現況的 FTC 官方頁面。
 3. 決定要不要把 “Results not typical” 的原文放回某個情境。
+
+## 創辦人決定與情境 15（2026-09-26）
+- 副標改為「A Buyer’s Checklist Before You Buy Resell Rights」，頁尾同步更新（創辦人決定：拿掉 PLR, MRR）。
+- 新增情境 15「Print a pack’s designs on mugs or T-shirts (print-on-demand)」，AMBER，第 16 頁；總頁數 22。
+  - ✅ “Original designs created by a seller” — etsy-creativity.txt（production partner 類別）
+  - ✅ “Sellers must disclose that an item is made by a production partner” — etsy-creativity.txt 同段
+  - ✅ Canva 授權不隨轉售包轉移 — 沿用第 6 頁與情境 10 已核對的 CLA “non-transferable” 依據
+- 後續頁碼參照已全部 +1（紅旗 p17、工作表 p19–20）。

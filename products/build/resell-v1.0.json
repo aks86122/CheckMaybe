@@ -1,8 +1,8 @@
 {
  "meta": {
   "product": "Can I Resell This?",
-  "subtitle": "A Buyer’s Checklist for PLR, MRR & Resell-Rights Products",
-  "footer": "CAN I RESELL THIS? — A BUYER’S CHECKLIST FOR RESELL-RIGHTS PRODUCTS · CHECKMAYBE",
+  "subtitle": "A Buyer’s Checklist Before You Buy Resell Rights",
+  "footer": "CAN I RESELL THIS? — A BUYER’S CHECKLIST BEFORE YOU BUY RESELL RIGHTS · CHECKMAYBE",
   "version": "1.0"
  },
  "pages": [
@@ -12,7 +12,7 @@
    "tag": "VERSION 1.0",
    "topline": "INDEPENDENT EDUCATIONAL RESOURCE — NOT AFFILIATED WITH ANY PLATFORM NAMED",
    "title": "Can I Resell This?",
-   "subtitle": "A Buyer’s Checklist for PLR, MRR & Resell-Rights Products",
+   "subtitle": "A Buyer’s Checklist Before You Buy Resell Rights",
    "value": "Check a resell-rights product before you buy it, and again before you list anything from it.",
    "quote": "This guide is educational. It does not grant any resale, PLR or MRR rights.",
    "steps": [
@@ -24,7 +24,7 @@
    "inside": [
     "BEFORE-YOU-BUY PATH",
     "PLATFORM RULES, QUOTED",
-    "14 SCENARIOS",
+    "15 SCENARIOS",
     "RED FLAGS + WORKSHEETS"
    ],
    "legal": [
@@ -241,7 +241,7 @@
      "signal_label": "RED · HIGH CONCERN",
      "text": "“Luxury lifestyle” packs often show car badges, watch faces and fashion logos. A pack licence cannot give you those brands’ permission. Beacons: “We do not allow the uploading of any content that infringes on copyrights, trademarks, or patents.”",
      "source": "Beacons Community Standards · Copyrighted content",
-     "note": "BEFORE BUYING — Ask to see sample clips. Visible logos are a red flag (page 16)."
+     "note": "BEFORE BUYING — Ask to see sample clips. Visible logos are a red flag (page 17)."
     }
    ]
   },
@@ -324,7 +324,7 @@
   {
    "type": "scenarios",
    "kicker": "SCENARIOS 01–02",
-   "tag": "01–02 / 14",
+   "tag": "01–02 / 15",
    "title": "Real-world resell scenarios",
    "lead": "First-pass signals, not permission. Check the licence you actually received.",
    "items": [
@@ -338,7 +338,7 @@
       "How much is still the original PLR text?",
       "Unsure? Ask support@gumroad.com before listing",
       "Canva, AI or stock content inside (page 6)?",
-      "Licence and check date saved (page 18)"
+      "Licence and check date saved (page 19)"
      ],
      "change": "Gumroad changing its list, or confirming your version in writing. A product you wrote yourself is a different case (scenario 5)."
     },
@@ -352,7 +352,7 @@
       "Is it pitched as a way to make money online?",
       "Other people’s videos, music or clips inside?",
       "Is the creator on Beacons with an affiliate option?",
-      "Rule and check date saved (page 19)"
+      "Rule and check date saved (page 20)"
      ],
      "change": "Beacons changing its Store rules. Promoting the creator’s own listing as an affiliate is a different route (scenario 8)."
     }
@@ -361,7 +361,7 @@
   {
    "type": "scenarios",
    "kicker": "SCENARIOS 03–04",
-   "tag": "03–04 / 14",
+   "tag": "03–04 / 15",
    "title": "Real-world resell scenarios",
    "lead": "First-pass signals, not permission. Check the licence you actually received.",
    "items": [
@@ -398,7 +398,7 @@
   {
    "type": "scenarios",
    "kicker": "SCENARIOS 05–06",
-   "tag": "05–06 / 14",
+   "tag": "05–06 / 15",
    "title": "Real-world resell scenarios",
    "lead": "First-pass signals, not permission. Check the licence you actually received.",
    "items": [
@@ -435,7 +435,7 @@
   {
    "type": "scenarios",
    "kicker": "SCENARIOS 07–08",
-   "tag": "07–08 / 14",
+   "tag": "07–08 / 15",
    "title": "Real-world resell scenarios",
    "lead": "First-pass signals, not permission. Check the licence you actually received.",
    "items": [
@@ -472,7 +472,7 @@
   {
    "type": "scenarios",
    "kicker": "SCENARIOS 09–10",
-   "tag": "09–10 / 14",
+   "tag": "09–10 / 15",
    "title": "Real-world resell scenarios",
    "lead": "First-pass signals, not permission. Check the licence you actually received.",
    "items": [
@@ -509,7 +509,7 @@
   {
    "type": "scenarios",
    "kicker": "SCENARIOS 11–12",
-   "tag": "11–12 / 14",
+   "tag": "11–12 / 15",
    "title": "Real-world resell scenarios",
    "lead": "First-pass signals, not permission. Check the licence you actually received.",
    "items": [
@@ -546,7 +546,7 @@
   {
    "type": "scenarios",
    "kicker": "SCENARIOS 13–14",
-   "tag": "13–14 / 14",
+   "tag": "13–14 / 15",
    "title": "Real-world resell scenarios",
    "lead": "First-pass signals, not permission. Check the licence you actually received.",
    "items": [
@@ -577,6 +577,39 @@
       "Can you answer your buyers’ licence questions?"
      ],
      "change": "A written licence expressly allowing onward MRR, cleared contents and a platform that allows it could move this to AMBER. Never assume it."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIO 15",
+   "tag": "15 / 15",
+   "title": "Real-world resell scenarios",
+   "lead": "First-pass signals, not permission. Check the licence you actually received.",
+   "items": [
+    {
+     "title": "Print a pack’s designs on mugs or T-shirts (print-on-demand)",
+     "signal": "AMBER",
+     "signal_label": "AMBER · CHECK PHYSICAL-PRODUCT RIGHTS",
+     "why": "A licence to resell a digital pack does not automatically cover physical products. Etsy’s production-partner category covers “Original designs created by a seller” — a design from someone else’s pack is not yours.",
+     "checks": [
+      "Does the licence name physical products or print-on-demand?",
+      "Any limit on quantity, print runs or product types?",
+      "Canva, stock photo, font or AI content inside (page 6)?",
+      "Are other buyers printing the same design?",
+      "Etsy: “Sellers must disclose that an item is made by a production partner”"
+     ],
+     "change": "GREEN-LEANING if the licence expressly allows print-on-demand and the contents are cleared. RED if it is personal use only, or has brand logos or characters.",
+     "situation": "You bought a template or graphics pack with “resell rights” and want to print its designs on mugs, T-shirts or posters through a print-on-demand service.",
+     "watch": [
+      "“Resell rights” on a digital pack often means reselling the files, not turning them into merchandise.",
+      "If the pack uses Canva library content, the pack seller’s Canva licence does not pass to you (page 6)."
+     ],
+     "steps": [
+      "Find the words “physical products” or “print-on-demand” in the licence, or ask the seller in writing.",
+      "Check the rules of the print-on-demand service and the marketplace you will sell on.",
+      "Save the licence and the seller’s reply with today’s date (page 19)."
+     ]
     }
    ]
   },
@@ -630,7 +663,7 @@
     "No income figures or screenshots I can’t prove from my own records.",
     "Any affiliate relationship is disclosed clearly and conspicuously, near the link — not only in comments or behind a hyperlink.",
     "My listing tells buyers exactly what rights they get — and don’t get.",
-    "I filled in the worksheets (pages 18–19)."
+    "I filled in the worksheets (pages 19–20)."
    ]
   },
   {
