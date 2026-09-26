@@ -52,17 +52,14 @@ Educational, not legal advice. Not affiliated with any AI provider.
 - **Slide 5:** 15 real-world scenarios: ebooks, T-shirts, printables, client work, logos, POD at scale, selling prompts…
 - **Slide 6:** Can I Use This? — AI Content Commercial Use Toolkit. Link in bio.
 
-**Caption**
+**Caption** (short: pain point → action → disclaimer; the slides carry the detail)
 ```
-You made it with AI. Can you sell it? It depends on five separate questions, and each one has its own source: the AI provider's terms, copyright law, other people's rights and your marketplace's rules.
+Made it with AI and ready to sell? "The AI tool says I own it" isn't the whole answer.
 
-Slides 3–4 quote OpenAI's Terms of Use and Etsy's Creativity Standards word for word.
+5 checks before you list → link in bio
 
-Can I Use This? is a 32-page toolkit that walks you through all five, with snapshots of five AI tools' terms, 15 real-world scenarios and before-you-sell checklists. Link in bio.
-
-Educational, not legal advice. Not affiliated with any AI provider.
-
-#aiart #aitools #digitalproducts #etsyseller #printondemand #gumroad #creatorbusiness #aicontent
+Not legal advice. Not affiliated with any AI provider.
+#aiart #aitools #etsyseller #printondemand #digitalproducts
 ```
 
 ## Facebook

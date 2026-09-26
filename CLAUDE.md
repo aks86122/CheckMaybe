@@ -6,6 +6,10 @@ CheckMaybe planning workspace. No website or app code yet — product plans, res
 
 Every CheckMaybe toolkit (new product or revision) follows `templates/toolkit-product-template.md`: its 8-step workflow (official sources saved by the founder → draft → claim-by-claim verification → page-by-page revision script → listing assets incl. Gumroad fields), page structure, traffic-light signals, citation and branding rules, and pre-publish checklist. Planning outputs go in `planning/<YYYY-MM>-<product>/`.
 
+## Social content
+
+Posts live in `content/`. Instagram captions stay short: one pain-point line, one action line (e.g. "→ link in bio"), one disclaimer line, about 5 hashtags. The carousel slides carry the detail. Facebook and Threads versions can be full length. Quotes must match the saved official source word for word.
+
 ## J AI Agency v1.1
 
 This repo uses the J AI Agency operating pack in `.agents/j-ai-agency/`. Its rules apply to every task:

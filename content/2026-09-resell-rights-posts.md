@@ -85,17 +85,14 @@ Educational, not legal advice. Not affiliated with Canva.
 - **Slide 5:** "Buy once, rebrand, resell" can break the storefront's rules before the licence even comes up.
 - **Slide 6:** Read the rules of the place you'll sell, not only the licence you bought. Save this for your next purchase. · CheckMaybe · Educational, not legal advice
 
-**Caption**
+**Caption** (short: pain point → action → disclaimer; the slides carry the detail)
 ```
-"Buy once, rebrand, resell as your own." Before you do that, read the rules of the place you plan to sell it.
+Paid for "resell rights"... and never checked if your store even allows it?
 
-Gumroad, Beacons and Etsy each say it in their own words (slides 2–4). All three quotes are copied from the official pages; the dates are on each slide.
+Save this before your next purchase.
 
-Rules change, so check the current pages yourself before you list anything. Educational, not legal advice.
-
-Save this for the next time a sales page says "full resell rights".
-
-#digitalproducts #etsyseller #gumroad #plr #mrr #resellrights #onlinebusiness #creatorbusiness
+Educational, not legal advice.
+#resellrights #plr #etsyseller #gumroad #digitalproducts
 ```
 
 ## Post 1 — Facebook
@@ -122,17 +119,14 @@ Read the rules of the place you'll sell, not only the licence. Rules change, so 
 - **Slide 5:** Before you list: ☐ Which elements are Canva library content? ☐ What label does each carry (Free, Pro, Education, Branded)? ☐ Could a buyer pull them out as files?
 - **Slide 6:** 20 seller scenarios like this one are in Can I Sell This?, a commercial use toolkit for Canva sellers. Link in bio. · CheckMaybe · Educational, not legal advice · Not affiliated with Canva
 
-**Caption**
+**Caption** (short: pain point → action → disclaimer; the slides carry the detail)
 ```
-A lot of "done-for-you" resell packs are Canva templates. The sales page rarely mentions §9 of Canva's Content License Agreement.
+That "full resell rights" Canva pack? The Canva parts aren't theirs to pass on.
 
-Slides 2–3 quote it word for word. In short: the rights in Canva's library content aren't yours to pass on, and you can't present that content as your own creation. Your own text and graphics are the safer parts of any pack.
+Check before you list. More in Can I Sell This? → link in bio
 
-I put this check, plus 19 other seller scenarios, into Can I Sell This?, a commercial use toolkit for Canva sellers. Link in bio.
-
-Educational, not legal advice. Not affiliated with Canva.
-
-#canvatemplates #canvaseller #etsyseller #digitalproducts #plr #resellrights #printables #creatorbusiness
+Not legal advice. Not affiliated with Canva.
+#canvaseller #canvatemplates #plr #etsyseller #digitalproducts
 ```
 
 ## Post 2 — Facebook

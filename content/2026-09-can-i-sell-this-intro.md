@@ -49,17 +49,14 @@ Educational, not legal advice. Not affiliated with Canva.
 - **Slide 5:** 20 seller scenarios: planners, templates, T-shirts, mugs, ebooks, client packs, logos, lead magnets, PLR bundles, sticker packs…
 - **Slide 6:** Can I Sell This? — A Commercial Use Toolkit for Canva Sellers. Link in bio.
 
-**Caption**
+**Caption** (short: pain point → action → disclaimer; the slides carry the detail)
 ```
-You designed it in Canva. Can you sell it? It depends on what you used and what the buyer gets. A finished PDF, a printed mug, an editable template and a client logo each follow different rules.
+One Pro element, or one library graphic in a logo, can change the answer for your whole Canva product.
 
-Slides 3–4 quote Canva's Content License Agreement and Licensing Explained page word for word.
+Know before you list, not after a takedown → link in bio
 
-Can I Sell This? is a 27-page toolkit with a first-pass signal (GREEN-LEANING, AMBER or RED), the reason and the clause for 20 seller scenarios, plus Etsy checks and worksheets. Link in bio.
-
-Educational, not legal advice. Not affiliated with Canva.
-
-#canvatemplates #canvaseller #etsyseller #digitalproducts #printables #printondemand #gumroad #creatorbusiness
+Not legal advice. Not affiliated with Canva.
+#canvaseller #canvatemplates #etsyseller #printables #digitalproducts
 ```
 
 ## Facebook
