@@ -1,0 +1,771 @@
+{
+ "meta": {
+  "product": "Can I Resell This?",
+  "subtitle": "A Buyer’s Checklist for PLR, MRR & Resell-Rights Products",
+  "footer": "CAN I RESELL THIS? — A BUYER’S CHECKLIST FOR RESELL-RIGHTS PRODUCTS · CHECKMAYBE",
+  "version": "1.0"
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "kicker": "CHECKMAYBE",
+   "tag": "VERSION 1.0",
+   "topline": "INDEPENDENT EDUCATIONAL RESOURCE — NOT AFFILIATED WITH ANY PLATFORM NAMED",
+   "title": "Can I Resell This?",
+   "subtitle": "A Buyer’s Checklist for PLR, MRR & Resell-Rights Products",
+   "value": "Check a resell-rights product before you buy it, and again before you list anything from it.",
+   "quote": "This guide is educational. It does not grant any resale, PLR or MRR rights.",
+   "steps": [
+    "READ THE LICENCE",
+    "CHECK THE PLATFORM",
+    "CHECK WHAT’S INSIDE",
+    "DECIDE, THEN LIST"
+   ],
+   "inside": [
+    "BEFORE-YOU-BUY PATH",
+    "PLATFORM RULES, QUOTED",
+    "14 SCENARIOS",
+    "RED FLAGS + WORKSHEETS"
+   ],
+   "legal": [
+    "VERSION 1.0 · CHECKMAYBE · EDUCATIONAL INFORMATION — NOT LEGAL ADVICE",
+    "PERSONAL USE ONLY — THIS GUIDE GRANTS NO RESALE, PLR OR MRR RIGHTS",
+    "PLATFORM NAMES ARE TRADEMARKS OF THEIR RESPECTIVE OWNERS"
+   ]
+  },
+  {
+   "type": "steps",
+   "kicker": "00 · START HERE",
+   "tag": "START HERE",
+   "title": "How to use this checklist",
+   "lead": "Use it before you pay for a resell-rights product, and again before you list anything from one. It is a decision aid, not a verdict, and it does not read or interpret your licence for you.",
+   "style": "flow",
+   "steps": [
+    {
+     "title": "Find the licence text",
+     "text": "Get the actual licence (PDF or page) you will receive. Sales-page claims, captions and DMs are not the licence."
+    },
+    {
+     "title": "Name the rights type",
+     "text": "Note the exact words the licence uses: PLR, MRR, Resell Rights, Personal Use. Sellers use them inconsistently (page 3)."
+    },
+    {
+     "title": "Check the platform",
+     "text": "Read the rules of the place you plan to sell. Platform rules apply on top of any licence (page 5)."
+    },
+    {
+     "title": "Check what’s inside",
+     "text": "Canva elements, AI output, stock, music, fonts and logos may carry their own terms (page 6)."
+    },
+    {
+     "title": "Decide and record",
+     "text": "Use the scenarios, red flags and worksheets, and save check dates. For high stakes, get qualified professional advice."
+    }
+   ],
+   "callout": {
+    "label": "READ THIS FIRST",
+    "text": "This guide is educational. It does not grant any resale, PLR or MRR rights. It is not legal advice, and it is for your personal use only. Rules change: check the current official pages before you rely on them.",
+    "tone": "red"
+   },
+   "legend": [
+    {
+     "signal": "GREEN",
+     "label": "GREEN-LEANING",
+     "text": "Official text supports it in the usual case — only under the stated conditions."
+    },
+    {
+     "signal": "AMBER",
+     "label": "AMBER",
+     "text": "Depends on specific conditions, or the official text is silent. Confirm the named point first."
+    },
+    {
+     "signal": "RED",
+     "label": "RED",
+     "text": "Official text prohibits it, or the risk is high. Don’t go ahead as described."
+    },
+    {
+     "signal": "VERIFY",
+     "label": "VERIFY BEFORE RELYING",
+     "text": "Not checked against official text this round. Check the official source yourself."
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "kicker": "01 · KEY TERMS",
+   "tag": "KEY TERMS",
+   "title": "Five terms sellers use loosely",
+   "lead": "PLR, MRR and Resell Rights are not the same thing. These are common trade usages, not official definitions. The licence text you receive decides — not the label on the sales page.",
+   "cards": [
+    {
+     "label": "PLR · PRIVATE LABEL RIGHTS",
+     "text": "Usually means you may edit the content and put your own name on it. What you may then do — sell it, give it away, pass rights on — varies by licence. Permission to edit or add your name is not the same as owning the copyright: check what the licence actually grants. Gumroad names PLR resale specifically (page 5)."
+    },
+    {
+     "label": "MRR · MASTER RESELL RIGHTS",
+     "text": "Usually means you may resell the product and also pass resale rights on to your buyers. Some MRR licences say the product may not be edited, even when the marketing says “rebrand it as your own”. If the sales page and the licence differ, ask the seller in writing before you pay."
+    },
+    {
+     "label": "RR · RESELL RIGHTS",
+     "text": "Usually means you may resell the product as it is, to end users, without passing resale rights on. Price limits, bundling, giveaways and where you may sell are often not stated. If the licence doesn’t say, ask before you assume."
+    },
+    {
+     "label": "PERSONAL USE",
+     "text": "You may use it yourself. No selling, giving away or sharing copies. If a licence does not clearly say what you may do, don’t assume you have more than personal use."
+    }
+   ],
+   "callout": {
+    "label": "AFFILIATE — A DIFFERENT THING",
+    "text": "You promote someone else’s product with a tracked link and earn a commission; the creator makes the sale. You don’t get a copy to sell. Different rules apply (page 7).",
+    "tone": "dark"
+   }
+  },
+  {
+   "type": "steps",
+   "kicker": "02 · BEFORE YOU BUY",
+   "tag": "DECISION PATH",
+   "title": "Before you buy: seven questions",
+   "lead": "Answer these before you pay. Any “no” or “don’t know” is your answer for now.",
+   "style": "letters",
+   "steps": [
+    {
+     "title": "Is there a written licence?",
+     "text": "Can you read the full licence before paying? If not, treat it as RED until you have it in writing."
+    },
+    {
+     "title": "What does it actually grant?",
+     "text": "Which words appear — PLR, MRR, Resell Rights, Personal Use? May you sell, edit, rebrand, give away, pass rights on?"
+    },
+    {
+     "title": "Where do the rights come from?",
+     "text": "Does the licence say who created the product and who granted the rights? If you can’t trace it, treat it as AMBER."
+    },
+    {
+     "title": "Where will you sell?",
+     "text": "Gumroad, Beacons, Etsy or your own site? Check that platform’s rules (page 5). A seller’s licence does not change them."
+    },
+    {
+     "title": "What’s inside the files?",
+     "text": "Canva elements, AI output, stock photos, music, fonts, brand logos? Each may have its own terms (page 6)."
+    },
+    {
+     "title": "How is it marketed to you?",
+     "text": "Income screenshots, “100% profit”, “buy to unlock your affiliate link”? Read pages 7–8 before paying."
+    },
+    {
+     "title": "Can you get your money back?",
+     "text": "Read the refund terms before paying. Save the licence, the sales page and the date."
+    }
+   ],
+   "callout": {
+    "label": "HOW TO READ THE EXITS",
+    "text": "No licence (A) or a platform that bans it (D) = RED. Anything unclear in B, C or E = AMBER until answered in writing. Clear on every step = GREEN-LEANING for that platform, on those terms only.",
+    "tone": "amber"
+   }
+  },
+  {
+   "type": "cards",
+   "kicker": "03 · PLATFORM RULES",
+   "tag": "PLATFORM RULES",
+   "title": "Platform rules, word for word",
+   "lead": "Quoted from saved copies of each official page. Platform rules sit on top of any licence: a seller’s licence does not change them.",
+   "cards": [
+    {
+     "label": "GUMROAD · PROHIBITED PRODUCTS AND ACTIVITIES",
+     "title": "PLR resale is named. MRR and RR are not.",
+     "signal": "RED",
+     "signal_label": "RED · PLR RESALE · MRR/RR: CHECK",
+     "text": "The list includes “reselling private label rights products”. It also lists “services (including, but not limited to, ‘get rich quick’ schemes, business opportunities, investment opportunities…)” and “multi-level marketing or pyramid schemes”. MRR and plain resell rights are not named in the PLR line. Don’t assume either way: read the other lines and ask Gumroad.",
+     "source": "gumroad.com/prohibited · Last revised September 16, 2026",
+     "note": "“If you are unsure whether your content is prohibited on Gumroad, please contact us” · the list “may change abruptly and without notice”"
+    },
+    {
+     "label": "BEACONS · COMMUNITY STANDARDS (STORE)",
+     "title": "Resale is generally not allowed",
+     "signal": "RED",
+     "signal_label": "RED · PRODUCTS YOU DID NOT CREATE",
+     "text": "“In general, we do not allow resale; you cannot sell products you did not create. You can act as an affiliate for other creators on Beacons, but you cannot sell products that aren’t your own creation.” Also prohibited: “Multi-level marketing offers, work-at-home scams and make money online opportunities”.",
+     "source": "beacons.ai/i/community-standards · Nov 22, 2025",
+     "note": "Also listed as high-risk: “Unlicensed proprietary content” and “Multi-level Marketing or Pyramid Schemes”"
+    },
+    {
+     "label": "ETSY · CREATIVITY STANDARDS",
+     "title": "Digital downloads must be the seller’s own designs",
+     "signal": "RED",
+     "signal_label": "RED · SOMEONE ELSE’S WORK",
+     "text": "Items “designed by a seller” “include only” listed types, among them “Digital downloads of sellers’ original designs: Original content created by the seller, sold as a digital download.” Listed as not qualifying: “A bundle, collection, scan, or PDF of someone else’s work” and “A PDF file of a book that the seller did not personally create or design”.",
+     "source": "etsy.com/legal/creativity · Last updated on Jun 10, 2025",
+     "note": "“Etsy reserves the right to remove listings that do not follow our policies.”"
+    }
+   ],
+   "callout": {
+    "label": "SELLING FROM YOUR OWN WEBSITE",
+    "text": "These marketplace lists don’t apply there, but the licence and the terms of content inside the pack still do. Your payment provider may have its own rules — VERIFY; not checked in this guide.",
+    "tone": "dark"
+   }
+  },
+  {
+   "type": "cards",
+   "kicker": "04 · WHAT’S INSIDE",
+   "tag": "THIRD-PARTY CONTENT",
+   "title": "Third-party content inside the pack",
+   "lead": "A resell licence comes from the pack seller. Items inside may be under someone else’s terms — check each one.",
+   "cards": [
+    {
+     "label": "CANVA LIBRARY CONTENT · CLA §9",
+     "signal": "RED",
+     "signal_label": "RED · RESELLING CANVA CONTENT",
+     "text": "Canva’s Content License Agreement §9 says you “definitely can’t” “sub-license, re-sell, rent, lend, assign, gift or otherwise transfer or distribute the Content or the rights granted under this Content License Agreement (subject to section 4A)”, or use Content “in a manner that gives the impression that the Content was created by you”.",
+     "source": "Canva Content License Agreement §9",
+     "note": "BEFORE BUYING — Ask which Canva items are inside and whether they come as Canva links or as files."
+    },
+    {
+     "label": "AI-GENERATED CONTENT · PROVIDER TERMS",
+     "signal": "AMBER",
+     "signal_label": "AMBER · CHECK THE PROVIDER TERMS",
+     "text": "OpenAI (US Terms of Use): “As between you and OpenAI, and to the extent permitted by applicable law, you (a) retain your ownership rights in Input and (b) own the Output.” That wording is between OpenAI and its user and doesn’t mention later buyers; “output may not be unique”. Anthropic: “Subject to your compliance with our Terms, we assign to you all of our right, title, and interest—if any—in Outputs.”",
+     "source": "OpenAI Terms of Use (US) · Anthropic Consumer Terms §4",
+     "note": "BEFORE BUYING — Ask which AI tools made it. For copyright in AI output, see Can I Use This?"
+    },
+    {
+     "label": "STOCK PHOTOS · VIDEO · MUSIC · FONTS",
+     "signal": "AMBER",
+     "signal_label": "AMBER · ASK FOR EACH SOURCE",
+     "text": "Each comes under a licence from wherever it was obtained. A pack’s “resell rights” can’t tell you what those licences allow, and “no watermark” is not a licence. Canva’s font software may only be used on Canva or inside an exported Canva design (CLA §9A).",
+     "source": "Canva Content License Agreement §9A",
+     "note": "BEFORE BUYING — Ask for a source list. No list? You can’t check it."
+    },
+    {
+     "label": "BRAND LOGOS IN “LUXURY” CLIPS",
+     "signal": "RED",
+     "signal_label": "RED · HIGH CONCERN",
+     "text": "“Luxury lifestyle” packs often show car badges, watch faces and fashion logos. A pack licence cannot give you those brands’ permission. Beacons: “We do not allow the uploading of any content that infringes on copyrights, trademarks, or patents.”",
+     "source": "Beacons Community Standards · Copyrighted content",
+     "note": "BEFORE BUYING — Ask to see sample clips. Visible logos are a red flag (page 16)."
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "kicker": "05 · AFFILIATE VS. RESELL",
+   "tag": "AFFILIATE VS. RESELL",
+   "title": "Promoting is not reselling",
+   "lead": "Promoting a product with an affiliate link is not the same as reselling it. Both can be restricted, for different reasons.",
+   "cards": [
+    {
+     "label": "RESELLING",
+     "text": "You list and sell a copy yourself, from your own shop, under a licence from the pack seller. The platform’s resale rules apply to your listing (page 5)."
+    },
+    {
+     "label": "PROMOTING AS AN AFFILIATE",
+     "signal": "AMBER",
+     "signal_label": "AMBER · DEPENDS WHAT YOU PROMOTE",
+     "text": "You share a tracked link; the creator makes the sale and delivers the product. Beacons: “You can act as an affiliate for other creators on Beacons, but you cannot sell products that aren’t your own creation.” An affiliate link is not a licence to copy or resell the product.",
+     "source": "Beacons Community Standards · Nov 22, 2025"
+    },
+    {
+     "label": "WHAT’S BEING PROMOTED MATTERS",
+     "signal": "AMBER",
+     "signal_label": "AMBER · CHECK THE PLATFORM LISTS",
+     "text": "Beacons prohibits “Multi-level marketing offers, work-at-home scams and make money online opportunities”. Gumroad prohibits “services (including, but not limited to, ‘get rich quick’ schemes, business opportunities, investment opportunities…)” and “multi-level marketing or pyramid schemes”. If a course is mainly about earning by promoting that same course, read these lines first.",
+     "source": "Beacons (Nov 22, 2025) · Gumroad (Sep 16, 2026)"
+    },
+    {
+     "label": "QUESTIONS TO ASK BEFORE YOU JOIN",
+     "text": "How many commission levels are there — only your own sales, or also sales by people you sign up? Does most of the income described come from promoting this same course, rather than from using what it teaches? Must you buy before you can promote? What are the refund terms?"
+    }
+   ],
+   "callout": {
+    "label": "WHAT THIS PAGE DOES NOT DO",
+    "text": "These questions help you decide what to check. They are not a test of whether any programme is legal, multi-level marketing or a pyramid scheme — that is a question for a qualified professional.",
+    "tone": "dark"
+   }
+  },
+  {
+   "type": "cards",
+   "kicker": "06 · CLAIMS & DISCLOSURE",
+   "tag": "CLAIMS & DISCLOSURE",
+   "title": "Income screenshots, testimonials and disclosure",
+   "lead": "Three US FTC topics matter here but have not yet been checked against official FTC pages, so they are marked VERIFY. This guide makes no income claims.",
+   "cards": [
+    {
+     "label": "US FTC · ENDORSEMENT DISCLOSURE",
+     "signal": "VERIFY",
+     "signal_label": "VERIFY BEFORE RELYING",
+     "text": "The US Federal Trade Commission has guidance on endorsements, including disclosing a paid or commission relationship such as an affiliate link. This edition has not checked the official FTC text, so no wording, section or date is given here.",
+     "note": "VERIFY BEFORE RELYING — official FTC page not yet checked"
+    },
+    {
+     "label": "US FTC · FAKE OR MISLEADING TESTIMONIALS",
+     "signal": "VERIFY",
+     "signal_label": "VERIFY BEFORE RELYING",
+     "text": "The FTC also has rules on fake or misleading reviews and testimonials. Reusing a seller’s testimonials, or presenting other people’s results as your customers’, may be relevant. Not yet checked against the official FTC text.",
+     "note": "VERIFY BEFORE RELYING — official FTC page not yet checked"
+    },
+    {
+     "label": "US FTC · EARNINGS CLAIMS",
+     "signal": "VERIFY",
+     "signal_label": "VERIFY BEFORE RELYING",
+     "text": "An FTC Earnings Claim Rule has been proposed. This edition has not checked its current status, or any other FTC rule on earnings claims, against official FTC text. Check the current FTC position before you make any income statement.",
+     "note": "VERIFY BEFORE RELYING — official FTC page not yet checked"
+    },
+    {
+     "label": "PLATFORM RULES · INCOME SCREENSHOTS",
+     "title": "Someone else’s results are not your results",
+     "text": "Gumroad’s list includes “deceptive marketing practices”. Beacons’ Email Marketing guidelines, under Prohibited Actions, bar including in your “Campaigns, Websites, Ads, or account or sell in your Store any material that wasn’t created by you, provided for you to use, or that would violate anyone’s rights”. Note the “provided for you to use” wording: check what the seller gave you in writing.",
+     "source": "Gumroad (Sep 16, 2026) · Beacons, Email Marketing · Prohibited Actions (Nov 22, 2025)",
+     "note": "BEFORE POSTING — Show no income figure you can’t prove from your own records."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 01–02",
+   "tag": "01–02 / 14",
+   "title": "Real-world resell scenarios",
+   "lead": "First-pass signals, not permission. Check the licence you actually received.",
+   "items": [
+    {
+     "title": "Rebrand a PLR ebook and sell it on Gumroad",
+     "signal": "RED",
+     "signal_label": "RED ON GUMROAD",
+     "why": "Gumroad’s list includes “reselling private label rights products”. A new cover and title don’t tell you it has stopped being a PLR product.",
+     "checks": [
+      "Licence allows editing, rebranding and selling?",
+      "How much is still the original PLR text?",
+      "Unsure? Ask support@gumroad.com before listing",
+      "Canva, AI or stock content inside (page 6)?",
+      "Licence and check date saved (page 18)"
+     ],
+     "change": "Gumroad changing its list, or confirming your version in writing. A product you wrote yourself is a different case (scenario 5)."
+    },
+    {
+     "title": "List an MRR course on Beacons",
+     "signal": "RED",
+     "signal_label": "RED ON BEACONS",
+     "why": "Beacons: “In general, we do not allow resale; you cannot sell products you did not create.” A course you bought is not one you created.",
+     "checks": [
+      "Did you create any of it yourself?",
+      "Is it pitched as a way to make money online?",
+      "Other people’s videos, music or clips inside?",
+      "Is the creator on Beacons with an affiliate option?",
+      "Rule and check date saved (page 19)"
+     ],
+     "change": "Beacons changing its Store rules. Promoting the creator’s own listing as an affiliate is a different route (scenario 8)."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 03–04",
+   "tag": "03–04 / 14",
+   "title": "Real-world resell scenarios",
+   "lead": "First-pass signals, not permission. Check the licence you actually received.",
+   "items": [
+    {
+     "title": "Sell a PLR planner on Etsy",
+     "signal": "RED",
+     "signal_label": "RED ON ETSY AS-IS",
+     "why": "Etsy digital downloads must be “sellers’ original designs”; “A bundle, collection, scan, or PDF of someone else’s work” does not qualify.",
+     "checks": [
+      "Is the design yours, or the PLR author’s?",
+      "Would your changes make it your own design?",
+      "Canva template or elements inside (page 6)?",
+      "AI used? Disclose it in the listing description",
+      "Does the licence allow resale at all?"
+     ],
+     "change": "Designing your own planner, using the PLR only as research, moves this toward scenario 5 — then check Etsy’s rules again."
+    },
+    {
+     "title": "Sell a PLR or MRR pack on your own website",
+     "signal": "AMBER",
+     "signal_label": "AMBER · LICENCE + CONTENTS DECIDE",
+     "why": "No marketplace list applies, but the licence still sets what you may do, and items inside the pack keep their own terms.",
+     "checks": [
+      "Licence allows selling from your own site?",
+      "Any price, bundle or territory limits?",
+      "Canva, AI, stock, music or fonts inside?",
+      "Payment provider rules — VERIFY, not checked here",
+      "Refund and delivery terms you’ll give buyers"
+     ],
+     "change": "GREEN-LEANING if the licence clearly allows it and every asset inside is cleared. RED if the licence is personal use only or missing."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 05–06",
+   "tag": "05–06 / 14",
+   "title": "Real-world resell scenarios",
+   "lead": "First-pass signals, not permission. Check the licence you actually received.",
+   "items": [
+    {
+     "title": "Use a PLR pack to learn, then write your own",
+     "signal": "GREEN",
+     "signal_label": "GREEN-LEANING",
+     "why": "Reading it for your own learning is personal use. A product you then write yourself, from your own knowledge, is not a copy of the pack.",
+     "checks": [
+      "Licence allows at least personal use?",
+      "Written from scratch, not paraphrased line by line?",
+      "No images, templates or files copied over",
+      "Your own examples, structure and title",
+      "Your platform’s rules still apply to your product"
+     ],
+     "change": "AMBER if your version follows the pack closely in structure or wording — that is scenario 6."
+    },
+    {
+     "title": "Heavily rewrite PLR text and sell it",
+     "signal": "AMBER",
+     "signal_label": "AMBER · LICENCE + PLATFORM DECIDE",
+     "why": "PLR licences often allow editing, but none of the platform rules quoted here say how much rewriting makes a PLR product your own.",
+     "checks": [
+      "Licence allows selling an edited version?",
+      "Any licence rule on names, credits or changes?",
+      "Gumroad: still a PLR product? Ask if unsure",
+      "Etsy: is it now your original design?",
+      "Keep drafts that show your own work"
+     ],
+     "change": "GREEN-LEANING if it becomes genuinely your own writing (scenario 5). RED where the platform treats it as PLR resale."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 07–08",
+   "tag": "07–08 / 14",
+   "title": "Real-world resell scenarios",
+   "lead": "First-pass signals, not permission. Check the licence you actually received.",
+   "items": [
+    {
+     "title": "Give a PLR pack away as a lead magnet",
+     "signal": "AMBER",
+     "signal_label": "AMBER · FREE IS STILL DISTRIBUTION",
+     "why": "Giving copies away still distributes them. Some licences allow giveaways; others don’t mention them — and silence is not permission.",
+     "checks": [
+      "Licence mentions free giveaways?",
+      "Allowed in exchange for an email address?",
+      "Gumroad $0 listing: still “reselling”? Ask",
+      "Third-party content inside (page 6)?",
+      "Your name or brand on it — allowed?"
+     ],
+     "change": "GREEN-LEANING if the licence expressly allows free giveaways and the delivery platform allows it. RED if the licence is personal use only."
+    },
+    {
+     "title": "Promote the original course as an affiliate on Beacons",
+     "signal": "AMBER",
+     "signal_label": "AMBER · DEPENDS WHAT IT OFFERS",
+     "why": "Beacons lets you “act as an affiliate for other creators on Beacons”, but prohibits “Multi-level marketing offers, work-at-home scams and make money online opportunities”.",
+     "checks": [
+      "Creator on Beacons with an official affiliate link?",
+      "Is the course mainly about earning by promoting it?",
+      "How many commission levels are there?",
+      "Must you buy before you can promote?",
+      "Commission disclosed (FTC — VERIFY)"
+     ],
+     "change": "GREEN-LEANING for an ordinary product, clearly disclosed. RED if the offer falls in Beacons’ prohibited list."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 09–10",
+   "tag": "09–10 / 14",
+   "title": "Real-world resell scenarios",
+   "lead": "First-pass signals, not permission. Check the licence you actually received.",
+   "items": [
+    {
+     "title": "Reuse the seller’s income screenshots",
+     "signal": "RED",
+     "signal_label": "RED · HIGH CONCERN",
+     "why": "They show someone else’s results, not yours or what a buyer can expect. Gumroad lists “deceptive marketing practices”; FTC rules are relevant (VERIFY).",
+     "checks": [
+      "Provided for you to use, in writing?",
+      "Would viewers think they’re your results?",
+      "Can you prove every figure you show?",
+      "Are typical results stated?",
+      "FTC earnings and testimonial rules — VERIFY"
+     ],
+     "change": "Use no income figures. If you must, show only your own verifiable records, after checking the FTC pages (VERIFY)."
+    },
+    {
+     "title": "A Canva template pack with “full resell rights”",
+     "signal": "RED",
+     "signal_label": "RED · STRICTER READING",
+     "why": "Canva’s licence is “non-transferable (subject to section 4A below)”, and CLA §9 bars you from “sub-license, re-sell … or otherwise transfer or distribute the Content”. A pack’s “full resell rights” can’t add to that.",
+     "checks": [
+      "Canva library template, or seller’s own design?",
+      "Any Pro (crown) elements inside?",
+      "Delivered as a Canva link or as files?",
+      "Can elements be extracted as files?",
+      "See Can I Sell This? for Canva detail"
+     ],
+     "change": "AMBER if the pack holds only the seller’s own designs with no Canva library Content — then check Can I Sell This? first."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 11–12",
+   "tag": "11–12 / 14",
+   "title": "Real-world resell scenarios",
+   "lead": "First-pass signals, not permission. Check the licence you actually received.",
+   "items": [
+    {
+     "title": "An AI-generated pack with resell rights",
+     "signal": "AMBER",
+     "signal_label": "AMBER · ASK WHO MADE IT, AND HOW",
+     "why": "OpenAI’s ownership clause begins “As between you and OpenAI” — wording between OpenAI and whoever generated it, silent on later buyers — and says “output may not be unique”.",
+     "checks": [
+      "Which AI tools and plans made it?",
+      "Did the seller check those providers’ terms?",
+      "Could others have near-identical output?",
+      "Real brands, people or characters in it?",
+      "Etsy: disclose AI; “AI prompt bundles” don’t qualify"
+     ],
+     "change": "GREEN-LEANING if the seller names the tools, their terms fit and the licence is clear. RED if it contains logos, characters or real likenesses."
+    },
+    {
+     "title": "A “luxury lifestyle” clip vault with brand logos",
+     "signal": "RED",
+     "signal_label": "RED · HIGH CONCERN",
+     "why": "Car badges, watch faces and fashion logos are other companies’ trademarks, and each clip was filmed by someone. A pack licence can’t grant brand permission, or filmmaker rights the seller doesn’t hold.",
+     "checks": [
+      "Who filmed each clip? Is there a source list?",
+      "Does each clip’s licence allow resale?",
+      "Visible logos, products or recognisable people?",
+      "Is the music in the clips licensed?",
+      "“No watermark” is not a licence"
+     ],
+     "change": "AMBER only if every clip has a documented licence allowing redistribution and no brand marks are visible."
+    }
+   ]
+  },
+  {
+   "type": "scenarios",
+   "kicker": "SCENARIOS 13–14",
+   "tag": "13–14 / 14",
+   "title": "Real-world resell scenarios",
+   "lead": "First-pass signals, not permission. Check the licence you actually received.",
+   "items": [
+    {
+     "title": "Add resell products as a bonus",
+     "signal": "AMBER",
+     "signal_label": "AMBER · A BONUS IS STILL DISTRIBUTION",
+     "why": "A “free bonus” still hands buyers a copy. The licence must allow bundling, and your platform may treat the bonus as part of what you sell.",
+     "checks": [
+      "Licence allows bundling or bonuses?",
+      "Any minimum-price or “never free” rule?",
+      "Would the bonus be banned alone on this platform?",
+      "Contents inside cleared (page 6)?",
+      "Bonus “value” used as a sales claim?"
+     ],
+     "change": "GREEN-LEANING if the licence expressly allows bonuses and the item would be allowed on its own. RED on a platform that bans it."
+    },
+    {
+     "title": "Sell “master resell rights” so buyers can resell",
+     "signal": "RED",
+     "signal_label": "RED · HIGHEST FRICTION",
+     "why": "You would pass rights on, so every gap in the chain reaches your buyers too. Beacons: “In general, we do not allow resale”; Gumroad doesn’t name MRR — check its PLR and business-opportunity lines.",
+     "checks": [
+      "Licence lets you grant MRR to others?",
+      "Rights traceable back to the creator?",
+      "Which platform — does it allow this at all?",
+      "Marketed as an income opportunity?",
+      "Can you answer your buyers’ licence questions?"
+     ],
+     "change": "A written licence expressly allowing onward MRR, cleared contents and a platform that allows it could move this to AMBER. Never assume it."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "kicker": "07 · RED FLAGS",
+   "tag": "RED FLAGS",
+   "title": "Red flags before you buy",
+   "lead": "Any one of these: stop, and get answers in writing before you pay or list.",
+   "style": "redflags",
+   "items": [
+    "No licence text before you pay — only a sales page, caption or DM.",
+    "The sales page says “rebrand it as your own” but the licence says no edits (or the reverse).",
+    "The seller can’t say who created the product or where their rights come from.",
+    "It is marketed with “100% profit” claims or income screenshots.",
+    "You must buy before you can promote or earn.",
+    "Most of the income described comes from selling the same course to the next buyer.",
+    "Commissions on sales made by people you sign up (more than one level).",
+    "“Luxury” clips with visible car, watch or fashion logos.",
+    "Music, stock footage or fonts with no named source or licence.",
+    "Canva templates sold with “full resell rights”.",
+    "“No watermark” offered as proof you can use it.",
+    "You’re told to sell on Gumroad, Beacons or Etsy with no mention of their rules.",
+    "No refund terms, or refunds only if you “take action” first.",
+    "Pressure: countdown timers, “last spots”, DM-only pricing."
+   ],
+   "callout": {
+    "label": "WHAT A RED FLAG MEANS",
+    "text": "A red flag doesn’t prove anything is illegal or that any seller acted wrongly. It means you don’t yet have enough to decide.",
+    "tone": "red"
+   }
+  },
+  {
+   "type": "list",
+   "kicker": "08 · BEFORE YOU LIST",
+   "tag": "CHECKLIST",
+   "title": "Before-you-list checklist",
+   "lead": "Run this before every listing, including free ones.",
+   "style": "checklist",
+   "items": [
+    "I have the full licence text saved, with the date I received it.",
+    "The licence clearly allows what I plan to do: sell, edit, rebrand, give away or pass rights on.",
+    "The licence matches what the sales page promised — or I asked the seller in writing.",
+    "I can trace who created the product.",
+    "I checked my platform’s current rules and saved the page date (page 5).",
+    "Gumroad: I read the PLR and business-opportunity lines, and asked support if unsure.",
+    "Beacons: I created this myself — or I’m promoting as an affiliate, not reselling.",
+    "Etsy: the design is my own original work, and any AI use is disclosed in the listing.",
+    "I know every Canva, AI, stock, music and font asset inside, and its terms.",
+    "No brand logos, recognisable people or characters I don’t have rights to.",
+    "No income figures or screenshots I can’t prove from my own records.",
+    "Any affiliate relationship is clearly disclosed (FTC — VERIFY).",
+    "My listing tells buyers exactly what rights they get — and don’t get.",
+    "I filled in the worksheets (pages 18–19)."
+   ]
+  },
+  {
+   "type": "worksheet",
+   "kicker": "W1 · WORKSHEET",
+   "tag": "LICENCE RECORD",
+   "title": "Licence record",
+   "lead": "One record per product. Copy the licence’s own words; don’t summarise from memory.",
+   "layout": "fields",
+   "fields": [
+    "PRODUCT NAME + WHERE BOUGHT",
+    "DATE BOUGHT + PRICE + REFUND TERMS",
+    "LICENCE TYPE AS WRITTEN (PLR / MRR / RR / PERSONAL USE / OTHER)",
+    "LICENCE FILE SAVED AS",
+    "MAY I SELL IT? WHERE? ANY PRICE LIMITS?",
+    "MAY I EDIT, REBRAND OR PUT MY NAME ON IT?",
+    "MAY I GIVE IT AWAY OR BUNDLE IT?",
+    "MAY I PASS RESALE RIGHTS ON?",
+    "WHO CREATED IT / WHERE DO THE RIGHTS COME FROM?",
+    "THIRD-PARTY CONTENT INSIDE (CANVA, AI, STOCK, MUSIC, FONTS, LOGOS)",
+    "SALES-PAGE CLAIMS THAT DIFFER FROM THE LICENCE",
+    "QUESTIONS SENT TO SELLER + DATE + ANSWER",
+    "MY DECISION + SIGNAL"
+   ]
+  },
+  {
+   "type": "worksheet",
+   "kicker": "W2 · WORKSHEET",
+   "tag": "PLATFORM & RIGHTS",
+   "title": "Platform & rights check",
+   "lead": "One row per place you might sell or promote. Quote the rule; don’t paraphrase it.",
+   "layout": "table",
+   "columns": [
+    "PLATFORM / CHANNEL",
+    "RULE + PAGE DATE",
+    "WHAT I PLAN TO DO",
+    "LICENCE ALLOWS IT?",
+    "SIGNAL + DATE CHECKED"
+   ],
+   "rows": 8
+  },
+  {
+   "type": "hierarchy",
+   "kicker": "09 · QUICK REFERENCE",
+   "tag": "SAFER PATHS",
+   "title": "Safer paths, from clearest to riskiest",
+   "lead": "From clearer ground at the top to the most friction at the bottom.",
+   "levels": [
+    {
+     "label": "LOWER FRICTION",
+     "signal": "GREEN",
+     "text": "Create an original product from your own knowledge, words and assets"
+    },
+    {
+     "label": "GREEN-LEANING",
+     "signal": "GREEN",
+     "text": "Use PLR only to learn, then write your own with your own expertise and examples"
+    },
+    {
+     "label": "AMBER",
+     "signal": "AMBER",
+     "text": "Recommend a product as a disclosed affiliate, where the platform allows it and the offer isn’t on its prohibited list"
+    },
+    {
+     "label": "HIGHER FRICTION",
+     "signal": "AMBER",
+     "text": "Resell only with a clear written licence and cleared contents, on a platform that allows it"
+    },
+    {
+     "label": "AVOID",
+     "signal": "RED",
+     "text": "Reselling with no written licence, on a platform that bans it, or with uncleared content inside"
+    }
+   ],
+   "callout": {
+    "label": "START AT THE TOP",
+    "text": "Each step down adds rules to check and records to keep. None of these steps is a guarantee — check the current rules each time.",
+    "tone": "dark"
+   }
+  },
+  {
+   "type": "sources",
+   "kicker": "10 · SOURCES",
+   "tag": "SOURCES",
+   "title": "Sources & update note",
+   "lead": "Quotes come from founder-saved copies of the official pages below. Rules change, sometimes without notice: re-check each page before you buy or list.",
+   "sources": [
+    {
+     "name": "Gumroad — Prohibited Products and Activities",
+     "url": "https://gumroad.com/prohibited",
+     "date": "Saved 26 September 2026",
+     "note": "Last revised September 16, 2026"
+    },
+    {
+     "name": "Beacons — Community Standards",
+     "url": "https://beacons.ai/i/community-standards",
+     "date": "Saved 26 September 2026",
+     "note": "Page dated Nov 22, 2025"
+    },
+    {
+     "name": "Etsy — Creativity Standards",
+     "url": "https://www.etsy.com/legal/creativity/",
+     "date": "Saved 25 September 2026",
+     "note": "Last updated on Jun 10, 2025"
+    },
+    {
+     "name": "Canva — Content License Agreement (§2, §9, §9A)",
+     "url": "https://www.canva.com/policies/content-license-agreement/",
+     "date": "Saved 25 September 2026",
+     "note": "No effective date shown on the saved page"
+    },
+    {
+     "name": "OpenAI — Terms of Use (US)",
+     "url": "https://openai.com/policies/terms-of-use",
+     "date": "Effective January 1, 2026",
+     "note": "EEA, Switzerland and UK residents have separate terms"
+    },
+    {
+     "name": "Anthropic — Consumer Terms of Service",
+     "url": "https://www.anthropic.com/legal/consumer-terms",
+     "date": "Effective October 8, 2025"
+    },
+    {
+     "name": "US Federal Trade Commission — endorsements, testimonials, earnings claims",
+     "url": "https://www.ftc.gov",
+     "date": "To be verified",
+     "note": "Not yet checked against official text. Earnings Claim Rule: proposed; current status not checked."
+    }
+   ],
+   "notes": [
+    "Quotes are word for word; only quotation marks and apostrophes are set in curly style.",
+    "Where a rule could be read more than one way, this guide follows the stricter reading.",
+    "Not covered: other platforms’ rules, payment-provider rules, and any country’s laws (US FTC topics are marked VERIFY)."
+   ],
+   "closing": {
+    "label": "VERSION 1.0 · CHECKMAYBE",
+    "text": "Independent educational resource. Not affiliated with, sponsored or endorsed by Gumroad, Beacons, Etsy, Canva, OpenAI, Anthropic or the FTC. Not legal advice. Personal use only: this guide grants no resale, PLR or MRR rights."
+   }
+  }
+ ]
+}
