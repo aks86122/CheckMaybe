@@ -36,3 +36,29 @@ Creators thinking about buying a PLR, MRR or resell-rights pack or course, and s
 - Independent resource, not affiliated with Gumroad, Beacons, Etsy, Canva or any other company named.
 
 Format: PDF, 22 pages, A4. Instant download.
+
+---
+
+# Beacons version（Beacons 商品頁用，較短）
+
+## Title
+Can I Resell This? — A Buyer’s Checklist Before You Buy Resell Rights
+
+## Description
+**The pack says “resell rights”. Does that mean you can sell it?**
+
+Not always. The licence you receive, the platform’s rules and the content inside the pack are three separate checks.
+
+This 22-page checklist walks you through them before you buy, and again before you list:
+✔ 7 questions to ask before you pay
+✔ Gumroad, Beacons and Etsy rules, quoted word for word with dates
+✔ What’s inside the pack: Canva content, AI output, stock, music, fonts, logos
+✔ Affiliate vs resell, and what the FTC says about disclosure and testimonials
+✔ 15 scenarios with GREEN-LEANING / AMBER / RED signals
+✔ Red flags, a before-you-list checklist and 2 worksheets
+
+Personal use only: this guide grants no resale, PLR or MRR rights.
+Educational resource, not legal advice. No income claims. Not affiliated with any platform named.
+
+## Button text
+Get the checklist

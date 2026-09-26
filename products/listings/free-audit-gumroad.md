@@ -33,3 +33,27 @@ Etsy, Gumroad and print-on-demand sellers, template shops and creators who use C
 - Independent resource, not affiliated with any platform named.
 
 Format: PDF, 6 pages, A4. Instant download.
+
+---
+
+# Beacons version（Beacons 商品頁用，較短）
+
+## Title
+The 5-Minute Pre-Publish Audit (Free)
+
+## Description
+**Before you hit publish, can you answer these five?**
+
+1. What went into it?
+2. Which licence covers each piece?
+3. What exactly am I selling?
+4. Where will I sell it?
+5. What must I disclose?
+
+A free 6-page checklist for Etsy, Gumroad and print-on-demand sellers. Includes the five questions with a GREEN-LEANING / AMBER / RED signal, nine red flags, a one-page product record, and where to go deeper.
+
+Free download: enter your email and the PDF is yours.
+Educational resource, not legal advice. Not affiliated with any platform named.
+
+## Button text
+Get the free checklist
