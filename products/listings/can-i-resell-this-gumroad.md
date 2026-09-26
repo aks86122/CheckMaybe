@@ -22,7 +22,7 @@ Not always. The licence you actually receive, the rules of the platform you sell
 - **Affiliate vs resell**: why promoting a product with a link is a different route from reselling it.
 - **Income screenshots, testimonials and disclosure**: what the US FTC’s own guidance pages say, quoted and dated.
 - **15 real-world scenarios**, each with a GREEN-LEANING / AMBER / RED signal, the reason, what to check and what could change the answer.
-- **Red flags before you buy** (15), a **before-you-list checklist**, two **worksheets** (licence record, platform & rights check) and a **safer-paths** overview.
+- **14 red flags before you buy**, a **14-point before-you-list checklist**, two **worksheets** (licence record, platform & rights check) and a **safer-paths** overview.
 - **Sources page** with dates for every official page quoted.
 
 **Who it’s for**
