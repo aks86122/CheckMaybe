@@ -742,13 +742,14 @@
     {
      "name": "OpenAI — Terms of Use (US)",
      "url": "https://openai.com/policies/terms-of-use",
-     "date": "Effective January 1, 2026",
-     "note": "EEA, Switzerland and UK residents have separate terms"
+     "date": "Saved 25 September 2026",
+     "note": "Effective January 1, 2026. EEA, Switzerland and UK residents have separate terms"
     },
     {
      "name": "Anthropic — Consumer Terms of Service",
      "url": "https://www.anthropic.com/legal/consumer-terms",
-     "date": "Effective October 8, 2025"
+     "date": "Saved 25 September 2026",
+     "note": "Effective October 8, 2025"
     },
     {
      "name": "US Federal Trade Commission — endorsements, testimonials, earnings claims",
