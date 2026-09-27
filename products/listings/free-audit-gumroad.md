@@ -8,7 +8,11 @@ A free 6-page checklist: five questions to run before you list any template, pri
 
 ## Description
 
-**Before you hit publish, can you answer these five?**
+**You’re about to hit publish. The product looks great. But do you know where every piece in it came from?**
+
+A Canva graphic, a font, a stock photo, an AI image, a file from a pack you bought. Most listing problems start with one piece nobody checked, and you usually find out after the listing is gone.
+
+You don’t need to read every licence tonight. You need five minutes and five questions:
 
 1. What went into it?
 2. Which licence covers each piece?
@@ -16,7 +20,7 @@ A free 6-page checklist: five questions to run before you list any template, pri
 4. Where will I sell it?
 5. What must I disclose?
 
-Most listing problems start with one piece nobody checked: a library graphic, a font, an AI image, or a pack bought with “resell rights”. This free checklist helps you find that piece before you list.
+If one answer is “I’m not sure”, that’s the piece to check before you list. This free checklist helps you find it.
 
 **What’s inside (6 pages)**
 - **The five questions**, with a simple GREEN-LEANING / AMBER / RED signal for your answers
@@ -42,7 +46,9 @@ Format: PDF, 6 pages, A4. Instant download.
 The 5-Minute Pre-Publish Audit (Free)
 
 ## Description
-**Before you hit publish, can you answer these five?**
+**About to hit publish? Do you know where every piece in your product came from?**
+
+Five minutes, five questions:
 
 1. What went into it?
 2. Which licence covers each piece?
