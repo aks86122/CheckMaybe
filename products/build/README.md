@@ -5,7 +5,7 @@ Every CheckMaybe toolkit PDF is generated from a content JSON file with this sha
 | File | Purpose |
 | --- | --- |
 | `SCHEMA.md` | Page types and fields for a product JSON (cover, steps, cards, table, scenarios, snapshot, list, worksheet, hierarchy, sources) |
-| `canva-v3.1.json`, `ai-v1.1.json` | Content of the two live products |
+| `canva-v3.2.json`, `ai-v1.1.json`, `resell-v1.0.json`, `audit-v1.0.json` | Content of the live products (older versions kept for reference) |
 | `render.py` + `style.css` | JSON → HTML (CheckMaybe cream/brown/orange design, traffic-light signals) |
 | `print.mjs` | HTML → A4 PDF with Playwright, plus layout QA: overflow, clipping, text overlap, safe-zone checks; small auto-fit (≥ 88%) |
 | `build.sh <name>` | Full build: `<name>.json` → `<name>.pdf`, QA report, page PNGs, contact sheet |

@@ -1,7 +1,7 @@
 # CheckMaybe 工具包產品模板
 
 所有 CheckMaybe 決策工具包（PDF／Workbook）都照這份模板製作與更新。
-範例：`Can I Sell This?`（Canva 版，v3.1）、`Can I Use This?`（AI 版，v1.1）。
+範例：`Can I Sell This?`（Canva 版，v3.2）、`Can I Use This?`（AI 版，v1.1）。
 產品內文一律英文；本說明為繁體中文。
 
 ---

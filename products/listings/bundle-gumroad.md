@@ -4,7 +4,7 @@
 The Complete Toolkit Bundle — Can I Sell This? + Can I Use This? + Can I Resell This?
 
 ## Summary
-All three CheckMaybe decision toolkits in one bundle: Canva licences, AI content and resell rights. 81 pages, $29 instead of $45.
+All three CheckMaybe decision toolkits in one bundle: Canva licences, AI content and resell rights. 82 pages, $29 instead of $45.
 
 ## Description (Gumroad)
 
@@ -19,7 +19,7 @@ Can I resell the pack I just bought?
 This bundle gives you all three CheckMaybe toolkits, so whatever you made and however you made it, you know what to check before you list.
 
 **What’s included**
-- **Can I Sell This? — A Commercial Use Toolkit for Canva Sellers** (27 pages, v3.1). Canva content labels, finished vs editable, templates, print-on-demand, client work and 20 seller scenarios.
+- **Can I Sell This? — A Commercial Use Toolkit for Canva Sellers** (28 pages, v3.2). Canva content labels, finished vs editable, templates, print-on-demand, client work and 22 seller scenarios.
 - **Can I Use This? — AI Content Commercial Use Toolkit** (32 pages, v1.1). AI provider terms, output rights, copyright, third-party risk and marketplace disclosure, with 15 scenarios.
 - **Can I Resell This? — A Buyer’s Checklist Before You Buy Resell Rights** (22 pages, v1.0). Licence terms, Gumroad, Beacons and Etsy rules quoted word for word, affiliate vs resell, and 15 scenarios.
 - **Bonus: The 5-Minute Pre-Publish Audit** (6 pages). Five questions to run before every listing.
@@ -44,7 +44,7 @@ This bundle gives you all three CheckMaybe toolkits, so whatever you made and ho
 - Platform rules change. Always confirm the current official terms before you list.
 - Independent resource, not affiliated with Canva, Etsy, Gumroad, Beacons or any AI provider.
 
-Format: 4 PDFs (81 pages + 6-page bonus), A4. Instant download.
+Format: 4 PDFs (82 pages + 6-page bonus), A4. Instant download.
 
 ---
 
@@ -57,7 +57,7 @@ The Complete Toolkit Bundle (3 Toolkits + Bonus)
 **Canva, AI, resell rights: three rulebooks, and your platform’s rules on top.**
 Can I sell what I made in Canva? Can I sell what I made with AI? Can I resell the pack I just bought?
 
-✔ Can I Sell This? — Canva commercial use (27 pages)
+✔ Can I Sell This? — Canva commercial use (28 pages)
 ✔ Can I Use This? — AI content commercial use (32 pages)
 ✔ Can I Resell This? — before you buy resell rights (22 pages)
 ✔ Bonus: The 5-Minute Pre-Publish Audit (6 pages)

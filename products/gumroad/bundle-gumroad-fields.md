@@ -11,7 +11,7 @@
 | Label | Value |
 | --- | --- |
 | Format | Instant PDF Download |
-| Includes | 3 toolkits (81 pages) + free 5-Minute Pre-Publish Audit |
+| Includes | 3 toolkits (82 pages) + free 5-Minute Pre-Publish Audit |
 | Best for | Canva, AI & resell-rights product sellers |
 | Language | English |
 

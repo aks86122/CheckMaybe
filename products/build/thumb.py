@@ -15,7 +15,7 @@ h1{font-size:76px;line-height:.98;margin-top:16px;font-weight:bold}
 .dots{position:absolute;left:44px;bottom:44px;display:flex;gap:8px}
 .dots span{width:22px;height:22px;border-radius:50%}
 """
-SUB = {"canva-v3.1": ("Commercial use toolkit for Canva sellers", "27-PAGE PDF · 20 SCENARIOS"),
+SUB = {"canva-v3.2": ("Commercial use toolkit for Canva sellers", "28-PAGE PDF · 22 SCENARIOS"),
        "ai-v1.1": ("AI content commercial use toolkit", "32-PAGE PDF · 15 SCENARIOS")}
 for p in PRODUCTS:
     sub, meta = SUB[p["id"]]

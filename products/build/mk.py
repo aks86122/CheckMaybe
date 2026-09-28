@@ -108,14 +108,14 @@ def featured(p):
 
 
 PRODUCTS = [
-    {"id": "canva-v3.1", "slug": "can-i-sell-this", "title": "Can I Sell This?", "subtitle": "A Commercial Use Toolkit for Canva Sellers",
+    {"id": "canva-v3.2", "slug": "can-i-sell-this", "title": "Can I Sell This?", "subtitle": "A Commercial Use Toolkit for Canva Sellers",
      "value": "Check a Canva-made product against the official license rules before you list it — first-pass signals, not guesses.",
-     "stats": [("27", "PAGE PDF"), ("20", "SELLER SCENARIOS"), ("SEP 2026", "SOURCES VERIFIED")],
-     "stack": [10, 5], "version": "3.1", "pages": "27",
+     "stats": [("28", "PAGE PDF"), ("22", "SELLER SCENARIOS"), ("SEP 2026", "SOURCES VERIFIED")],
+     "stack": [10, 5], "version": "3.2", "pages": "28",
      "foot": "EDUCATIONAL RESOURCE, NOT LEGAL ADVICE · NOT AFFILIATED WITH CANVA",
      "pv_title": "Look inside the toolkit",
-     "pv_sub": "A decision path, a quick map, 20 traffic-light seller scenarios, Etsy checks, a pre-publish checklist and worksheets.",
-     "preview": [(4, "DECISION PATH"), (5, "QUICK MAP"), (10, "20 SCENARIOS"), (20, "PRE-PUBLISH CHECKLIST")],
+     "pv_sub": "A decision path, a quick map, 22 traffic-light seller scenarios, Etsy checks, a pre-publish checklist and worksheets.",
+     "preview": [(4, "DECISION PATH"), (5, "QUICK MAP"), (10, "22 SCENARIOS"), (21, "PRE-PUBLISH CHECKLIST")],
      "featured": {"page": 10, "crop_top": 0.07, "title": "Every scenario gets a signal — and the reason behind it",
                   "calls": [("A traffic-light signal", "GREEN-LEANING, AMBER or RED. A first-pass signal, never a guarantee.", (0.70, 0.176)),
                             ("The reason, with the clause", "Each answer cites the official source, e.g. CLA §5.", (0.045, 0.25)),
