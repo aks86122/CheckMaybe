@@ -52,6 +52,14 @@ SETS = {
   '<div class="big" style="font-size:60px">Before you list:</div><div class="checks"><div class="check"><span class="box"></span>Which elements are Canva library content?</div><div class="check"><span class="box"></span>What label does each carry: Free, Pro, Education, Branded?</div><div class="check"><span class="box"></span>Could a buyer pull them out as files?</div></div>',
   '<div class="big" style="font-size:60px">20 seller scenarios like this one:</div><div class="prod"><b>Can I Sell This?</b><span>A commercial use toolkit for Canva sellers</span></div><div class="cta">LINK IN BIO →</div><div class="note">Not affiliated with Canva.</div>',
  ],
+ "canva-lifetime-pro": [
+  '<div class="hook">“Lifetime Canva Pro” for a few dollars?</div><div class="rule"></div><div class="sub">Read Canva’s own terms before you sell what you make with it.</div>',
+  quote("CANVA · TERMS OF USE §2e", "Effective 19 Aug 2026", "You will not:", "rent, lease, sell, distribute, offer in a service bureau, sublicense, or otherwise make available the Service or the Licensed Content to any third party"),
+  quote("CANVA · TERMS OF USE §8 TEAMS", "Some offers are a “team invite”", "", "the Team Owner or Administrator may control access to, delete, or re-assign ownership to the User Content you upload and Designs you create"),
+  '<div class="label">CANVA · CONTENT LICENSE AGREEMENT</div><div class="lead">Pro licences come from the subscription (§4):</div><div class="quote" style="font-size:46px">“at no additional cost if you have a valid Canva subscription”</div><div class="lead">After “any abuse of a username or password” (§10):</div><div class="quote" style="font-size:46px">“lose all rights to Content and Canva designs”</div>',
+  '<div class="big" style="font-size:60px">Before you sell:</div><div class="checks"><div class="check"><span class="box"></span>Whose account is it?</div><div class="check"><span class="box"></span>Who pays for the subscription?</div><div class="check"><span class="box"></span>Can someone remove you or your designs?</div><div class="check"><span class="box"></span>Is it Education? Non-commercial only (CLA §8)</div></div>',
+  '<div class="big" style="font-size:60px">22 seller scenarios like this one:</div><div class="prod"><b>Can I Sell This?</b><span>A commercial use toolkit for Canva sellers</span></div><div class="cta">LINK IN BIO →</div><div class="note">Not affiliated with Canva.</div>',
+ ],
 }
 for name, slides in SETS.items():
     for i, inner in enumerate(slides, 1):

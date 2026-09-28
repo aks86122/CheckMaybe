@@ -40,7 +40,7 @@ Educational, not legal advice. Not affiliated with Canva.
 
 ---
 
-## Instagram carousel (6 slides, 1080×1350)
+## Instagram carousel (6 slides, 1080×1350) — images: `content/carousels/canva-lifetime-pro-1…6.png`
 - **Slide 1:** “Lifetime Canva Pro” for a few dollars? Read this before you sell what you make with it.
 - **Slide 2:** Canva Terms of Use §2e: you will not “rent, lease, sell … or otherwise make available the Service … to any third party”.
 - **Slide 3:** A “team invite” puts your designs in someone else’s Team. §8: the Team Owner or Administrator “may control access to, delete, or re-assign ownership” of the designs you create there.
