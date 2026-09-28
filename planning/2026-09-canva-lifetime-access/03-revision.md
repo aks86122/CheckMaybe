@@ -23,3 +23,7 @@ Minor revision (added content, re-verified sources): 27 → 28 pages, 20 → 22 
 
 ## Listing assets updated
 Gumroad/Beacons listing, Gumroad fields, bundle listing (81 → 82 pages), cover/preview/featured images, Gumroad thumbnail, bundle ZIP. Founder re-uploads to Gumroad/Beacons (team does not publish).
+
+## Follow-up (same day): bundle and free Audit
+- **The 5-Minute Pre-Publish Audit v1.0 → v1.1:** page 5 “20 real seller scenarios” → “22”; cover/closing version labels. Listing images, Gumroad thumbnail, listing and fields updated.
+- **Bundle:** ZIP now holds Can I Sell This? v3.2 + Audit v1.1; cover, portrait and Gumroad thumbnail rebuilt (82 pages) with `build/bundle.py`; bundle intro posts and carousel slide 6 say 82 pages / 28 pages.

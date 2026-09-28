@@ -5,9 +5,11 @@ Every CheckMaybe toolkit PDF is generated from a content JSON file with this sha
 | File | Purpose |
 | --- | --- |
 | `SCHEMA.md` | Page types and fields for a product JSON (cover, steps, cards, table, scenarios, snapshot, list, worksheet, hierarchy, sources) |
-| `canva-v3.2.json`, `ai-v1.1.json`, `resell-v1.0.json`, `audit-v1.0.json` | Content of the live products (older versions kept for reference) |
+| `canva-v3.2.json`, `ai-v1.1.json`, `resell-v1.0.json`, `audit-v1.1.json` | Content of the live products (older versions kept for reference) |
 | `render.py` + `style.css` | JSON → HTML (CheckMaybe cream/brown/orange design, traffic-light signals) |
 | `print.mjs` | HTML → A4 PDF with Playwright, plus layout QA: overflow, clipping, text overlap, safe-zone checks; small auto-fit (≥ 88%) |
+| `bundle.py` + `bundle.mjs` | Bundle cover, portrait and Gumroad thumbnail (page total computed in `bundle.py`) |
+| `audit-img.mjs` | Renders the free Audit listing images from `img/free-audit-*.html` |
 | `build.sh <name>` | Full build: `<name>.json` → `<name>.pdf`, QA report, page PNGs, contact sheet |
 
 New product: write `<name>.json` following `SCHEMA.md`, run `./build.sh <name>`, fix anything the report flags, then review the rendered pages visually before release.

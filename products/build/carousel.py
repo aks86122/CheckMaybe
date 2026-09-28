@@ -61,6 +61,9 @@ SETS = {
   '<div class="big" style="font-size:60px">22 seller scenarios like this one:</div><div class="prod"><b>Can I Sell This?</b><span>A commercial use toolkit for Canva sellers</span></div><div class="cta">LINK IN BIO →</div><div class="note">Not affiliated with Canva.</div>',
  ],
 }
+ONLY = {"bundle-intro-6": '<div class="big" style="font-size:60px">All three toolkits, one bundle:</div><div class="prod"><b>The Complete Toolkit Bundle</b><span>Can I Sell This?<br>Can I Use This?<br>Can I Resell This?<br><br>82 pages · $29 instead of $45<br>+ free 5-Minute Pre-Publish Audit</span></div><div class="cta">LINK IN BIO →</div>'}
+for name, inner in ONLY.items():
+    open(f"car/{name}.html", "w").write(page(inner, 6, 6, "@CHECKMAYBETW"))
 for name, slides in SETS.items():
     for i, inner in enumerate(slides, 1):
         open(f"car/{name}-{i}.html", "w").write(page(inner, i, len(slides), "SWIPE →" if i < len(slides) else "@CHECKMAYBETW"))

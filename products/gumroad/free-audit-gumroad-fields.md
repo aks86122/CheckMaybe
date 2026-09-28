@@ -1,4 +1,4 @@
-# The 5-Minute Pre-Publish Audit — A Free Checklist for Digital Product Sellers (v1.0) — Gumroad fields
+# The 5-Minute Pre-Publish Audit — A Free Checklist for Digital Product Sellers (v1.1) — Gumroad fields
 
 ## 設定
 - Price：**$0+**（自由定價，最低 0；建議價可填 3）

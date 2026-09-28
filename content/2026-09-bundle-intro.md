@@ -39,7 +39,7 @@ The licence you bought doesn’t change the rules of the place you sell.
 **5/5**
 ```
 I put all three CheckMaybe toolkits in one bundle: Can I Sell This? · Can I Use This? · Can I Resell This?
-81 pages, $29 instead of $45, plus the free 5-Minute Pre-Publish Audit. Link in bio.
+82 pages, $29 instead of $45, plus the free 5-Minute Pre-Publish Audit. Link in bio.
 
 Educational, not legal advice.
 ```
@@ -50,7 +50,7 @@ Educational, not legal advice.
 3. CANVA · CLA: “most restrictive category applies to the entire design.”
 4. ETSY: “Sellers must disclose … created with the use of AI.”
 5. GUMROAD: “reselling private label rights products”
-6. The Complete Toolkit Bundle — 81 pages · $29 instead of $45 + free Audit. Link in bio.
+6. The Complete Toolkit Bundle — 82 pages · $29 instead of $45 + free Audit. Link in bio.
 
 **Caption**
 ```
@@ -80,7 +80,7 @@ Gumroad’s prohibited list includes “reselling private label rights products�
 I’ve made a toolkit for each question, and now they come together:
 
 The Complete Toolkit Bundle
-✔ Can I Sell This? — Canva commercial use (27 pages)
+✔ Can I Sell This? — Canva commercial use (28 pages)
 ✔ Can I Use This? — AI content commercial use (32 pages)
 ✔ Can I Resell This? — before you buy resell rights (22 pages)
 ✔ Bonus: The 5-Minute Pre-Publish Audit

@@ -1,4 +1,4 @@
-# The 5-Minute Pre-Publish Audit — Gumroad / Beacons listing (v1.0, free)
+# The 5-Minute Pre-Publish Audit — Gumroad / Beacons listing (v1.1, free)
 
 ## Title
 The 5-Minute Pre-Publish Audit — A Free Checklist for Digital Product Sellers
