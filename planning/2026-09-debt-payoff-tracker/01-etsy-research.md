@@ -12,7 +12,7 @@ Search: "debt payoff tracker" (from Etsy autocomplete). Etsy shows "1,000+ items
 | Snowball / avalanche in title | 27 |
 | Budget planner combined | 22 |
 | Printable / PDF | 7 |
-| "Interest" / "APR" in title | 1 (a loan repayment calculator bundle) |
+| "Interest" / "APR" in title | 0 |
 
 Shop review counts (shop-level): top shops 5.5k–12.7k; several Bestsellers from shops with 7–169 reviews.
 
