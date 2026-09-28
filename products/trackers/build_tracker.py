@@ -17,12 +17,12 @@ thin = Side(style="thin", color=LINE); BOX = Border(left=thin, right=thin, top=t
 CUR, PCT, DATE = '$#,##0.00;($#,##0.00);"-"', '0.0%;-0.0%;"-"', 'mmm d, yyyy'
 
 wb = Workbook()
-def sheet(name, widths, first=False):
+def sheet(name, widths, first=False, rows=40, cols=12):
     ws = wb.active if first else wb.create_sheet(name)
     ws.title = name; ws.sheet_view.showGridLines = False
     for col, w in widths.items(): ws.column_dimensions[col].width = w
-    for r in range(1, 80):
-        for c in range(1, 30): ws.cell(r, c).fill = fill(BG)
+    for r in range(1, rows + 1):
+        for c in range(1, cols + 1): ws.cell(r, c).fill = fill(BG)
     return ws
 
 def title(ws, text, sub):
@@ -44,7 +44,7 @@ def cell(ws, ref, v, fmt=None, inp=False, bold=False, color=None, align="left"):
     return c
 
 # ---------------- Settings ----------------
-st = sheet("Settings", {"A": 3, "B": 34, "C": 16, "D": 60})
+st = sheet("Settings", {"A": 3, "B": 34, "C": 16, "D": 60}, rows=22, cols=5)
 title(st, "Settings", "Blue cells are yours to edit.")
 rows = [("Monthly take-home income", 4200, CUR, "Your income after tax, per month."),
         ("High-cost APR (red flag)", 0.20, PCT, "Any debt at or above this APR is flagged HIGH."),
@@ -65,7 +65,7 @@ for col, items in lists.items():
 
 # ---------------- Debts ----------------
 de = sheet("Debts & Installments", {"A": 3, "B": 22, "C": 14, "D": 13, "E": 12, "F": 11, "G": 10, "H": 11, "I": 13,
-                                    "J": 12, "K": 11, "L": 13, "M": 13, "N": 13, "O": 14, "P": 10, "Q": 10, "R": 11})
+                                    "J": 12, "K": 11, "L": 13, "M": 13, "N": 13, "O": 14, "P": 10, "Q": 10, "R": 11}, rows=27, cols=19)
 title(de, "Debts & Installments", "Enter what you know (blue). The real APR is worked out from your monthly payment when you don't know it.")
 cols = ["Name", "Type", "Original amount", "Monthly payment", "Total payments", "Payments made", "Stated APR (if known)",
         "Balance now (if known)", "Real APR", "Payments left", "Balance (est.)", "Still to pay", "Interest still to pay",
@@ -107,7 +107,7 @@ de.freeze_panes = "C6"
 
 # ---------------- Subscriptions ----------------
 su = sheet("Subscriptions", {"A": 3, "B": 20, "C": 12, "D": 11, "E": 12, "F": 13, "G": 13, "H": 11, "I": 9, "J": 11,
-                             "K": 10, "L": 12, "M": 12, "N": 14, "O": 10, "P": 14, "Q": 10, "R": 16, "S": 6})
+                             "K": 10, "L": 12, "M": 12, "N": 14, "O": 10, "P": 14, "Q": 10, "R": 16, "S": 6}, rows=37, cols=19)
 title(su, "Subscriptions & Free Trials", "Untick Keep? on anything you'd cancel to see what you'd save. Free trials get a cancel-by countdown.")
 scol = ["Name", "Category", "Price", "Billing", "Start date", "Paid with", "Auto-renew?", "Keep?", "Free trial?", "Trial days",
         "Monthly cost", "Yearly cost", "Next charge", "Days to charge", "Trial: cancel by", "Trial days left", "Alert"]
@@ -155,7 +155,7 @@ su.conditional_formatting.add(f"Q{S0}:Q{S1}", FormulaRule(formula=[f'AND(ISNUMBE
 su.freeze_panes = "C6"
 
 # ---------------- Dashboard ----------------
-db = sheet("Dashboard", {"A": 3, "B": 26, "C": 16, "D": 4, "E": 26, "F": 16, "G": 4, "H": 26, "I": 16}, first=True)
+db = sheet("Dashboard", {"A": 3, "B": 26, "C": 16, "D": 4, "E": 26, "F": 16, "G": 4, "H": 26, "I": 16}, first=True, rows=48, cols=10)
 wb.move_sheet("Dashboard", -(len(wb.sheetnames) - 1))
 db["B2"] = "HIDDEN COST TRACKER"; db["B2"].font = F(ORANGE, True, 20)
 db["B3"] = "See what your debts, installments and subscriptions really cost you."; db["B3"].font = F(MUTED, False, 10, True)
@@ -221,7 +221,7 @@ db["B36"] = "Estimates only, not financial advice. Real APR is worked out from y
 db["B36"].font = F(MUTED, False, 8, True)
 
 # ---------------- How to use ----------------
-hw = sheet("How to Use", {"A": 3, "B": 100})
+hw = sheet("How to Use", {"A": 3, "B": 100}, rows=20, cols=3)
 title(hw, "How to use", "Five minutes to set up.")
 steps = ["1. Settings: enter your monthly take-home income. Adjust the red/amber APR levels if you like (defaults 20% / 10%).",
          "2. Debts & Installments: one row per debt. BLUE cells are yours; ORANGE-header columns calculate themselves.",
