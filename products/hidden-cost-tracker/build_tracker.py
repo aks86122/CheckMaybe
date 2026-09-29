@@ -428,4 +428,4 @@ for i, s in enumerate(steps):
 wb.move_sheet("How to Use", -(len(wb.sheetnames) - 2))
 wb.move_sheet("Chart Data", len(wb.sheetnames) - 1 - wb.sheetnames.index("Chart Data"))
 for ws in wb.worksheets: ws.sheet_properties.tabColor = {"Dashboard": ORANGE, "How to Use": TEAL, "Chart Data": "2A2D3A"}.get(ws.title, "3A3F58")
-wb.save("hidden-cost-tracker-prototype.xlsx"); print("saved", wb.sheetnames)
+wb.save("Hidden-Cost-Tracker.xlsx"); print("saved", wb.sheetnames)

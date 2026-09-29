@@ -1,6 +1,6 @@
 # Hidden Cost Tracker (prototype)
 
-`build_tracker.py` → `hidden-cost-tracker-prototype.xlsx` (English, dark theme; for Google Sheets / Excel).
+`build_tracker.py` → `Hidden-Cost-Tracker.xlsx` (English, dark theme; for Google Sheets / Excel).
 `sheets_polish.gs` → one-time Apps Script for the Google Sheets master copy (buyers never run it).
 
 Tabs: Dashboard · How to Use · Settings · Debts & Installments · Subscriptions · Chart Data.
@@ -27,3 +27,8 @@ Key formulas
 - Trial cancel-by = start date + trial days − 1; days left counted from `TODAY()`.
 - Committed share = (loan + installment payments + subscriptions, per month) ÷ monthly income.
 - Dashboard lists use hidden sort-key columns (value + ROW()/n) so ties don't repeat the same name.
+
+Buyer guide PDF
+- `node build_guide.mjs "https://docs.google.com/spreadsheets/d/<ID>/copy"` → `Hidden-Cost-Tracker-Access-Guide.pdf` (Letter, 4 pages, dark).
+- Without a link it builds `...-DRAFT.pdf` with a red placeholder and a "DO NOT UPLOAD" mark.
+- Seller setup steps (Chinese): `SETUP-zh.md`.
