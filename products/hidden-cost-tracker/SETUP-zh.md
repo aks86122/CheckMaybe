@@ -6,7 +6,9 @@
 > - [x] 買家說明 PDF 草稿（連結是佔位字）
 > - [ ] **下一步（要電腦）：** 照下方步驟一、二做母版，拿到 `/copy` 連結
 > - [ ] 產生正式版 PDF（把連結貼給 Claude）
-> - [ ] 儀表板截圖 → Etsy 商品圖 8–10 張 + 商品說明
+> - [x] Etsy 商品頁文案（標題、13 個標籤、說明、10 張圖規劃）→ `listing-etsy.md`
+> - [ ] 照 `listing-etsy.md` 第 5 節的清單截圖 → 做 10 張商品圖
+> - [ ] 測一次：Google 版「檔案 › 下載 › Excel」打開是否正常（勾選框可能變 TRUE/FALSE）；不正常就在 Etsy 改附 `Hidden-Cost-Tracker.xlsx`
 > - [ ] Etsy 上架（建議 US$7–9，初期打折）
 
 ## 資料夾內容
