@@ -1,9 +1,9 @@
 # CheckMaybe 待辦清單
 
-最後更新：2026-10-01
+最後更新：2026-10-03
 
 ## 進行中
-- **Hidden Cost Tracker**：完成九成，等電腦做 Google Sheets 母版。進度清單：`products/hidden-cost-tracker/SETUP-zh.md`
+- **Hidden Cost Tracker**：商品完成（母版、/copy 連結、正式 PDF、Excel 測試、Etsy／Gumroad／Beacons 商品圖與文案）。等上架：Gumroad 先上，Etsy 商店審核中。進度清單：`products/hidden-cost-tracker/SETUP-zh.md`
 
 ## 之後再做（等前面的有銷售數據）
 ### 情侶版 Hidden Cost Tracker（Couples Hidden Cost Tracker）
