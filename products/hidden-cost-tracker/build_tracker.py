@@ -221,7 +221,7 @@ chips(su, f"R{S0}:R{S1}", {"Cancel soon?": "red", "Trial ended": "red", "Charge 
 su.conditional_formatting.add(f"Q{S0}:Q{S1}", FormulaRule(formula=[f'AND(ISNUMBER($Q{S0}),$Q{S0}>=0,$Q{S0}<=3)'], fill=fill(CHIP["red"][1]), font=F(RED, True)))
 su.conditional_formatting.add(f"O{S0}:O{S1}", FormulaRule(formula=[f'AND(ISNUMBER($O{S0}),$O{S0}<={WARN})'], font=F(AMBER, True)))
 su.conditional_formatting.add(f"B{S0}:G{S1}", FormulaRule(formula=[f'$R{S0}="Cancel soon?"'], fill=fill("3A1C24")))
-su.conditional_formatting.add(f"B{S0}:Q{S1}", FormulaRule(formula=[f'$I{S0}="Yes"'], font=F("6E6C80", False, 10, True, True)))
+su.conditional_formatting.add(f"B{S0}:Q{S1}", FormulaRule(formula=[f'$I{S0}="Yes"'], fill=fill(INPUT), font=F("6E6C80", False, 10, True, True)))
 su.auto_filter.ref = f"B5:R{S1}"
 
 # ---------------- Chart Data (feeds the dashboard charts) ----------------
