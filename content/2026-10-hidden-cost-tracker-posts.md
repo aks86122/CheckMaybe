@@ -76,7 +76,7 @@ Not financial advice.
 ```
 Free trials aren't free if you forget the date.
 
-How many are you on right now? Most people can't answer that in 5 seconds 👇
+How many are you on right now? Could you list them all from memory? 👇
 ```
 
 **2/3**
