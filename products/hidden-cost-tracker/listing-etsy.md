@@ -87,7 +87,7 @@ How it works
 FAQ
 
 Do I need Excel or paid software?
-No. It's made for Google Sheets, which is free with a Google account, on a computer or in the Google Sheets app. Prefer Excel? Download your copy as .xlsx (File › Download › Microsoft Excel). The formulas still work, and tick boxes become Yes/No drop-downs.
+No. It's made for Google Sheets, which is free with a Google account, on a computer or in the Google Sheets app. Prefer Excel? Download your copy as .xlsx (File › Download › Microsoft Excel). The formulas still work, and tick boxes turn into Yes/No cells you type in.
 
 Will anything be shipped?
 No. This is a digital download. You get a PDF with the link to your copy of the tracker.
@@ -131,8 +131,8 @@ Consistency with the buyer PDF (`build_guide.mjs`): flags, Excel note, privacy l
 | Attributes (if offered) | Planner type: budget / finance; Format or software: Google Sheets, Excel; Theme/colour: dark (black) | Assumption, depends on what the category shows |
 | Personalization | Off | Fact |
 | Quantity | 999 (digital, never runs out) | Fact; no "only X left" messaging |
-| Digital file to upload | `Hidden-Cost-Tracker-Access-Guide.pdf` only (the final one, never the `-DRAFT` file) | Fact, per SETUP-zh.md step 3 |
-| Optional second file | `Hidden-Cost-Tracker.xlsx` for Excel users | Founder decision. Not needed if the Google "Download as .xlsx" route is tested and works |
+| Digital file to upload | `Hidden-Cost-Tracker-Access-Guide.pdf` only | Fact, per SETUP-zh.md step 3 |
+| Optional second file | `Hidden-Cost-Tracker.xlsx` for Excel users | Founder decision. Not needed: the Google "Download as .xlsx" route was tested 2026-10-03 and works |
 | Renewal | Manual for the first 4 months | Recommendation: avoids repeat US$0.20 fees if the test fails |
 | Returns | Shop policy: no returns on digital items, but invite a message if something doesn't work | Set in shop policies, not in the listing |
 
@@ -140,6 +140,8 @@ Price recommendation: list at US$8 (range US$7–9).
 Rationale: page-1 medians are about US$5.6 (debt payoff), US$5.7 (subscription) and US$4 (BNPL) (R1, R2); this one file covers all three plus the real-APR feature nobody else lists, which supports pricing above the median, while a new shop with zero reviews should stay at or below US$9. Final price: pricing analyst. Any launch discount should be a real Etsy sale with an honest end date, no fake countdowns.
 
 ## 5. Image plan (10 images)
+
+Done 2026-10-03: `images/etsy/hidden-cost-tracker-etsy-01-hero.png` … `-10-included.png` (3000 × 2250), built by `build_images.py`. Upload in number order; 01 is the thumbnail.
 
 Format: 4:3 landscape so Etsy's thumbnail crop doesn't cut text (about 3000 × 2250 px; confirm Etsy's current size guidance in the upload screen). Dark backgrounds to match the sheet. Big headline text, readable on a phone. Screenshots come from the real Google Sheets master copy with the made-up example rows. Add a small "Example data" label on every image that shows numbers.
 
@@ -174,7 +176,7 @@ Assumptions (not yet tested):
 - Research is one search page each on the Taiwan Etsy site; US results and ranking may differ.
 
 Risks to check before publishing:
-- Excel route: the guide and this listing say a Google copy downloaded as .xlsx keeps working with Yes/No drop-downs. That was true for the openpyxl-built .xlsx; after `sheets_polish.gs` adds native Google checkboxes, the downloaded file may show TRUE/FALSE instead. Test one download in Excel (or attach the .xlsx as a second file) before going live.
+- Excel route: tested 2026-10-03. A Google copy downloaded as .xlsx keeps its numbers and charts; tick boxes show as Yes/No text (no drop-down). Guide and listing now say that.
 - AI disclosure: the wording meets the "disclose in the description" rule as briefed; re-read Etsy's current Creativity Standards page once when listing, since the rules change.
 - Upload only the final PDF; the DRAFT PDF has a placeholder link.
 
