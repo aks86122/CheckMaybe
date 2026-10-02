@@ -127,7 +127,7 @@ You want to check what you’re really getting before you pay.
 
 ## 區塊 6：What’s inside（產品內頁拼貼圖 + 短句）
 
-**圖片：** 用現成的預覽圖（products/images/*-preview.png）
+**圖片：** 用現成的預覽圖（products/<商品>/images/*-preview.png）
 
 **Every toolkit gives you:**
 ✔ A traffic-light signal: GREEN-LEANING, AMBER or RED

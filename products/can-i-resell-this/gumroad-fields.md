@@ -2,7 +2,7 @@
 
 ## 上架提醒
 - 建議價：US$15（與另外兩本一致）
-- 封面：`thumbnails/can-i-resell-this-gumroad-thumb.png`；商品圖：`../images/can-i-resell-this-cover|preview|featured.png`
+- 封面：`thumbnails/can-i-resell-this-gumroad-thumb.png`；商品圖：`images/can-i-resell-this-cover|preview|featured.png`
 - Gumroad 分類／標籤避免用 “PLR”“MRR”“resell rights” 當主要標籤；用 “licensing”“checklist”“digital products”。
 
 ## Additional details (Product tab)

@@ -17,7 +17,9 @@
 | --- | --- |
 | `Hidden-Cost-Tracker.xlsx` | 追蹤表本體。上傳到 Google 雲端硬碟做成母版；也可以附給 Excel 買家 |
 | `sheets_polish.gs` | 一次性美化腳本：勾選框、篩選列、深色圖表、公式防誤改提醒 |
-| `Hidden-Cost-Tracker-Access-Guide-DRAFT.pdf` | 買家說明 PDF 草稿（連結還是佔位字，**不要上傳**） |
+| `Hidden-Cost-Tracker-Access-Guide.pdf` | 買家說明 PDF 正式版（連結已填好，上傳到各平台的就是這份） |
+| `images/` | 商品圖：`etsy/`、`gumroad/`、`beacons/` 各一個資料夾 |
+| `listing-etsy.md` / `listing-gumroad.md` / `listing-beacons.md` | 各平台的商品文案 |
 | `build_tracker.py` / `build_guide.mjs` | 重新產生 xlsx / PDF 的程式 |
 
 ## 步驟一：做出 Google Sheets 母版（需要電腦，約 5 分鐘）

@@ -1,7 +1,7 @@
 # Hidden Cost Tracker — Etsy listing (v1 draft, 2026-10-01)
 
 Language: English, US buyers. Status: ready to paste once the final Access Guide PDF (with the real /copy link) exists. Not published.
-Sources: `README.md`, `SETUP-zh.md`, `build_tracker.py`, `build_guide.mjs` (this folder); `planning/2026-09-debt-payoff-tracker/01-etsy-research.md` (R1) and `02-subscription-bnpl-research.md` (R2). House style: `products/listings/can-i-sell-this-gumroad.md`.
+Sources: `README.md`, `SETUP-zh.md`, `build_tracker.py`, `build_guide.mjs` (this folder); `planning/2026-09-debt-payoff-tracker/01-etsy-research.md` (R1) and `02-subscription-bnpl-research.md` (R2). House style: `products/can-i-sell-this/listing-gumroad.md`.
 
 Buyer-facing text below is plain text on purpose (no bold). In section 3, copy everything between the two `---` lines exactly.
 

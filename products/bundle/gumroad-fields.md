@@ -3,7 +3,7 @@
 ## 設定
 - 價格：**US$29**（三本單買 US$45）
 - Gumroad：用 **Bundle** 功能建立（Products → New product → Bundle），勾選 Can I Sell This? / Can I Use This? / Can I Resell This?；免費 Audit 可一起勾選當贈品。
-- 封面：`../images/bundle-cover.png`（橫式）、`../images/bundle-portrait.png`（直式 2:3）
+- 封面：`images/bundle-cover.png`（橫式）、`images/bundle-portrait.png`（直式 2:3）
 - 縮圖：`thumbnails/bundle-gumroad-thumb.png`
 - Beacons：沒有 Bundle 功能的話，上傳 `../CheckMaybe-Complete-Toolkit-Bundle.zip`（4 個 PDF）
 
