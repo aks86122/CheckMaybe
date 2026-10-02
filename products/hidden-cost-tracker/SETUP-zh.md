@@ -1,11 +1,11 @@
 # Hidden Cost Tracker 上架前設定（賣家自己做，一次就好）
 
-> **目前進度（2026-09-29 暫停，等有電腦再繼續）**
+> **目前進度（2026-10-03 更新）**
 > - [x] 追蹤表 v2（深色、彩色標籤、儀表板、圖表），公式驗算 0 錯誤
 > - [x] Google Sheets 一次性美化腳本 `sheets_polish.gs`
 > - [x] 買家說明 PDF 草稿（連結是佔位字）
-> - [ ] **下一步（要電腦）：** 照下方步驟一、二做母版，拿到 `/copy` 連結
-> - [ ] 產生正式版 PDF（把連結貼給 Claude）
+> - [x] 母版做好（語言設成美國、時區美東、腳本已刪），`/copy` 連結測試成功
+> - [x] 正式版 PDF：`Hidden-Cost-Tracker-Access-Guide.pdf`（這份才上傳 Etsy）
 > - [x] Etsy 商品頁文案（標題、13 個標籤、說明、10 張圖規劃）→ `listing-etsy.md`
 > - [ ] 照 `listing-etsy.md` 第 5 節的清單截圖 → 做 10 張商品圖
 > - [ ] 測一次：Google 版「檔案 › 下載 › Excel」打開是否正常（勾選框可能變 TRUE/FALSE）；不正常就在 Etsy 改附 `Hidden-Cost-Tracker.xlsx`
