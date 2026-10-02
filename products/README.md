@@ -9,6 +9,7 @@
 | `can-i-resell-this/` | Can I Resell This?（轉售授權） | `Can-I-Resell-This-v1.0.pdf` | 同上 |
 | `free-audit/` | The 5-Minute Pre-Publish Audit（免費） | `The-5-Minute-Pre-Publish-Audit-v1.1.pdf` | 同上 |
 | `bundle/` | Complete Toolkit Bundle | `CheckMaybe-Complete-Toolkit-Bundle.zip` | 同上 |
+| `holiday-hidden-cost-tracker/` | Holiday Hidden Cost Tracker（節日版，製作中） | `Holiday-Hidden-Cost-Tracker.xlsx` | 待寫 |
 | `hidden-cost-tracker/` | Hidden Cost Tracker（Google Sheets 追蹤表） | `Hidden-Cost-Tracker-Access-Guide.pdf`（買家拿到的檔案）＋ `Hidden-Cost-Tracker.xlsx` | `listing-etsy.md`、`listing-gumroad.md`、`listing-beacons.md` |
 
 ## 商品圖命名
