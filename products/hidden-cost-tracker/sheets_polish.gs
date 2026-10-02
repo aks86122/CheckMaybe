@@ -10,6 +10,8 @@
  *   - Yes/No columns on Subscriptions become real checkboxes (formulas keep working: ticked = "Yes").
  *   - Filter bars (slicers) above the Subscriptions and Debts tables.
  *   - Rebuilds the three Dashboard charts as native dark Google charts.
+ *   - Sets the file to English (United States) and US Eastern time, so dates read "Oct 2" instead of the
+ *     uploader's local language, and every buyer's copy starts in English.
  *   - Soft-protects the calculated columns (a warning, not a lock) so buyers don't overwrite formulas by accident.
  * Safe to run again: it removes what it added before re-adding it.
  */
@@ -28,6 +30,9 @@ function polishTemplate() {
     throw new Error('Tabs not found. Run this inside the Hidden Cost Tracker file, after File > Save as Google Sheets.');
   }
   const report = [];
+  ss.setSpreadsheetLocale('en_US');
+  ss.setSpreadsheetTimeZone('America/New_York');
+  report.push('English (US) locale');
   report.push(addCheckboxes_(su));
   report.push(addSlicers_(su, 'B5:R35', [[3, 'Category'], [5, 'Billing'], [9, 'Cancel it?'], [18, 'Alert']]));
   report.push(addSlicers_(de, 'B5:R25', [[3, 'Type'], [18, 'Flag']]));
