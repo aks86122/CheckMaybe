@@ -8,7 +8,7 @@
 > - [x] 正式版 PDF：`Hidden-Cost-Tracker-Access-Guide.pdf`（這份才上傳 Etsy）
 > - [x] Etsy 商品頁文案（標題、13 個標籤、說明、10 張圖規劃）→ `listing-etsy.md`
 > - [ ] 照 `listing-etsy.md` 第 5 節的清單截圖 → 做 10 張商品圖
-> - [ ] 測一次：Google 版「檔案 › 下載 › Excel」打開是否正常（勾選框可能變 TRUE/FALSE）；不正常就在 Etsy 改附 `Hidden-Cost-Tracker.xlsx`
+> - [x] Excel 測試（2026-10-03）：數字、圖表正常；勾選框變成 Yes/No 文字（沒有下拉選單，PDF 已改寫）；打勾列的深色底已修正
 > - [ ] Etsy 上架（建議 US$7–9，初期打折）
 
 ## 資料夾內容

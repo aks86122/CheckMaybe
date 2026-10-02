@@ -97,7 +97,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>${css}</st
   </div>
   <div class="grid2">
     <div class="card"><h3>On your phone</h3><p class="small muted">Install the free Google Sheets app, open the copy from your Drive and update it anywhere. Phone in dark mode and the colours look washed out? Tap ⋮ › <b style="color:var(--txt)">View in light theme</b> to see the design as intended.</p></div>
-    <div class="card"><h3>Prefer Excel?</h3><p class="small muted">In your Google copy choose File › Download › Microsoft Excel (.xlsx). Everything calculates; tick boxes become Yes/No drop-downs.</p></div>
+    <div class="card"><h3>Prefer Excel?</h3><p class="small muted">In your Google copy choose File › Download › Microsoft Excel (.xlsx). Everything calculates. Tick boxes turn into Yes/No cells: just type Yes or No.</p></div>
   </div>
   <div class="card"><h3>Please don't "Request edit access"</h3><p class="small muted">The link opens a view-only master. Always use <b style="color:var(--txt)">Make a copy</b> so you have a file you can edit.</p></div>
   ${foot(2)}
