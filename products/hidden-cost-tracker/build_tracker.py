@@ -353,7 +353,7 @@ db["B52"].font = F(MUTED, False, 8, True)
 
 # right column: section titles + charts
 section("F13", "WHERE EACH MONTH'S INCOME GOES", ORANGE)
-section("F27", "SPEND VS POTENTIAL SAVINGS (YEARLY)", PURPLE)
+section("F27", "SPEND VS SAVINGS (YEARLY)", PURPLE)
 db["H27"] = "VIEW  ▸"; db["H27"].font = F(MUTED, True, 8); db["H27"].alignment = Alignment(horizontal="right", vertical="bottom")
 cell(db, "I27", "By category", inp=True, bold=True, color=BLUE, align="center", size=9)
 listdv(db, '"By category,By subscription"', "I27")
