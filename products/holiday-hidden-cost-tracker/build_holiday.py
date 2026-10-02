@@ -156,7 +156,7 @@ hp.row_dimensions[4].height = 40
 header(hp, 5, 2, ["Item", "Plan type", "Price", "Payment", "Number of payments", "Pays every", "First payment",
                   "1st paid at checkout?", "Stated APR (if known)"], IN_H)
 header(hp, 5, 11, ["Total you'll pay", "Extra cost", "Real APR", "Last payment", "Payments left", "Still to pay", "Flag"], OUT_H)
-header(hp, 5, 18, [f'=UPPER(TEXT(EDATE({START},{j}),"mmm yyyy"))' for j in range(5)], GOLD)
+header(hp, 5, 18, [f'=UPPER(TEXT(EDATE({START},{j}),"mmm yyyy"))' for j in range(5)], OUT_H)
 psample = [("Smart watch", "Pay-in-4", 279, 69.75, 4, "2 weeks", d(2026, 11, 27), "Yes", None),
            ("Flights home", "Pay-in-4", 420, 105, 4, "2 weeks", d(2026, 12, 15), "Yes", None),
            ("4K TV", "Store financing", 649, 59, 12, "Month", d(2026, 12, 27), "No", None),
