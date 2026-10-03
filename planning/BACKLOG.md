@@ -21,3 +21,8 @@
 - **開工條件**：原版 Tracker 上架，並賣出幾單。
 - **成本**：低，可以用 `build_tracker.py` 改出來。
 - **參考**：[Etsy couples budget spreadsheet](https://www.etsy.com/market/couples_budget_spreadsheet/)、[split expense google sheet](https://www.etsy.com/market/split_expense_google_sheet)、[couple tracker](https://www.etsy.com/market/couple_tracker)
+
+### 誠實上架文案提示詞包（Honest Listing Copy Prompts）
+- **由來**：2026-10-03 創辦人分享一個 Gumroad AI 廣告提示詞包（500+ 提示詞、US$15、0 評價）。筆記：`planning/2026-09-competitor-notes/04-ai-prompt-vault-reference.md`
+- **想法**：把 `listing-copy` skill 的結構做成給 Etsy／Gumroad 賣家的提示詞包，內建「不誇大、數字要對回商品、平台欄位上限」的檢查。
+- **開工條件**：Hidden Cost Tracker 有銷售數據；或先發 1～2 篇 Threads 測反應。
