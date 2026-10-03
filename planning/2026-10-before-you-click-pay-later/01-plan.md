@@ -1,6 +1,6 @@
 # 《Before You Click "Pay Later"》企劃 v0.1
 
-狀態：草稿，等創辦人審閱（2026-10-03）
+狀態：**已核准**（2026-10-03），製作中
 產品資料夾（做好之後）：`products/before-you-click-pay-later/`
 來源：競品筆記 D（`planning/2026-09-competitor-notes/04-ai-prompt-vault-reference.md`）「短而專一的小書」＋ Hidden Cost Tracker 已驗證的範例數字。
 
@@ -84,8 +84,11 @@
 | 免費品下載多、付費轉換低 | 正常現象；先看名單成長，30 天後再評估 |
 | 時間跟節日版、前情提要撞期 | 內容大多沿用既有素材；若來不及，節日版優先，小書順延 |
 
-## 待創辦人決定（4 題）
-1. 免費（$0+），還是收一點（例如 US$3）？我建議免費。
-2. 10/13 前先上，還是等 11/1 跟節日版一起上？
-3. 第 10 頁「我的分期清單」要不要做成可填寫的 PDF 欄位？（多一點工，但手機上能直接填）
-4. 書名用 *Before You Click "Pay Later"* 可以嗎？備案：*5 Checks Before You Pay Later*。
+## 創辦人決定（2026-10-03）
+1. 免費（$0+） ✅
+2. 這幾天就上架（不等節日版） ✅
+3. 第 10 頁做成可填寫的 PDF 欄位 ✅
+4. 書名：*Before You Click "Pay Later"* ✅
+
+## 查證紀錄
+- Deferred interest（2026-10-03 查證）：CFPB「How to understand special promotional financing offers on credit cards」與 CFPB 新聞稿「Encourages Retail Credit Card Companies to Consider More Transparent Promotions」。重點：促銷期結束仍有餘額時，利息會從購買日起追溯計算；CFPB 建議改用不追溯的 0% 促銷。
