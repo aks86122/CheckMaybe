@@ -73,7 +73,7 @@ Good to know
 | Best for | Anyone choosing pay-in-4, BNPL or store financing |
 | Language | English |
 
-## Button text (Receipt tab) — 17/26 characters
+## Button text (Receipt tab) — 16/26 characters
 ```
 Download the PDF
 ```
