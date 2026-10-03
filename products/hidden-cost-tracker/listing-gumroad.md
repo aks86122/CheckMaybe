@@ -1,5 +1,7 @@
 # Hidden Cost Tracker — Gumroad listing (v1, 2026-10-03)
 
+**Live (2026-10-03):** https://checkmaybe.gumroad.com/l/kofwfjf
+
 Same product and facts as `listing-etsy.md`. If one changes, update the other.
 
 ## Name

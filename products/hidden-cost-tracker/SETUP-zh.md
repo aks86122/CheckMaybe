@@ -9,7 +9,9 @@
 > - [x] Etsy 商品頁文案（標題、13 個標籤、說明、10 張圖規劃）→ `listing-etsy.md`
 > - [ ] 照 `listing-etsy.md` 第 5 節的清單截圖 → 做 10 張商品圖
 > - [x] Excel 測試（2026-10-03）：數字、圖表正常；勾選框變成 Yes/No 文字（沒有下拉選單，PDF 已改寫）；打勾列的深色底已修正
-> - [ ] Etsy 上架（建議 US$7–9，初期打折）
+> - [x] Gumroad 上架（2026-10-03）：https://checkmaybe.gumroad.com/l/kofwfjf
+> - [x] Beacons 上架（2026-10-03）：https://shop.beacons.ai/checkmaybe/32876c16-76e3-411e-844c-02265774d312
+> - [ ] Etsy 上架（商店審核中；建議 US$8）
 
 ## 資料夾內容
 
