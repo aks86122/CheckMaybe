@@ -3,7 +3,7 @@
 最後更新：2026-10-03
 
 ## 進行中
-- **Hidden Cost Tracker**：商品完成（母版、/copy 連結、正式 PDF、Excel 測試、Etsy／Gumroad／Beacons 商品圖與文案）。等上架：Gumroad 先上，Etsy 商店審核中。進度清單：`products/hidden-cost-tracker/SETUP-zh.md`
+- **Hidden Cost Tracker**：商品完成（母版、/copy 連結、正式 PDF、Excel 測試、Etsy／Gumroad／Beacons 商品圖與文案）。Beacons 已上架（2026-10-03）；Gumroad 待確認連結；Etsy 商店審核中。進度清單：`products/hidden-cost-tracker/SETUP-zh.md`
 
 - **節日版 Hidden Cost Tracker**（聖誕／黑五分期）：企劃 v0.1 等創辦人審閱，目標 11/1 前上架。`planning/2026-10-holiday-hidden-cost-tracker/01-plan.md`
 

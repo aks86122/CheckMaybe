@@ -1,5 +1,7 @@
 # Hidden Cost Tracker — Beacons store listing (v1, 2026-10-03)
 
+**Live (2026-10-03):** https://shop.beacons.ai/checkmaybe/32876c16-76e3-411e-844c-02265774d312
+
 Same product and facts as `listing-etsy.md` / `listing-gumroad.md`.
 
 | Field | Value |
