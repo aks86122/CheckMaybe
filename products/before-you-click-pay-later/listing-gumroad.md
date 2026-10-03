@@ -78,7 +78,7 @@ Good to know
 Download the PDF
 ```
 
-## Custom message (Receipt tab) — 300/500 characters
+## Custom message (Receipt tab) — 273/500 characters
 ```
 Thanks for grabbing Before You Click "Pay Later".
 Keep it on your phone: page 9 is the one-page summary to check at checkout, and page 10 is a list you can fill in.
