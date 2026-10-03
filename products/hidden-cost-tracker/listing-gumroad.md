@@ -22,7 +22,7 @@ US$8 (same as Etsy). "Let customers pay what they want": off for now.
 A Google Sheets tracker that works out the real APR on your installment plans and counts down free trials before they charge you.
 ```
 
-## Description (paste)
+## Description v1 (replaced 2026-10-03 by v2 below)
 
 That $1,200 phone paid as 24 × $67 sounds cheap each month. It works out to about 29.8% APR. Store financing, pay-in-4 plans and "low monthly payment" deals rarely show the yearly rate, and free trials turn into charges when you're not looking.
 
@@ -90,9 +90,9 @@ Start in Settings with your monthly take-home pay, then replace the example rows
 All figures are estimates to help you plan, not financial advice.
 ```
 
-## Description v2 (restructured, 2026-10-03) — same facts, pain points → what it does → what you get → FAQ
+## Description v2 — LIVE from 2026-10-03 (pain points → what it does → what you get → FAQ)
 
-Order borrowed from a Gumroad sales page the founder shared (pain-point list, then outcomes, then contents, then FAQ). No income claims, no "value" totals, no countdowns. Use v1 or v2, not both; if switching, keep the other unchanged for a few weeks so views and sales can be compared.
+Order borrowed from a Gumroad sales page the founder shared (pain-point list, then outcomes, then contents, then FAQ). No income claims, no "value" totals, no countdowns. Founder chose v2 for Gumroad on 2026-10-03. House template for all listings: `.claude/skills/listing-copy/SKILL.md`.
 
 ```
 "Only $67 a month" isn't the whole price.

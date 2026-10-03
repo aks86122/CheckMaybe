@@ -6,6 +6,10 @@ CheckMaybe planning workspace. No website or app code yet — product plans, res
 
 Every CheckMaybe toolkit (new product or revision) follows `templates/toolkit-product-template.md`: its 8-step workflow (official sources saved by the founder → draft → claim-by-claim verification → page-by-page revision script → listing assets incl. Gumroad fields), page structure, traffic-light signals, citation and branding rules, and pre-publish checklist. Planning outputs go in `planning/<YYYY-MM>-<product>/`.
 
+## Listing copy
+
+Every product description (Gumroad, Etsy, Beacons) follows the `listing-copy` skill in `.claude/skills/listing-copy/SKILL.md`: hook → pain points → what it helps you do → what you get → how it works → FAQ → good to know. No income claims, value stacks or fake urgency.
+
 ## Social content
 
 Posts live in `content/`. Instagram captions stay short: one pain-point line, one action line (e.g. "→ link in bio"), one disclaimer line, about 5 hashtags. The carousel slides carry the detail. Facebook and Threads versions can be full length. Quotes must match the saved official source word for word.
