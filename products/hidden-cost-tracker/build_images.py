@@ -122,6 +122,43 @@ SQUARE = lambda w: page(w, w, f'<h1 style="font-size:{round(w*.12)}px">Hidden Co
                         f'<div class="sub" style="font-size:{round(w*.042)}px">Real APR · free trials · debt-free date</div>'
                         + win("dash", f"left:{round(w*.06)}px;top:{round(w*.5)}px;width:{round(w*.88)}px"))
 
+# ---- Instagram carousel: 4:5, rendered 864x1080 CSS px at 1.25x = 1080x1350. Big type for phones ----
+IW, IH = 864, 1080
+def ig(n, body, example=True):
+    num = f'<div class="abs" style="right:40px;top:40px;font-size:18px;color:#9A98AE;font-weight:700">{n} / 7</div>'
+    return page(IW, IH, num + body, example=example)
+H1 = lambda t, s=60: f'<h1 style="font-size:{s}px">{t}</h1>'
+SUB = lambda t: f'<div class="sub" style="font-size:26px">{t}</div>'
+MATH = ('<div class="card abs" style="left:40px;top:470px;width:784px;padding:36px 40px;font-size:34px;line-height:1.7">'
+        '<div>$67 × 24 payments = <b>$1,608</b></div><div>Phone price = <b>$1,200</b></div>'
+        '<div style="border-top:1px solid #33384F;margin-top:12px;padding-top:12px">You pay <b class="r">$408 extra</b> '
+        '≈ <b class="r">29.8% APR</b></div></div>')
+IG = {
+    "01-hook": ig(1, H1('That <em>“$67 a month”</em><br>phone plan?', 72) + SUB('About <b style="color:#FF6B6B">29.8% APR</b>. Swipe to see why →')
+                  + shot("phone_apr", "left:40px;top:520px;width:784px")),
+    "02-math": ig(2, H1('Pay-later deals show<br>the <em>monthly price</em>.<br>Not the yearly rate.', 56) + MATH
+                  + '<div class="abs" style="left:40px;top:840px;width:784px;font-size:24px;color:#9A98AE;line-height:1.4">'
+                    'A pay-in-4 with no fee is 0%. The monthly price alone doesn\'t tell you which one you\'ve got.</div>'),
+    "03-real-apr": ig(3, H1('So I built a sheet<br>that <em>works it out</em>', 60)
+                      + SUB('Every debt ranked by real APR, flagged HIGH / CHECK / OK.')
+                      + shot("debts", "left:40px;top:380px;width:784px") + shot("apr", "left:160px;top:690px;width:544px")),
+    "04-trials": ig(4, H1('Free trials with a<br><em>cancel-by</em> date', 60)
+                    + SUB('Next charges and countdowns, updated every day.')
+                    + shot("upcoming", "left:40px;top:380px;width:784px")),
+    "05-cancel": ig(5, H1('Tick <em>“Cancel it?”</em><br>see the yearly saving', 60)
+                    + shot("subs_left", "left:40px;top:300px;width:784px")
+                    + shot("savecard", "left:230px;top:850px;width:404px")),
+    "06-dashboard": ig(6, H1('How much of your<br>income is <em>already<br>spoken for</em>', 60)
+                       + shot("kpi", "left:40px;top:420px;width:784px") + shot("donut", "left:160px;top:600px;width:544px")),
+    "07-cta": ig(7, H1('Hidden Cost<br><em>Tracker</em>', 80)
+                 + SUB('Google Sheets · also works in Excel<br>Your copy stays in your own Google Drive')
+                 + '<div class="chips" style="margin-top:22px"><span class="chip r" style="font-size:20px">Real APR</span>'
+                   '<span class="chip a" style="font-size:20px">Free-trial countdown</span><span class="chip g" style="font-size:20px">Debt-free date</span></div>'
+                 + shot("guide1", "left:262px;top:530px;width:340px")
+                 + '<div class="abs" style="left:40px;top:1010px;width:784px;text-align:center;font-size:30px;font-weight:800;color:#F08A4B">Link in bio →</div>',
+                 example=False),
+}
+
 jobs = []
 def add(folder, name, html, w, h, k):
     os.makedirs(os.path.join(HERE, "images", folder), exist_ok=True)
@@ -134,6 +171,8 @@ for n, html in ETSY.items():
 add("gumroad", "gumroad-cover", GUM_COVER, 1280, 720, 2)
 add("gumroad", "gumroad-thumb", SQUARE(600), 600, 600, 2)
 add("beacons", "beacons-product", SQUARE(540), 540, 540, 2)
+for n, html in IG.items():
+    add("instagram", f"ig-{n}", html, IW, IH, 1.25)
 
 js = f"""
 import {{ chromium }} from '/opt/node22/lib/node_modules/playwright/index.mjs';

@@ -15,7 +15,7 @@
 ## 商品圖命名
 
 - PDF 工具包：`images/<slug>-cover.png`（1280×720）、`-preview.png`、`-featured.png`、`-gumroad-thumb.png`（1200×1200 方形）。Beacons 用 preview 圖。
-- Hidden Cost Tracker：`images/etsy/`（4:3，3000×2250）、`images/gumroad/`（封面 16:9＋方形縮圖）、`images/beacons/`（方形 1080×1080）。
+- Hidden Cost Tracker：`images/etsy/`（4:3，3000×2250）、`images/gumroad/`（封面 16:9＋方形縮圖）、`images/beacons/`（方形 1080×1080）、`images/instagram/`（輪播 7 張，4:5，1080×1350）。
 
 ## 共用工具
 
