@@ -1,6 +1,6 @@
 # Hidden Cost Tracker posts (English, CheckMaybe) — October 2026
 
-Launch posts for the original Hidden Cost Tracker (`products/hidden-cost-tracker/`). Numbers are the tracker's made-up example rows, checked in the sheet: phone plan $1,200 as 24 × $67 = 29.8% APR; sofa $2,000 as 24 × $105 = 23.3%; laptop pay-in-4 = 0%; ticking Cancel it? on 4 example subscriptions saves $1,104 a year. Links go in the profile bio, not the posts (Beacons: https://shop.beacons.ai/checkmaybe/32876c16-76e3-411e-844c-02265774d312). Post 1 went out 2026-10-03 with the topic changed by the founder; suggested topic: Personal Finance. Not financial advice.
+Launch posts for the original Hidden Cost Tracker (`products/hidden-cost-tracker/`). Numbers are the tracker's made-up example rows, checked in the sheet: phone plan $1,200 as 24 × $67 = 29.8% APR; sofa $2,000 as 24 × $105 = 23.3%; laptop pay-in-4 = 0%; ticking Cancel it? on 4 example subscriptions saves $1,104 a year. Links go in the profile bio, not the posts (Beacons: https://shop.beacons.ai/checkmaybe/32876c16-76e3-411e-844c-02265774d312). Suggested topic tag: Personal Finance or Budgeting. Not financial advice.
 
 Order: Post 1 first (it carries the link), then Posts 2 and 3 a few days apart. The holiday posts (`2026-10-holiday-bnpl-posts.md`) are separate and use different examples.
 
