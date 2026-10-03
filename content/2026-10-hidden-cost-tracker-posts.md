@@ -103,3 +103,31 @@ Find out what your plans and subscriptions really cost → link in bio
 Estimates only, not financial advice.
 #budgeting #debtfree #subscriptions #googlesheets #personalfinance
 ```
+
+## Facebook post (full length, link in the post)
+
+Images: the 7 Instagram carousel slides (`products/hidden-cost-tracker/images/instagram/`), or Etsy image 01 as a single image. Facebook can carry the link in the post itself; if reach looks low, move the link to the first comment.
+
+```
+"Just $67 a month" for a $1,200 phone.
+
+24 payments later you've paid $1,608. That's about 29.8% APR (made-up example, no other fees). The monthly price looked small, so the yearly rate never came up.
+
+Store financing, pay-in-4, "low monthly payment" deals and free trials all work the same way: the cost is real, it's just spread out where you don't see it.
+
+So I built Hidden Cost Tracker, a Google Sheet that puts it all in one place:
+✔ Real APR on every plan: enter the price, the payment and the number of payments
+✔ HIGH / CHECK / OK flag on every debt
+✔ Debt-free date, payments left and interest still to pay
+✔ Avalanche or snowball payoff order
+✔ Subscriptions with the next charge date and a countdown
+✔ Free trials with a cancel-by date, highlighted before they bill
+✔ Tick "Cancel it?" and see the yearly saving
+✔ One dashboard: how much of your income is already spoken for each month
+
+Works in Google Sheets (free) and Excel. Your copy lives in your own Google Drive, so nobody else sees your numbers.
+
+👉 https://checkmaybe.gumroad.com/l/kofwfjf
+
+Estimates only, not financial advice. Example numbers are made up.
+```
