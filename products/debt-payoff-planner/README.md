@@ -34,4 +34,5 @@ Limits (stated in the sheet): no back-interest calculation, interest monthly at 
 
 ## Still to do (needs a computer once)
 - Upload to Drive → Save as Google Sheets → check charts and drop-downs → make the `/copy` link.
-- Buyer guide PDF and listing copy (same pattern as Hidden Cost Tracker).
+- Buyer guide: `node build_guide.mjs "<copy link>"` → `Debt-Payoff-Planner-Access-Guide.pdf` (master: https://docs.google.com/spreadsheets/d/1oi5C0C9JHBy2mtu1vmjVdEclfH0fHbRD5G8dLFxyTqQ/copy, anyone-with-link viewer). Listing copy: `listing.md`.
+- Master copy: set File › Settings › Locale to United States so buyers see English month names.
