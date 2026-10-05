@@ -9,7 +9,7 @@
 | 免費導流 | Before You Click "Pay Later"（BNPL 真實成本檢查表） | US$0 | 做好、未上架（`planning/2026-10-before-you-click-pay-later/`） |
 | 單本 | Hidden Cost Tracker（Debt, BNPL & Subscription） | US$8 | 已上架 |
 | 單本 | Debt Payoff Planner：4 種順序比較（Smart／雪崩／雪球／現金流）＋提前還款違約金、綁約、不確定規則、0% 遞延利息期限、逾期優先 | 假設 US$7 | **v1 已做好** `products/debt-payoff-planner/`（待轉 Google Sheets）。缺口證據：Etsy 第 1 頁 47 筆中 0 筆標題提到 interest/APR（`planning/2026-09-debt-payoff-tracker/01-etsy-research.md`） |
-| 單本（季節） | Holiday Hidden Cost Tracker（黑五／聖誕分期） | US$7 | 製作中，目標 11/1 前上架（`planning/2026-10-holiday-hidden-cost-tracker/01-plan.md`） |
+| 單本（季節） | Holiday Hidden Cost Tracker（黑五／聖誕分期） | US$7 | Google 母檔、買家 PDF、文案已完成（2026-10-05），11/1 前上架 |
 | 全套 | Debt Toolkit Bundle（以上 3 本） | 假設 US$15（單買合計 US$22） | 3 本到齊後上架；價格交定價專員確認 |
 
 - 原本規劃的「原版＋節日版 US$12」組合保留為節慶期間限定組合。
