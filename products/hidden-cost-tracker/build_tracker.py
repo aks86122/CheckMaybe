@@ -24,6 +24,8 @@ CHIP = {"purple": (PURPLE, "2E2250"), "pink": (PINK, "3D1B35"), "teal": (TEAL, "
         "green": (GREEN, "173A28"), "red": (RED, "4A1D22"), "blue": (BLUE, "1C2B4A"), "orange": (ORANGE, "4A2A18"),
         "grey": ("B8B6C8", "2F3242")}
 F = lambda c=TXT, b=False, s=10, i=False, strike=False: Font(name="Arial", color=c, bold=b, size=s, italic=i, strike=strike)
+# Conditional-format fonts: colour/bold only. Font name or size in a dxf makes desktop Excel 'repair' styles.xml and drop all formatting.
+FD = lambda c=TXT, b=False, *_a, **_k: Font(color=c, bold=b)
 fill = lambda c: PatternFill("solid", fgColor=c)
 thin = Side(style="thin", color=LINE); BOX = Border(left=thin, right=thin, top=thin, bottom=thin)
 CUR, PCT, DATE = '$#,##0.00;($#,##0.00);"-"', '0.0%;-0.0%;"-"', 'mmm d, yyyy'
@@ -62,7 +64,7 @@ def chips(ws, rng, mapping):
     """Colour-coded 'chip' look for drop-down values (conditional formatting, works in Excel and Sheets)."""
     for v, name in mapping.items():
         fg, bg = CHIP[name]
-        ws.conditional_formatting.add(rng, CellIsRule(operator="equal", formula=[f'"{v}"'], fill=fill(bg), font=F(fg, True, 9)))
+        ws.conditional_formatting.add(rng, CellIsRule(operator="equal", formula=[f'"{v}"'], fill=fill(bg), font=FD(fg, True, 9)))
 
 def listdv(ws, src, rng):
     v = DataValidation(type="list", formula1=src, allow_blank=True); ws.add_data_validation(v); v.add(rng)
@@ -143,8 +145,8 @@ de["J5"].comment = Comment("Stated APR if you entered one. Otherwise worked out 
 listdv(de, DEBT_TYPES, f"C{N0}:C{N1}")
 chips(de, f"C{N0}:C{N1}", {"Credit card": "red", "Loan": "blue", "Installment": "amber", "BNPL": "pink", "Family / friend": "teal", "Other": "grey"})
 chips(de, f"R{N0}:R{N1}", {"HIGH": "red", "CHECK": "amber", "OK": "green"})
-de.conditional_formatting.add(f"J{N0}:J{N1}", FormulaRule(formula=[f'AND(ISNUMBER($J{N0}),$J{N0}>={RED_APR})'], font=F(RED, True)))
-de.conditional_formatting.add(f"P{N0}:P{N1}", CellIsRule(operator="equal", formula=["1"], fill=fill(CHIP["orange"][1]), font=F(ORANGE, True)))
+de.conditional_formatting.add(f"J{N0}:J{N1}", FormulaRule(formula=[f'AND(ISNUMBER($J{N0}),$J{N0}>={RED_APR})'], font=FD(RED, True)))
+de.conditional_formatting.add(f"P{N0}:P{N1}", CellIsRule(operator="equal", formula=["1"], fill=fill(CHIP["orange"][1]), font=FD(ORANGE, True)))
 de.auto_filter.ref = f"B5:R{N1}"
 
 # ---------------- Subscriptions ----------------
@@ -218,10 +220,10 @@ chips(su, f"H{S0}:H{S1}", {"Yes": "green", "No": "grey"})
 chips(su, f"I{S0}:I{S1}", {"Yes": "red", "No": "grey"})
 chips(su, f"J{S0}:J{S1}", {"Yes": "amber", "No": "grey"})
 chips(su, f"R{S0}:R{S1}", {"Cancel soon?": "red", "Trial ended": "red", "Charge soon": "amber", "To cancel": "grey", "OK": "green"})
-su.conditional_formatting.add(f"Q{S0}:Q{S1}", FormulaRule(formula=[f'AND(ISNUMBER($Q{S0}),$Q{S0}>=0,$Q{S0}<=3)'], fill=fill(CHIP["red"][1]), font=F(RED, True)))
-su.conditional_formatting.add(f"O{S0}:O{S1}", FormulaRule(formula=[f'AND(ISNUMBER($O{S0}),$O{S0}<={WARN})'], font=F(AMBER, True)))
+su.conditional_formatting.add(f"Q{S0}:Q{S1}", FormulaRule(formula=[f'AND(ISNUMBER($Q{S0}),$Q{S0}>=0,$Q{S0}<=3)'], fill=fill(CHIP["red"][1]), font=FD(RED, True)))
+su.conditional_formatting.add(f"O{S0}:O{S1}", FormulaRule(formula=[f'AND(ISNUMBER($O{S0}),$O{S0}<={WARN})'], font=FD(AMBER, True)))
 su.conditional_formatting.add(f"B{S0}:G{S1}", FormulaRule(formula=[f'$R{S0}="Cancel soon?"'], fill=fill("3A1C24")))
-su.conditional_formatting.add(f"B{S0}:Q{S1}", FormulaRule(formula=[f'$I{S0}="Yes"'], fill=fill(INPUT), font=F("6E6C80", False, 10, True, True)))
+su.conditional_formatting.add(f"B{S0}:Q{S1}", FormulaRule(formula=[f'$I{S0}="Yes"'], fill=fill(INPUT), font=FD("6E6C80", False, 10, True, True)))
 su.auto_filter.ref = f"B5:R{S1}"
 
 # ---------------- Chart Data (feeds the dashboard charts) ----------------
@@ -308,14 +310,14 @@ section("B13", "COMING UP  ·  NEXT CHARGES")
 table(14, ["Subscription", "Amount", "Date", "Due in"], 6,
       lambda k: [f"={pick('S', k, 'B')}", f"={pick('S', k, 'D')}", f"={pick('S', k, 'N')}", f"={pick('S', k, 'O')}"],
       [None, CUR, "mmm d", DAYS], ["left", "right", "center", "center"])
-db.conditional_formatting.add("E15:E20", FormulaRule(formula=[f'AND(ISNUMBER(E15),E15<={WARN})'], fill=fill(CHIP["amber"][1]), font=F(AMBER, True)))
+db.conditional_formatting.add("E15:E20", FormulaRule(formula=[f'AND(ISNUMBER(E15),E15<={WARN})'], fill=fill(CHIP["amber"][1]), font=FD(AMBER, True)))
 
 section("B22", "FREE TRIALS  ·  CANCEL BEFORE YOU'RE CHARGED", AMBER)
 table(23, ["Free trial", "Then costs", "Cancel by", "Days left"], 4,
       lambda k: [f"={pick('U', k, 'B')}", f"={pick('U', k, 'D')}", f"={pick('U', k, 'P')}", f"={pick('U', k, 'Q')}"],
       [None, CUR, "mmm d", DAYS], ["left", "right", "center", "center"], AMBER)
-db.conditional_formatting.add("E24:E27", FormulaRule(formula=["AND(ISNUMBER(E24),E24<=3)"], fill=fill(CHIP["red"][1]), font=F(RED, True)))
-db.conditional_formatting.add("E24:E27", FormulaRule(formula=[f"AND(ISNUMBER(E24),E24<={WARN})"], fill=fill(CHIP["amber"][1]), font=F(AMBER, True)))
+db.conditional_formatting.add("E24:E27", FormulaRule(formula=["AND(ISNUMBER(E24),E24<=3)"], fill=fill(CHIP["red"][1]), font=FD(RED, True)))
+db.conditional_formatting.add("E24:E27", FormulaRule(formula=[f"AND(ISNUMBER(E24),E24<={WARN})"], fill=fill(CHIP["amber"][1]), font=FD(AMBER, True)))
 
 section("B29", "DEBTS  ·  PAY EXTRA ON #1 FIRST (HIGHEST REAL APR)", RED)
 table(30, ["Debt", "Real APR", "Flag", "Interest left"], 6,
@@ -428,4 +430,4 @@ for i, s in enumerate(steps):
 wb.move_sheet("How to Use", -(len(wb.sheetnames) - 2))
 wb.move_sheet("Chart Data", len(wb.sheetnames) - 1 - wb.sheetnames.index("Chart Data"))
 for ws in wb.worksheets: ws.sheet_properties.tabColor = {"Dashboard": ORANGE, "How to Use": TEAL, "Chart Data": "2A2D3A"}.get(ws.title, "3A3F58")
-wb.save("Hidden-Cost-Tracker.xlsx"); print("saved", wb.sheetnames)
+wb.save("Hidden-Cost-Tracker.xlsx"); import sys, os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "build")); import excel_compat; excel_compat.fix("Hidden-Cost-Tracker.xlsx"); print("saved", wb.sheetnames)

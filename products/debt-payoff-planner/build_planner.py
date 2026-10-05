@@ -25,6 +25,8 @@ TXT, MUTED, BLUE, ORANGE, RED, AMBER, GREEN, TEAL, PURPLE = "EDEBF5", "9A98AE", 
 CHIP = {"purple": (PURPLE, "2E2250"), "teal": (TEAL, "16373A"), "amber": (AMBER, "4A3A15"), "green": (GREEN, "173A28"),
         "red": (RED, "4A1D22"), "blue": (BLUE, "1C2B4A"), "orange": (ORANGE, "4A2A18"), "grey": ("B8B6C8", "2F3242")}
 F = lambda c=TXT, b=False, s=10, i=False: Font(name="Arial", color=c, bold=b, size=s, italic=i)
+# Conditional-format fonts: colour/bold only. Font name or size in a dxf makes desktop Excel 'repair' styles.xml and drop all formatting.
+FD = lambda c=TXT, b=False, *_a, **_k: Font(color=c, bold=b)
 fill = lambda c: PatternFill("solid", fgColor=c)
 thin = Side(style="thin", color=LINE); BOX = Border(left=thin, right=thin, top=thin, bottom=thin)
 NUM, PCT, MON = '#,##0.00;(#,##0.00);"-"', '0.0%;-0.0%;"-"', 'mmm yyyy'
@@ -71,7 +73,7 @@ def cell(ws, ref, v, fmt=None, inp=False, bold=False, color=None, align="left", 
 def chips(ws, rng, mapping):
     for v, name in mapping.items():
         fg, bg = CHIP[name]
-        ws.conditional_formatting.add(rng, CellIsRule(operator="equal", formula=[f'"{v}"'], fill=fill(bg), font=F(fg, True, 9)))
+        ws.conditional_formatting.add(rng, CellIsRule(operator="equal", formula=[f'"{v}"'], fill=fill(bg), font=FD(fg, True, 9)))
 
 def listdv(ws, items, rng):
     v = DataValidation(type="list", formula1='"' + ",".join(items) + '"', allow_blank=True); ws.add_data_validation(v); v.add(rng)
@@ -112,8 +114,8 @@ rows = [("Debt-free", MON, lambda s: f"='{s}'!$B$5"),
 for i, (lab, fmt, fx) in enumerate(rows):
     r = 15 + i; cell(pl, f"B{r}", lab, band=i % 2, bold=True)
     for j, s in enumerate(CALC): cell(pl, f"{L(3 + j)}{r}", fx(s), fmt, band=i % 2, align="right")
-pl.conditional_formatting.add("C19:F19", FormulaRule(formula=["AND(ISNUMBER(C19),C19=MIN($C$19:$F$19))"], font=F(GREEN, True)))
-pl.conditional_formatting.add("C15:F15", FormulaRule(formula=["AND(ISNUMBER(C15),C15=MIN($C$15:$F$15))"], font=F(GREEN, True)))
+pl.conditional_formatting.add("C19:F19", FormulaRule(formula=["AND(ISNUMBER(C19),C19=MIN($C$19:$F$19))"], font=FD(GREEN, True)))
+pl.conditional_formatting.add("C15:F15", FormulaRule(formula=["AND(ISNUMBER(C15),C15=MIN($C$15:$F$15))"], font=FD(GREEN, True)))
 pl["B21"] = "Green = best in that row. If a month shows \"-\", that plan doesn't finish within 30 years: raise the monthly amount."
 pl["B21"].font = F(MUTED, False, 8, True)
 
@@ -240,9 +242,9 @@ listdv(md, RULES, f"H{R0}:H{RN}"); listdv(md, TYPES, f"C{R0}:C{RN}")
 listdv(md, ["Yes", "No"], f"G{R0}:G{RN}"); listdv(md, ["Yes", "No"], f"M{R0}:M{RN}")
 chips(md, f"G{R0}:G{RN}", {"Yes": "red", "No": "grey"}); chips(md, f"M{R0}:M{RN}", {"Yes": "amber", "No": "grey"})
 chips(md, f"H{R0}:H{RN}", {RULES[0]: "green", RULES[1]: "amber", RULES[2]: "purple", RULES[3]: "red"})
-md.conditional_formatting.add(f"Q{R0}:Q{RN}", FormulaRule(formula=[f'OR(LEFT(Q{R0},4)="Wait",LEFT(Q{R0},6)="Locked",LEFT(Q{R0},3)="Ask",LEFT(Q{R0},7)="Minimum")'], font=F(AMBER, True, 9)))
-md.conditional_formatting.add(f"R{R0}:R{RN}", CellIsRule(operator="equal", formula=['"Now"'], font=F(GREEN, True)))
-md.conditional_formatting.add(f"Q{R0}:Q{RN}", FormulaRule(formula=[f'OR(LEFT(Q{R0},5)="Worth",LEFT(Q{R0},2)="OK")'], font=F(GREEN, False, 9)))
+md.conditional_formatting.add(f"Q{R0}:Q{RN}", FormulaRule(formula=[f'OR(LEFT(Q{R0},4)="Wait",LEFT(Q{R0},6)="Locked",LEFT(Q{R0},3)="Ask",LEFT(Q{R0},7)="Minimum")'], font=FD(AMBER, True, 9)))
+md.conditional_formatting.add(f"R{R0}:R{RN}", CellIsRule(operator="equal", formula=['"Now"'], font=FD(GREEN, True)))
+md.conditional_formatting.add(f"Q{R0}:Q{RN}", FormulaRule(formula=[f'OR(LEFT(Q{R0},5)="Worth",LEFT(Q{R0},2)="OK")'], font=FD(GREEN, False, 9)))
 md.freeze_panes = f"C{R0}"
 md[f"B{RN + 2}"] = "Rows marked (sample) are made up: overwrite or clear them. Up to 12 debts."; md[f"B{RN + 2}"].font = F(MUTED, False, 8, True)
 
@@ -309,7 +311,7 @@ for m in range(1, MONTHS + 1):
     for j in range(N):
         cell(sc, f"{L(6 + j)}{r}", "=" + pick(L(3 + j), cr), NUM, band=b, align="right", size=9)
 sc.freeze_panes = "C6"
-sc.conditional_formatting.add(f"D6:D{5 + MONTHS}", CellIsRule(operator="lessThanOrEqual", formula=["0.005"], font=F(GREEN, True)))
+sc.conditional_formatting.add(f"D6:D{5 + MONTHS}", CellIsRule(operator="lessThanOrEqual", formula=["0.005"], font=FD(GREEN, True)))
 
 # chart: total balance over time (first 10 years) on Plan
 def rich(color, sz=900, bold=False):
@@ -365,4 +367,4 @@ order = ["Start Here", "Plan", "My Debts", "Schedule"] + CALC
 wb._sheets = [wb[n] for n in order]
 wb.active = 1
 for ws in wb.worksheets: ws.sheet_properties.tabColor = {"Plan": ORANGE, "Start Here": TEAL, "My Debts": BLUE}.get(ws.title, "3A3F58")
-wb.save("Debt-Payoff-Planner.xlsx"); print("saved", wb.sheetnames)
+wb.save("Debt-Payoff-Planner.xlsx"); import sys, os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "build")); import excel_compat; excel_compat.fix("Debt-Payoff-Planner.xlsx"); print("saved", wb.sheetnames)

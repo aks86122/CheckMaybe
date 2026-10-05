@@ -22,6 +22,8 @@ TXT, MUTED, GOLD, BERRY, GREEN, TEAL, ICE, PURPLE = "F3EFE4", "A7B2A3", "E0B05A"
 CHIP = {"gold": (GOLD, "3D3218"), "berry": (BERRY, "43202A"), "green": (GREEN, "1C3A2A"), "teal": (TEAL, "173833"),
         "ice": (ICE, "1D3045"), "purple": (PURPLE, "2E2546"), "grey": ("C2C8BE", "2A3530")}
 F = lambda c=TXT, b=False, s=10, i=False, strike=False: Font(name="Arial", color=c, bold=b, size=s, italic=i, strike=strike)
+# Conditional-format fonts: colour/bold only. Font name or size in a dxf makes desktop Excel 'repair' styles.xml and drop all formatting.
+FD = lambda c=TXT, b=False, *_a, **_k: Font(color=c, bold=b)
 fill = lambda c: PatternFill("solid", fgColor=c)
 thin = Side(style="thin", color=LINE); BOX = Border(left=thin, right=thin, top=thin, bottom=thin)
 CUR, PCT, DATE = '$#,##0.00;($#,##0.00);"-"', '0.0%;-0.0%;"-"', 'mmm d, yyyy'
@@ -60,7 +62,7 @@ def cell(ws, ref, v, fmt=None, inp=False, bold=False, color=None, align="left", 
 def chips(ws, rng, mapping):
     for v, name in mapping.items():
         fg, bg = CHIP[name]
-        ws.conditional_formatting.add(rng, CellIsRule(operator="equal", formula=[f'"{v}"'], fill=fill(bg), font=F(fg, True, 9)))
+        ws.conditional_formatting.add(rng, CellIsRule(operator="equal", formula=[f'"{v}"'], fill=fill(bg), font=FD(fg, True, 9)))
 
 def listdv(ws, src, rng):
     v = DataValidation(type="list", formula1=src, allow_blank=True); ws.add_data_validation(v); v.add(rng)
@@ -142,8 +144,8 @@ chips(gl, f"G{G0}:G{G1}", {"Cash / debit": "green", "Credit card": "ice", "Pay-i
                             "Store financing": "berry", "Gift card": "teal", "Other": "grey"})
 chips(gl, f"H{G0}:H{G1}", {"Idea": "grey", "Bought": "ice", "Wrapped": "gold", "Given": "green"})
 chips(gl, f"K{G0}:K{G1}", {"On a plan": "berry"})
-gl.conditional_formatting.add(f"J{G0}:J{G1}", FormulaRule(formula=[f'AND(ISNUMBER($J{G0}),$J{G0}<0)'], font=F(BERRY, True)))
-gl.conditional_formatting.add(f"J{G0}:J{G1}", FormulaRule(formula=[f'AND(ISNUMBER($J{G0}),$J{G0}>0)'], font=F(GREEN, True)))
+gl.conditional_formatting.add(f"J{G0}:J{G1}", FormulaRule(formula=[f'AND(ISNUMBER($J{G0}),$J{G0}<0)'], font=FD(BERRY, True)))
+gl.conditional_formatting.add(f"J{G0}:J{G1}", FormulaRule(formula=[f'AND(ISNUMBER($J{G0}),$J{G0}>0)'], font=FD(GREEN, True)))
 gl.auto_filter.ref = f"B5:K{G1}"
 
 # ---------------- Holiday Payments ----------------
@@ -204,8 +206,8 @@ chips(hp, f"C{P0}:C{P1}", {"Pay-in-4": "gold", "Monthly BNPL": "berry", "Store f
 chips(hp, f"G{P0}:G{P1}", {"2 weeks": "teal", "Month": "purple"})
 chips(hp, f"I{P0}:I{P1}", {"Yes": "green", "No": "grey"})
 chips(hp, f"Q{P0}:Q{P1}", {"HIGH": "berry", "CHECK": "gold", "OK": "green"})
-hp.conditional_formatting.add(f"M{P0}:M{P1}", FormulaRule(formula=[f'AND(ISNUMBER($M{P0}),$M{P0}>={RED_APR})'], font=F(BERRY, True)))
-hp.conditional_formatting.add(f"L{P0}:L{P1}", FormulaRule(formula=[f'AND(ISNUMBER($L{P0}),$L{P0}>0)'], font=F(BERRY, True)))
+hp.conditional_formatting.add(f"M{P0}:M{P1}", FormulaRule(formula=[f'AND(ISNUMBER($M{P0}),$M{P0}>={RED_APR})'], font=FD(BERRY, True)))
+hp.conditional_formatting.add(f"L{P0}:L{P1}", FormulaRule(formula=[f'AND(ISNUMBER($L{P0}),$L{P0}>0)'], font=FD(BERRY, True)))
 hp.auto_filter.ref = f"B5:Q{P1}"
 
 # ---------------- Free Trials ----------------
@@ -248,8 +250,8 @@ listdv(ft, BILL, f"F{T0}:F{T1}"); listdv(ft, '"Yes,No"', f"G{T0}:G{T1}")
 chips(ft, f"F{T0}:F{T1}", {"Weekly": "berry", "Monthly": "purple", "Yearly": "gold"})
 chips(ft, f"G{T0}:G{T1}", {"Yes": "green", "No": "grey"})
 chips(ft, f"L{T0}:L{T1}", {"Cancel soon?": "berry", "Trial ended": "berry", "Cancelled": "green", "OK": "grey"})
-ft.conditional_formatting.add(f"I{T0}:I{T1}", FormulaRule(formula=[f'AND(ISNUMBER($I{T0}),$I{T0}>=0,$I{T0}<={WARN})'], fill=fill(CHIP["berry"][1]), font=F(BERRY, True)))
-ft.conditional_formatting.add(f"B{T0}:K{T1}", FormulaRule(formula=[f'$G{T0}="Yes"'], fill=fill(INPUT), font=F("6E7A70", False, 10, True, True)))
+ft.conditional_formatting.add(f"I{T0}:I{T1}", FormulaRule(formula=[f'AND(ISNUMBER($I{T0}),$I{T0}>=0,$I{T0}<={WARN})'], fill=fill(CHIP["berry"][1]), font=FD(BERRY, True)))
+ft.conditional_formatting.add(f"B{T0}:K{T1}", FormulaRule(formula=[f'$G{T0}="Yes"'], fill=fill(INPUT), font=FD("6E7A70", False, 10, True, True)))
 ft.auto_filter.ref = f"B5:L{T1}"
 
 # ---------------- Chart Data ----------------
@@ -312,7 +314,7 @@ done = f'COUNTIF({gr("H")},"Bought")+COUNTIF({gr("H")},"Wrapped")+COUNTIF({gr("H
 kpi(5, 2, "HOLIDAY BUDGET", f"={BUDGET}", CUR, TXT, "change it in Settings")
 kpi(5, 4, "SPENT ON GIFTS", f"={SPENT}", CUR, GOLD, f'=IF({BUDGET}>0,TEXT({SPENT}/{BUDGET},"0%")&" of your budget","")')
 left = kpi(5, 6, "LEFT IN BUDGET", f"={BUDGET}-{SPENT}", CUR, GREEN, f'=IF({BUDGET}-{SPENT}<0,"over budget","still to spend")')
-db.conditional_formatting.add("F6", FormulaRule(formula=["F6<0"], font=F(BERRY, True, 20)))
+db.conditional_formatting.add("F6", FormulaRule(formula=["F6<0"], font=FD(BERRY, True, 20)))
 kpi(5, 8, "GIFTS SORTED", f'={done}&" of "&COUNTA({gr("B")})', "General", TXT,
     f'=COUNTIF({gr("H")},"Idea")&" still ideas  ·  "&COUNTIF({gr("H")},"Given")&" given"')
 mlabel = lambda j: f'="DUE IN "&UPPER(TEXT(EDATE({START},{j}),"mmmm"))'
@@ -339,15 +341,15 @@ section("B13", "HOLIDAY PAYMENTS  ·  MONTH BY MONTH", BERRY)
 table(14, ["Month", "Due", "Share of income", "Running total"], 5,
       lambda k: [f"='Chart Data'!B{4 + k}", f"='Chart Data'!C{4 + k}", f"='Chart Data'!D{4 + k}", f"=SUM('Chart Data'!$C$5:C{4 + k})"],
       [None, CUR, PCT, CUR], ["left", "right", "right", "right"], BERRY)
-db.conditional_formatting.add("D15:D19", FormulaRule(formula=["D15>=0.1"], fill=fill(CHIP["berry"][1]), font=F(BERRY, True)))
-db.conditional_formatting.add("D15:D19", FormulaRule(formula=["D15>=0.05"], fill=fill(CHIP["gold"][1]), font=F(GOLD, True)))
+db.conditional_formatting.add("D15:D19", FormulaRule(formula=["D15>=0.1"], fill=fill(CHIP["berry"][1]), font=FD(BERRY, True)))
+db.conditional_formatting.add("D15:D19", FormulaRule(formula=["D15>=0.05"], fill=fill(CHIP["gold"][1]), font=FD(GOLD, True)))
 
 pick = lambda key, k, col: f'IFERROR(INDEX({tr(col)},MATCH(SMALL({tr(key)},{k}),{tr(key)},0)),"")'
 section("B21", "FREE TRIALS  ·  CANCEL BEFORE YOU'RE CHARGED", GOLD)
 table(22, ["Free trial", "Then costs", "Cancel by", "Days left"], 4,
       lambda k: [f"={pick('M', k, 'B')}", f"={pick('M', k, 'E')}", f"={pick('M', k, 'H')}", f"={pick('M', k, 'I')}"],
       [None, CUR, "mmm d", DAYS], ["left", "right", "center", "center"], GOLD)
-db.conditional_formatting.add("E23:E26", FormulaRule(formula=[f"AND(ISNUMBER(E23),E23<={WARN})"], fill=fill(CHIP["berry"][1]), font=F(BERRY, True)))
+db.conditional_formatting.add("E23:E26", FormulaRule(formula=[f"AND(ISNUMBER(E23),E23<={WARN})"], fill=fill(CHIP["berry"][1]), font=FD(BERRY, True)))
 
 section("B28", "PAYMENT PLANS  ·  HIGHEST REAL APR FIRST", BERRY)
 table(29, ["Plan", "Real APR", "Flag", "Still to pay"], 6,
@@ -439,4 +441,4 @@ wb._sheets = [wb[n] for n in order]
 tabs = {"Dashboard": GOLD, "How to Use": TEAL, "Chart Data": "26302A", "Gift List": BERRY, "Holiday Payments": BERRY}
 for ws in wb.worksheets: ws.sheet_properties.tabColor = tabs.get(ws.title, "2F4838")
 wb.active = 0
-wb.save("Holiday-Hidden-Cost-Tracker.xlsx"); print("saved", wb.sheetnames)
+wb.save("Holiday-Hidden-Cost-Tracker.xlsx"); import sys, os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "build")); import excel_compat; excel_compat.fix("Holiday-Hidden-Cost-Tracker.xlsx"); print("saved", wb.sheetnames)
