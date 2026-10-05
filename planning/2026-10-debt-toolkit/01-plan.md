@@ -41,8 +41,8 @@
 ## 4. 待辦
 
 - [ ] 本週：上架 Before You Click "Pay Later"（免費）
-- [ ] 10/11～12：節日版 master（原排程）→ 11/1 前上架
+- [x] 節日版 master＋買家 PDF＋文案（2026-10-05 提前完成）→ 11/1 前上架
 - [ ] 11/13 前：準備黑五導流素材＋30% off 代碼（Gumroad 的優惠碼可設到期日與數量）
 - [x] Debt Payoff Planner v1（2026-10-05）。創辦人決定：工具一次做完，之後配合節慶導流分批上架
-- [ ] Debt Payoff Planner：轉 Google Sheets master、買家 PDF、上架文案
+- [x] Debt Payoff Planner：Google master、買家 PDF、上架文案（2026-10-05）
 - [ ] 全套定價：交 `specialized-pricing-analyst`

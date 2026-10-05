@@ -21,4 +21,6 @@ Seasonal edition of Hidden Cost Tracker (dark green / gold / berry). Plan: `plan
 - With Today set to Jan 8, 2027: watch 1 payment left (Jan 8 not yet paid), flights 2, TV 11, console 5; trials show Trial ended / Cancelled / OK correctly.
 
 ## Still to do (see plan timeline)
-- Google master + `/copy` link (founder, 10/11–10/12), buyer PDF guide, listing images, Etsy/Gumroad/Beacons copy.
+- ✅ Google master (2026-10-05): https://docs.google.com/spreadsheets/d/1KWwokhobH8ib60UvtkmG-2BDGjGJabm8K_BFTVcotKI/copy (anyone-with-link viewer). Set File › Settings › Locale to United States.
+- ✅ Buyer guide: `node build_guide.mjs "<copy link>"` → `Holiday-Hidden-Cost-Tracker-Access-Guide.pdf`. Listing copy: `listing.md`.
+- Listing images (Etsy 10 / Gumroad / Beacons).
