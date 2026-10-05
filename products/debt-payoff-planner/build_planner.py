@@ -262,7 +262,7 @@ for sname in CALC:
     cs["A9"] = "first";     cs["B9"] = '=IF(COUNT($C$10:$N$10)=0,"-",MIN($C$10:$N$10))'
     for j in range(N):
         c = L(3 + j); r = R0 + j
-        cs[f"{c}2"] = f"=IF('My Debts'!${rk}${r}=\"\",\"\",'My Debts'!${rk}${r})"
+        cs[f"{c}2"] = f"=IF('My Debts'!${rk}${r}=\"\",999,'My Debts'!${rk}${r})"
         cs[f"{c}3"] = f"=IF('My Debts'!$U${r}=\"\",{FAR},'My Debts'!$U${r})"
         cs[f"{c}4"] = f"=N(+'My Debts'!$E${r})"
         cs[f"{c}5"] = f"=IF(N(+'My Debts'!$L${r})>0,'My Debts'!$L${r},{c}4)"
@@ -280,10 +280,11 @@ for sname in CALC:
         r = FIRST + m - 1; p = r - 1
         cs[f"A{r}"] = m
         cs[f"B{r}"] = f"=EDATE({S['start']},{m - 1})"
-        cs[f"AA{r}"] = f'=_xlfn.MINIFS($C$2:$N$2,C{p}:N{p},">0",$C$3:$N$3,"<="&B{r})'
+        # lowest open, unlocked rank. MAX(cond/rank) inside SUMPRODUCT works without MINIFS (Excel 2016) or array entry
+        cs[f"AA{r}"] = f"=IFERROR(ROUND(1/SUMPRODUCT(MAX((C{p}:N{p}>0)*($C$3:$N$3<=B{r})/$C$2:$N$2)),0),0)"
         cs[f"AB{r}"] = f"=SUMPRODUCT((C{p}:N{p}>0)*$C$7:$N$7)"
         cs[f"AC{r}"] = f"=MAX(0,{S['budget']}-AB{r})+IF(A{r}={S['lumpm']},N({S['lump']}),0)"
-        cs[f"AF{r}"] = f'=_xlfn.MINIFS($C$2:$N$2,C{p}:N{p},">0",$C$3:$N$3,"<="&B{r},$C$2:$N$2,">"&AA{r})'
+        cs[f"AF{r}"] = f"=IFERROR(ROUND(1/SUMPRODUCT(MAX((C{p}:N{p}>0)*($C$3:$N$3<=B{r})*($C$2:$N$2>AA{r})/$C$2:$N$2)),0),0)"
         cs[f"AG{r}"] = f"=MAX(0,AC{r}-MAX(0,SUMPRODUCT(($C$2:$N$2=AA{r})*(AH{r}:AS{r}-$C$7:$N$7))))"
         for j in range(N):
             b, pc, dc = L(3 + j), L(15 + j), L(34 + j)

@@ -22,7 +22,7 @@ Start Here · Plan (settings, compare, checks, payoff order, charts) · My Debts
 ## Engine (each Calc sheet, month by month)
 1. Every debt with a balance pays its minimum (capped at what's due).
 2. Extra = monthly budget − minimums of debts still open (+ one-time extra in its month).
-3. Extra goes to the highest-ranked debt that is open and allowed to take extra this month (`MINIFS` on rank, open balance, unlock date). Whatever it can't absorb rolls to the next one.
+3. Extra goes to the highest-ranked debt that is open and allowed to take extra this month (lowest rank among open, unlocked debts via `1/SUMPRODUCT(MAX(cond/rank))`; no MINIFS, so it also works in Excel 2016). Whatever it can't absorb rolls to the next one.
 4. Interest = balance × APR ÷ 12, using the promo APR before the promo end and the after-promo APR from then on.
 5. Fee charged if a fee debt is cleared before its fee end date.
 
