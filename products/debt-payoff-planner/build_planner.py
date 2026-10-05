@@ -208,17 +208,17 @@ for i in range(N):
     q = (f'=IF(NOT({act}),"",IF(AND({minp}>0,{minp}<=$D{r}*{apr}/12),"Minimum doesn\'t cover interest: pay more here",'
          f'IF({minp}<=0,"Add the minimum payment",'
          f'IF({rule}="{RULES[3]}","Ask your lender before paying extra",'
-         f'IF({rule}="{RULES[2]}",IF(N(+$J{r})=0,"Locked: add the unlock date","Locked until "&TEXT($J{r},"mmm yyyy")),'
+         f'IF({rule}="{RULES[2]}",IF(N(+$J{r})=0,"Locked: add the unlock date","Locked until "&CHOOSE(MONTH($J{r}),"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")&" "&YEAR($J{r})),'
          f'IF({rule}="{RULES[1]}",IF(N(+$I{r})=0,"Add the fee amount (blank = no fee)",'
          f'IF(NOT(ISNUMBER($P{r})),"Fee is worth paying: minimums never clear this",'
-         f'IF(N(+$I{r})<$P{r},"Worth it: saves about "&TEXT($P{r}-$I{r},"#,##0")&" after the fee","Wait: the fee is more than the interest you\'d save"&IF(N(+$J{r})>0," (until "&TEXT($J{r},"mmm yyyy")&")","")))),'
+         f'IF(N(+$I{r})<$P{r},"Worth it: saves about "&TEXT($P{r}-$I{r},"#,##0")&" after the fee","Wait: the fee is more than the interest you\'d save"&IF(N(+$J{r})>0," (until "&CHOOSE(MONTH($J{r}),"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")&" "&YEAR($J{r})&")","")))),'
          f'"OK to pay early"))))))')
     cell(md, f"Q{r}", q, band=b, color=TXT, size=9)
     # R extra can start (date)
     rr = (f'=IF(NOT({act}),"",IF({rule}="{RULES[3]}",{FAR},IF({rule}="{RULES[2]}",IF(N(+$J{r})=0,{FAR},$J{r}),'
           f'IF(AND({rule}="{RULES[1]}",N(+$I{r})>0,ISNUMBER($P{r}),N(+$I{r})>=N(+$P{r})),IF(N(+$J{r})=0,{FAR},$J{r}),DATE(1900,1,1)))))')
     md[f"U{r}"] = rr
-    cell(md, f"R{r}", f'=IF($U{r}="","",IF($U{r}<={S["start"]},"Now",IF($U{r}>={FAR},"Not yet",TEXT($U{r},"mmm yyyy"))))', band=b, align="center")
+    cell(md, f"R{r}", f'=IF($U{r}="","",IF($U{r}<={S["start"]},"Now",IF($U{r}>={FAR},"Not yet",CHOOSE(MONTH($U{r}),"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")&" "&YEAR($U{r}))))', band=b, align="center")
     # hidden sort keys W..Z (smaller = earlier). Smart tiers: 0 behind, 1 deferred-interest promo still running, 2 rest.
     av = f"1000-{apr}*100+ROW()/1000000"
     cf = f"1000-IF({minp}>0,{minp}/$D{r},0)*100+ROW()/1000000"
@@ -233,8 +233,8 @@ for i in range(N):
     col = L(3 + i)
     cell(md, f"T{r}", f"=IF({act},CHOOSE({S['idx']}," + ",".join(f"'{s}'!{col}$10" for s in CALC) + "),\"\")", MON, band=b, align="right")
     md[f"AE{r}"] = f'=AND({act},$M{r}="Yes",N(+$K{r})>0,ISNUMBER($T{r}),N(+$T{r})>=N(+$K{r}))'
-    why = (f'=IF(NOT({act}),"",IF($AE{r},"⚠ Cleared after the promo ends ("&TEXT($K{r},"mmm yyyy")&"): back-interest likely, not counted here. Try Smart.",IF($G{r}="Yes","Behind on payments: deal with this first",'
-           f'IF(AND($M{r}="Yes",N(+$K{r})>{S["start"]}),"Deferred interest: clear by "&TEXT($K{r},"mmm yyyy")&" or back-interest is added",'
+    why = (f'=IF(NOT({act}),"",IF($AE{r},"⚠ Cleared after the promo ends ("&CHOOSE(MONTH($K{r}),"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")&" "&YEAR($K{r})&"): back-interest likely, not counted here. Try Smart.",IF($G{r}="Yes","Behind on payments: deal with this first",'
+           f'IF(AND($M{r}="Yes",N(+$K{r})>{S["start"]}),"Deferred interest: clear by "&CHOOSE(MONTH($K{r}),"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")&" "&YEAR($K{r})&" or back-interest is added",'
            f'IF($U{r}>{S["start"]},$Q{r},CHOOSE({S["idx"]},IF({S["pressure"]},"Frees up monthly money fastest","Highest APR among the rest"),'
            f'"APR "&TEXT({apr},"0.0%"),"Balance "&TEXT($D{r},"#,##0"),"Frees "&TEXT({minp},"#,##0")&"/month when cleared"))))))')
     cell(md, f"V{r}", why, band=b, color=MUTED, size=9)
