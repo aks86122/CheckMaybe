@@ -22,5 +22,5 @@ Seasonal edition of Hidden Cost Tracker (dark green / gold / berry). Plan: `plan
 
 ## Still to do (see plan timeline)
 - ✅ Google master (2026-10-05): https://docs.google.com/spreadsheets/d/1wxzEeO6fx0MqJOv0SrB6MLGLvvn0hh80Hj-1qJ8dajQ/copy (anyone-with-link viewer). Polished with holiday_polish.gs (checkboxes, slicers, native charts, en_US locale) on 2026-10-05.
-- ✅ Buyer guide: `node build_guide.mjs "<copy link>"` → `Holiday-Hidden-Cost-Tracker-Access-Guide.pdf`. Listing copy: `listing.md`.
+- ✅ Buyer guide: `node build_guide.mjs "<copy link>"` → `Holiday-Hidden-Cost-Tracker-Access-Guide.pdf`. Listing copy: `listing-gumroad.md`, `listing-etsy.md`, `listing-beacons.md` (house structure).
 - Listing images (Etsy 10 / Gumroad / Beacons).
