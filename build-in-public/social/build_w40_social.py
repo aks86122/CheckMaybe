@@ -20,7 +20,7 @@ carousel = [
  '<div class="big">33</div><div class="sub">page views</div><h2 style="margin-top:70px">0 sales. <span class="o">0 USD.</span></h2>',
  '<h2>Where the 33 views came from</h2><div style="margin-top:50px"><div class="row"><span>Direct, email, messages</span><b>16</b></div><div class="row"><span>Facebook</span><b>15</b></div><div class="row"><span>Threads</span><b>1</b></div><div class="row"><span>My own shop page</span><b>1</b></div></div><div class="sub">24 of 33 views: <span class="o">United States</span></div>',
  '<h2>What went wrong</h2><ul><li>Applied to my first affiliate network. <span class="o">Declined.</span></li><li>My first English Reel: <span class="o">5 views.</span></li><li>My first build-in-public post had typos.</li></ul>',
- '<h2>What I learned</h2><ul><li>Views are not sales.</li><li>People came, looked, and left. The offer is not clear yet.</li><li>6 products, no clear audience yet.</li></ul>',
+ '<h2>What I learned</h2><ul><li>Views are not sales.</li><li>People came, looked, and left. The offer is not clear yet.</li><li>The product series is ready. Traffic is the missing piece.</li></ul>',
  '<h1>Next week:<br><span class="o">one product,<br>one audience.</span></h1><div class="sub">Real numbers every Sunday.<br>Even the zeros. Follow along.</div>',
 ]
 reel = [
