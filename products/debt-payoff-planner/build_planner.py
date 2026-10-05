@@ -336,7 +336,7 @@ bc.add_data(Reference(pl, min_col=3, max_col=6, min_row=19), from_rows=True, tit
 bc.set_categories(Reference(pl, min_col=3, max_col=6, min_row=14))
 bc.series[0].graphicalProperties = GraphicalProperties(solidFill=TEAL, ln=LineProperties(noFill=True))
 bc.y_axis.number_format = "#,##0"; dark(bc); bc.width, bc.height = 15, 6.5
-pl["H29"] = "INTEREST + FEES BY ORDER"; pl["H29"].font = F(TEAL, True, 9)
+pl["H45"] = "INTEREST + FEES BY ORDER"; pl["H45"].font = F(TEAL, True, 9)
 pl.add_chart(bc, "H46")
 
 # ======================= Start Here =======================
