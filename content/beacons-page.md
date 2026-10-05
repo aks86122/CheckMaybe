@@ -1,6 +1,158 @@
-# Beacons 頁面文案 v2：長頁面版（2026-09-26）
+# Beacons 頁面文案 v3：兩條產品線（2026-10-05，以此為準）
 
-# 最終排法（2026-09-26，以此為準）
+v2（下方）只寫了「賣家授權」一條線。現在多了「錢」這條線（Pay Later、Hidden Cost Tracker、Holiday、Debt Payoff Planner、Debt Toolkit Bundle），所以品牌一句話從「check first, then sell」改成 **check the fine print before you sell, buy or pay later**。
+兩條線的共同點不變：看清楚小字、附官方出處或算給你看、不保證賺錢。
+【 】裡請換成你自己的真實經歷；不要提重生引路人或個人負債故事（品牌分開）。
+
+## 分頁（仍然 3 個）
+**HOME**（新訪客）｜**TOOLKITS**（想買的人）｜**中文**
+
+### HOME
+1. Header — 簡介：`Plain-English checklists for the fine print. Before you sell, buy or pay later.`
+2. Scrolling text — `Check before you sell ✦ Check before you pay later ✦ Official sources, no guesswork ✦ No income promises ✦`
+3. Text — v3 區塊 1 開場
+4. Text — v3 區塊 2 Sound familiar?
+5. Digital products — 兩個免費：5-Minute Pre-Publish Audit、Before You Click "Pay Later"
+6. Text — v3 區塊 7 Who’s behind CheckMaybe
+7. Links — See all toolkits →（TOOLKITS）、Instagram、Threads
+8. Text — v3 區塊 9 頁尾
+
+### TOOLKITS（用兩個小標分兩區）
+1. Text — `Pick the side that matches your question.`
+2. Text 小標 — **For sellers: can I sell this?**
+3. Digital products — Complete Toolkit Bundle（放第一張）、Can I Sell This?、Can I Use This?、Can I Resell This?、免費 Audit
+4. Text 小標 — **For your money: what will this really cost?**
+5. Digital products — Hidden Cost Tracker、免費 Pay Later；上架後依序加 Holiday Hidden Cost Tracker（11/1 前）、Debt Payoff Planner、Debt Toolkit Bundle（上架後放這區第一張）
+6. Text — v3 區塊 5 Who is CheckMaybe for?
+7. Text — v3 區塊 6 What you get
+8. Text — v3 區塊 9 頁尾
+
+---
+
+## v3 區塊 1：開場（置中、一句一行）
+
+Hi, I’m J 👋
+
+You made something in Canva or with AI.
+Or a checkout says “only $67 a month”.
+
+**Then the question hits:**
+**Can I actually sell this?**
+**What will this really cost me?**
+
+The answers are buried in licence pages,
+platform rules and payment fine print.
+
+So I built **CheckMaybe**:
+plain-English checklists and spreadsheets
+that show you what to check *before* you decide,
+with the official source or the full math behind every answer.
+
+---
+
+## v3 區塊 2：Sound familiar?
+
+**Sound familiar?**
+
+**If you sell digital products**
+▪ You used a Canva template. Can you sell the printable?
+▪ You made it with AI. Who owns the output, and do you need to disclose it?
+▪ You bought a resell-rights pack. Does the licence actually let you list it on Gumroad or Etsy?
+
+**If you’re about to pay later**
+▪ Pay-in-4, store financing, “only $X a month”: what’s the real yearly rate?
+▪ Three plans and two free trials. Which payments land in the same month?
+▪ Several debts. Which one should get the extra money first, and does paying early cost a fee?
+
+One unchecked detail can mean a takedown,
+or a bill you didn’t see coming.
+
+---
+
+## v3 區塊 5：Who is CheckMaybe for?
+
+**Who is CheckMaybe for?**
+
+▪ **Etsy & Gumroad sellers**: you sell printables, templates or planners and want the rules before you list.
+▪ **Creators using AI**: you want a clear routine instead of guesswork.
+▪ **Anyone about to buy a “resell rights” pack**: check what you’re really getting before you pay.
+▪ **Anyone using pay-later or store financing**: see the full cost and the due dates before you agree.
+▪ **Anyone paying off more than one debt**: plan the order, including early-payoff fees and 0% deadlines.
+
+---
+
+## v3 區塊 6：What you get
+
+**Seller toolkits (PDF)**
+✔ A traffic-light signal: GREEN-LEANING, AMBER or RED
+✔ The reason in plain English, with the official clause and its date
+✔ Checklists and worksheets to keep a record
+
+**Money tools (Google Sheets)**
+✔ The real APR and extra cost of any plan
+✔ Every due date in one place, so payments don’t stack up by surprise
+✔ Made-up example rows so you can see how it works before you type your own
+
+---
+
+## v3 區塊 7：Who’s behind CheckMaybe?
+
+**Who’s behind CheckMaybe?**
+
+I’m J, a creator in Taiwan 🇹🇼
+【可選：一句你自己的真實背景】
+
+I kept seeing creators lose listings over rules nobody explained clearly,
+and “only $X a month” offers that never showed the full price.
+
+So I read the official terms, saved every source,
+and turned them into checklists and spreadsheets anyone can follow.
+
+**No hype. No income promises.**
+**Just: check first, then decide.**
+
+---
+
+## v3 區塊 9：頁尾小字
+
+Educational information, not legal or financial advice. CheckMaybe is an independent resource, not affiliated with Canva, Etsy, Gumroad, Beacons, any AI provider, lender or pay-later provider. Rules and rates change: always confirm the current official terms. Digital downloads: see the refund policy on the checkout page.
+
+---
+
+## v3 中文分頁
+
+嗨，我是 J 👋
+
+用 Canva 做了模板、用 AI 生了圖，
+**到底能不能拿去賣？**
+
+結帳頁寫「每月只要 $X」、分 4 期免息，
+**實際總共要付多少？**
+
+CheckMaybe 把官方條款和小字整理成檢查清單和試算表，
+決定之前先確認。
+
+**賣家授權（PDF）**
+▪ Can I Sell This?：Canva 商用授權
+▪ Can I Use This?：AI 內容商用
+▪ Can I Resell This?：買轉售權之前先檢查
+
+**錢的工具**
+▪ Before You Click "Pay Later"：免費 PDF，5 個檢查看懂分期總成本
+▪ Hidden Cost Tracker（Google Sheets）：分期、訂閱、免費試用的真實年利率和到期日
+▪ （上架後再加）Holiday Hidden Cost Tracker、Debt Payoff Planner
+
+（內容為英文）
+
+**不保證賺錢，只幫你少踩雷。**
+
+教育資訊，非法律或財務建議。與 Canva、Etsy、Gumroad、Beacons、任何 AI 服務、貸款或分期業者無關聯。
+
+---
+
+# （舊）Beacons 頁面文案 v2：長頁面版（2026-09-26）
+
+# v2 排法（2026-09-26，已由 v3 取代）
 
 三個分頁：**HOME**（新訪客：認識你、領免費工具）｜**TOOLKITS**（想買的人：看產品）｜**中文**（台灣受眾）。
 下方「區塊 1–9」是文案本身；這裡是每頁要放哪些區塊。
