@@ -29,7 +29,7 @@ html = f"""<!doctype html><html><head><meta charset="utf-8"><style>
 ul{{margin-top:20px;padding-left:26px;font-size:20px;line-height:1.6;color:#E6E8EF}}
 .f{{position:absolute;left:44px;right:44px;bottom:32px;font-size:15px;color:#7F89A3;display:flex;justify-content:space-between}}
 </style></head><body><div class="tag">CHECKMAYBE · BUILDING IN PUBLIC</div><h1>{d['title']}</h1><div class="d">{d['period']}</div>
-<div class="pl"><div class="k">Net this week<br><span style="font-size:15px">revenue − spend</span></div><div class="n">{v(pl, ' 元')}</div></div>
+<div class="pl"><div class="k">{d.get('net_label', 'Net this week')}<br><span style="font-size:15px">revenue − spend</span></div><div class="n">{v(pl, ' USD')}</div></div>
 <div class="g">{T}</div><ul>{notes}</ul><div class="f"><span>Real numbers only. Fees and refunds already deducted.</span><span>Check before you pay.</span></div></body></html>"""
 h = out.replace(".png", ".html"); open(h, "w").write(html)
 js = f"""import {{ chromium }} from '/opt/node22/lib/node_modules/playwright/index.mjs';
