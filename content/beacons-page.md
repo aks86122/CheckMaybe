@@ -17,15 +17,18 @@ v2（下方）只寫了「賣家授權」一條線。現在多了「錢」這條
 7. Links — See all toolkits →（TOOLKITS）、Instagram、Threads
 8. Text — v3 區塊 9 頁尾
 
-### TOOLKITS（用兩個小標分兩區）
+### TOOLKITS（用兩個小標分兩區，2026-10-06 依實際頁面調整）
 1. Text — `Pick the side that matches your question.`
 2. Text 小標 — **For sellers: can I sell this?**
-3. Digital products — Complete Toolkit Bundle（放第一張）、Can I Sell This?、Can I Use This?、Can I Resell This?、免費 Audit
-4. Text 小標 — **For your money: what will this really cost?**
-5. Digital products — Hidden Cost Tracker、免費 Pay Later；上架後依序加 Holiday Hidden Cost Tracker（11/1 前）、Debt Payoff Planner、Debt Toolkit Bundle（上架後放這區第一張）
-6. Text — v3 區塊 5 Who is CheckMaybe for?
-7. Text — v3 區塊 6 What you get
-8. Text — v3 區塊 9 頁尾
+3. Digital products（只選賣家系列）— Complete Toolkit Bundle → Can I Sell This? → Can I Use This? → Can I Resell This? → 免費 Audit（放最後，HOME 已經有大卡）
+4. Image — Can I Sell This? 的「Look inside the toolkit」圖（留在賣家區）
+5. Text 小標 — **For your money: what will this really cost?**
+6. Digital products（只選錢的系列）— Hidden Cost Tracker → 免費 Pay Later（上架後）；之後 Debt Toolkit Bundle 上架就放第一張，Holiday、Planner 接在 Hidden Cost Tracker 後面
+7. Text — v3 區塊 6 What you get（取代舊的 What’s inside）
+8. Text — v3 區塊 5 Who is CheckMaybe for?（取代舊的 Who it’s for；粗體名稱後面要加冒號，不然會黏成一句）
+9. Text — v3 區塊 9 頁尾（取代舊的 Disclaimer）
+
+舊頁面的問題（2026-10-06 截圖）：Hidden Cost Tracker 混在 Decision toolkits 的賣家商品裡；What’s inside、Who it’s for、Disclaimer 只講賣家；免費 Audit 大卡放在最上面，把付費商品往下推。
 
 ---
 
