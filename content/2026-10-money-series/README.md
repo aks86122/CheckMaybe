@@ -5,7 +5,7 @@ The earlier carousels for Hidden Cost Tracker and Before You Click "Pay Later" a
 
 | Folder | What it does | When to post | Link in bio points to |
 | --- | --- | --- | --- |
-| `money-series/` (6) | Traffic post: introduces the money tools, sends people to the free guide | Now: Pay Later is live (2026-10-07) | Free Pay Later guide |
+| `money-series/` (6) | Traffic post: introduces the money tools, sends people to the free guide | Now: Pay Later is live (2026-10-06) | Free Pay Later guide |
 | `holiday/` (6) | Launch: Holiday Hidden Cost Tracker | Launch day (before 11/1); post again at the 11/13 Black Friday push | Holiday tracker |
 | `planner/` (6) | Launch: Debt Payoff Planner | Launch day | Debt Payoff Planner |
 

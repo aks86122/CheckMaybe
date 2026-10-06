@@ -1,6 +1,6 @@
 # Before You Click "Pay Later" — Gumroad listing (v1, 2026-10-03)
 
-**Live (2026-10-07)** on Gumroad and Beacons.
+**Live (2026-10-06)** on Gumroad and Beacons.
 
 Written with `.claude/skills/listing-copy/SKILL.md`. Same copy on Beacons (short version below).
 

@@ -6,7 +6,7 @@
 
 | 層 | 商品 | 價格 | 狀態 |
 | --- | --- | --- | --- |
-| 免費導流 | Before You Click "Pay Later"（BNPL 真實成本檢查表） | US$0 | **已上架（2026-10-07）** |
+| 免費導流 | Before You Click "Pay Later"（BNPL 真實成本檢查表） | US$0 | **已上架（2026-10-06）** |
 | 單本 | Hidden Cost Tracker（Debt, BNPL & Subscription） | US$8 | 已上架 |
 | 單本 | Debt Payoff Planner：4 種順序比較（Smart／雪崩／雪球／現金流）＋提前還款違約金、綁約、不確定規則、0% 遞延利息期限、逾期優先 | 假設 US$7 | **v1 已做好** `products/debt-payoff-planner/`（待轉 Google Sheets）。缺口證據：Etsy 第 1 頁 47 筆中 0 筆標題提到 interest/APR（`planning/2026-09-debt-payoff-tracker/01-etsy-research.md`） |
 | 單本（季節） | Holiday Hidden Cost Tracker（黑五／聖誕分期） | US$7 | Google 母檔、買家 PDF、文案已完成（2026-10-05），11/1 前上架 |
@@ -40,7 +40,7 @@
 
 ## 4. 待辦
 
-- [x] 上架 Before You Click "Pay Later"（免費，2026-10-07）
+- [x] 上架 Before You Click "Pay Later"（免費，2026-10-06）
 - [x] 節日版 master＋買家 PDF＋文案（2026-10-05 提前完成）→ 11/1 前上架
 - [ ] 11/13 前：準備黑五導流素材＋30% off 代碼（Gumroad 的優惠碼可設到期日與數量）
 - [x] Debt Payoff Planner v1（2026-10-05）。創辦人決定：工具一次做完，之後配合節慶導流分批上架
