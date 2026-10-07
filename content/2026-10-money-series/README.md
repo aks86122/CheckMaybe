@@ -6,10 +6,10 @@ The earlier carousels for Hidden Cost Tracker and Before You Click "Pay Later" a
 | Folder | What it does | When to post | Link in bio points to |
 | --- | --- | --- | --- |
 | `money-series/` (6) | Traffic post: introduces the money tools, sends people to the free guide | Now: Pay Later is live (2026-10-06) | Free Pay Later guide |
-| `holiday/` (6) | Launch: Holiday Hidden Cost Tracker | Launch day (before 11/1); post again at the 11/13 Black Friday push | Holiday tracker |
-| `planner/` (6) | Launch: Debt Payoff Planner | Launch day | Debt Payoff Planner |
+| `holiday/` (6) | Launch: Holiday Hidden Cost Tracker | Now (live 2026-10-07); post again at the 11/13 Black Friday push | Holiday tracker |
+| `planner/` (6) | Launch: Debt Payoff Planner | Now (live 2026-10-07); again late December | Debt Payoff Planner |
 
-Rules followed: made-up examples are labelled on every slide; no income or savings promises; no fake urgency; no lender, BNPL brand or founder story. "Coming soon" on slide 5 of `money-series/` is true only until those two launch; after that, re-label them "Available now" and re-run.
+Rules followed: made-up examples are labelled on every slide; no income or savings promises; no fake urgency; no lender, BNPL brand or founder story. All four money tools are live (2026-10-07); slide 5 says "Available now".
 
 Numbers (checked in the sheets and listings): phone $1,200 as 24 × $67 = $1,608, about 29.8% APR; holiday January $428.25 = 10.2% of the example income; console $499 as 6 × $89.50 = $537, about 25.7% APR; planner Avalanche 1,598.68 vs Smart 1,679.15 interest, Avalanche clears the store card after its 0% deal ends.
 

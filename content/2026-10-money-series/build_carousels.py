@@ -90,8 +90,8 @@ A = series("Money tools", [
      '<div style="margin-top:40px;display:grid;gap:18px">'
      '<div class="card" style="padding:24px 28px"><span class="free">FREE</span><div style="font-size:30px;font-weight:800;margin-top:10px">Before You Click “Pay Later”</div><div class="sub" style="font-size:22px">5 checks in 5 minutes · 12-page PDF</div></div>'
      '<div class="card" style="padding:24px 28px"><span class="live">AVAILABLE NOW</span><div style="font-size:30px;font-weight:800;margin-top:10px">Hidden Cost Tracker</div><div class="sub" style="font-size:22px">Real APR, subscriptions, free trials · Google Sheets</div></div>'
-     '<div class="card" style="padding:24px 28px"><span class="soon">COMING SOON</span><div style="font-size:30px;font-weight:800;margin-top:10px">Holiday Hidden Cost Tracker</div><div class="sub" style="font-size:22px">Gifts, holiday plans, January totals</div></div>'
-     '<div class="card" style="padding:24px 28px"><span class="soon">COMING SOON</span><div style="font-size:30px;font-weight:800;margin-top:10px">Debt Payoff Planner</div><div class="sub" style="font-size:22px">4 payoff orders, early-payoff fees, 0% deadlines</div></div>'
+     '<div class="card" style="padding:24px 28px"><span class="live">AVAILABLE NOW</span><div style="font-size:30px;font-weight:800;margin-top:10px">Holiday Hidden Cost Tracker</div><div class="sub" style="font-size:22px">Gifts, holiday plans, January totals</div></div>'
+     '<div class="card" style="padding:24px 28px"><span class="live">AVAILABLE NOW</span><div style="font-size:30px;font-weight:800;margin-top:10px">Debt Payoff Planner</div><div class="sub" style="font-size:22px">4 payoff orders, early-payoff fees, 0% deadlines</div></div>'
      '</div>', "Not financial advice."),
     ("06-cta",
      '<h1 style="font-size:66px;margin-top:70px">Start with the<br><em>free</em> guide</h1>'
