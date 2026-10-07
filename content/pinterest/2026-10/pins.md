@@ -24,22 +24,21 @@ Format: `<product URL>?utm_source=pinterest&utm_medium=social&utm_campaign=<pin 
 Known URLs: Can I Sell This? `https://checkmaybe.gumroad.com/l/baxojo`; Hidden Cost Tracker `https://checkmaybe.gumroad.com/l/kofwfjf`.
 Others: replace `<…-url>` with the product's Gumroad URL (Gumroad › Products › Share). Until then use the store `https://checkmaybe.gumroad.com`.
 
-## Posting order (1 pin a day)
-| Day | Pin | Why now |
+## Posting order (2 pins a day: one money, one seller)
+Each pin = one image + its title, description, alt text and link below. Use Pinterest's own scheduler (Publish at a later date) to queue a whole week in one sitting. Don't publish all 14 at once: spread them out.
+
+| Day | Morning | Evening |
 | --- | --- | --- |
-| 1 | m1 | Strongest hook, free guide is live |
-| 2 | s4 | Free seller checklist |
-| 3 | m5 | Hidden Cost Tracker is live |
-| 4 | m2 | Free guide, list-style pins get saved |
-| 5 | s1 | Best-known seller product |
-| 6 | m6 | |
-| 7 | s5 | Bundle |
-| 8 | m3 | |
-| 9 | s2 | |
-| 10 | m4 | |
-| 11 | s3 | |
-| Holiday tracker launch day | h1, then h2 the next day | Pinterest users plan Christmas from October; the earlier the holiday tracker is live, the longer these pins work. Repin both on 11/13 to the Christmas board. |
-| Planner launch day | p1 | Repin late December: "debt payoff" searches rise for New Year |
+| 1 | m1 | s4 |
+| 2 | m5 | s1 |
+| 3 | m2 | s5 |
+| 4 | h1 (if Holiday tracker is live) | s2 |
+| 5 | m6 | s3 |
+| 6 | h2 (if live) | m3 |
+| 7 | p1 (if Planner is live) | m4 |
+
+Holiday pins: repin h1 and h2 to the Christmas board on 11/13. Planner pin: repin late December ("debt payoff" searches rise for New Year).
+After week 1: 1 new pin a day (or a new version of the best pin) is enough.
 
 After 4 weeks: check Pinterest Analytics (impressions, saves, outbound clicks) and Gumroad sources (`utm_source=pinterest`). Make 2–3 new versions of the pin with the most outbound clicks (new title + new image, same link).
 
