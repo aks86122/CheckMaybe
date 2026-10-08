@@ -34,6 +34,7 @@ Next time a post takes off, check what happened after the view: saves, DMs, link
 
 (Examples are made up to show the idea.)
 Save this for your next content review.
+#contentcreator #creatortips #instagramtips #smallbusiness
 ```
 ### FB
 Same as the IG caption.
@@ -61,6 +62,7 @@ Copy them, swap the [brackets] for your own details.
 AI is a checklist, not a lawyer or an accountant. Confirm license terms and fees on the original pages before you list anything.
 
 Save this for your next product idea.
+#digitalproducts #etsyseller #sellingonline #aiprompts #commerciallicense
 ```
 ### FB
 ```
@@ -111,6 +113,7 @@ Before you click "Pay Later", ask AI 4 questions: the real APR, what happens if 
 Copy the prompts, swap the [brackets], and check the numbers against the plan's own terms.
 
 Estimates only, not financial advice. Free "Before You Click Pay Later" guide: link in bio.
+#buynowpaylater #budgeting #personalfinance #aiprompts
 ```
 ### FB
 Same as the IG caption, plus the 4 prompts in full (slides 2–5).
