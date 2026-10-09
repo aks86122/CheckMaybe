@@ -1,3 +1,62 @@
+# Beacons 頁面文案 v4：圖大於文（2026-10-09，以此為準）
+
+v3 的內容不變，但字太多、看了會焦躁。v4 改成「一張橫幅＋最多3行字＋商品卡片」。長的說明（Sound familiar、What you get、Who is CheckMaybe for）拿掉，改由商品卡片自己的說明承接。
+橫幅圖：`content/beacons-banners/`；背景影片：`content/beacons-banners/background/night-bridge-vertical.mp4`。
+
+## 文字設定（全站）
+| 項目 | 設定 |
+| --- | --- |
+| 字體 | 標題、內文都用 Inter（沒有就用 DM Sans） |
+| 文字顏色 | 主要 `#FFFFFF`，次要 `#C9C7D8` |
+| 對齊 | 置中 |
+| 內文大小 | 中（Medium），不要用大字 |
+| 粗體 | 每個文字區塊最多一行粗體 |
+| Emoji | 只在 Hi, I’m J 用一個 👋，其他不用 |
+| 每個文字區塊 | 最多3～4行；超過就刪 |
+| Scrolling text（跑馬燈） | 拿掉，橫幅已經講了 |
+
+## HOME
+1. Header：名稱 `CheckMaybe`，簡介 `Plain-English checklists for the fine print.`
+2. Image：banner-01-home
+3. Text：
+   > You made something with a template or AI.
+   > Or a checkout says “only $67 a month.”
+   > **Check the fine print before you decide.**
+4. Image：banner-02-free
+5. Digital products：5-Minute Pre-Publish Audit、Before You Click “Pay Later”（按鈕 `Get it free`）
+6. Image：banner-05-about
+7. Text：
+   > Hi, I’m J 👋 a creator in Taiwan.
+   > I read the official terms and do the math,
+   > so you can check first, then decide.
+   > **No hype. No income promises.**
+8. Links：`See all toolkits →`（TOOLKITS）、Instagram、Threads
+9. Text（小字，次要顏色）：頁尾
+
+## TOOLKITS
+1. Image：banner-03-sellers
+2. Text：`A clear signal, the reason, and the official source.`
+3. Digital products：Complete Toolkit Bundle → Can I Sell This? → Can I Use This? → Can I Resell This?（按鈕 `See inside`）
+4. Image：banner-04-money
+5. Text：`The real APR, every due date, and which debt to pay first.`
+6. Digital products：Debt Toolkit Bundle → Hidden Cost Tracker → Holiday Hidden Cost Tracker → Debt Payoff Planner → Before You Click “Pay Later”（免費放最後）
+7. Text（小字）：頁尾
+
+## 中文
+1. Image：banner-06-chinese
+2. Text：
+   > 嗨，我是J，在台灣做檢查清單的創作者。
+   > 用模板或AI做的東西能不能賣？「每月只要$67」總共要付多少？
+   > **決定之前，先看清楚小字。**
+   > （內容為英文）
+3. Digital products：同 TOOLKITS
+4. Text（小字）：不保證賺錢，只幫你少踩雷。教育資訊，非法律或財務建議。與Canva、Etsy、Gumroad、Beacons、任何AI服務、貸款或分期業者無關聯。
+
+## 頁尾（英文，小字）
+> Educational info, not legal or financial advice. Not affiliated with Canva, Etsy, Gumroad, Beacons, any AI provider, lender or pay-later provider. Rules change: always check the current official terms.
+
+---
+
 # Beacons 頁面文案 v3：兩條產品線（2026-10-05，以此為準）
 
 v2（下方）只寫了「賣家授權」一條線。現在多了「錢」這條線（Pay Later、Hidden Cost Tracker、Holiday、Debt Payoff Planner、Debt Toolkit Bundle），所以品牌一句話從「check first, then sell」改成 **check the fine print before you sell, buy or pay later**。

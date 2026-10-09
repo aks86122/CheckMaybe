@@ -18,7 +18,7 @@ B = [  # name, photo, background-position, kicker, title, line
  ("02-free", "robson-hatsukami-morgan-T8LZZvKc9Jc", "center", "FREE", "Start free.", "Two short checklists to try first."),
  ("03-sellers", "kal-luu-8isKycuUkkc", "center 40%", "FOR SELLERS", "Can I sell<br>this?", "Templates, fonts, AI and resell rights."),
  ("04-money", "timo-volz-Ha6n8MNgEbQ", "center", "FOR YOUR MONEY", "What will this<br>really cost?", "Pay later, hidden costs and debt payoff."),
- ("05-about", "jack-brind-eV7WTlVcydg", "right center", "WHO'S BEHIND IT", "Made in<br>Taipei.", "Plain-English checklists by J."),
+ ("05-about", "jack-brind-eV7WTlVcydg", "right center", "WHO'S BEHIND IT", "Made in<br>Taiwan.", "Plain-English checklists by J."),
  ("06-chinese", "vernon-raineil-cenzon-6rEPAbrXNaY", "center", "中文", "中文說明", "Traditional Chinese guide to CheckMaybe."),
 ]
 jobs = []
