@@ -14,12 +14,12 @@ h1{font-size:64px;font-weight:800;line-height:1.05;text-shadow:0 2px 18px rgba(0
 p{font-size:23px;color:rgba(255,255,255,.88);margin-top:16px;line-height:1.4}
 .bar{width:48px;height:4px;background:#F08A4B;border-radius:2px;margin-bottom:22px}"""
 B = [  # name, photo, background-position, kicker, title, line
- ("01-home", "nica-lorber-FTj49uatPMc", "center 60%", "START HERE", "Check the<br>fine print.", "Before you sell, buy or pay later."),
- ("02-free", "emma-swoboda-iFWGdUOAHIA", "center 55%", "FREE", "Start free.", "Two short checklists to try first."),
+ ("01-home", "yu-hong-lee-cAztbx_kPYQ", "center", "START HERE", "Check the<br>fine print.", "Before you sell, buy or pay later."),
+ ("02-free", "robson-hatsukami-morgan-T8LZZvKc9Jc", "center", "FREE", "Start free.", "Two short checklists to try first."),
  ("03-sellers", "kal-luu-8isKycuUkkc", "center 40%", "FOR SELLERS", "Can I sell<br>this?", "Templates, fonts, AI and resell rights."),
  ("04-money", "timo-volz-Ha6n8MNgEbQ", "center", "FOR YOUR MONEY", "What will this<br>really cost?", "Pay later, hidden costs and debt payoff."),
  ("05-about", "jack-brind-eV7WTlVcydg", "right center", "WHO'S BEHIND IT", "Made in<br>Taipei.", "Plain-English checklists by J."),
- ("06-chinese", "markus-winkler-yHbEL72j0jc", "center", "中文", "中文說明", "Traditional Chinese guide to CheckMaybe."),
+ ("06-chinese", "vernon-raineil-cenzon-6rEPAbrXNaY", "center", "中文", "中文說明", "Traditional Chinese guide to CheckMaybe."),
 ]
 jobs = []
 for name, photo, pos, k, h, p in B:
