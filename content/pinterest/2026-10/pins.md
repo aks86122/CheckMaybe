@@ -129,3 +129,37 @@ After 4 weeks: check Pinterest Analytics (impressions, saves, outbound clicks) a
 - **Description:** Can I sell this? Can I use this? Can I resell this? Three PDF toolkits, 82 pages, every answer tied to the official source. $29 instead of $45. Not legal advice; not affiliated with any platform named.
 - **Alt text:** The three CheckMaybe toolkits shown as printed PDFs.
 - **Link:** `https://checkmaybe.gumroad.com/l/udjkm?utm_source=pinterest&utm_medium=social&utm_campaign=s5`
+
+---
+
+## v2 — receipt mascot pins (2026-10-17)
+
+4 new pins in `pins/checkmaybe-pin-r*.png`, built by `build_pins_v2.py`: receipt mascot from the comics + the real product screen. Same products, links and made-up numbers as v1, new images. On Pinterest that's normal: people find pins through search, not a feed, and fresh images to the same link are encouraged.
+When: after the 14 v1 pins are out (week 1), 1 pin a day. r2 again with h1/h2 at the 11/13 Black Friday push; r4 again late December.
+
+| Pin | Board | Link (UTM campaign = pin id) |
+| --- | --- | --- |
+| r1 | Pay Later & Budgeting Tips | `https://checkmaybe.gumroad.com/l/cbmfye?utm_source=pinterest&utm_medium=social&utm_campaign=r1` |
+| r2 | Christmas Budget & Gift Planning | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=r2` |
+| r3 | Pay Later & Budgeting Tips | `https://checkmaybe.gumroad.com/l/kofwfjf?utm_source=pinterest&utm_medium=social&utm_campaign=r3` |
+| r4 | Debt Payoff Planning | `https://checkmaybe.gumroad.com/l/ddktis?utm_source=pinterest&utm_medium=social&utm_campaign=r4` |
+
+### r1 — Unroll the receipt
+- **Title:** "Only $67 a Month"? Unroll the Receipt Before You Pay Later
+- **Description:** A $1,200 phone paid as 24 × $67 costs $1,608: $408 more, about 29.8% APR (made-up example). Check the total, not the monthly price. Free 5-check PDF guide for the moment before you click "pay later". Not financial advice. #buynowpaylater #budgeting #personalfinance
+- **Alt text:** Cartoon receipt unrolling to a long pile. Text: "Only $67 a month." 24 × $67 = $1,608 for a $1,200 phone, $408 more, about 29.8% APR.
+
+### r2 — One big January
+- **Title:** Christmas Budget: Four Small Pay-in-4 Plans, One Big January Bill
+- **Description:** Made-up example: four holiday pay-in-4 plans land together and January's payments reach $428.25, 10.2% of the example income. The Holiday Hidden Cost Tracker adds up gifts, payment plans and free trials month by month in Google Sheets. Not financial advice. #christmasbudget #holidaybudget #buynowpaylater
+- **Alt text:** Cartoon receipt carrying four gift boxes next to a month-by-month table showing $428.25 due in January.
+
+### r3 — Free until the date you forget
+- **Title:** Free Trial Tracker: Write Down the Cancel-By Date (Google Sheets)
+- **Description:** A free trial is free until the date you forget. Write down the cancel-by date the day you start. The Hidden Cost Tracker lists every trial and subscription and highlights trials before they bill, plus the real APR on every payment plan. Not financial advice. #subscriptiontracker #budgeting #googlesheets
+- **Alt text:** Cartoon receipt with a magnifier next to an hourglass and a gift box, beside a budget tracker dashboard.
+
+### r4 — Read the asterisk
+- **Title:** "0% Interest*": When Does It End? Plan Your Debt Payoff Order
+- **Description:** A 0% deal has an end date, and it can change which debt you should pay off first. The Debt Payoff Planner compares 4 payoff orders side by side in Google Sheets (made-up example rows). Not financial advice. #debtpayoff #debtfree #debtavalanche
+- **Alt text:** Cartoon receipt looking through a magnifier at a small star, next to a table comparing debt payoff orders.
