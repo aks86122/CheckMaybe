@@ -8,7 +8,10 @@ A post says:
 3. Gumroad — Sell
 4. Threads — Promote"
 
-The pinned reply under it: a free guide.
+Anyone can open all four for free today. (Gumroad takes a cut when you sell.)
 
-Three of those four apps are free for everyone. What actually moves sales is #4, and that's the part no app does for you.
+So the tools aren't the hard part. #4 is: getting people to see you and trust you. No app does that for you.
+
+And this post? That's #4 in action. The pinned reply sends you to a free guide.
 ```
+Rewritten 2026-10-17: the first version ("Three of those four apps are free for everyone") was unclear, and all four can be started for free.
