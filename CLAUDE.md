@@ -43,3 +43,6 @@ Hard limits:
 - Default to handling a task yourself or with one subagent; never launch the whole team without explicit approval.
 - Auth, payments, database, API, secrets, uploads or production → Engineering + Security + QA, then stop for human approval.
 - Never deploy, publish, create paid infrastructure, change production data, or expose credentials without explicit approval.
+
+## Drafting workflow (founder 2026-10-17)
+Every post follows the 6 steps in `docs/content-workflow.md`. Step 4 (the 3-reader check) runs before any draft goes to J.
