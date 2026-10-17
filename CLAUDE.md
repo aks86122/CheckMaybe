@@ -14,6 +14,8 @@ Every product description (Gumroad, Etsy, Beacons) follows the `listing-copy` sk
 
 Posts live in `content/`. Instagram captions stay short: one pain-point line, one action line (e.g. "→ link in bio"), one disclaimer line, about 5 hashtags. The carousel slides carry the detail. Facebook and Threads versions can be full length. Quotes must match the saved official source word for word.
 
+Comic format (founder decision 2026-10-17): from now on, carousels are comics with the CheckMaybe mascots (checkbox for teardowns, receipt for money/debt posts). See `content/mascots.md`; template `content/2026-10-comic-01/build.py`. Posts made before this date stay as they are.
+
 ## J AI Agency v1.1
 
 This repo uses the J AI Agency operating pack in `.agents/j-ai-agency/`. Its rules apply to every task:
