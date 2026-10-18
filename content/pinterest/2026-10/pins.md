@@ -163,3 +163,38 @@ When: after the 14 v1 pins are out (week 1), 1 pin a day. r2 again with h1/h2 at
 - **Title:** "0% Interest*": When Does It End? Plan Your Debt Payoff Order
 - **Description:** A 0% deal has an end date, and it can change which debt you should pay off first. The Debt Payoff Planner compares 4 payoff orders side by side in Google Sheets (made-up example rows). Not financial advice. #debtpayoff #debtfree #debtavalanche
 - **Alt text:** Cartoon receipt looking through a magnifier at a small star, next to a table comparing debt payoff orders.
+
+---
+
+## v3 — seasonal pins: Halloween, Thanksgiving / Black Friday (2026-10-18)
+
+4 pins in `pins/checkmaybe-pin-hw*.png` and `pins/checkmaybe-pin-tg*.png`, built by `build_pins_v3.py`. Receipt mascot in costume (art/: ghost, pumpkin, bags, pie; Canva AI 2026-10-18, media MAHYWd1rgQE, MAHYWU6GB-A, MAHYWblyFas, MAHYWU-1htc). Numbers are the same checked made-up examples as v1 (README in content/2026-10-money-series): $1,103.76/yr subscriptions, $499 console as 6 × $89.50 = $537 ≈ 25.7% APR, January $428.25 = 10.2%.
+New board (suggested): **Halloween & Fall Budget Tips**. Thanksgiving 2026 = Thu 11/26, Black Friday = 11/27. Pinterest needs lead time, so seasonal pins go up weeks before the day.
+
+| Pin | Board | Post on | Link (UTM campaign = pin id) |
+| --- | --- | --- | --- |
+| hw1 | Halloween & Fall Budget Tips (+ Pay Later & Budgeting Tips) | 10/19 | `https://checkmaybe.gumroad.com/l/kofwfjf?utm_source=pinterest&utm_medium=social&utm_campaign=hw1` |
+| hw2 | Halloween & Fall Budget Tips | 10/22 | `https://checkmaybe.gumroad.com/l/cbmfye?utm_source=pinterest&utm_medium=social&utm_campaign=hw2` |
+| tg1 | Christmas Budget & Gift Planning (+ Halloween & Fall) | 10/27; repin 11/13 | `https://checkmaybe.gumroad.com/l/cbmfye?utm_source=pinterest&utm_medium=social&utm_campaign=tg1` |
+| tg2 | Christmas Budget & Gift Planning | 11/2; repin 11/13 | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=tg2` |
+Days in between: the v2 pins (r1–r4), 1 a day.
+
+### hw1 — Zombie subscriptions
+- **Title:** Zombie Subscriptions: The Ones You Forgot Come Back Every Month
+- **Description:** Halloween budget check: forgotten subscriptions charge you every month. Made-up example: 4 of them = $1,103.76 a year. The Hidden Cost Tracker lists every subscription and free trial with next charge and cancel-by dates in Google Sheets. Not financial advice. #halloween #subscriptiontracker #budgeting
+- **Alt text:** Cartoon receipt in a ghost costume holding a pumpkin bucket, next to a budget tracker dashboard. Text: Zombie subscriptions, 4 forgotten subscriptions = $1,103.76 a year.
+
+### hw2 — Trick or treat: "0% interest*"
+- **Title:** Trick or Treat: "0% Interest*" — What Deferred Interest Means
+- **Description:** Before a "0% interest" deal, look for "deferred interest" or "no interest if paid in full." If any balance is left when the promo ends, interest can go back to the day you bought it (US CFPB). Free 5-check PDF guide before you click "pay later". Not financial advice. #buynowpaylater #deferredinterest #budgeting
+- **Alt text:** Nervous cartoon receipt next to a jack-o-lantern with a star sticker. Text: Trick or treat, "0% interest*", read the asterisk.
+
+### tg1 — Black Friday on pay-in-4?
+- **Title:** Black Friday on Pay-in-4? Check the Total Before You Check Out
+- **Description:** Made-up example: a $499 console as 6 × $89.50 = $537, about 25.7% APR. Before Black Friday checkout, run 5 quick checks: total cost, yearly rate, late rules, first payment date, what else is due that month. Free PDF guide. Not financial advice. #blackfriday #buynowpaylater #holidaybudget
+- **Alt text:** Surprised cartoon receipt carrying shopping bags. Text: Black Friday on pay-in-4? $499 console as 6 × $89.50 = $537, about 25.7% APR.
+
+### tg2 — Thanksgiving week shopping lands in January
+- **Title:** Thanksgiving & Black Friday Shopping: The Bill Lands in January
+- **Description:** Made-up example: four holiday pay-in-4 plans = $428.25 due in January, 10.2% of the example income. The Holiday Hidden Cost Tracker puts gifts, payment plans and free trials month by month in one Google Sheet. Not financial advice. #thanksgiving #christmasbudget #holidaybudget
+- **Alt text:** Cartoon receipt holding a calendar next to a pumpkin pie, beside a month-by-month payment table showing $428.25 due in January.
