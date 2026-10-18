@@ -37,7 +37,7 @@ Each pin = one image + its title, description, alt text and link below. Use Pint
 | 6 | h2 | m3 |
 | 7 | p1 | m4 |
 
-Holiday pins: repin h1 and h2 to the Christmas board on 11/13. Planner pin: repin late December ("debt payoff" searches rise for New Year).
+Holiday and planner repins: use the new images in "Repin variants" below (dates there; Pinterest needs 4–6 weeks before a holiday to show a pin).
 After week 1: 1 new pin a day (or a new version of the best pin) is enough.
 
 After 4 weeks: check Pinterest Analytics (impressions, saves, outbound clicks) and Gumroad sources (`utm_source=pinterest`). Make 2–3 new versions of the pin with the most outbound clicks (new title + new image, same link).
@@ -135,7 +135,7 @@ After 4 weeks: check Pinterest Analytics (impressions, saves, outbound clicks) a
 ## v2 — receipt mascot pins (2026-10-17)
 
 4 new pins in `pins/checkmaybe-pin-r*.png`, built by `build_pins_v2.py`: receipt mascot from the comics + the real product screen. Same products, links and made-up numbers as v1, new images. On Pinterest that's normal: people find pins through search, not a feed, and fresh images to the same link are encouraged.
-When: after the 14 v1 pins are out (week 1), 1 pin a day. r2 again with h1/h2 at the 11/13 Black Friday push; r4 again late December.
+When: after the 14 v1 pins are out (week 1), 1 pin a day. Repins of r2 and r4: new images in "Repin variants" below.
 
 | Pin | Board | Link (UTM campaign = pin id) |
 | --- | --- | --- |
@@ -175,8 +175,8 @@ New board (suggested): **Halloween & Fall Budget Tips**. Thanksgiving 2026 = Thu
 | --- | --- | --- | --- |
 | hw1 | Halloween & Fall Budget Tips (+ Pay Later & Budgeting Tips) | 10/19 | `https://checkmaybe.gumroad.com/l/kofwfjf?utm_source=pinterest&utm_medium=social&utm_campaign=hw1` |
 | hw2 | Halloween & Fall Budget Tips | 10/22 | `https://checkmaybe.gumroad.com/l/cbmfye?utm_source=pinterest&utm_medium=social&utm_campaign=hw2` |
-| tg1 | Christmas Budget & Gift Planning (+ Halloween & Fall) | 10/27; repin 11/13 | `https://checkmaybe.gumroad.com/l/cbmfye?utm_source=pinterest&utm_medium=social&utm_campaign=tg1` |
-| tg2 | Christmas Budget & Gift Planning | 11/2; repin 11/13 | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=tg2` |
+| tg1 | Christmas Budget & Gift Planning (+ Halloween & Fall) | 10/27; variant tg1b 11/6 | `https://checkmaybe.gumroad.com/l/cbmfye?utm_source=pinterest&utm_medium=social&utm_campaign=tg1` |
+| tg2 | Christmas Budget & Gift Planning | 11/2; variant tg2b 11/9 | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=tg2` |
 Days in between: the v2 pins (r1–r4), 1 a day.
 
 ### hw1 — Zombie subscriptions
@@ -203,14 +203,14 @@ Days in between: the v2 pins (r1–r4), 1 a day.
 
 ## Repin variants (2026-10-18): never repin the same picture
 
-Founder 2026-10-18: a repin gets a new image, not the same one. Wherever this file says "repin" or "post again", post the variant below instead (a new pin, same link). Built by `build_pins_repin.py`: mascot on the left, product on the right, yellow headline, new wording; same checked made-up numbers.
+Founder 2026-10-18: a repin gets a new image, not the same one, and goes up early enough to collect impressions: Pinterest usually needs 4–6 weeks before a seasonal search peak (Black Friday 11/27 → early November; New Year debt-payoff searches → late November). Wherever this file says "repin" or "post again", post the variant below instead (a new pin, same link). Built by `build_pins_repin.py`: mascot on the left, product on the right, yellow headline, new wording; same checked made-up numbers.
 
 | Variant | Replaces the repin of | Post on | Board | Link |
 | --- | --- | --- | --- | --- |
-| tg1b "The cart says $499. The plan says $537." | tg1 | 11/13 | Christmas Budget & Gift Planning | `https://checkmaybe.gumroad.com/l/cbmfye?utm_source=pinterest&utm_medium=social&utm_campaign=tg1b` |
-| tg2b "Black Friday now. January later." | tg2, h1, r2 | 11/14 | Christmas Budget & Gift Planning | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=tg2b` |
-| h2b "Make the gift list before the cart." | h2 | 11/15 | Christmas Budget & Gift Planning | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=h2b` |
-| r4b "New year, new payoff plan? Check the 0% dates first." | r4, p1 | 12/27 | Debt Payoff Planning | `https://checkmaybe.gumroad.com/l/ddktis?utm_source=pinterest&utm_medium=social&utm_campaign=r4b` |
+| tg1b "The cart says $499. The plan says $537." | tg1 | 11/6 | Christmas Budget & Gift Planning | `https://checkmaybe.gumroad.com/l/cbmfye?utm_source=pinterest&utm_medium=social&utm_campaign=tg1b` |
+| tg2b "Black Friday now. January later." | tg2, h1, r2 | 11/9 | Christmas Budget & Gift Planning | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=tg2b` |
+| h2b "Make the gift list before the cart." | h2 | 11/11 | Christmas Budget & Gift Planning | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=h2b` |
+| r4b "New year, new payoff plan? Check the 0% dates first." | r4, p1 | 11/24 | Debt Payoff Planning | `https://checkmaybe.gumroad.com/l/ddktis?utm_source=pinterest&utm_medium=social&utm_campaign=r4b` |
 
 ### tg1b
 - **Title:** Black Friday Pay-in-4: The Cart Says $499, the Plan Says $537
