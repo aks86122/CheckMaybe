@@ -198,3 +198,36 @@ Days in between: the v2 pins (r1–r4), 1 a day.
 - **Title:** Thanksgiving & Black Friday Shopping: The Bill Lands in January
 - **Description:** Made-up example: four holiday pay-in-4 plans = $428.25 due in January, 10.2% of the example income. The Holiday Hidden Cost Tracker puts gifts, payment plans and free trials month by month in one Google Sheet. Not financial advice. #thanksgiving #christmasbudget #holidaybudget
 - **Alt text:** Cartoon receipt holding a calendar next to a pumpkin pie, beside a month-by-month payment table showing $428.25 due in January.
+
+---
+
+## Repin variants (2026-10-18): never repin the same picture
+
+Founder 2026-10-18: a repin gets a new image, not the same one. Wherever this file says "repin" or "post again", post the variant below instead (a new pin, same link). Built by `build_pins_repin.py`: mascot on the left, product on the right, yellow headline, new wording; same checked made-up numbers.
+
+| Variant | Replaces the repin of | Post on | Board | Link |
+| --- | --- | --- | --- | --- |
+| tg1b "The cart says $499. The plan says $537." | tg1 | 11/13 | Christmas Budget & Gift Planning | `https://checkmaybe.gumroad.com/l/cbmfye?utm_source=pinterest&utm_medium=social&utm_campaign=tg1b` |
+| tg2b "Black Friday now. January later." | tg2, h1, r2 | 11/14 | Christmas Budget & Gift Planning | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=tg2b` |
+| h2b "Make the gift list before the cart." | h2 | 11/15 | Christmas Budget & Gift Planning | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=h2b` |
+| r4b "New year, new payoff plan? Check the 0% dates first." | r4, p1 | 12/27 | Debt Payoff Planning | `https://checkmaybe.gumroad.com/l/ddktis?utm_source=pinterest&utm_medium=social&utm_campaign=r4b` |
+
+### tg1b
+- **Title:** Black Friday Pay-in-4: The Cart Says $499, the Plan Says $537
+- **Description:** Made-up example: 6 payments × $89.50 = $537 for a $499 console, about 25.7% APR. Check the total, not the payment. Free 5-check PDF guide before you click "pay later". Not financial advice. #blackfriday #buynowpaylater #holidaybudget
+- **Alt text:** Cartoon receipt carrying shopping bags next to a PDF guide. Text: The cart says $499. The plan says $537.
+
+### tg2b
+- **Title:** Black Friday Now, January Later: Add Up Your Pay-in-4 Plans
+- **Description:** Made-up example: four holiday pay-in-4 plans land together, $428.25 in January, 10.2% of the example income. The Holiday Hidden Cost Tracker shows gifts, plans and free trials month by month in Google Sheets. Not financial advice. #blackfriday #christmasbudget #buynowpaylater
+- **Alt text:** Worried cartoon receipt in a scarf holding a calendar in the snow, next to a month-by-month payment table showing $428.25 in January.
+
+### h2b
+- **Title:** Christmas Gift List Template: Make the List Before the Cart (Google Sheets)
+- **Description:** Gift list with a budget per person, every pay-later due date and free-trial cancel-by dates, in one Google Sheet. Example data, not financial advice. #christmasgiftlist #christmasbudget #googlesheets
+- **Alt text:** Cartoon receipt carrying a stack of gift boxes next to a gift list spreadsheet.
+
+### r4b
+- **Title:** New Year Debt Payoff Plan: Check Your 0% Dates First
+- **Description:** A 0% deal has an end date, and it can change which debt you should pay off first. The Debt Payoff Planner compares 4 payoff orders side by side in Google Sheets (made-up example rows). Not financial advice. #debtpayoff #newyearsresolution #debtfree
+- **Alt text:** Cartoon receipt with a calculator next to a table comparing debt payoff orders. Text: New year, new payoff plan? Check the 0% dates first.
