@@ -18,6 +18,7 @@ Rules followed: every number is a labelled made-up example checked in the sheets
 | Christmas Budget & Gift Planning | Holiday budget ideas: gift list with a budget per person, pay-in-4 due dates and January bills, in one Google Sheets tracker. | h1, h2 (+ m2) |
 | Debt Payoff Planning | Debt snowball vs avalanche, early-payoff fees, 0% deadlines: plan your payoff order in Google Sheets. | p1 (+ m5) |
 | Selling Digital Products: Licensing | Canva commercial use, AI content, PLR and resell rights: what to check before you list on Etsy or Gumroad. | s1, s2, s3, s4, s5 |
+| Halloween & Fall Budget Tips | Halloween and fall budget ideas: spot zombie subscriptions, read the fine print on "0% interest" deals, and add up Thanksgiving and Black Friday pay-in-4 plans before January. Free checklists and Google Sheets budget templates. Made-up examples, not financial advice. | hw1, hw2, tg1 (added 2026-10-18) |
 
 ## Links (UTM)
 Format: `<product URL>?utm_source=pinterest&utm_medium=social&utm_campaign=<pin id>`
