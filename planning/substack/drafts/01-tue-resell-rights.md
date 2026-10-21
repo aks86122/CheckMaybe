@@ -75,11 +75,11 @@ Next Thursday: "Personal use only" — what it actually blocks.
 ```
 
 ## Links to add before publishing
-- Gumroad Prohibited Products: live page URL
-- Beacons Community Standards: live page URL
-- Etsy Creativity Standards: live page URL
-- Canva Content License Agreement: live page URL
-(Use the URLs listed in `planning/2026-09-can-i-resell-this/sources.md`.)
+Link each platform name in the body to its page (from `planning/2026-09-can-i-resell-this/sources.md`):
+- Gumroad Prohibited Products: https://gumroad.com/prohibited
+- Beacons Community Standards: https://beacons.ai/i/community-standards
+- Etsy Creativity Standards: https://www.etsy.com/legal/creativity/
+- Canva Content License Agreement: https://www.canva.com/policies/content-license-agreement/
 
 ## Substack Notes to go with it (post Tue/Wed)
 ```
