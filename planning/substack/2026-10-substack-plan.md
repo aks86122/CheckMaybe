@@ -23,10 +23,16 @@ Watch: unsubscribes after each email. If 2+ unsubscribes per email in a week, se
 ## First 4 weeks
 | Week | Tue deep dive | Thu fine print | Sat log |
 | --- | --- | --- | --- |
-| 1 | Bought a pack with "resell rights"? 5 lines to check before you list it | "Personal use only": what it actually blocks | Week 1: starting from 0 subscribers |
+| 1 | Bought a pack with "resell rights"? 5 lines to check before you list it | What "personal use only" actually blocks | Week 1: starting from 0 subscribers |
 | 2 | Made it in Canva: what the license lets you sell | "Standalone file" in Canva's terms, explained | |
 | 3 | Made it with AI: can you sell it? (per tool's commercial terms) | "You own the output" vs "you can sell it" | Week 3 log |
 | 4 | PLR vs MRR vs resell rights: one table | One real listing's license, read line by line | |
+
+## Writing style (founder 2026-10-21)
+- No numbered bold headings like "**1. Gumroad: ...**" in the article. Write it as normal paragraphs; each point starts its own paragraph with the platform name in the sentence.
+- No "---" separators and no em dashes (—) or double hyphens (--) anywhere in the post. Use a full stop, comma or colon instead.
+- Quotes from rules can stay as block quotes (that's the evidence). Avoid bullet-point lists in the body; turn checklists into a sentence or two.
+- Reason: these patterns read as AI-written.
 
 ## Setup (week 0)
 - Publication name, tagline, About page (3 sentences, no founder story).
