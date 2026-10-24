@@ -257,3 +257,28 @@ For the new Deal Check tab in Holiday Hidden Cost Tracker v1.1. Numbers are the 
 - Title: `Black Friday on a Payment Plan? A Deal Can Cost More`
 - Description: `A sale price on a monthly plan can cost more than paying in full. Made-up example: a $499 TV is $538.92 at checkout, but 12 payments of $49 come to $588, which is $49.08 more. The Deal Check tab shows the extra cost of the plan next to every deal. Made-up example, not financial advice.`
 - Alt text: `Pin with a mascot holding a calculator and a comparison: pay in full $538.92, 12 × $49 $588, extra on the plan $49.08.`
+
+## v5 — new topics for W44 (2026-10-24)
+Topics 2, 6 and 7 from `planning/2026-10-volume/01-plan.md`; replace the W44 "NEW" pins that repeated used topics. Built by `build_pins_v5.py`. Poses not used on any earlier pin (shock, think, checklist).
+Numbers are the products' made-up example rows (LibreOffice recalculation 2026-10-24): Debt Payoff Planner minimums only $7,135.07, with the plan $1,679.15, save $5,455.92; its credit card $4,800 at 24.49% with a $120 minimum = $5,265.69 interest if minimums only (84 payments, independent simulation). Hidden Cost Tracker: photo app $22.99/month = $275.88/yr, VPN $59.88/yr, meal kit $59.99/week = $3,119.48/yr. Travel pin has no numbers.
+
+| Pin | Board | Post on | Link |
+| --- | --- | --- | --- |
+| mt1 "Minimum payment, maximum interest." | Debt Payoff Planning | 10/26 | `https://checkmaybe.gumroad.com/l/ddktis?utm_source=pinterest&utm_medium=social&utm_campaign=mt1` |
+| sb1 "Monthly or yearly? Compare by the year." | Pay Later & Budgeting Tips | 10/28 | `https://checkmaybe.gumroad.com/l/kofwfjf?utm_source=pinterest&utm_medium=social&utm_campaign=sb1` |
+| tv1 "Holiday travel: the fare isn't the trip." | Christmas Budget & Gift Planning | 10/30 | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=tv1` |
+
+**mt1**
+- Title: `Minimum Payments Only? A $4,800 Card Can Take 7 Years to Pay Off`
+- Description: `Paying only the minimum keeps a balance alive for years. Made-up example: a $4,800 card at 24.49% APR with a $120 minimum takes about 7 years and $5,265.69 in interest. The Debt Payoff Planner (Google Sheets) shows what you save compared with minimums only: $5,455.92 on its example debts. Made-up example, not financial advice. #debtpayoff #creditcarddebt #minimumpayment`
+- Alt text: `Shocked cartoon receipt next to a small table: total interest with minimums only $7,135.07, with a payoff order $1,679.15, interest you save $5,455.92.`
+
+**sb1**
+- Title: `Monthly or Yearly Subscription? Compare Every Plan by the Year`
+- Description: `A small monthly price hides the yearly total. Made-up example: a photo app at $22.99 a month is $275.88 a year; a meal kit at $59.99 a week is $3,119.48 a year. The Hidden Cost Tracker turns weekly, monthly, quarterly and yearly prices into one monthly and one yearly number in Google Sheets. Made-up example, not financial advice. #subscriptions #budgeting #googlesheets`
+- Alt text: `Thinking cartoon receipt next to a table of subscriptions with price, billing and cost per year: photo app $275.88, VPN $59.88, meal kit $3,119.48.`
+
+**tv1**
+- Title: `Holiday Travel Budget: The Fare Isn't the Trip (Fees to Add Before You Book)`
+- Description: `Before you book holiday travel, add what the fare leaves out: checked bags, seat choice, resort fees, airport parking. Put the trip total, not the fare, into your holiday budget. The Holiday Hidden Cost Tracker keeps travel on a payment plan next to gifts and free trials, month by month, in Google Sheets. Checklist, not financial advice. #holidaytravel #christmasbudget #travelbudget`
+- Alt text: `Cartoon receipt holding a clipboard next to a trip cost checklist: fare listed, checked bags, seat choice, resort fee and airport parking to add.`
