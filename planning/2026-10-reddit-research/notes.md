@@ -29,6 +29,7 @@ Etsy's own pages return 403 to automated reads; the points below agree across Va
 - New "misleading AI images" report option: no immediate enforcement at first. No deadline announced for old listings.
 
 ### CheckMaybe's own Etsy listings (checked 2026-10-24)
+Founder 2026-10-24: CheckMaybe does not sell on Etsy (Gumroad and Beacons only). The listing-etsy.md files are drafts for a possible later shop; the edits below only matter if that ever happens.
 - Images for the 3 spreadsheet products are real sheet renders of the example rows: preview rule met.
 - AI disclosure ("How this was made") was only in Hidden Cost Tracker; added to Holiday Hidden Cost Tracker and Debt Payoff Planner.
 - PDF guides (Can I Sell/Use/Resell This?) are not planned for Etsy. If ever listed there, check the "guides to complete a task" ban first.
