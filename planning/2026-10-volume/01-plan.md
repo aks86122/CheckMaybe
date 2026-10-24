@@ -4,7 +4,7 @@ Founder 2026-10-24: all made pins are posted or scheduled (6 scheduled). Next pi
 
 ## What the Pinterest numbers say (founder screenshots 2026-10-24, views per pin)
 Money topics do better than seller topics on Pinterest (the opposite of Threads):
-- "Only $67 a month" (BNPL APR) 57 views, 7 saves. Debt snowball vs avalanche 35. Free BNPL guide 33. "$9,000 pin" teardown 33. 5 questions before you list 33. Christmas budget / pay-in-4 29–30.
+- "Only $67 a month" (BNPL APR) 57 views, 1 save, 7 clicks (about 12%, the best click rate on the account). Several other pins have 1 click each. Debt snowball vs avalanche 35. Free BNPL guide 33. "$9,000 pin" teardown 33. 5 questions before you list 33. Christmas budget / pay-in-4 29–30.
 - Seller pins (Canva, AI, resell rights) 20–29.
 Volume is still small (under 60 per pin), so treat this as a direction, not proof.
 
