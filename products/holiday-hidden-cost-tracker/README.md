@@ -24,8 +24,9 @@ Seasonal edition of Hidden Cost Tracker (dark green / gold / berry). Plan: `plan
 ## v1.1 check (2026-10-24, LibreOffice recalculation, 0 formula errors)
 - Headphones $199 vs $249: 20.1% below, $214.92 at checkout, Real deal. Air fryer $89 vs $89: Not a deal. TV $499 vs $549 on 12 × $49: $538.92 vs $588, extra $49.08. Smart watch 6.7% below: Small deal. Robot vacuum $186.72 at checkout: Real deal. Scooter, Need it = No: Skip it. Other tabs unchanged.
 - Founder OK 2026-10-24 (option A). Done: buyer guide source (Seven tabs, Deal Check row), listing text v1.1 in all three listing files.
-- **Blocked:** the Google master is owned by qwert900823@gmail.com; the connector account only has public view, so the Deal Check tab could not be written. Either share the master with edit access, or import the Deal Check tab by hand from the xlsx (File › Import › Upload › Insert new sheet(s), then move it before Chart Data). The guide PDF in this folder stays v1.0 until the master has the tab; rebuild with `node build_guide.mjs "<copy link>"` after that.
-- Order before bf1 (10/29): master tab → rebuild guide PDF → upload the new PDF on Gumroad/Etsy/Beacons → paste the v1.1 listing text.
+- 2026-10-24: Deal Check tab written to the Google master (index 6, before Chart Data) and How to Use rows 13–14 added. Read back: 6 items checked · 2 real deals · 1 not a deal · plans add $61; every row matches the LibreOffice check. Guide PDF rebuilt (Seven tabs). The /copy link is unchanged, so the old PDF already copies the new tab.
+- Existing buyers' copies don't update by themselves: tell them to make a fresh copy from the same link.
+- Left for founder before bf1 (10/29): paste the v1.1 listing text on Gumroad (Etsy/Beacons too), upload the new PDF.
 
 ## Still to do (see plan timeline)
 - ✅ Google master (2026-10-05): https://docs.google.com/spreadsheets/d/1wxzEeO6fx0MqJOv0SrB6MLGLvvn0hh80Hj-1qJ8dajQ/copy (anyone-with-link viewer). Polished with holiday_polish.gs (checkboxes, slicers, native charts, en_US locale) on 2026-10-05.
