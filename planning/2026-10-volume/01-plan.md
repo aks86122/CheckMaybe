@@ -15,8 +15,8 @@ BNPL "$67 a month" / 29.8% APR · deferred interest / "0% interest*" · forgotte
 Each needs a quick check on trends.pinterest.com (founder's business account) before we make many versions. Seasonal ones need 4–6 weeks of lead time.
 | # | Topic | Season | Links to |
 | --- | --- | --- | --- |
-| 1 | Is the Black Friday price really a deal? Check the price before the sale | now to 11/27 | NEW Black Friday Deal Checker |
-| 2 | Minimum payment trap: how long a balance takes at the minimum | any time | NEW Minimum Payment Calculator |
+| 1 | Is the Black Friday price really a deal? Check the price before the sale | now to 11/27 | Holiday Hidden Cost Tracker (new Deal Check tab) |
+| 2 | Minimum payment trap: how long a balance takes at the minimum | any time | Debt Payoff Planner |
 | 3 | No-spend January challenge tracker | pin from mid Nov | NEW No-Spend Month Tracker |
 | 4 | Sinking funds for 2027 (car, gifts, annual bills) | pin from late Nov | NEW Sinking Funds Tracker |
 | 5 | Gift card fine print: fees, expiry, unused balances | Dec | Gift card list in NEW Sinking Funds or free mini guide |
@@ -29,16 +29,20 @@ Each needs a quick check on trends.pinterest.com (founder's business account) be
 | 12 | Digital planner 2027: what you can't put on it (brand names, characters) | Nov–Jan | Can I Sell This? |
 Rule for every pin: no repeat of a used title or image; made-up example numbers labeled; no lender or brand names in claims; no income promises.
 
-## New products, in build order (small, cheap, fast; reuse build_tracker.py and the toolkit builder)
-| Order | Product | Format | Price idea | Why now |
-| --- | --- | --- | --- | --- |
-| 1 | Black Friday Deal Checker: price history, tax, shipping and pay-in-4 total in one row | Google Sheet | US$3–5 | Black Friday 11/27; pins must go up this week |
-| 2 | Minimum Payment Calculator: months and interest at the minimum vs a fixed amount | Google Sheet | US$3–5 | Debt pins already get the most views after BNPL |
-| 3 | No-Spend Month Tracker (January 2027) | Google Sheet + printable | US$3–5 | January search season; pins from mid Nov |
-| 4 | Sinking Funds Tracker 2027 | Google Sheet | US$4–6 | New-year budgeting |
-| 5 | Listing Fine Print Pack for digital sellers: download note, AI disclosure lines, buyer-terms wording to adapt | PDF | US$5–7 | Uses checked rules we already have; not legal advice |
-Each product gets: 3 new pins (different images), 1 Substack Note, Gumroad listing with UTM links. Founder lists on Gumroad (publishing needs the founder).
-Later bundle: "Money Fine Print Sheets" (1–4 + Hidden Cost Tracker).
+## New products (revised 2026-10-24 after checking what exists)
+Founder: the debt/money series already has 4 paid products + 1 free guide. Checked the files:
+- Holiday Hidden Cost Tracker already has Gift List, Holiday Payments (Black Friday pay-in-4) and Free Trials tabs. A separate Black Friday checker would compete with it.
+- Debt Payoff Planner already shows "what you save compared with paying minimums only". A separate minimum-payment calculator would compete with it.
+So: no new products inside the debt series. Volume there comes from new pin topics pointing to the existing products. New products only where nothing exists yet.
+
+| Order | What | Type | Why |
+| --- | --- | --- | --- |
+| 1 | "Deal Check" tab added to Holiday Hidden Cost Tracker (sale price vs usual price, tax, shipping, pay-in-4 total) | Update v1.1 of an existing product, existing buyers get it free | Black Friday 11/27. Pins for topic 1 link here |
+| 2 | No-Spend Month Tracker (January 2027) | NEW, budget series | Nothing similar in the shop; January search season |
+| 3 | Sinking Funds Tracker 2027 | NEW, budget series | New-year budgeting; can bundle with 2 later |
+| 4 | Listing Fine Print Pack for digital sellers | NEW, seller series | Uses checked rules we already have; not legal advice |
+Topic 2 (minimum payment trap) pins link to Debt Payoff Planner. Topics 6–7 link to the Hidden Cost / Holiday trackers.
+Each item gets 3 new pins (different images) and 1 Substack Note. Founder lists on Gumroad.
 
 ## Check
 11/22 (4 weeks): Pinterest outbound clicks per topic and Gumroad sales per product. Make more versions of whatever gets clicks; stop what doesn't.
