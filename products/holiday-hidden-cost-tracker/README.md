@@ -26,7 +26,7 @@ Seasonal edition of Hidden Cost Tracker (dark green / gold / berry). Plan: `plan
 - Founder OK 2026-10-24 (option A). Done: buyer guide source (Seven tabs, Deal Check row), listing text v1.1 in all three listing files.
 - 2026-10-24: Deal Check tab written to the Google master (index 6, before Chart Data) and How to Use rows 13–14 added. Read back: 6 items checked · 2 real deals · 1 not a deal · plans add $61; every row matches the LibreOffice check. Guide PDF rebuilt (Seven tabs). The /copy link is unchanged, so the old PDF already copies the new tab.
 - Existing buyers' copies don't update by themselves: tell them to make a fresh copy from the same link.
-- Left for founder before bf1 (10/29): paste the v1.1 listing text on Gumroad (Etsy/Beacons too), upload the new PDF.
+- 2026-10-24: founder pasted the v1.1 text and new PDF on Gumroad (checked on the live page: Deal Check lines present). Still old: Product tab "Includes" field. Beacons text v1.1 not pasted yet. Not on Etsy.
 
 ## Still to do (see plan timeline)
 - ✅ Google master (2026-10-05): https://docs.google.com/spreadsheets/d/1wxzEeO6fx0MqJOv0SrB6MLGLvvn0hh80Hj-1qJ8dajQ/copy (anyone-with-link viewer). Polished with holiday_polish.gs (checkboxes, slicers, native charts, en_US locale) on 2026-10-05.
