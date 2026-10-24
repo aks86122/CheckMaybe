@@ -31,3 +31,8 @@ Founder's photos and other people's screenshots are not in this repo.
 
 ## Etsy listing images (founder download, 2026-10-24)
 3 images saved from Etsy listings (`il_1140xN.<id>_<hash>.jpg`): 1140 × 1140, only an ICC color profile left; no EXIF, XMP or C2PA. So a buyer can't learn anything from a downloaded listing image. The tool now recognises Etsy file names and switches to buyer advice (read the AI disclosure, review photos, ask the seller for an unedited photo, report misleading AI images).
+
+## v0.3 (2026-10-24): reverse image search + feedback
+- Reverse image search box: paste a listing image address, open TinEye / Google Lens / Bing with it (link-out, nothing sent by us).
+- "Was this result right?" under every result. Stored in the artifact's `db` collection `feedback` (rule: read/write `interact`; the prototype is private, so only the owner can open it). Each row: correct yes/no, what it really was (camera / edited / made with AI / edited with AI / screenshot / someone else's image / design / not sure), optional tool name and comment, and the check's findings (verdict, signals, format, size, camera yes/no, C2PA issuer, source types, tool names, file-name pattern). Never the photo, file name, location or account IDs.
+- Read it with ArtifactData `list` on `feedback`. For the public site this needs our own store (e.g. a small form endpoint) and a privacy note; part of the security review.
