@@ -1,0 +1,245 @@
+<title>Listing Photo Check</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; drop zone, then one result sheet per photo (facts | platform signals | still to check). CheckMaybe toolkit palette. */
+:root {
+  --paper: #efe5cc; --sheet: #f8f2e2; --ink: #33261b; --muted: #6f5f4c; --rule: #d8c9a6;
+  --rust: #b8551b; --green: #3f6b3a; --amber: #9a7020; --red: #b33a27; --blue: #3d5a80;
+  --chip-g: #dfe8d6; --chip-a: #f1e2bd; --chip-r: #f3d7cf; --chip-b: #dbe3ee;
+  --f-display: "Source Serif 4", "Bitstream Charter", Georgia, serif;
+  --f-body: "IBM Plex Sans", "Segoe UI", Roboto, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #1f1813; --sheet: #2a211a; --ink: #f0e6d2; --muted: #b9a88f; --rule: #4a3c2f;
+  --rust: #e48a4e; --green: #8fc184; --amber: #e0b45a; --red: #ee8b78; --blue: #9db7da;
+  --chip-g: #2c3b27; --chip-a: #3e3220; --chip-r: #47271f; --chip-b: #26303e; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #1f1813; --sheet: #2a211a; --ink: #f0e6d2; --muted: #b9a88f; --rule: #4a3c2f;
+  --rust: #e48a4e; --green: #8fc184; --amber: #e0b45a; --red: #ee8b78; --blue: #9db7da;
+  --chip-g: #2c3b27; --chip-a: #3e3220; --chip-r: #47271f; --chip-b: #26303e; color-scheme: dark }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 56px; }
+.wrap { max-width: 860px; margin: 0 auto; display: grid; gap: 28px; }
+header { display: grid; gap: 10px; }
+.brand { font: 600 12px/1 var(--f-body); letter-spacing: .22em; text-transform: uppercase; color: var(--rust); }
+h1 { font: 700 clamp(30px, 5vw, 44px)/1.08 var(--f-display); margin: 0; text-wrap: balance; }
+.lede { margin: 0; max-width: 62ch; color: var(--muted); }
+.drop { border: 2px dashed var(--rule); border-radius: 10px; background: var(--sheet); padding: 26px 20px; display: grid; gap: 10px; justify-items: start; }
+.drop.over { border-color: var(--rust); }
+.drop strong { font: 600 18px/1.3 var(--f-display); }
+.drop p { margin: 0; color: var(--muted); font-size: 14px; }
+.btn { font: 600 15px var(--f-body); background: var(--ink); color: var(--paper); border: 0; border-radius: 6px; padding: 10px 16px; cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+.btn:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid var(--rust); outline-offset: 2px; }
+.privacy { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: baseline; }
+.privacy b { color: var(--green); font-weight: 600; }
+.err { color: var(--red); font-size: 14px; margin: 0; }
+.results { display: grid; gap: 22px; }
+.sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+.sheet-head { display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--rule); flex-wrap: wrap; }
+.thumb { width: 64px; height: 64px; object-fit: cover; border-radius: 6px; background: var(--rule); flex: none; }
+.sheet-head .name { font: 500 14px var(--f-mono); word-break: break-all; min-width: 0; flex: 1 1 200px; }
+.tag { font: 600 11px/1 var(--f-body); letter-spacing: .12em; text-transform: uppercase; padding: 5px 8px; border-radius: 4px; }
+.tag.example { background: var(--chip-b); color: var(--blue); }
+.verdict { padding: 14px 18px; border-bottom: 1px solid var(--rule); display: grid; gap: 4px; }
+.verdict h2 { font: 700 21px/1.25 var(--f-display); margin: 0; text-wrap: balance; }
+.verdict p { margin: 0; color: var(--muted); font-size: 15px; max-width: 64ch; }
+.cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.col { padding: 14px 18px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.col + .col { border-left: 1px solid var(--rule); }
+.col h3 { font: 600 12px/1.2 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 0; }
+dl { margin: 0; display: grid; gap: 8px; }
+dt { font-size: 12px; color: var(--muted); }
+dd { margin: 0; font: 400 14px/1.4 var(--f-mono); font-variant-numeric: tabular-nums; word-break: break-word; }
+.sig { display: grid; gap: 4px; font-size: 14px; }
+.chip { justify-self: start; font: 600 12px/1 var(--f-body); padding: 5px 8px; border-radius: 999px; }
+.g { background: var(--chip-g); color: var(--green); } .a { background: var(--chip-a); color: var(--amber); }
+.r { background: var(--chip-r); color: var(--red); } .b { background: var(--chip-b); color: var(--blue); }
+ul.todo { margin: 0; padding-left: 18px; display: grid; gap: 8px; font-size: 14px; }
+ul.todo a { color: var(--rust); }
+.foot { padding: 12px 18px; border-top: 1px solid var(--rule); display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.foot small { color: var(--muted); }
+.limits { font-size: 14px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 18px; display: grid; gap: 8px; max-width: 68ch; }
+.limits h2 { font: 700 18px var(--f-display); color: var(--ink); margin: 0; }
+.limits p { margin: 0; }
+@media (max-width: 720px) { .cols { grid-template-columns: minmax(0, 1fr); } .col + .col { border-left: 0; border-top: 1px solid var(--rule); } }
+@media (prefers-reduced-motion: no-preference) { .sheet { animation: rise .25s ease-out; } @keyframes rise { from { transform: translateY(6px); } to { transform: none; } } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="brand">CheckMaybe · photo check</div>
+    <h1>What does your photo file say before you list it?</h1>
+    <p class="lede">See the camera data, editing traces and AI markers that marketplaces and social platforms can read. Then see what you still need to check yourself.</p>
+  </header>
+
+  <section class="drop" id="drop" aria-label="Choose photos">
+    <strong>Drop photos here, or choose files</strong>
+    <p>JPEG, PNG, WebP or HEIC, up to 20 MB each. Use the original file from your camera roll: photos sent through chat apps or saved from social media lose most of their data.</p>
+    <label class="btn" for="pick">Choose photos</label>
+    <input id="pick" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif" multiple hidden>
+    <div class="privacy"><b>●</b><span>Checked in your browser. Your photos are never uploaded.</span></div>
+    <p class="err" id="err" hidden></p>
+  </section>
+
+  <section class="results" id="results" aria-live="polite"></section>
+
+  <section class="limits">
+    <h2>What this check can and can't tell you</h2>
+    <p>File data can be removed or changed by apps, so missing AI markers do not prove a photo is not AI-made, and camera data does not prove a photo was never edited. Platforms also use their own detection, so this check cannot predict whether a photo will be labeled or a listing removed.</p>
+    <p>Educational information, not legal advice. Not affiliated with Etsy, Meta, Canva or any app named here.</p>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/full.umd.js"></script>
+<script>
+const TOOLKIT = "https://checkmaybe.gumroad.com/l/kzhzh?utm_source=photocheck&utm_medium=tool&utm_campaign=v01";
+const MAX = 20 * 1024 * 1024;
+const EDITORS = [["Adobe Photoshop","Photoshop"],["Lightroom","Lightroom"],["Canva","Canva"],["Snapseed","Snapseed"],["PicsArt","PicsArt"],["GIMP","GIMP"],["Affinity","Affinity"],["Pixelmator","Pixelmator"],["VSCO","VSCO"],["Meitu","Meitu"],["Fotor","Fotor"],["CapCut","CapCut"],["Photopea","Photopea"],["Picsart","PicsArt"],["Remini","Remini"],["Lensa","Lensa"],["Facetune","Facetune"],["Instagram","Instagram"]];
+const AI_TOKENS = [["trainedAlgorithmicMedia","made with generative AI"],["compositeWithTrainedAlgorithmicMedia","edited with generative AI"],["algorithmicMedia","made by an algorithm"]];
+const GENERATORS = ["Adobe Firefly","Firefly","DALL-E","DALL·E","ChatGPT","OpenAI","Midjourney","Imagen","Gemini","Stable Diffusion","Canva","Microsoft Designer","Bing Image Creator","Meta AI","Leonardo"];
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const kb = n => n > 1048576 ? (n / 1048576).toFixed(1) + " MB" : Math.round(n / 1024) + " KB";
+
+function sniff(bytes) {
+  const h = Array.from(bytes.slice(0, 12)).map(b => b.toString(16).padStart(2, "0")).join("");
+  if (h.startsWith("ffd8ff")) return "JPEG";
+  if (h.startsWith("89504e47")) return "PNG";
+  if (h.startsWith("52494646") && h.slice(16, 24) === "57454250") return "WebP";
+  if (h.slice(8, 16) === "66747970") return "HEIC";
+  return null;
+}
+
+function scan(bytes) {
+  // latin1 view of the whole file: C2PA (JUMBF) labels, XMP and IPTC fields are stored as plain text
+  let txt = ""; const step = 65536;
+  for (let i = 0; i < bytes.length; i += step) txt += String.fromCharCode.apply(null, bytes.subarray(i, i + step));
+  const c2pa = /jumb/.test(txt) && /c2pa/.test(txt);
+  const ai = AI_TOKENS.filter(([t]) => new RegExp(t).test(txt)).map(([, d]) => d);
+  const aiExact = ai.length && txt.includes("compositeWithTrainedAlgorithmicMedia") ? ["edited with generative AI"] : ai.filter(d => d !== "made by an algorithm" || !txt.includes("trainedAlgorithmicMedia"));
+  const gens = GENERATORS.filter(g => txt.includes(g));
+  let cg = (txt.match(/claim_generator[^A-Za-z0-9]{0,8}([A-Za-z0-9 ._/()+-]{3,60})/) || [])[1];
+  if (cg) cg = cg.split(/\s+c2pa|\s+digitalSourceType|\s+trained/)[0];
+  const actions = [...new Set((txt.match(/c2pa\.(created|edited|converted|placed|opened|filtered|color_adjustments|cropped|resized|drawing)/g) || []))];
+  const xmp = txt.includes("<x:xmpmeta");
+  const gainmap = txt.includes("hdr-gain-map") || txt.includes("GainMap");
+  return { c2pa, ai: [...new Set(aiExact)], gens: [...new Set(gens)], cg: cg ? cg.trim() : null, actions, xmp, gainmap };
+}
+
+function dims(file, url) {
+  return new Promise(res => { const im = new Image(); im.onload = () => res([im.naturalWidth, im.naturalHeight]); im.onerror = () => res(null); im.src = url; });
+}
+
+async function check(file) {
+  if (!file.size) return { error: file.name + " is empty." };
+  if (file.size > MAX) return { error: file.name + " is " + kb(file.size) + ". The limit is 20 MB." };
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  const type = sniff(bytes);
+  if (!type) return { error: file.name + " doesn't look like a JPEG, PNG, WebP or HEIC image." };
+  let meta = {};
+  try { meta = (await exifr.parse(bytes, { tiff: true, exif: true, gps: true, xmp: true, iptc: true, icc: false, mergeOutput: true, translateValues: true })) || {}; } catch (e) { meta = {}; }
+  const url = type === "HEIC" ? null : URL.createObjectURL(file);
+  const wh = url ? await dims(file, url) : (meta.ExifImageWidth ? [meta.ExifImageWidth, meta.ExifImageHeight] : null);
+  return { file, type, meta, url, wh, s: scan(bytes) };
+}
+
+function judge(r) {
+  const m = r.meta, s = r.s;
+  const camera = m.Make || m.Model ? [m.Make, m.Model].filter(Boolean).join(" ") : null;
+  const taken = m.DateTimeOriginal || m.CreateDate || null;
+  const sw = [m.Software, m.CreatorTool, m.HistorySoftwareAgent].filter(Boolean).map(String);
+  const editors = [...new Set(sw.flatMap(x => EDITORS.filter(([k]) => x.toLowerCase().includes(k.toLowerCase())).map(([, n]) => n)))];
+  const firmware = sw.length && !editors.length ? sw[0] : null;
+  const gps = m.latitude != null || m.GPSLatitude != null;
+  const exposure = m.ExposureTime ? (m.ExposureTime < 1 ? "1/" + Math.round(1 / m.ExposureTime) : m.ExposureTime) + " s" : null;
+  const aiMark = s.ai.length > 0, hasCreds = s.c2pa;
+  const sq = r.wh && r.wh[0] === r.wh[1] && [1080, 1440, 540, 640, 720, 1200].includes(r.wh[0]);
+  const stripped = !camera && !taken && !hasCreds && !aiMark && !editors.length;
+
+  let level, title, text;
+  if (aiMark) { level = "r"; title = "This file says AI was used";
+    text = "It carries a marker that platforms are known to read (" + s.ai.join(", ") + "). Instagram and Facebook may show an AI label, and Etsy expects you to disclose AI use in the listing."; }
+  else if (hasCreds) { level = "a"; title = "This file has Content Credentials";
+    text = "A C2PA record is attached" + (s.cg ? " (written by " + s.cg + ")" : "") + ". It didn't name generative AI, but platforms read these records, so check what it says before you post."; }
+  else if (editors.length) { level = "a"; title = "Edited in " + editors.join(", ");
+    text = "Fine for most listing photos if the item still looks the way it really is. For Etsy's required unedited photo, use a different, straight-from-camera shot."; }
+  else if (camera) { level = "g"; title = "Looks like a straight-from-camera photo";
+    text = "The file still has its camera data and no editing app name. That fits Etsy's unedited-photo rule, but file data can't prove a photo was never edited."; }
+  else if (stripped) { level = "b"; title = "This file has almost no data left";
+    text = (sq ? "Its size (" + r.wh[0] + " × " + r.wh[1] + ") is typical of photos saved from social media. " : "") + "Chat apps, social media and screenshots remove camera data. Check the original from your camera roll instead."; }
+  else { level = "b"; title = "Some data, no clear signal";
+    text = "The file has some technical data but no camera details, editing app or AI marker."; }
+
+  const facts = [
+    ["Format", r.type + (r.wh ? " · " + r.wh[0] + " × " + r.wh[1] : "")],
+    ["File size", kb(r.file.size)],
+    ["Camera", camera || "Not found"],
+    ["Taken", taken ? (taken instanceof Date ? taken.toLocaleString() : String(taken)) : "Not found"],
+    ["Settings", [exposure, m.FNumber ? "f/" + m.FNumber : null, m.ISO ? "ISO " + m.ISO : null].filter(Boolean).join(" · ") || "Not found"],
+    ["Software", sw.length ? sw.join(" · ") : "Not found"],
+  ];
+  const sigs = [];
+  sigs.push(aiMark ? ["r", "AI marker found", "IPTC/C2PA says: " + s.ai.join(", ") + "."] : ["g", "No AI marker found", "None of the standard AI fields are present. This doesn't prove the image isn't AI-made."]);
+  sigs.push(hasCreds ? ["a", "Content Credentials (C2PA)", (s.cg ? "Written by " + s.cg + ". " : "") + (s.actions.length ? "Actions: " + s.actions.join(", ") + ". " : "") + "Signature not verified in this version."] : ["b", "No Content Credentials", "No C2PA record in the file."]);
+  if (s.gens.length) sigs.push(["a", "Tool names in the file", s.gens.join(", ")]);
+  sigs.push(editors.length ? ["a", "Editing app named", editors.join(", ")] : firmware ? ["g", "Camera software only", "“" + firmware + "” looks like phone or camera firmware, not an editing app."] : ["b", "No software named", "The file doesn't say which app last saved it."]);
+  if (s.gainmap && !camera) sigs.push(["g", "Phone HDR data", "An HDR gain map survived, a sign the image came from a phone camera."]);
+  if (gps) sigs.push(["r", "Location saved in the file", "Remove location before you post: anyone who downloads the original can read it."]);
+
+  const todo = [];
+  if (aiMark || s.gens.length) todo.push('Disclose AI use in your listing description (Etsy requires it). <a href="' + TOOLKIT + '" target="_blank" rel="noopener">Can I Use This?</a> p. 12');
+  todo.push("For Etsy, keep at least one unedited photo of the actual item on a real background, unless your item type is an exception.");
+  todo.push("Make sure every photo shows the real color, size, condition and flaws of what the buyer receives.");
+  if (editors.includes("Canva") || s.gens.includes("Canva")) todo.push('If you used Canva elements or AI tools, check that your license covers selling the result. <a href="https://checkmaybe.gumroad.com/l/baxojo?utm_source=photocheck&utm_medium=tool&utm_campaign=v01" target="_blank" rel="noopener">Can I Sell This?</a>');
+  if (stripped) todo.push("Run the check again on the original file from your camera roll.");
+  todo.push("Keep the original file and the date you took it, in case a listing is questioned.");
+  return { level, title, text, facts, sigs, todo };
+}
+
+function render(r, example) {
+  const j = r.j || judge(r);
+  const el = document.createElement("article"); el.className = "sheet";
+  el.innerHTML =
+    '<div class="sheet-head">' + (r.url ? '<img class="thumb" alt="" src="' + r.url + '">' : '<div class="thumb" aria-hidden="true"></div>') +
+    '<div class="name">' + esc(r.name || r.file.name) + '</div>' + (example ? '<span class="tag example">Example result</span>' : '') + '</div>' +
+    '<div class="verdict"><span class="chip ' + j.level + '">' + ({ g: "Lower concern", a: "Check first", r: "Platforms may label it", b: "Not enough data" }[j.level]) + '</span><h2>' + esc(j.title) + '</h2><p>' + esc(j.text) + '</p></div>' +
+    '<div class="cols"><div class="col"><h3>In the file</h3><dl>' + j.facts.map(([k, v]) => '<div><dt>' + k + '</dt><dd>' + esc(v) + '</dd></div>').join("") + '</dl></div>' +
+    '<div class="col"><h3>What platforms can read</h3>' + j.sigs.map(([c, t, d]) => '<div class="sig"><span class="chip ' + c + '">' + esc(t) + '</span><span>' + esc(d) + '</span></div>').join("") + '</div>' +
+    '<div class="col"><h3>Still for you to check</h3><ul class="todo">' + j.todo.map(t => '<li>' + t + '</li>').join("") + '</ul></div></div>' +
+    '<div class="foot"><button class="btn ghost" type="button">Copy report</button><small>Checked ' + new Date().toLocaleDateString() + ' · not legal advice</small></div>';
+  const btn = el.querySelector("button");
+  btn.addEventListener("click", async () => {
+    const text = ["CheckMaybe photo check", (r.name || r.file.name), j.title, j.text, "", "In the file:", ...j.facts.map(([k, v]) => "- " + k + ": " + v), "", "What platforms can read:", ...j.sigs.map(([, t, d]) => "- " + t + ": " + d), "", "Still to check:", ...j.todo.map(t => "- " + t.replace(/<[^>]+>/g, "")), "", "Missing data doesn't prove a photo isn't AI-made or was never edited. Not legal advice."].join("\n");
+    try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
+    catch (e) { const ta = document.createElement("textarea"); ta.value = text; ta.style.cssText = "width:100%;height:200px"; el.querySelector(".foot").append(ta); ta.select(); btn.textContent = "Select and copy the text"; }
+  });
+  return el;
+}
+
+async function handle(files) {
+  const err = $("#err"); err.hidden = true; const box = $("#results");
+  box.querySelectorAll(".sheet").forEach(n => { const i = n.querySelector("img.thumb"); if (i && i.src.startsWith("blob:")) URL.revokeObjectURL(i.src); });
+  box.innerHTML = ""; const errors = [];
+  if (typeof exifr === "undefined") { err.textContent = "The checker couldn't load. Reload the page and try again."; err.hidden = false; return; }
+  for (const f of files) { const r = await check(f); if (r.error) errors.push(r.error); else box.append(render(r)); }
+  if (errors.length) { err.textContent = errors.join(" "); err.hidden = false; }
+}
+
+const drop = $("#drop");
+$("#pick").addEventListener("change", e => handle([...e.target.files]));
+["dragenter", "dragover"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
+["dragleave", "drop"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove("over"); }));
+drop.addEventListener("drop", e => handle([...e.dataTransfer.files]));
+
+// Example result so the page shows what it does before a photo is chosen (made-up values)
+$("#results").append(render({ name: "example-phone-photo.jpg", file: { size: 2263007 }, j: {
+  level: "g", title: "Looks like a straight-from-camera photo",
+  text: "The file still has its camera data and no editing app name. That fits Etsy's unedited-photo rule, but file data can't prove a photo was never edited.",
+  facts: [["Format", "JPEG · 4096 × 2304"], ["File size", "2.2 MB"], ["Camera", "Example phone model"], ["Taken", "2026-10-24 23:17"], ["Settings", "1/60 s · f/1.9 · ISO 75"], ["Software", "Phone firmware build"]],
+  sigs: [["g", "No AI marker found", "None of the standard AI fields are present. This doesn't prove the image isn't AI-made."], ["b", "No Content Credentials", "No C2PA record in the file."], ["g", "Camera software only", "The software field looks like phone firmware, not an editing app."]],
+  todo: ["For Etsy, keep at least one unedited photo of the actual item on a real background, unless your item type is an exception.", "Make sure every photo shows the real color, size, condition and flaws of what the buyer receives.", "Keep the original file and the date you took it, in case a listing is questioned."] } }, true));
+</script>
