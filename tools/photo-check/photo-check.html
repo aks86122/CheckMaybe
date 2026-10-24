@@ -199,6 +199,8 @@ function judge(r) {
   sigs.push(editors.length ? ["a", "Editing app named", editors.join(", ")] : firmware ? ["g", "Camera software only", "“" + firmware + "” looks like phone or camera firmware, not an editing app."] : ["b", "No software named", "The file doesn't say which app last saved it."]);
   if (s.gainmap && !camera) sigs.push(["g", "Phone HDR data", "An HDR gain map survived, a sign the image came from a phone camera."]);
   const uuidName = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(jpe?g|png|webp)$/i.test(r.file.name || "");
+  const chatName = /^\d{13}\.(jpe?g|png|webp)$/i.test(r.file.name || "") || /_\d{3}\.(jpe?g|png)$/i.test(r.file.name || "");
+  if (chatName && stripped) sigs.push(["b", "File name looks like a chat-app save", "Names like this usually come from saving an image out of a chat app such as LINE, which removes camera data. It may also be someone else's photo or screenshot."]);
   if (uuidName && stripped) sigs.push(["a", "File name looks like an app export", "Names like this usually come from design apps such as Canva, which save images without camera data. Treat it as an edited image."]);
   if (s.accountIds) sigs.push(["a", "Account IDs in the file", "The file lists a design-app document, user and brand ID (hidden here). Anyone who downloads the original can read them."]);
   if (gps) sigs.push(["r", "Location saved in the file", "Remove location before you post: anyone who downloads the original can read it."]);
