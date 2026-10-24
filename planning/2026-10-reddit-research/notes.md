@@ -20,3 +20,19 @@ Source: threads the founder pasted (Reddit is blocked from this environment, so 
 - Best fit for CheckMaybe's own buyers (Etsy/digital sellers): a preflight for printable PDFs (page size Letter/A4, image resolution, file size), not a general print or brand tool.
 - No build before the Black Friday work is done. Paying demand not shown in any thread.
 - No promotional replies on these threads.
+
+## Etsy AI/photo policy update (announced 2026-10-22)
+Etsy's own pages return 403 to automated reads; the points below agree across Value Added Resource, Inkfluence and EcomCrew. Founder should open the Seller Handbook article once to confirm.
+- Most listings need one unedited photo of the actual item on a real background; exceptions include some print-on-demand, digital downloads and made-to-order.
+- Digital downloads with visual content: show a preview or excerpt of what buyers get.
+- AI-made items still allowed with disclosure and a clear creative role; AI-generated functional instructions (patterns, recipes, manuals, "guides intended to help buyers complete a specific task") are banned.
+- New "misleading AI images" report option: no immediate enforcement at first. No deadline announced for old listings.
+
+### CheckMaybe's own Etsy listings (checked 2026-10-24)
+- Images for the 3 spreadsheet products are real sheet renders of the example rows: preview rule met.
+- AI disclosure ("How this was made") was only in Hidden Cost Tracker; added to Holiday Hidden Cost Tracker and Debt Payoff Planner.
+- PDF guides (Can I Sell/Use/Resell This?) are not planned for Etsy. If ever listed there, check the "guides to complete a task" ban first.
+- Holiday image 10 tab list updated with Deal Check.
+
+### Product read
+Policy is 2 days old and affects digital sellers, CheckMaybe's buyers. Cheapest first move is content, not a tool: an "Etsy's new AI rules for digital sellers" page in Can I Use This? (v1.2), plus pins and a Substack post (volume plan topic 9). Tool (listing preflight) only if that content gets clicks.

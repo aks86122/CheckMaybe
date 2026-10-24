@@ -63,6 +63,9 @@ Good to know
 • Real APR is estimated from your payment schedule and doesn't include fees charged separately. 0% offers can add back-dated interest if a payment is late: check your agreement.
 • Example numbers in the images are made up.
 • For personal use. Please don't share or resell the template link.
+
+How this was made
+CheckMaybe planned the features, layout and test cases. AI tools helped write the spreadsheet formulas and the scripts that build the file, and every formula was checked against the example data before release.
 ```
 
 ## Tags (13) — keyword ideas, assumption until checked against Etsy autocomplete

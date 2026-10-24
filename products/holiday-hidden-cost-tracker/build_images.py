@@ -46,7 +46,7 @@ ETSY = {
  "10-included": B.page(W, H, '<h1>What\'s <em>included</em></h1>'
                        '<div class="abs" style="left:56px;top:230px;width:580px"><ul class="inc">'
                        '<li>Google Sheets tracker (copy link in the PDF)</li><li>Works in Excel too: File › Download › .xlsx</li>'
-                       '<li>Tabs: Dashboard, Gift List, Holiday Payments, Free Trials, Settings, How to Use</li>'
+                       '<li>Tabs: Dashboard, Gift List, Holiday Payments, Deal Check, Free Trials, Settings, How to Use</li>'
                        '<li>Dark green &amp; gold theme, charts, filters, colour tags</li><li>4-page PDF guide</li><li>Digital download, nothing is shipped</li></ul>'
                        '<p style="font-size:16px;color:#7E8C82;margin-top:22px">Estimates only. Not financial advice. Example rows are made up.</p></div>'
                        + B.shot("hol_guide1", "left:700px;top:200px;width:444px"), example=False),
