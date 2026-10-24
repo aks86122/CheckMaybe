@@ -195,6 +195,8 @@ function judge(r) {
   if (s.gens.length) sigs.push(["a", "Tool names in the file", s.gens.join(", ")]);
   sigs.push(editors.length ? ["a", "Editing app named", editors.join(", ")] : firmware ? ["g", "Camera software only", "“" + firmware + "” looks like phone or camera firmware, not an editing app."] : ["b", "No software named", "The file doesn't say which app last saved it."]);
   if (s.gainmap && !camera) sigs.push(["g", "Phone HDR data", "An HDR gain map survived, a sign the image came from a phone camera."]);
+  const uuidName = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(jpe?g|png|webp)$/i.test(r.file.name || "");
+  if (uuidName && stripped) sigs.push(["a", "File name looks like an app export", "Names like this usually come from design apps such as Canva, which save images without camera data. Treat it as an edited image."]);
   if (gps) sigs.push(["r", "Location saved in the file", "Remove location before you post: anyone who downloads the original can read it."]);
 
   const todo = [];
@@ -202,7 +204,7 @@ function judge(r) {
   todo.push("For Etsy, keep at least one unedited photo of the actual item on a real background, unless your item type is an exception.");
   todo.push("Make sure every photo shows the real color, size, condition and flaws of what the buyer receives.");
   if (editors.includes("Canva") || s.gens.includes("Canva")) todo.push('If you used Canva elements or AI tools, check that your license covers selling the result. <a href="https://checkmaybe.gumroad.com/l/baxojo?utm_source=photocheck&utm_medium=tool&utm_campaign=v01" target="_blank" rel="noopener">Can I Sell This?</a>');
-  if (stripped) todo.push("If you made or edited this image with AI, disclose it yourself: the file no longer says so.", "If it's your own photo, run the check again on the original from your camera roll.");
+  if (stripped) todo.push("If you made or edited this image with AI, disclose it yourself: the file no longer says so.", "For Etsy's unedited photo, upload the original from your camera roll, not an export from a design app.");
   todo.push("Keep the original file and the date you took it, in case a listing is questioned.");
   return { level, title, text, facts, sigs, todo };
 }
