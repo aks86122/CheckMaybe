@@ -1,5 +1,7 @@
 # Pinterest pins — CheckMaybe (v1, 2026-10-07)
 
+**Advanced settings for every pin (founder 2026-10-24):** Allow comments ON · Show similar products OFF (it sends viewers to other sellers) · **Mark as AI-modified ON** (the receipt mascot is Canva AI art and the layouts are made with AI tools; CheckMaybe teaches AI disclosure, so we disclose too) · Features AI-generated person OFF (cartoon, not a realistic person). Only a pin with no AI art at all (sheet screenshots and text only) may leave AI-modified off.
+
 14 pins, 1000×1500 (2:3), in `pins/`. Built by `build_pins.py` from the real product images (made-up example rows).
 Two looks: dark = money tools (matches the sheets), cream = seller toolkits (matches the PDFs).
 Pinterest works like a search engine: titles and descriptions lead with the words people type. Pins keep getting traffic for months, so one pin a day beats ten in one day.
