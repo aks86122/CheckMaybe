@@ -28,3 +28,6 @@ Everything runs in the browser: no upload, no backend, no paid API.
 | AI brand image saved as JPG | no data (known limit: markers lost) |
 | Our own pin render PNG | no data |
 Founder's photos and other people's screenshots are not in this repo.
+
+## Etsy listing images (founder download, 2026-10-24)
+3 images saved from Etsy listings (`il_1140xN.<id>_<hash>.jpg`): 1140 × 1140, only an ICC color profile left; no EXIF, XMP or C2PA. So a buyer can't learn anything from a downloaded listing image. The tool now recognises Etsy file names and switches to buyer advice (read the AI disclosure, review photos, ask the seller for an unedited photo, report misleading AI images).

@@ -37,3 +37,6 @@ Founder 2026-10-24: CheckMaybe does not sell on Etsy (Gumroad and Beacons only).
 
 ### Product read
 Policy is 2 days old and affects digital sellers, CheckMaybe's buyers. Cheapest first move is content, not a tool: an "Etsy's new AI rules for digital sellers" page in Can I Use This? (v1.2), plus pins and a Substack post (volume plan topic 9). Tool (listing preflight) only if that content gets clicks.
+
+### Tested 2026-10-24: Etsy strips listing images
+Etsy re-encodes listing photos (1140 px) and keeps only an ICC profile: no camera data, AI markers or Content Credentials survive. Buyer-side value is a checklist plus asking the seller for originals, not file analysis of listing images.

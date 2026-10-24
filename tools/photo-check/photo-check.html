@@ -248,9 +248,12 @@ function judge(r) {
   const sq = r.wh && r.wh[0] === r.wh[1] && [1080, 1440, 540, 640, 720, 1200].includes(r.wh[0]);
   const uuidName = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(jpe?g|png|webp)$/i.test(name);
   const chatName = /^\d{13}\.(jpe?g|png|webp)$/i.test(name) || /_\d{3}\.(jpe?g|png)$/i.test(name);
+  const etsyName = /^il_(\d+x\w+|fullxfull)\.\d+_[a-z0-9]+\.(jpe?g|png|webp)$/i.test(name);
 
   let level, title, text;
-  if (aiMark) { level = "r"; title = "This file says AI was used";
+  if (etsyName && stripped) { level = "b"; title = "Saved from an Etsy listing";
+    text = "Etsy re-saves every listing photo and removes camera data and AI markers, so a downloaded listing image can't show how it was made. Read the listing description for an AI disclosure, look for buyer photos in the reviews, or ask the seller for an unedited photo."; }
+  else if (aiMark) { level = "r"; title = "This file says AI was used";
     text = "It carries a marker that platforms are known to read (" + aiWords.join(", ") + (tools.length ? ", by " + tools.join(", ") : "") + "). Instagram and Facebook may show an AI label, and Etsy expects you to disclose AI use in the listing."; }
   else if (screenshot) { level = "b"; title = "This looks like a screenshot";
     text = "A screenshot isn't a photo of your item. If it shows someone else's post, product or photo, you may not have the rights to use it in a listing."; }
@@ -301,12 +304,14 @@ function judge(r) {
   if (screenshot) sigs.push(["b", "Screenshot", shotName ? "The file name says it's a screenshot." : "The file is marked as a screen capture."]);
   else if (stripped && screenSize) sigs.push(["b", "Screen-sized image", "No camera data and the size matches a common phone or computer screen, so it may be a screenshot."]);
   if (s.gainmap && !camera) sigs.push(["g", "Phone HDR data", "An HDR gain map survived, a sign the image came from a phone camera."]);
+  if (etsyName && stripped) sigs.push(["b", "Etsy listing image", "The file name matches Etsy's image servers. Etsy keeps only a color profile; everything else is removed on upload."]);
   if (chatName && stripped) sigs.push(["b", "File name looks like a chat-app save", "Names like this usually come from saving an image out of a chat app such as LINE, which removes camera data. It may also be someone else's photo or screenshot."]);
   if (uuidName && stripped) sigs.push(["a", "File name looks like an app export", "Names like this usually come from design apps such as Canva, which save images without camera data. Treat it as an edited image."]);
   if (s.accountIds) sigs.push(["a", "Account IDs in the file", "The file lists a design-app document, user and brand ID (hidden here). Anyone who downloads the original can read them."]);
   if (gps) sigs.push(["r", "Location saved in the file", "Remove location before you post: anyone who downloads the original can read it."]);
 
   const todo = [];
+  if (etsyName && stripped) todo.push("Check the listing description: Etsy requires sellers to disclose items made with AI.", "Look for review photos from other buyers; they show the real item.", "Ask the seller for an unedited photo of the actual item. Etsy now requires one on most listings.", "If the photos look misleading, use “Report this item to Etsy” and choose the misleading AI images option.");
   if (aiMark || tools.length) todo.push('Disclose AI use in your listing description (Etsy requires it). <a href="' + TOOLKIT + '" target="_blank" rel="noopener">Can I Use This?</a> p. 12');
   if (screenshot || chatName) todo.push('Only use images you made or have permission to use. <a href="https://checkmaybe.gumroad.com/l/baxojo?utm_source=photocheck&utm_medium=tool&utm_campaign=v01" target="_blank" rel="noopener">Can I Sell This?</a>');
   todo.push("For Etsy, keep at least one unedited photo of the actual item on a real background, unless your item type is an exception.");
