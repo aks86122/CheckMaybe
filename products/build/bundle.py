@@ -2,10 +2,10 @@
 import os
 from mk import CSS, E, img, pill
 
-PAGES = 28 + 32 + 22          # Can I Sell This? v3.2 + Can I Use This? v1.1 + Can I Resell This? v1.0
+PAGES = 28 + 33 + 22          # Can I Sell This? v3.2 + Can I Use This? v1.2 + Can I Resell This? v1.0
 FOOT = "EDUCATIONAL RESOURCE, NOT LEGAL ADVICE · NOT AFFILIATED WITH ANY PLATFORM NAMED"
 TITLES = "Can I Sell This?<br>Can I Use This?<br>Can I Resell This?"
-C_SELL, C_USE, C_RES = img("canva-v3.2", 1), img("ai-v1.1", 1), img("resell-v1.0", 1)
+C_SELL, C_USE, C_RES = img("canva-v3.2", 1), img("ai-v1.2", 1), img("resell-v1.0", 1)
 EXTRA = """.bl-titles{font-size:25px;font-weight:bold;line-height:1.25}
 .bl-meta{font-family:var(--sans);font-weight:bold;font-size:14px;letter-spacing:.12em;color:var(--muted);line-height:1.9}
 .dots{display:flex;gap:10px}.dots span{width:24px;height:24px;border-radius:50%}"""

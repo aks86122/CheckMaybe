@@ -1,10 +1,10 @@
-# Can I Use This? — Gumroad / Beacons listing (v1.1)
+# Can I Use This? — Gumroad / Beacons listing (v1.2)
 
 ## Title
 Can I Use This? — AI Content Commercial Use Toolkit
 
 ## Summary (short description / "You'll get" line)
-A 32-page PDF decision guide for creators who sell things made with AI: what to check before you publish, with official sources cited.
+A 33-page PDF decision guide for creators who sell things made with AI: what to check before you publish, with official sources cited.
 
 ## Description
 
@@ -16,18 +16,23 @@ Those are five separate questions: what the provider allows, what rights it give
 
 **Can I Use This?** walks you through all five before you list an AI-assisted ebook, printable, print-on-demand design, logo or client project.
 
-**What’s inside (32 pages)**
+**What’s inside (33 pages)**
 - **The 5-Check Framework**: tool, output, input, use, verify. A repeatable routine for every AI-assisted product.
 - **Quick decision map**: eight questions from “Did you use AI?” to “Verify before you publish”.
 - **Five questions that are not the same**: commercial permission, output rights, copyright, third-party rights and marketplace rules, kept apart so you don’t mix them up.
 - **AI tool terms snapshots** for OpenAI, Adobe Firefly, Midjourney, Google Gemini and Anthropic Claude: plan differences, commercial-use and output-rights language, restrictions and the official source for each.
 - **15 real-world scenarios**, each with a concern level, what to check, what to watch out for and the steps to take before you publish: AI images in ebooks, T-shirts and printables, client work, logos, book covers, AI-written ebooks and blogs, stock-style images, POD at scale, selling prompts, lookalike outputs and uploaded reference material.
-- **Etsy rules built in**: AI items count as “designed by a seller”, AI use must be disclosed in the listing description, production partners must be disclosed, and AI prompt bundles are not allowed.
+- **Etsy’s October 2026 AI rules on one page**: when to disclose AI, the three things you can’t list (bot-generated listings, prompt bundles without the artwork, AI-generated patterns, recipes and how-to guides), what digital downloads must show in listing images, and what happens if a listing is misleading. Taken from Etsy’s official pages and checked 24 October 2026.
 - **Red flags, a before-you-sell checklist and a stop-and-verify list.**
 - **Two worksheets**: an AI content record and a terms verification log, so you can show what you checked and when.
 - **Official sources page** with the version and check date for each source.
 
-**What’s new in v1.1 (September 2026)**
+**What’s new in v1.2 (October 2026)**
+- New page on Etsy’s 22 October 2026 AI update and Listing Image Requirements.
+- AI-written ebook, printable and prompt scenarios, red flags and checklist updated to match: on Etsy, AI-generated instructional e-books are no longer allowed, and digital downloads need a real preview.
+- Sources page lists the three Etsy pages with their check date.
+
+**v1.1 (September 2026)**
 - OpenAI (US Terms of Use) and Anthropic (Consumer Terms) snapshots rechecked against the official terms on 25 September 2026.
 - Etsy Creativity Standards added throughout, including the prompt-bundle rule.
 - Adobe Firefly, Midjourney and Google Gemini snapshots are clearly labelled “verify before relying” or “pending full review” until their next check.
@@ -40,4 +45,4 @@ Etsy and Gumroad sellers, print-on-demand shops, freelancers and small brands wh
 - AI platform terms change, sometimes with little notice. Always confirm the current official terms before you rely on them.
 - Independent resource, not affiliated with, sponsored by or endorsed by OpenAI, Adobe, Midjourney, Google, Anthropic or Etsy.
 
-Format: PDF, 32 pages, A4. Instant download.
+Format: PDF, 33 pages, A4. Instant download.
