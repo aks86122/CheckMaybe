@@ -232,3 +232,28 @@ Founder 2026-10-18: a repin gets a new image, not the same one, and goes up earl
 - **Title:** New Year Debt Payoff Plan: Check Your 0% Dates First
 - **Description:** A 0% deal has an end date, and it can change which debt you should pay off first. The Debt Payoff Planner compares 4 payoff orders side by side in Google Sheets (made-up example rows). Not financial advice. #debtpayoff #newyearsresolution #debtfree
 - **Alt text:** Cartoon receipt with a calculator next to a table comparing debt payoff orders. Text: New year, new payoff plan? Check the 0% dates first.
+
+## v4 — Black Friday "is it really a deal?" (2026-10-24)
+For the new Deal Check tab in Holiday Hidden Cost Tracker v1.1. Numbers are the tab's made-up example rows (LibreOffice recalculation, 0 errors). Poses not used on any earlier pin. Built by `build_pins_v4.py`.
+**Post only after the Google master and the Gumroad listing include the Deal Check tab** (otherwise the pin promises something the buyer can't find).
+
+| Pin | Board | Post on | Link |
+| --- | --- | --- | --- |
+| bf1 "Black Friday 'deal'? Check the usual price first." | Christmas Budget & Gift Planning (+ Halloween & Fall Budget Tips) | 10/29 | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=bf1` |
+| bf2 "The sale price isn't the checkout price." | Christmas Budget & Gift Planning | 11/4 | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=bf2` |
+| bf3 "A deal on a plan can cost more." | Pay Later & Budgeting Tips (+ Christmas Budget & Gift Planning) | 11/10 | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=bf3` |
+
+**bf1**
+- Title: `Is That Black Friday Deal Real? Check the Usual Price First`
+- Description: `Before you buy on Black Friday, compare the sale price with the usual price. Made-up example: headphones at $199, usually $249, is 20% below; an air fryer at $89, usually $89, is not a deal at all. The Deal Check tab in the Holiday Hidden Cost Tracker (Google Sheets) gives every item a verdict. Made-up example, not financial advice.`
+- Alt text: `Pin with a receipt mascot holding a price tag and a small table: headphones real deal, air fryer not a deal, smart watch small deal.`
+
+**bf2**
+- Title: `Black Friday Budget: The Sale Price Isn't the Checkout Price`
+- Description: `Add tax and shipping before you decide. Made-up example: a $159 robot vacuum plus 8% tax and $15 shipping is $186.72 at checkout. The Deal Check tab works it out for every item on your list, in Google Sheets. Made-up example, not financial advice.`
+- Alt text: `Pin with a magnifying-glass mascot and a breakdown: sale price $159, tax $12.72, shipping $15, at checkout $186.72.`
+
+**bf3**
+- Title: `Black Friday on a Payment Plan? A Deal Can Cost More`
+- Description: `A sale price on a monthly plan can cost more than paying in full. Made-up example: a $499 TV is $538.92 at checkout, but 12 payments of $49 come to $588, which is $49.08 more. The Deal Check tab shows the extra cost of the plan next to every deal. Made-up example, not financial advice.`
+- Alt text: `Pin with a mascot holding a calculator and a comparison: pay in full $538.92, 12 × $49 $588, extra on the plan $49.08.`
