@@ -1,13 +1,30 @@
-# Listing Photo Check (prototype v0.1, 2026-10-24)
+# Listing Photo Check (prototype v0.2, 2026-10-24)
 
 Free tool idea (founder 2026-10-24): a photo check that leads to the toolkits. Private preview: https://claude.ai/artifact/3za29W5K4qVn7Lrjyxsjdg (owner only). Not deployed; public hosting needs founder approval and a security review first (uploads + production, CLAUDE.md hard limits).
 
-What it does, all in the browser (no upload, no backend, no API):
-- Reads EXIF/XMP/IPTC with `exifr` 7.1.3 (MIT, jsDelivr): camera, capture time, settings, software, GPS presence (never shows coordinates).
-- Scans the file text for C2PA/JUMBF records, IPTC DigitalSourceType (`trainedAlgorithmicMedia`, `compositeWithTrainedAlgorithmicMedia`), generator names, editing apps. C2PA signatures are NOT verified (c2pa-web left for later).
-- Verdict + three columns: in the file / what platforms can read / still for you to check, with links to Can I Use This? and Can I Sell This? (utm_source=photocheck).
-- Limits shown on the page: missing data ≠ not AI, camera data ≠ never edited, can't predict labels.
+Everything runs in the browser: no upload, no backend, no paid API.
 
-Tested 2026-10-24 (Playwright, local): original phone photo → straight from camera; chat-app copy → almost no data left; Photoshop-tagged copy → edited; synthetic XMP + C2PA file → AI marker; GPS copy → location warning; text file and empty file → errors; 390px width, no horizontal scroll, no console errors. Founder's Drive files (2026-10-24): ChatGPT PNG → AI marker + C2PA written by "OpenAI Media Service API" (c2pa.created, c2pa.converted); an AI brand image saved as JPG → no data left (shows why missing markers ≠ not AI); LINE-saved life photo → no data left. 5 Canva-edited exports (2 PNG, 3 JPG): no camera data, no app name, no C2PA, the word "Canva" appears nowhere in the files; only clue is the UUID file name, now shown as "File name looks like an app export". So Canva edits can't be detected from file data, and a Canva export can't serve as Etsy's unedited photo. Canva AI (founder's "海邊眺望的背影" PNG, 2026-10-24): C2PA written by c2pa-rs for Canva, IPTC compositeWithTrainedAlgorithmicMedia, XMP CreatorTool with Canva doc/user/brand IDs → "This file says AI was used"; IDs are hidden in the display and flagged as "Account IDs in the file". Founder's own photos stay out of this repo.
+## What it reads
+- EXIF/XMP/IPTC with `exifr` 7.1.3 (MIT): camera, capture and save times, settings, software, GPS presence (coordinates never shown), maker notes.
+- Content Credentials with the official `@contentauth/c2pa-web` 0.15.3 (MIT, inline WASM via jsDelivr `+esm`, ~12 MB, loaded only when a file has a C2PA record): signer (certificate issuer), each action's IPTC digital source type and software agent, invisible watermark action, ingredients, validation codes. Trust list not checked (signer name shown as written). If the library can't load, it falls back to a text scan and says the signature wasn't verified.
+- IPTC Digital Source Type vocabulary mapped to plain words (camera capture … trainedAlgorithmicMedia = made with generative AI, compositeWithTrainedAlgorithmicMedia = edited with generative AI, screenCapture = screenshot).
+- Consistency checks: image size vs size the camera recorded (cropped/resized), save time vs capture time (saved again later), missing maker notes, screenshot markers/names, screen-sized images without data, chat-app and app-export file names, design-app account IDs (hidden, flagged).
 
-- LINE group saves (13-digit time-stamp names, other people's screenshots; deleted after the test): no camera data, empty Photoshop-format IPTC block → "almost no data left" + "File name looks like a chat-app save". Another ASUS original (P_20261024_232356) → straight from camera.
+## Test suite (2026-10-24, 23 files, all as expected, no console errors, 390 px no horizontal scroll)
+| File | Verdict |
+| --- | --- |
+| 2 ASUS phone originals | straight from camera |
+| resized copy / re-saved copy | camera photo changed later (size changed / saved again later) |
+| Photoshop-tagged copy | edited in Photoshop (+ size changed) |
+| GPS copy | location warning |
+| C2PA fixtures CA / XCA / E-sig (c2pa-rs) | credentials intact / changed after signing / signature broken |
+| c2pa-rs sample1.png | edited in Lightroom, saved again later |
+| ChatGPT PNG (founder) | AI: made with generative AI, gpt-image, signed by OpenAI OpCo, LLC, invisible watermark; certificate issue (likely expiry) shown amber, not as tampering |
+| Canva AI PNG (founder) | AI: edited with generative AI, Canva AI, signed by Canva, credentials intact, account IDs flagged |
+| Canva plain edits (UUID names) | no data, app-export name |
+| LINE saves (13-digit / _NNN names) | no data, chat-app name |
+| Android phone screenshot (+ Screenshot_ name copy) | screenshot (UserComment marker) |
+| PC/chat screenshots 1920×1080 WebP | no data, screen-sized image |
+| AI brand image saved as JPG | no data (known limit: markers lost) |
+| Our own pin render PNG | no data |
+Founder's photos and other people's screenshots are not in this repo.

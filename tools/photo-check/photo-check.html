@@ -89,7 +89,7 @@ ul.todo a { color: var(--rust); }
 
   <section class="limits">
     <h2>What this check can and can't tell you</h2>
-    <p>File data can be removed or changed by apps, so missing AI markers do not prove a photo is not AI-made, and camera data does not prove a photo was never edited. Platforms also use their own detection, so this check cannot predict whether a photo will be labeled or a listing removed.</p>
+    <p>File data can be removed or changed by apps, so missing AI markers do not prove a photo is not AI-made, and camera data does not prove a photo was never edited. Content Credentials are checked with the official C2PA library; signer names are shown as written on the certificate and are not checked against a trust list. Platforms also use their own detection, so this check cannot predict whether a photo will be labeled or a listing removed.</p>
     <p>Educational information, not legal advice. Not affiliated with Etsy, Meta, Canva or any app named here.</p>
   </section>
 </div>
@@ -137,7 +137,62 @@ function scan(bytes) {
   const uniq = [...new Set(gens)].filter((g, i, a) => !a.some(o => o !== g && o.includes(g)));
   if (cg && /c2pa|contentauth/i.test(cg) && uniq.length) cg = uniq[0] + " (" + cg.trim() + ")";
   const accountIds = /\b(doc|user|brand)=[A-Za-z0-9_-]{6,}/.test(txt);
-  return { c2pa, ai: [...new Set(aiExact)], gens: uniq, cg: cg ? cg.trim() : null, actions, xmp, gainmap, accountIds };
+  const dst = [...new Set([...txt.matchAll(/digitalsourcetype\/([A-Za-z]+)/gi)].map(x => x[1]).filter(c => DST[c]))];
+  const shotText = /<[^>]*Screenshot|Screenshot<|UserComment[^<]{0,40}Screenshot/i.test(txt) || /\x00Screenshot\x00?/.test(txt);
+  return { c2pa, ai: [...new Set(aiExact)], gens: uniq, cg: cg ? cg.trim() : null, actions, xmp, gainmap, accountIds, dst, shotText };
+}
+
+// IPTC Digital Source Type vocabulary (cv.iptc.org/newscodes/digitalsourcetype)
+const DST = {
+  digitalCapture: ["a camera capture", "g"], computationalCapture: ["a phone camera capture with built-in processing", "g"],
+  negativeFilm: ["a film scan", "g"], positiveFilm: ["a film scan", "g"], print: ["a scan of a print", "g"],
+  humanEdits: ["edited by a person", "a"], minorHumanEdits: ["lightly edited by a person", "a"], compositeCapture: ["a composite of camera captures", "a"],
+  algorithmicallyEnhanced: ["enhanced by software", "a"], dataDrivenMedia: ["made from data", "a"], digitalArt: ["digital art made by a person", "a"],
+  virtualRecording: ["a recording of a virtual scene", "a"], screenCapture: ["a screenshot", "b"], algorithmicMedia: ["made by an algorithm (not trained AI)", "a"],
+  compositeSynthetic: ["a composite that includes synthetic parts", "r"], trainedAlgorithmicMedia: ["made with generative AI", "r"],
+  compositeWithTrainedAlgorithmicMedia: ["edited with generative AI", "r"],
+};
+const AI_DST = ["trainedAlgorithmicMedia", "compositeWithTrainedAlgorithmicMedia", "compositeSynthetic"];
+const SCREENS = ["1080x2448","1080x2400","1080x2340","1080x2412","1080x2460","1080x1920","1440x3200","1440x3088","1170x2532","1179x2556","1284x2778","1290x2796","1125x2436","1242x2688","828x1792","750x1334","1920x1080","2560x1440","1366x768","1536x864","1440x900","2880x1800","3840x2160","1600x900","1280x720"];
+
+let c2paLib = null;
+function loadC2pa() {
+  if (!c2paLib) c2paLib = import("https://cdn.jsdelivr.net/npm/@contentauth/c2pa-web@0.15.3/inline/+esm")
+    .then(async mod => ({ mod, c2pa: await mod.createC2pa() }));
+  return c2paLib;
+}
+const VCODE = {
+  "assertion.dataHash.mismatch": "The image was changed after it was signed, so the record no longer matches the pixels.",
+  "claimSignature.mismatch": "The signature doesn't match the record.",
+  "signingCredential.invalid": "The signing certificate couldn't be validated (it may have expired).",
+  "signingCredential.revoked": "The signing certificate was revoked.",
+};
+async function readC2pa(file, mime) {
+  try {
+    const { mod, c2pa } = await loadC2pa();
+    const rd = await mod.Reader.fromBlob(c2pa, mime, file);
+    if (!rd) return { none: true };
+    const st = await rd.manifestStore(); await rd.free();
+    const man = st.manifests[st.active_manifest] || {};
+    const acts = (man.assertions || []).filter(a => /^c2pa\.actions/.test(a.label)).flatMap(a => (a.data && a.data.actions) || []);
+    const name = x => x && (x.name || (typeof x === "string" ? x : null));
+    const all = Object.values(st.manifests || {});
+    return {
+      issuer: man.signature_info && man.signature_info.issuer,
+      signedAt: man.signature_info && man.signature_info.time,
+      gen: (man.claim_generator_info || []).map(g => g.name).filter(n => n && !/^c2pa|make_test/i.test(n)),
+      agents: [...new Set(acts.map(a => name(a.softwareAgent)).filter(Boolean))],
+      actions: [...new Set(acts.map(a => a.action))],
+      dst: [...new Set(acts.map(a => (a.digitalSourceType || "").split("/").pop()).filter(Boolean))],
+      watermark: acts.some(a => /watermark/.test(a.action)),
+      state: st.validation_state || null,
+      problems: [...new Set((st.validation_status || []).map(v => v.code).filter(c => VCODE[c]))].map(c => VCODE[c]),
+      tampered: (st.validation_status || []).some(v => /dataHash\.mismatch|claimSignature\.mismatch|hash.*mismatch/.test(v.code)),
+      changed: (st.validation_status || []).some(v => /Hash\.mismatch|hash.*mismatch/i.test(v.code)),
+      ingredients: all.reduce((n, mm) => n + ((mm.ingredients || []).length), 0),
+      history: all.length,
+    };
+  } catch (e) { return { error: true }; }
 }
 
 function dims(file, url) {
@@ -151,34 +206,64 @@ async function check(file) {
   const type = sniff(bytes);
   if (!type) return { error: file.name + " doesn't look like a JPEG, PNG, WebP or HEIC image." };
   let meta = {};
-  try { meta = (await exifr.parse(bytes, { tiff: true, exif: true, gps: true, xmp: true, iptc: true, icc: false, mergeOutput: true, translateValues: true })) || {}; } catch (e) { meta = {}; }
+  try { meta = (await exifr.parse(bytes, { tiff: true, exif: true, gps: true, xmp: true, iptc: true, icc: false, makerNote: true, userComment: true, mergeOutput: true, translateValues: true })) || {}; } catch (e) { meta = {}; }
   const url = type === "HEIC" ? null : URL.createObjectURL(file);
   const wh = url ? await dims(file, url) : (meta.ExifImageWidth ? [meta.ExifImageWidth, meta.ExifImageHeight] : null);
-  return { file, type, meta, url, wh, s: scan(bytes) };
+  const s = scan(bytes);
+  const mime = { JPEG: "image/jpeg", PNG: "image/png", WebP: "image/webp", HEIC: "image/heic" }[type];
+  const cr = s.c2pa ? await readC2pa(file, mime) : null;
+  return { file, type, meta, url, wh, s, cr };
 }
 
 function judge(r) {
-  const m = r.meta, s = r.s;
+  const m = r.meta, s = r.s, cr = r.cr && !r.cr.error && !r.cr.none ? r.cr : null;
+  const name = r.file.name || "";
   const camera = m.Make || m.Model ? [m.Make, m.Model].filter(Boolean).join(" ") : null;
   const taken = m.DateTimeOriginal || m.CreateDate || null;
+  const modified = m.ModifyDate || null;
   const sw = [m.Software, m.CreatorTool, m.HistorySoftwareAgent].filter(Boolean).map(x => String(x).replace(/\b(doc|user|brand)=[A-Za-z0-9_-]+/g, "$1=(hidden)"));
   const editors = [...new Set(sw.flatMap(x => EDITORS.filter(([k]) => x.toLowerCase().includes(k.toLowerCase())).map(([, n]) => n)))];
   const firmware = sw.length && !editors.length ? sw[0] : null;
   const gps = m.latitude != null || m.GPSLatitude != null;
   const exposure = m.ExposureTime ? (m.ExposureTime < 1 ? "1/" + Math.round(1 / m.ExposureTime) : m.ExposureTime) + " s" : null;
-  const aiMark = s.ai.length > 0, hasCreds = s.c2pa;
-  const sq = r.wh && r.wh[0] === r.wh[1] && [1080, 1440, 540, 640, 720, 1200].includes(r.wh[0]);
+
+  // Source type: C2PA actions first, then IPTC/XMP fields
+  const dst = [...new Set([...(cr ? cr.dst : []), ...s.dst])].filter(c => DST[c]);
+  const aiCodes = dst.filter(c => AI_DST.includes(c));
+  const aiMark = aiCodes.length > 0 || (!cr && s.ai.length > 0);
+  const aiWords = aiCodes.length ? aiCodes.map(c => DST[c][0]) : s.ai;
+  const hasCreds = s.c2pa;
+  const tools = [...new Set([...(cr ? [...cr.agents, ...cr.gen] : []), ...s.gens])].filter((g, i, a) => !a.some(o => o !== g && o.toLowerCase().includes(g.toLowerCase())));
+
+  // Consistency checks on camera data
+  const exifWH = m.ExifImageWidth && m.ExifImageHeight ? [m.ExifImageWidth, m.ExifImageHeight] : null;
+  const resized = exifWH && r.wh && !((exifWH[0] === r.wh[0] && exifWH[1] === r.wh[1]) || (exifWH[0] === r.wh[1] && exifWH[1] === r.wh[0]));
+  const gapMin = taken instanceof Date && modified instanceof Date ? Math.round((modified - taken) / 60000) : null;
+  const resaved = gapMin != null && gapMin > 2;
+  const noMakerNote = camera && !m.makerNote && !m.MakerNote;
+  const screenSize = r.wh && (SCREENS.includes(r.wh[0] + "x" + r.wh[1]) || SCREENS.includes(r.wh[1] + "x" + r.wh[0]));
+  const shotName = /^(screenshot|screen shot|螢幕|截圖|截屏|スクリーンショット)/i.test(name);
+  const screenshot = dst.includes("screenCapture") || s.shotText || shotName || (/Screenshot/i.test(String(m.UserComment || "")));
   const stripped = !camera && !taken && !hasCreds && !aiMark && !editors.length;
+  const sq = r.wh && r.wh[0] === r.wh[1] && [1080, 1440, 540, 640, 720, 1200].includes(r.wh[0]);
+  const uuidName = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(jpe?g|png|webp)$/i.test(name);
+  const chatName = /^\d{13}\.(jpe?g|png|webp)$/i.test(name) || /_\d{3}\.(jpe?g|png)$/i.test(name);
 
   let level, title, text;
   if (aiMark) { level = "r"; title = "This file says AI was used";
-    text = "It carries a marker that platforms are known to read (" + s.ai.join(", ") + "). Instagram and Facebook may show an AI label, and Etsy expects you to disclose AI use in the listing."; }
+    text = "It carries a marker that platforms are known to read (" + aiWords.join(", ") + (tools.length ? ", by " + tools.join(", ") : "") + "). Instagram and Facebook may show an AI label, and Etsy expects you to disclose AI use in the listing."; }
+  else if (screenshot) { level = "b"; title = "This looks like a screenshot";
+    text = "A screenshot isn't a photo of your item. If it shows someone else's post, product or photo, you may not have the rights to use it in a listing."; }
+  else if (hasCreds && cr && cr.tampered) { level = "r"; title = cr.changed ? "This file was changed after it was signed" : "Its Content Credentials signature is broken";
+    text = (cr.changed ? "It has a Content Credentials record, but the image no longer matches it." : "The record's signature doesn't match.") + " Platforms may treat the record as broken. Use the original file if you have it."; }
   else if (hasCreds) { level = "a"; title = "This file has Content Credentials";
-    text = "A C2PA record is attached" + (s.cg ? " (written by " + s.cg + ")" : "") + ". It didn't name generative AI, but platforms read these records, so check what it says before you post."; }
+    text = "A C2PA record is attached" + (cr && cr.issuer ? ", signed by " + cr.issuer : "") + ". It doesn't say generative AI was used, but platforms read these records, so check what it says before you post."; }
   else if (editors.length) { level = "a"; title = "Edited in " + editors.join(", ");
     text = "Fine for most listing photos if the item still looks the way it really is. For Etsy's required unedited photo, use a different, straight-from-camera shot."; }
+  else if (camera && (resized || resaved)) { level = "a"; title = "A camera photo that was changed later";
+    text = "The camera data is still there, but " + (resized ? "the image size no longer matches what the camera recorded" : "the file was saved again " + gapMin + " minutes after it was taken") + ". For Etsy's unedited photo, use the original from your camera roll."; }
   else if (camera) { level = "g"; title = "Looks like a straight-from-camera photo";
-    text = "The file still has its camera data and no editing app name. That fits Etsy's unedited-photo rule, but file data can't prove a photo was never edited."; }
+    text = "The file still has its camera data, its original size and no editing app name. That fits Etsy's unedited-photo rule, but file data can't prove a photo was never edited."; }
   else if (stripped) { level = "b"; title = "This file has almost no data left";
     text = (sq ? "Its size (" + r.wh[0] + " × " + r.wh[1] + ") is typical of photos saved from social media. " : "") + "Chat apps, social media, screenshots and many design and AI tools save images without this data, so the file can't show where the image came from. If it's your own photo, check the original from your camera roll."; }
   else { level = "b"; title = "Some data, no clear signal";
@@ -192,25 +277,42 @@ function judge(r) {
     ["Settings", [exposure, m.FNumber ? "f/" + m.FNumber : null, m.ISO ? "ISO " + m.ISO : null].filter(Boolean).join(" · ") || "Not found"],
     ["Software", sw.length ? sw.join(" · ") : "Not found"],
   ];
+  if (exifWH && resized) facts.splice(1, 0, ["Size the camera recorded", exifWH[0] + " × " + exifWH[1]]);
+  if (dst.length) facts.push(["Source type", dst.map(c => DST[c][0]).join(" · ")]);
+
   const sigs = [];
-  sigs.push(aiMark ? ["r", "AI marker found", "IPTC/C2PA says: " + s.ai.join(", ") + "."] : ["g", "No AI marker found", "None of the standard AI fields are present. This doesn't prove the image isn't AI-made."]);
-  sigs.push(hasCreds ? ["a", "Content Credentials (C2PA)", (s.cg ? "Written by " + s.cg + ". " : "") + (s.actions.length ? "Actions: " + s.actions.join(", ") + ". " : "") + "Signature not verified in this version."] : ["b", "No Content Credentials", "No C2PA record in the file."]);
-  if (s.gens.length) sigs.push(["a", "Tool names in the file", s.gens.join(", ")]);
+  sigs.push(aiMark ? ["r", "AI marker found", (aiCodes.length ? "Source type: " : "Marker: ") + aiWords.join(", ") + "."] : ["g", "No AI marker found", "None of the standard AI fields are present. This doesn't prove the image isn't AI-made."]);
+  if (hasCreds) {
+    if (cr) {
+      let d = (cr.issuer ? "Signed by " + cr.issuer + " (name on the certificate; not checked against a trust list). " : "")
+        + (cr.actions.length ? "Steps recorded: " + cr.actions.map(a => a.replace("c2pa.", "")).join(", ") + ". " : "")
+        + (cr.ingredients ? "Made from " + cr.ingredients + " earlier file" + (cr.ingredients > 1 ? "s" : "") + ". " : "");
+      sigs.push([cr.tampered ? "r" : "a", cr.tampered ? (cr.changed ? "Changed after signing" : "Signature broken") : cr.problems.length ? "Content Credentials: certificate issue" : "Content Credentials intact", d + (cr.problems.length ? cr.problems.join(" ") : "The signature matches the file.")]);
+      if (cr.watermark) sigs.push(["a", "Invisible watermark recorded", "The record says a watermark was added to the pixels. It can survive screenshots and re-saves."]);
+    } else {
+      sigs.push(["a", "Content Credentials (C2PA)", (s.cg ? "Written by " + s.cg + ". " : "") + (r.cr && r.cr.error ? "The full check couldn't run in this browser, so the signature wasn't verified." : "")]);
+    }
+  } else sigs.push(["b", "No Content Credentials", "No C2PA record in the file."]);
+  if (tools.length) sigs.push(["a", "Tools named in the file", tools.join(", ")]);
   sigs.push(editors.length ? ["a", "Editing app named", editors.join(", ")] : firmware ? ["g", "Camera software only", "“" + firmware + "” looks like phone or camera firmware, not an editing app."] : ["b", "No software named", "The file doesn't say which app last saved it."]);
+  if (resized) sigs.push(["a", "Size changed after capture", "The camera recorded " + exifWH[0] + " × " + exifWH[1] + "; the file is " + r.wh[0] + " × " + r.wh[1] + ". It was cropped or resized."]);
+  if (resaved) sigs.push(["a", "Saved again later", "Last saved " + (gapMin >= 1440 ? Math.round(gapMin / 1440) + " days" : gapMin >= 60 ? Math.round(gapMin / 60) + " hours" : gapMin + " minutes") + " after it was taken."]);
+  if (noMakerNote && !editors.length) sigs.push(["b", "Camera notes missing", "Phones and cameras usually store their own notes in the file. They're missing, so an app may have re-saved it."]);
+  if (screenshot) sigs.push(["b", "Screenshot", shotName ? "The file name says it's a screenshot." : "The file is marked as a screen capture."]);
+  else if (stripped && screenSize) sigs.push(["b", "Screen-sized image", "No camera data and the size matches a common phone or computer screen, so it may be a screenshot."]);
   if (s.gainmap && !camera) sigs.push(["g", "Phone HDR data", "An HDR gain map survived, a sign the image came from a phone camera."]);
-  const uuidName = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(jpe?g|png|webp)$/i.test(r.file.name || "");
-  const chatName = /^\d{13}\.(jpe?g|png|webp)$/i.test(r.file.name || "") || /_\d{3}\.(jpe?g|png)$/i.test(r.file.name || "");
   if (chatName && stripped) sigs.push(["b", "File name looks like a chat-app save", "Names like this usually come from saving an image out of a chat app such as LINE, which removes camera data. It may also be someone else's photo or screenshot."]);
   if (uuidName && stripped) sigs.push(["a", "File name looks like an app export", "Names like this usually come from design apps such as Canva, which save images without camera data. Treat it as an edited image."]);
   if (s.accountIds) sigs.push(["a", "Account IDs in the file", "The file lists a design-app document, user and brand ID (hidden here). Anyone who downloads the original can read them."]);
   if (gps) sigs.push(["r", "Location saved in the file", "Remove location before you post: anyone who downloads the original can read it."]);
 
   const todo = [];
-  if (aiMark || s.gens.length) todo.push('Disclose AI use in your listing description (Etsy requires it). <a href="' + TOOLKIT + '" target="_blank" rel="noopener">Can I Use This?</a> p. 12');
+  if (aiMark || tools.length) todo.push('Disclose AI use in your listing description (Etsy requires it). <a href="' + TOOLKIT + '" target="_blank" rel="noopener">Can I Use This?</a> p. 12');
+  if (screenshot || chatName) todo.push('Only use images you made or have permission to use. <a href="https://checkmaybe.gumroad.com/l/baxojo?utm_source=photocheck&utm_medium=tool&utm_campaign=v01" target="_blank" rel="noopener">Can I Sell This?</a>');
   todo.push("For Etsy, keep at least one unedited photo of the actual item on a real background, unless your item type is an exception.");
   todo.push("Make sure every photo shows the real color, size, condition and flaws of what the buyer receives.");
-  if (editors.includes("Canva") || s.gens.includes("Canva")) todo.push('If you used Canva elements or AI tools, check that your license covers selling the result. <a href="https://checkmaybe.gumroad.com/l/baxojo?utm_source=photocheck&utm_medium=tool&utm_campaign=v01" target="_blank" rel="noopener">Can I Sell This?</a>');
-  if (stripped) todo.push("If you made or edited this image with AI, disclose it yourself: the file no longer says so.", "For Etsy's unedited photo, upload the original from your camera roll, not an export from a design app.");
+  if (editors.includes("Canva") || tools.some(t => /canva/i.test(t))) todo.push('If you used Canva elements or AI tools, check that your license covers selling the result. <a href="https://checkmaybe.gumroad.com/l/baxojo?utm_source=photocheck&utm_medium=tool&utm_campaign=v01" target="_blank" rel="noopener">Can I Sell This?</a>');
+  if (stripped && !screenshot) todo.push("If you made or edited this image with AI, disclose it yourself: the file no longer says so.", "For Etsy's unedited photo, upload the original from your camera roll, not an export from a design app.");
   todo.push("Keep the original file and the date you took it, in case a listing is questioned.");
   return { level, title, text, facts, sigs, todo };
 }
