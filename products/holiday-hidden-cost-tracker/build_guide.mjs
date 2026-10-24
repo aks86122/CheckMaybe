@@ -104,11 +104,12 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>${css}</st
 
 <section class="page">
   <div class="kick">What's inside</div>
-  <h2>Six tabs, one holiday budget</h2>
+  <h2>Seven tabs, one holiday budget</h2>
   <table class="card" style="padding:4px 8px">
     <tr><td>Dashboard</td><td class="muted">Budget, spent, left, gifts sorted. What your holiday plans charge next month and the month after, highest real APR, trials ending soon, a month-by-month chart, and what's still to buy.</td></tr>
     <tr><td>Gift List</td><td class="muted">Recipient, relationship, gift, budget, actual cost, paid with, status. Gifts bought on a plan are marked.</td></tr>
     <tr><td>Holiday Payments</td><td class="muted">Price, payment, number of payments, every 2 weeks or monthly, first payment date. Works out total, extra cost, real APR, last payment and what each plan charges in each month.</td></tr>
+    <tr><td>Deal Check</td><td class="muted">Before you buy: sale price vs the usual price, the total at checkout with tax and shipping, what a payment plan adds, and a verdict for each item.</td></tr>
     <tr><td>Free Trials</td><td class="muted">Holiday streaming and shipping trials: cancel-by date, countdown and yearly cost if you keep it.</td></tr>
     <tr><td>Settings</td><td class="muted">Budget, income, first month to plan, APR levels for the flags.</td></tr>
     <tr><td>How to Use</td><td class="muted">These instructions, inside the sheet.</td></tr>

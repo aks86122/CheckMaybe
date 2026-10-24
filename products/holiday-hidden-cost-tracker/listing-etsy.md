@@ -1,4 +1,4 @@
-# Holiday Hidden Cost Tracker — Etsy listing (v1, 2026-10-05)
+# Holiday Hidden Cost Tracker — Etsy listing (v1.1, 2026-10-24: Deal Check tab added)
 
 Same facts as `listing-gumroad.md`. Images: `images/etsy/` (10, in order).
 
@@ -19,6 +19,7 @@ If you're tired of…
 • small pay-in-4 payments piling up in the same month
 • not knowing what January will cost until the bills arrive
 • going over your gift budget without noticing
+• "deals" that cost the same as last month
 • holiday free trials turning into charges
 …this tracker is for you.
 
@@ -28,11 +29,12 @@ What Holiday Hidden Cost Tracker helps you do
 ✔ Work out the real APR and extra cost of any plan: enter the price, the payment and the number of payments
 ✔ Spot the expensive ones: HIGH / CHECK / OK flag on every plan (20% and 10% by default, change them in Settings)
 ✔ Track every gift: who it's for, budget vs actual cost, how you paid and status
+✔ Check a Black Friday deal before you buy: sale price vs the usual price, the total at checkout with tax and shipping, and what a payment plan adds on top
 ✔ Never miss a cancel-by date: countdown for every free trial and the yearly cost if you keep it
 
 What you get
 ✔ PDF guide with your "Make a copy" link and setup steps
-✔ Google Sheets tracker, dark green and gold: Dashboard, Gift List, Holiday Payments, Free Trials, Settings, How to Use
+✔ Google Sheets tracker, dark green and gold: Dashboard, Gift List, Holiday Payments, Deal Check, Free Trials, Settings, How to Use
 ✔ Dashboard with budget cards, a month-by-month table and 2 charts
 ✔ Tick boxes, filter bars and colour tags
 ✔ Made-up example rows so you can see how it works
