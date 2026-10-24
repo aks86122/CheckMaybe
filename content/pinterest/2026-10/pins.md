@@ -282,3 +282,41 @@ Numbers are the products' made-up example rows (LibreOffice recalculation 2026-1
 - Title: `Holiday Travel Budget: The Fare Isn't the Trip (Fees to Add Before You Book)`
 - Description: `Before you book holiday travel, add what the fare leaves out: checked bags, seat choice, resort fees, airport parking. Put the trip total, not the fare, into your holiday budget. The Holiday Hidden Cost Tracker keeps travel on a payment plan next to gifts and free trials, month by month, in Google Sheets. Checklist, not financial advice. #holidaytravel #christmasbudget #travelbudget`
 - Alt text: `Cartoon receipt holding a clipboard next to a trip cost checklist: fare listed, checked bags, seat choice, resort fee and airport parking to add.`
+
+## v6 — Etsy's October 2026 AI rules, 5 pain points (2026-10-24)
+Link: Can I Use This? v1.2 (page 12 covers all five). Wording from Etsy's official pages pasted by the founder: "Important updates to AI use on Etsy", "What's Etsy's Stance on AI Creations?", "Listing Image Requirements" (22 Oct 2026). No numbers. Built by `build_pins_v6.py`.
+**Post only after Can I Use This? v1.2 is uploaded on Gumroad** (v1.1 has no Etsy October page). Founder 2026-10-24: post now, one a day, because Pinterest reach needs time.
+Board: Selling Digital Products: Licensing. Not affiliated with Etsy; no Etsy logo or colours on the images.
+
+| Pin | Pain point | Post on | Link |
+| --- | --- | --- | --- |
+| et1 "AI-written patterns and recipes are out on Etsy." | AI instructions banned | day 1 | `https://checkmaybe.gumroad.com/l/kzhzh?utm_source=pinterest&utm_medium=social&utm_campaign=et1` |
+| et2 "Made it with AI? Say so in the description." | disclosure | day 2 | `https://checkmaybe.gumroad.com/l/kzhzh?utm_source=pinterest&utm_medium=social&utm_campaign=et2` |
+| et3 "Selling a digital download? Show what's inside." | preview rule | day 3 | `https://checkmaybe.gumroad.com/l/kzhzh?utm_source=pinterest&utm_medium=social&utm_campaign=et3` |
+| et4 "Prompt bundles can't be sold on Etsy." | prompt bundles, bot listings | day 4 | `https://checkmaybe.gumroad.com/l/kzhzh?utm_source=pinterest&utm_medium=social&utm_campaign=et4` |
+| et5 "Edited every photo with AI? Keep one that isn't." | unedited photo, refunds | day 5 | `https://checkmaybe.gumroad.com/l/kzhzh?utm_source=pinterest&utm_medium=social&utm_campaign=et5` |
+
+**et1**
+- Title: `Etsy Bans AI-Generated Patterns, Recipes and How-To Guides (October 2026)`
+- Description: `Since 22 October 2026, Etsy doesn't allow AI-generated functional instructions: craft patterns, recipes, project plans, manuals and instructional e-books. The instructions must be your own work, and you need a real photo of something made with them. Can I Use This? sums up Etsy's new AI rules on one page, with the official sources. Not legal advice; not affiliated with Etsy. #etsyseller #crochetpattern #etsytips`
+- Alt text: `Cartoon checkmark mascot next to a list: AI-written crochet pattern not allowed, AI-written recipe not allowed, your own tested pattern show a real result.`
+
+**et2**
+- Title: `Etsy AI Disclosure: When You Have to Say an Item Was Made With AI`
+- Description: `Etsy still allows items made with AI when you play a clear creative role, such as your own original prompts. You must disclose AI use in the listing description, and you can't present AI work as handmade or entirely your own creation. Can I Use This? walks through what to check before you list AI-made work. Not legal advice; not affiliated with Etsy. #etsyseller #aiart #etsytips`
+- Alt text: `Cartoon receipt holding a checklist next to a list: your own prompts and curation allowed, item created with AI disclose it, AI work sold as handmade not allowed.`
+
+**et3**
+- Title: `Selling Digital Downloads on Etsy? Your Photos Must Show What's Inside`
+- Description: `Etsy's updated Listing Image Requirements: digital downloads should include a visual preview or excerpt of the content buyers receive. Only items with nothing visual, like audio files, can use representative images, and those can't mislead. Mockups alone may not be enough for a planner or printable. Not legal advice; not affiliated with Etsy. #etsydigitaldownloads #printables #etsyseller`
+- Alt text: `Waving cartoon receipt next to a list: planner PDF real page preview, printable wall art real file preview, audio file representative image OK.`
+
+**et4**
+- Title: `Can You Sell AI Prompt Bundles on Etsy? No, and Bot Listings Are Out Too`
+- Description: `Etsy prohibits selling AI prompt bundles on their own: the prompts belong with the finished artwork. Bot-generated listings with no individual human input aren't allowed either. AI art made from your own prompts is still allowed with disclosure. Can I Use This? covers the rules and what to check. Not legal advice; not affiliated with Etsy. #aiprompts #etsyseller #digitalproducts`
+- Alt text: `Cartoon receipt with a clipboard next to a list: prompt bundle on its own not allowed, bot-generated listings not allowed, AI art from your own prompts allowed with disclosure.`
+
+**et5**
+- Title: `Etsy's New Photo Rule: Keep One Unedited Photo of the Real Item`
+- Description: `Most Etsy listings now need at least one unedited photo of the actual item on a real background. Other photos can still be edited, even with AI, if they stay accurate. If a buyer opens a case because the item is materially different, you may be responsible for the refund. Can I Use This? sums up the October 2026 rules. Not legal advice; not affiliated with Etsy. #etsyseller #productphotography #etsytips`
+- Alt text: `Cartoon receipt giving a thumbs up next to a list: one unedited photo required, new background on other photos OK if accurate, hiding flaws or damage not allowed.`
