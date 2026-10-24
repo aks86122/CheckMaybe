@@ -100,7 +100,7 @@ const TOOLKIT = "https://checkmaybe.gumroad.com/l/kzhzh?utm_source=photocheck&ut
 const MAX = 20 * 1024 * 1024;
 const EDITORS = [["Adobe Photoshop","Photoshop"],["Lightroom","Lightroom"],["Canva","Canva"],["Snapseed","Snapseed"],["PicsArt","PicsArt"],["GIMP","GIMP"],["Affinity","Affinity"],["Pixelmator","Pixelmator"],["VSCO","VSCO"],["Meitu","Meitu"],["Fotor","Fotor"],["CapCut","CapCut"],["Photopea","Photopea"],["Picsart","PicsArt"],["Remini","Remini"],["Lensa","Lensa"],["Facetune","Facetune"],["Instagram","Instagram"]];
 const AI_TOKENS = [["trainedAlgorithmicMedia","made with generative AI"],["compositeWithTrainedAlgorithmicMedia","edited with generative AI"],["algorithmicMedia","made by an algorithm"]];
-const GENERATORS = ["Adobe Firefly","Firefly","DALL-E","DALL·E","ChatGPT","OpenAI","Midjourney","Imagen","Gemini","Stable Diffusion","Canva","Microsoft Designer","Bing Image Creator","Meta AI","Leonardo"];
+const GENERATORS = ["Canva AI","Adobe Firefly","Firefly","DALL-E","DALL·E","ChatGPT","OpenAI","Midjourney","Imagen","Gemini","Stable Diffusion","Canva","Microsoft Designer","Bing Image Creator","Meta AI","Leonardo"];
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const kb = n => n > 1048576 ? (n / 1048576).toFixed(1) + " MB" : Math.round(n / 1024) + " KB";
@@ -134,7 +134,10 @@ function scan(bytes) {
   const actions = [...new Set((txt.match(/c2pa\.(created|edited|converted|placed|opened|filtered|color_adjustments|cropped|resized|drawing)/g) || []))];
   const xmp = txt.includes("<x:xmpmeta");
   const gainmap = txt.includes("hdr-gain-map") || txt.includes("GainMap");
-  return { c2pa, ai: [...new Set(aiExact)], gens: [...new Set(gens)], cg: cg ? cg.trim() : null, actions, xmp, gainmap };
+  const uniq = [...new Set(gens)].filter((g, i, a) => !a.some(o => o !== g && o.includes(g)));
+  if (cg && /c2pa|contentauth/i.test(cg) && uniq.length) cg = uniq[0] + " (" + cg.trim() + ")";
+  const accountIds = /\b(doc|user|brand)=[A-Za-z0-9_-]{6,}/.test(txt);
+  return { c2pa, ai: [...new Set(aiExact)], gens: uniq, cg: cg ? cg.trim() : null, actions, xmp, gainmap, accountIds };
 }
 
 function dims(file, url) {
@@ -158,7 +161,7 @@ function judge(r) {
   const m = r.meta, s = r.s;
   const camera = m.Make || m.Model ? [m.Make, m.Model].filter(Boolean).join(" ") : null;
   const taken = m.DateTimeOriginal || m.CreateDate || null;
-  const sw = [m.Software, m.CreatorTool, m.HistorySoftwareAgent].filter(Boolean).map(String);
+  const sw = [m.Software, m.CreatorTool, m.HistorySoftwareAgent].filter(Boolean).map(x => String(x).replace(/\b(doc|user|brand)=[A-Za-z0-9_-]+/g, "$1=(hidden)"));
   const editors = [...new Set(sw.flatMap(x => EDITORS.filter(([k]) => x.toLowerCase().includes(k.toLowerCase())).map(([, n]) => n)))];
   const firmware = sw.length && !editors.length ? sw[0] : null;
   const gps = m.latitude != null || m.GPSLatitude != null;
@@ -197,6 +200,7 @@ function judge(r) {
   if (s.gainmap && !camera) sigs.push(["g", "Phone HDR data", "An HDR gain map survived, a sign the image came from a phone camera."]);
   const uuidName = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(jpe?g|png|webp)$/i.test(r.file.name || "");
   if (uuidName && stripped) sigs.push(["a", "File name looks like an app export", "Names like this usually come from design apps such as Canva, which save images without camera data. Treat it as an edited image."]);
+  if (s.accountIds) sigs.push(["a", "Account IDs in the file", "The file lists a design-app document, user and brand ID (hidden here). Anyone who downloads the original can read them."]);
   if (gps) sigs.push(["r", "Location saved in the file", "Remove location before you post: anyone who downloads the original can read it."]);
 
   const todo = [];
