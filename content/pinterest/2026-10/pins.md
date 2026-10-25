@@ -287,7 +287,7 @@ Numbers are the products' made-up example rows (LibreOffice recalculation 2026-1
 
 ## v6 — Etsy's October 2026 AI rules, 5 pain points (2026-10-24)
 Link: Can I Use This? v1.2 (page 12 covers all five). Wording from Etsy's official pages pasted by the founder: "Important updates to AI use on Etsy", "What's Etsy's Stance on AI Creations?", "Listing Image Requirements" (22 Oct 2026). No numbers. Built by `build_pins_v6.py`.
-**Post only after Can I Use This? v1.2 is uploaded on Gumroad** (v1.1 has no Etsy October page). Founder 2026-10-24: post now, one a day, because Pinterest reach needs time.
+**v1.2 is on Gumroad (founder 2026-10-25), ready to post.** Was: post only after Can I Use This? v1.2 is uploaded on Gumroad (v1.1 has no Etsy October page). Founder 2026-10-24: post now, one a day, because Pinterest reach needs time.
 Board: Selling Digital Products: Licensing. Not affiliated with Etsy; no Etsy logo or colours on the images.
 
 | Pin | Pain point | Post on | Link |
@@ -320,7 +320,7 @@ Board: Selling Digital Products: Licensing. Not affiliated with Etsy; no Etsy lo
 
 **et5**
 - Title: `Etsy's New Photo Rule: Keep One Unedited Photo of the Real Item`
-- Description: `Most Etsy listings now need at least one unedited photo of the actual item on a real background. Other photos can still be edited, even with AI, if they stay accurate. If a buyer opens a case because the item is materially different, you may be responsible for the refund. Can I Use This? sums up the October 2026 rules. Not legal advice; not affiliated with Etsy. #etsyseller #productphotography #etsytips`
+- Description: `Most Etsy listings now need at least one unedited photo of the actual item on a real background. Other photos can still be edited, even with AI, if they stay accurate. If a buyer opens a case because the item is materially different, you may be responsible for the refund. Our free Photo Check shows which photo still has its camera data and no editing app. Can I Use This? sums up the rules. Not legal advice; not affiliated with Etsy. #etsyseller #productphotography #etsytips`
 - Alt text: `Cartoon receipt giving a thumbs up next to a list: one unedited photo required, new background on other photos OK if accurate, hiding flaws or damage not allowed.`
 
 ## v7 — free Photo Check tool (2026-10-25)
