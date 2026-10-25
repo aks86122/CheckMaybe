@@ -3,7 +3,7 @@
 最後更新：2026-10-03
 
 ## 進行中
-- **Hidden Cost Tracker**：商品完成（母版、/copy 連結、正式 PDF、Excel 測試、Etsy／Gumroad／Beacons 商品圖與文案）。Gumroad（https://checkmaybe.gumroad.com/l/kofwfjf）和 Beacons 已上架（2026-10-03）；目前沒有在 Etsy 賣（創辦人 2026-10-24），Etsy 文案只是備用草稿。進度清單：`products/hidden-cost-tracker/SETUP-zh.md`
+- **Hidden Cost Tracker**：商品完成（母版、/copy 連結、正式 PDF、Excel 測試、Etsy／Gumroad／Beacons 商品圖與文案）。Gumroad（https://checkmaybe.gumroad.com/l/kofwfjf）和 Beacons 已上架（2026-10-03）；Etsy 店已申請、審核中（創辦人 2026-10-25），通過前不上架；Etsy 文案是草稿，上架前要再對一次 Etsy 2026-10 的 AI 規則。進度清單：`products/hidden-cost-tracker/SETUP-zh.md`
 
 - **節日版 Hidden Cost Tracker**（聖誕／黑五分期）：企劃 v0.1 等創辦人審閱，目標 11/1 前上架。`planning/2026-10-holiday-hidden-cost-tracker/01-plan.md`
 - **Debt Toolkit（負債套組）＋節慶導流日曆**：免費 Pay Later 檢查表 → Hidden Cost Tracker／Debt Payoff Tracker／節日版 → 全套；節慶前 1～2 週導流。`planning/2026-10-debt-toolkit/01-plan.md`
