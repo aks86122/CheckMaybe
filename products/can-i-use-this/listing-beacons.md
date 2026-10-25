@@ -25,3 +25,5 @@ Button text: `Free Photo Check`
 Image: `images/` preview (Beacons uses the preview image).
 
 Founder 2026-10-25: Beacons updated (listing text and the Free Photo Check link block with images/free-photo-check-1080.png from tools/photo-check).
+
+Beacons plan (2026-10-25): keep the Free Photo Check block; add a link block "Free Listing Photo Checklist" to https://checkmaybe.gumroad.com/l/dpipva?utm_source=beacons&utm_medium=link&utm_campaign=lpc (image: products/listing-photo-checklist/images/listing-photo-checklist-gumroad-thumb.png). No Beacons-hosted free product, so all emails stay in one Gumroad list.
