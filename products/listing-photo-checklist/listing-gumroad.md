@@ -1,5 +1,6 @@
 # Listing Photo Checklist — Gumroad listing (free, v1.0, 2026-10-25)
 
+Live 2026-10-25: https://checkmaybe.gumroad.com/l/dpipva ($0, pay what you want).
 Price: $0+ (pay what you want, minimum 0). Gumroad asks for an email to download.
 File: `Listing-Photo-Checklist.pdf` (4 pages, A4, links clickable).
 Images: `images/listing-photo-checklist-gumroad-cover.png` (cover, 2560×1440), `images/listing-photo-checklist-gumroad-thumb.png` (thumbnail, 1200×1200).

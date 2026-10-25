@@ -229,6 +229,7 @@ function judge(r) {
   if (graphic) todo.push("If the graphic uses AI art or AI-edited photos, disclose it where you post it (for example Pinterest's “AI-modified” setting or your listing description).", "A designed graphic can't be Etsy's required unedited photo; use a real photo of the item for that.");
   else if (stripped && !screenshot) todo.push("If you made or edited this image with AI, disclose it yourself: the file no longer says so.", "For Etsy's unedited photo, upload the original from your camera roll, not an export from a design app.");
   todo.push("Keep the original file and the date you took it, in case a listing is questioned.");
+  todo.push('Before you post, run the free <a href="https://checkmaybe.gumroad.com/l/dpipva?utm_source=photocheck&utm_medium=tool&utm_campaign=v07" target="_blank" rel="noopener">Listing Photo Checklist</a> (5 checks, PDF).');
   return { level, title, text, facts, sigs, todo, pixel: !(screenshot || graphic || aiMark) };
 }
 
@@ -415,4 +416,4 @@ $("#results").append(render({ name: "example-phone-photo.jpg", file: { size: 226
   text: "The file still has its camera data and no editing app name. That fits Etsy's unedited-photo rule, but file data can't prove a photo was never edited.",
   facts: [["Format", "JPEG · 4096 × 2304"], ["File size", "2.2 MB"], ["Camera", "Example phone model"], ["Taken", "2026-10-24 23:17"], ["Settings", "1/60 s · f/1.9 · ISO 75"], ["Software", "Phone firmware build"]],
   sigs: [["g", "No AI marker found", "None of the standard AI fields are present. This doesn't prove the image isn't AI-made."], ["b", "No Content Credentials", "No C2PA record in the file."], ["g", "Camera software only", "The software field looks like phone firmware, not an editing app."]],
-  todo: ["For Etsy, keep at least one unedited photo of the actual item on a real background, unless your item type is an exception.", "Make sure every photo shows the real color, size, condition and flaws of what the buyer receives.", "Keep the original file and the date you took it, in case a listing is questioned."] } }, true));
+  todo: ["For Etsy, keep at least one unedited photo of the actual item on a real background, unless your item type is an exception.", "Make sure every photo shows the real color, size, condition and flaws of what the buyer receives.", "Keep the original file and the date you took it, in case a listing is questioned.", 'Before you post, run the free <a href="https://checkmaybe.gumroad.com/l/dpipva?utm_source=photocheck&utm_medium=tool&utm_campaign=v07" target="_blank" rel="noopener">Listing Photo Checklist</a> (5 checks, PDF).'] } }, true));

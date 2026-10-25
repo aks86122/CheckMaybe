@@ -169,3 +169,4 @@ body{margin:0;padding:0 32px 100px;background:radial-gradient(ellipse 70% 35% at
 @media(max-width:600px){body{padding:0 16px 70px}.topbar{height:66px}.topright{font-size:9px}.hero-layout{padding:58px 0;gap:35px}h1{font-size:clamp(44px,11vw,61px)}.lede{font-size:14px}.drop{padding:34px 20px;min-height:370px}.drop strong{font-size:23px}.drop .btn{width:100%}.hero-features span{font-size:10px}.section-heading{margin:50px 0 20px}.sheet-head,.verdict,.col,.foot,.srch,.fb{padding:20px}.rev{padding:23px 18px}.rev .btn{width:100%}}
 .mark{display:flex;align-items:center;justify-content:center}
 .px:empty{display:none}
+.freepdf{margin:0;font-size:13px;color:var(--muted);text-align:center}.freepdf a{color:var(--rust)}
