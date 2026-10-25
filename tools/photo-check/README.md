@@ -50,3 +50,10 @@ The claude.ai artifact stays on v0.3: it can't host the model files. Not yet tes
 
 ## v0.7 design (2026-10-25, founder upload "Linear × Stripe")
 New look only: dark app-style layout, Inter font from Google Fonts. The script is byte-for-byte the v0.4 script (same checks, pixel check, feedback `tool_version` 0.4). Two fixes on top: the "C." logo dot fell below the square (now inline), and the example result showed an empty band where the pixel check goes (now hidden). The page is dark in light mode too (by design in the upload). The CSS still carries the v0.5/v0.6 layers underneath v0.7; they are overridden, can be cleaned up later. Checked: 25-file suite unchanged, no errors, 390px no sideways scroll.
+
+## v0.7.1 (2026-10-25): first Google Form feedback
+Row 2: a ChatGPT image later edited in Photoshop (JPEG 605×594, 96 KB, no camera data) got "almost no data left" plus the green signal "Camera software only". Wrong signal: any software name counted as camera firmware even with no camera make/model. Fixes:
+- "Camera software only" now needs camera make or model in the file; otherwise the signal is "App named: last saved by X; no camera data, so not straight from a camera".
+- More editors recognised: any "Photoshop" (incl. Express), Adobe Express, Illustrator, Paint.NET, Microsoft Photos, Krita, Procreate, Pixlr, Polarr, Picasa, ACDSee, XnView, IrfanView, Luminar, Capture One, darktable.
+- "Edited in …" now says exporting from an editor often removes AI markers too, so it can't show whether the image started as an AI image.
+Suite: only change is the two phone screenshots (software field, no camera make) now show "App named" instead of "Camera software only". Synthetic tests: Photoshop 26.1 and Photoshop Express → "Edited in Photoshop"; unknown app → "almost no data left" + "App named".

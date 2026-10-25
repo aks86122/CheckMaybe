@@ -218,7 +218,7 @@ body{margin:0;padding:0 32px 100px;background:radial-gradient(ellipse 70% 35% at
 <script>
 const TOOLKIT = "https://checkmaybe.gumroad.com/l/kzhzh?utm_source=photocheck&utm_medium=tool&utm_campaign=v01";
 const MAX = 20 * 1024 * 1024;
-const EDITORS = [["Adobe Photoshop","Photoshop"],["Lightroom","Lightroom"],["Canva","Canva"],["Snapseed","Snapseed"],["PicsArt","PicsArt"],["GIMP","GIMP"],["Affinity","Affinity"],["Pixelmator","Pixelmator"],["VSCO","VSCO"],["Meitu","Meitu"],["Fotor","Fotor"],["CapCut","CapCut"],["Photopea","Photopea"],["Picsart","PicsArt"],["Remini","Remini"],["Lensa","Lensa"],["Facetune","Facetune"],["Instagram","Instagram"]];
+const EDITORS = [["Photoshop","Photoshop"],["Adobe Express","Adobe Express"],["Illustrator","Illustrator"],["Paint.NET","Paint.NET"],["Microsoft Photos","Microsoft Photos"],["Windows Photo","Microsoft Photos"],["Krita","Krita"],["Procreate","Procreate"],["Pixlr","Pixlr"],["Polarr","Polarr"],["Picasa","Picasa"],["ACDSee","ACDSee"],["XnView","XnView"],["IrfanView","IrfanView"],["Luminar","Luminar"],["Capture One","Capture One"],["darktable","darktable"],["Lightroom","Lightroom"],["Canva","Canva"],["Snapseed","Snapseed"],["PicsArt","PicsArt"],["GIMP","GIMP"],["Affinity","Affinity"],["Pixelmator","Pixelmator"],["VSCO","VSCO"],["Meitu","Meitu"],["Fotor","Fotor"],["CapCut","CapCut"],["Photopea","Photopea"],["Picsart","PicsArt"],["Remini","Remini"],["Lensa","Lensa"],["Facetune","Facetune"],["Instagram","Instagram"]];
 const AI_TOKENS = [["trainedAlgorithmicMedia","made with generative AI"],["compositeWithTrainedAlgorithmicMedia","edited with generative AI"],["algorithmicMedia","made by an algorithm"]];
 const GENERATORS = ["Canva AI","Adobe Firefly","Firefly","DALL-E","DALL·E","ChatGPT","OpenAI","Midjourney","Imagen","Gemini","Stable Diffusion","Canva","Microsoft Designer","Bing Image Creator","Meta AI","Leonardo"];
 const $ = s => document.querySelector(s);
@@ -344,7 +344,8 @@ function judge(r) {
   const modified = m.ModifyDate || null;
   const sw = [m.Software, m.CreatorTool, m.HistorySoftwareAgent].filter(Boolean).map(x => String(x).replace(/\b(doc|user|brand)=[A-Za-z0-9_-]+/g, "$1=(hidden)"));
   const editors = [...new Set(sw.flatMap(x => EDITORS.filter(([k]) => x.toLowerCase().includes(k.toLowerCase())).map(([, n]) => n)))];
-  const firmware = sw.length && !editors.length ? sw[0] : null;
+  const firmware = sw.length && !editors.length && (m.Make || m.Model) ? sw[0] : null;
+  const otherApp = sw.length && !editors.length && !firmware ? sw[0] : null;
   const gps = m.latitude != null || m.GPSLatitude != null;
   const exposure = m.ExposureTime ? (m.ExposureTime < 1 ? "1/" + Math.round(1 / m.ExposureTime) : m.ExposureTime) + " s" : null;
 
@@ -387,7 +388,7 @@ function judge(r) {
   else if (hasCreds) { level = "a"; title = "This file has Content Credentials";
     text = "A C2PA record is attached" + (cr && cr.issuer ? ", signed by " + cr.issuer : "") + ". It doesn't say generative AI was used, but platforms read these records, so check what it says before you post."; }
   else if (editors.length) { level = "a"; title = "Edited in " + editors.join(", ");
-    text = "Fine for most listing photos if the item still looks the way it really is. For Etsy's required unedited photo, use a different, straight-from-camera shot."; }
+    text = "Fine for most listing photos if the item still looks the way it really is. Exporting from an editor often removes AI markers too, so this can't show whether the image started as an AI image. For Etsy's required unedited photo, use a different, straight-from-camera shot."; }
   else if (camera && (resized || resaved)) { level = "a"; title = "A camera photo that was changed later";
     text = "The camera data is still there, but " + (resized ? "the image size no longer matches what the camera recorded" : "the file was saved again " + gapMin + " minutes after it was taken") + ". For Etsy's unedited photo, use the original from your camera roll."; }
   else if (camera) { level = "g"; title = "Looks like a straight-from-camera photo";
@@ -422,7 +423,7 @@ function judge(r) {
     }
   } else sigs.push(["b", "No Content Credentials", "No C2PA record in the file."]);
   if (tools.length) sigs.push(["a", "Tools named in the file", tools.join(", ")]);
-  sigs.push(editors.length ? ["a", "Editing app named", editors.join(", ")] : firmware ? ["g", "Camera software only", "“" + firmware + "” looks like phone or camera firmware, not an editing app."] : ["b", "No software named", "The file doesn't say which app last saved it."]);
+  sigs.push(editors.length ? ["a", "Editing app named", editors.join(", ")] : otherApp ? ["a", "App named", "The file was last saved by “" + otherApp + "”. There is no camera data, so this is not straight from a camera."] : firmware ? ["g", "Camera software only", "“" + firmware + "” looks like phone or camera firmware, not an editing app."] : ["b", "No software named", "The file doesn't say which app last saved it."]);
   if (resized) sigs.push(["a", "Size changed after capture", "The camera recorded " + exifWH[0] + " × " + exifWH[1] + "; the file is " + r.wh[0] + " × " + r.wh[1] + ". It was cropped or resized."]);
   if (resaved) sigs.push(["a", "Saved again later", "Last saved " + (gapMin >= 1440 ? Math.round(gapMin / 1440) + " days" : gapMin >= 60 ? Math.round(gapMin / 60) + " hours" : gapMin + " minutes") + " after it was taken."]);
   if (noMakerNote && !editors.length) sigs.push(["b", "Camera notes missing", "Phones and cameras usually store their own notes in the file. They're missing, so an app may have re-saved it."]);
