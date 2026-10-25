@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Photo Check · CheckMaybe</title>
+<meta name="description" content="Check a listing photo's camera data, editing traces, AI markers and Content Credentials in your browser before you post it. Your photos are never uploaded.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="topbar"><div class="wordmark"><span class="mark">C<span class="mark-dot">.</span></span><span>CHECKMAYBE</span></div><div class="topright"><span class="navdot"></span> CREATOR TOOLS <span class="navsep">/</span> PHOTO CHECK</div></nav>
+  <main class="hero-layout"><header>
+    <div class="brand"><span class="tiny-line"></span> THE LISTING PHOTO AUDIT <span class="hero-num">/ 01</span></div>
+    <h1>Before you list it, <em>look closer.</em></h1>
+    <p class="lede">Check camera metadata, editing traces, AI-related markers and Content Credentials before you publish. Get a clear report of what the file reveals — and what it cannot prove.</p>
+    <div class="hero-features"><span><i>01</i> Metadata insights</span><span><i>02</i> AI &amp; edit signals</span><span><i>03</i> Clear next steps</span></div>
+  </header>
+
+  <section class="drop" id="drop" aria-label="Choose photos">
+    <span class="drop-eyebrow">YOUR PRIVATE WORKSPACE</span>
+    <strong>Start with a photo.</strong>
+    <p>JPEG, PNG, WebP or HEIC, up to 20 MB each. Use the original file from your camera roll: photos sent through chat apps or saved from social media lose most of their data.</p>
+    <label class="btn" for="pick">Select your photos <span aria-hidden="true">↗</span></label>
+    <input id="pick" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif" multiple hidden>
+    <div class="privacy"><b>●</b><span>Checked in your browser. Your photos are never uploaded.</span></div>
+    <p class="err" id="err" hidden></p>
+  </section></main>
+
+  <div class="section-heading"><div><span class="eyebrow">THE REPORT</span><h2>Your photo, decoded.</h2></div><span class="section-aside">EXAMPLE REPORT SHOWN BELOW</span></div>
+  <section class="results" id="results" aria-live="polite"></section>
+
+  <div class="section-heading secondary"><div><span class="eyebrow">BEYOND METADATA</span><h2>Look for matches elsewhere.</h2></div></div>
+  <section class="rev" aria-labelledby="revh">
+    <h2 id="revh">Search a listing photo by its address</h2>
+    <p>Marketplaces remove file data, so for a listing photo the best check is a reverse image search. The same photo on a stock site, a wholesale site or another shop is a warning sign. Right-click the listing photo, copy the image address and paste it here.</p>
+    <div class="row"><input id="revurl" type="url" placeholder="https://i.etsystatic.com/…/il_1140xN….jpg" aria-label="Image address"></div>
+    <div class="row" id="revlinks"><a class="btn ghost" data-eng="tineye" href="https://tineye.com/" target="_blank" rel="noopener">Search TinEye</a><a class="btn ghost" data-eng="lens" href="https://lens.google.com/" target="_blank" rel="noopener">Search Google Lens</a><a class="btn ghost" data-eng="bing" href="https://www.bing.com/visualsearch" target="_blank" rel="noopener">Search Bing</a></div>
+    <p class="note">These open the search site in a new tab and send it the image address. No address yet? The buttons open each site, where you can upload a photo yourself.</p>
+  </section>
+
+  <section class="limits">
+    <h2>What this check can and can't tell you</h2>
+    <p>File data can be removed or changed by apps, so missing AI markers do not prove a photo is not AI-made, and camera data does not prove a photo was never edited. Content Credentials are checked with the official C2PA library; signer names are shown as written on the certificate and are not checked against a trust list. Platforms also use their own detection, so this check cannot predict whether a photo will be labeled or a listing removed.</p>
+    <p>Educational information, not legal advice. Not affiliated with Etsy, Meta, Canva or any app named here.</p>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/full.umd.js" integrity="sha384-KrOocIA+lZcNUz2MDavnT/FuX+CbTREJihUi0bp8QUSwhE2AkGTNpv2b7yMbBkx5" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
