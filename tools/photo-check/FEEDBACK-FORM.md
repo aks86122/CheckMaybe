@@ -23,3 +23,5 @@ Founder sends the pre-filled link (⋮ menu → Get pre-filled link, fill every 
 Form created by the founder (anonymous, no sign-in needed; Q1 also has "Maybe"). Entry ids read from the public form page: right 1031372084, actual 2118168332, tool 920764767, comment 1367118987, check 1662659418. "Send feedback" is now a link that opens the form pre-filled (tested: all five fields filled, URL about 800 characters); the visitor presses Submit. The page no longer writes to the artifact database; the 2 earlier rows stay there. Not submitted in testing, so the response sheet has no test row.
 
 Fix (same day): the founder's first test response had Q5 empty. Likely cause: the claude.ai viewer opens a clicked link with the address it had before the page's click handler ran, so it opened the bare form. The link's address is now updated on every answer change, before any click.
+
+Response sheet (owner qwert900823, shared with the connector account): 1eove0DVWPGdb1tz7Q-EMDNDz0eZ_u8e449ID2K8HN4g, tab 「表單回覆 1」. First pre-filled row arrived 2026-10-25 16:42 with Check details filled, so the fix works.
