@@ -16,6 +16,7 @@ Delivered as an offline HTML file (no hosting, no accounts), or bundled free wit
 - Batch: a whole listing folder at once, one summary table (which photo can be the unedited one, which need AI disclosure, which leak location).
 - Listing photo record: PDF/CSV with each file's capture data, SHA-256 and check date, to keep in case a listing is questioned. Wording: a record, not legal proof.
 - Printable / PDF preflight (fits digital sellers): page size Letter vs A4, image resolution inside the PDF, embedded fonts, file size limits per platform, preview pages present.
+- Built-in reverse image search (TinEye API, about US$0.01–0.04 per search, key on a small backend; listing URLs only unless the user agrees to send a file).
 - Original vs edited pair: show that an edited listing photo and its camera original are the same shot.
 Gate to stage 3: steady Pro sales (for example 20+ a month) and requests that need an account.
 

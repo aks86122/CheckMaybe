@@ -62,6 +62,11 @@ ul.todo { margin: 0; padding-left: 18px; display: grid; gap: 8px; font-size: 14p
 ul.todo a { color: var(--rust); }
 .foot { padding: 12px 18px; border-top: 1px solid var(--rule); display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
 .foot small { color: var(--muted); }
+[hidden] { display: none !important; }
+.srch { padding: 12px 18px; border-top: 1px solid var(--rule); display: grid; gap: 8px; font-size: 14px; }
+.srch .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.srch a.btn { text-decoration: none; display: inline-block; }
+.srch .note { color: var(--muted); font-size: 13px; margin: 0; }
 .fb { padding: 12px 18px; border-top: 1px solid var(--rule); display: grid; gap: 10px; font-size: 14px; }
 .fb .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .fb select, .fb input[type=text], .fb textarea, .rev input { font: 14px var(--f-body); color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; min-width: 0; max-width: 100%; }
@@ -99,7 +104,7 @@ ul.todo a { color: var(--rust); }
   <section class="results" id="results" aria-live="polite"></section>
 
   <section class="rev" aria-labelledby="revh">
-    <h2 id="revh">Is this listing photo used somewhere else?</h2>
+    <h2 id="revh">Search a listing photo by its address</h2>
     <p>Marketplaces remove file data, so for a listing photo the best check is a reverse image search. The same photo on a stock site, a wholesale site or another shop is a warning sign. Right-click the listing photo, copy the image address and paste it here.</p>
     <div class="row"><input id="revurl" type="url" placeholder="https://i.etsystatic.com/…/il_1140xN….jpg" aria-label="Image address"></div>
     <div class="row" id="revlinks"><a class="btn ghost" data-eng="tineye" href="https://tineye.com/" target="_blank" rel="noopener">Search TinEye</a><a class="btn ghost" data-eng="lens" href="https://lens.google.com/" target="_blank" rel="noopener">Search Google Lens</a><a class="btn ghost" data-eng="bing" href="https://www.bing.com/visualsearch" target="_blank" rel="noopener">Search Bing</a></div>
@@ -383,6 +388,33 @@ function feedbackBlock(r, j, example) {
   return box;
 }
 
+function searchBlock(r, example) {
+  const box = document.createElement("div"); box.className = "srch";
+  const etsy = /^il_(\d+x\w+|fullxfull)\./i.test(r.file.name || r.name || "");
+  box.innerHTML = '<div class="row"><strong>Is this image used somewhere else?</strong></div>' +
+    '<div class="row">' + (r.url && !example ? '<button class="btn" type="button" data-copy>Copy image</button>' : '') +
+    '<a class="btn ghost" href="https://lens.google.com/" target="_blank" rel="noopener">Open Google Lens</a>' +
+    '<a class="btn ghost" href="https://tineye.com/" target="_blank" rel="noopener">Open TinEye</a>' +
+    '<a class="btn ghost" href="https://www.bing.com/visualsearch" target="_blank" rel="noopener">Open Bing</a></div>' +
+    '<p class="note">' + (etsy ? "For a listing photo, pasting its image address in the box at the bottom of this page searches all three at once." :
+      "Copy the image, open a search site and paste it (Ctrl+V or ⌘V), or drag the photo file onto the site. The photo goes to that site, not to us.") + '</p>' +
+    '<p class="note cstatus" aria-live="polite"></p>';
+  const btn = box.querySelector("[data-copy]");
+  if (btn) btn.addEventListener("click", async () => {
+    const st = box.querySelector(".cstatus");
+    try {
+      const img = box.closest(".sheet").querySelector("img.thumb"); const im = new Image(); im.src = img.src; await im.decode();
+      const max = 2000, k = Math.min(1, max / Math.max(im.naturalWidth, im.naturalHeight));
+      const cv = document.createElement("canvas"); cv.width = Math.round(im.naturalWidth * k); cv.height = Math.round(im.naturalHeight * k);
+      cv.getContext("2d").drawImage(im, 0, 0, cv.width, cv.height);
+      const blob = await new Promise(res => cv.toBlob(res, "image/png"));
+      await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+      st.textContent = "Copied. Open a search site and paste it.";
+    } catch (e) { st.textContent = "Copying images isn't allowed here. Open a search site and drag the photo file onto it instead."; }
+  });
+  return box;
+}
+
 function render(r, example) {
   const j = r.j || judge(r);
   const el = document.createElement("article"); el.className = "sheet";
@@ -400,6 +432,7 @@ function render(r, example) {
     try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
     catch (e) { const ta = document.createElement("textarea"); ta.value = text; ta.style.cssText = "width:100%;height:200px"; el.querySelector(".foot").append(ta); ta.select(); btn.textContent = "Select and copy the text"; }
   });
+  el.querySelector(".foot").before(searchBlock(r, example));
   el.append(feedbackBlock(r, j, example));
   return el;
 }
