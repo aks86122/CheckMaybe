@@ -57,3 +57,4 @@ Row 2: a ChatGPT image later edited in Photoshop (JPEG 605×594, 96 KB, no camer
 - More editors recognised: any "Photoshop" (incl. Express), Adobe Express, Illustrator, Paint.NET, Microsoft Photos, Krita, Procreate, Pixlr, Polarr, Picasa, ACDSee, XnView, IrfanView, Luminar, Capture One, darktable.
 - "Edited in …" now says exporting from an editor often removes AI markers too, so it can't show whether the image started as an AI image.
 Suite: only change is the two phone screenshots (software field, no camera make) now show "App named" instead of "Camera software only". Synthetic tests: Photoshop 26.1 and Photoshop Express → "Edited in Photoshop"; unknown app → "almost no data left" + "App named".
+- Founder: the row-2 image went ChatGPT → Photoshop → PhotoDirector. Added PhotoDirector, PowerDirector, YouCam, BeautyPlus, B612 and PhotoRoom. Test: Software "CyberLink PhotoDirector 365" → "Edited in PhotoDirector".
