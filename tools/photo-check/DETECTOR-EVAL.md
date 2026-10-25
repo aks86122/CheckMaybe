@@ -38,3 +38,34 @@ haywoodsloan, without the 21 mascots (one style, inflates the score): 6/7 AI fou
 5. Feedback rows (tool v0.3) should store the pixel score so wrong calls can be counted.
 
 Not changed: ROADMAP "Not doing" still bans a pixel guess as the verdict.
+
+## Round 2: 88 more real photos (2026-10-25)
+Founder added 88 phone photos (one phone, Jul–Oct 2026): food, objects, streets, receipts, indoor and night shots. Each tested 3 ways: original, Etsy copy (1140px, q85), and a typical seller edit (square crop, +15% brightness, +10% contrast, q90). Top 3 models only.
+
+| Model | Original flagged | Etsy copy flagged | Seller edit flagged |
+| --- | --- | --- | --- |
+| haywoodsloan | 1/88 | 2/88 | 1/88 |
+| Ateeqq | 2/88 | 2/88 | 5/88 |
+| umm-maybe | 3/88 | 2/88 | 4/88 |
+
+haywoodsloan flagged 3 different photos (3/88 = 3.4% in at least one version), with high scores (0.92–0.96), so a "medium" band would not hide them:
+- a backlit harbour scene (flagged as the original and the Etsy copy)
+- a hand holding a printed receipt (text-heavy, like the screenshots in round 1; Etsy copy only)
+- a food tray (only after the brighten/crop edit)
+The same photo can flip between 0.01 and 0.96 depending on compression or a small edit.
+
+Thresholds, haywoodsloan, all checks so far (294 real checks, 56 AI checks incl. Etsy copies):
+
+| Flag when score ≥ | Real checks flagged | AI found | AI found, mascots left out |
+| --- | --- | --- | --- |
+| 0.5 | 4/294 | 53/56 | 11/14 |
+| 0.95 | 1/294 | 51/56 | 9/14 |
+| 0.97 | 0/294 | 48/56 | 9/14 |
+| 0.99 | 0/294 | 44/56 | 6/14 |
+
+## Updated recommendation
+- Show the pixel check only as one line, only when the score is ≥0.97: "Pixel check: strong AI-like patterns. Pixel checks can be wrong." Below 0.97 show nothing (not "looks real").
+- 0.97 was picked on this same set, so it is tuned to these photos. The real false-alarm rate on other people's photos is unknown; the false alarms sat at 0.92–0.96, just under the line.
+- Never run it on screenshots, receipts or documents, or designed graphics (text-heavy images trigger it). The tool already detects screenshots and graphics; photos of printed text are not detected yet.
+- Before launch: photos from at least 3 other phones (iPhone included) and 50 AI images from other generators. Keep the 0.97 line only if real photos stay at 0 flagged.
+- Store the pixel score in feedback rows to keep measuring after launch.
