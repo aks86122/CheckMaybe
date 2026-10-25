@@ -69,3 +69,28 @@ Thresholds, haywoodsloan, all checks so far (294 real checks, 56 AI checks incl.
 - Never run it on screenshots, receipts or documents, or designed graphics (text-heavy images trigger it). The tool already detects screenshots and graphics; photos of printed text are not detected yet.
 - Before launch: photos from at least 3 other phones (iPhone included) and 50 AI images from other generators. Keep the 0.97 line only if real photos stay at 0 flagged.
 - Store the pixel score in feedback rows to keep measuring after launch.
+
+## Round 3: in the browser (2026-10-25)
+Model: haywoodsloan exported to ONNX and quantized to int8 (`pixel-check/export_onnx.py`): **199MB** (fp32 was 783MB). Run with onnxruntime-web 1.20.1 (WASM, multi-threaded) in headless Chromium on a 4-core cloud machine. Phone speed was simulated with Chrome's CPU slowdown (x4 ≈ mid-range phone, x6 ≈ older phone); no real phone or Safari tested yet.
+
+Accuracy after int8: on 274 checks the score moved 0.009 on average. At the 0.97 line: real photos flagged 0/206 (same as full model), AI found 49/56 (full model 48/56).
+
+| Setup | Model start (once per visit) | One photo |
+| --- | --- | --- |
+| Desktop, 4 threads | 7.5s | about 1.1s (first run 1.9s) |
+| Desktop, 1 thread | 4.2s | about 2.9s |
+| Mid-range phone (CPU x4) | 25s | about 3.4s |
+| Older phone (CPU x6) | 36s | about 4.7s |
+| WebGPU | not measurable here (cloud machine has no real GPU) | |
+
+Download of 199MB, first visit only (then kept in the browser cache): about 16s at 100Mbps, 55s at 30Mbps, 2.5 min at 10Mbps.
+Memory: about 200MB for the model on top of the page; risky on older iPhones (Safari closes heavy tabs).
+A pre-optimized model starts faster (1.3s desktop, 5.6s at CPU x4) but is 326MB to download. Not worth it.
+
+Preprocessing matters: the browser's own canvas resize moved scores enough to cross the 0.97 line (0.994 → 0.973). A PIL-compatible bicubic resize in JavaScript (`pixel-check/resize.js`) brings browser scores back in line with Python (0.983/0.983, 0.994/0.994, 0.999/0.999).
+
+### What this means
+- Desktop: fine as an opt-in button ("Run pixel check, 199MB one-time download"), about 10s the first time after the download, about 1s per photo afterwards.
+- Phones: possible but slow (about 30–40s before the first result, plus the download). Offer it on desktop by default; on phones show the button with the size and time warning.
+- Hosting: one 199MB file does not fit Cloudflare Pages (25MB per file) or GitHub Pages (100MB per file). Options: split into 9 parts under 25MB and join them in the browser, or host the file on Hugging Face (needs an account and founder approval to publish).
+- Still to test: a real Android phone and an iPhone (Safari memory), and the cache surviving a second visit.
