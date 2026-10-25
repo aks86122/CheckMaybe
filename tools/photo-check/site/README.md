@@ -12,3 +12,5 @@ Deploy repo: github.com/aks86122/checkmaybe-photo-check (private), branch main, 
 Live 2026-10-25: https://checkmaybe-photo-check.pages.dev (Cloudflare Pages, auto-deploys main). Checked live: all security headers present, model parts served with 1-year immutable cache, headless Chromium 390px: cross-origin isolated, C2PA check works, pixel check 25.5s first run including the 199MB download, form link pre-filled, no console errors. Not yet tested on a real phone.
 
 2026-10-25: founder tested on a computer and a phone. The claude.ai artifact now only says the tool moved, with a link to https://checkmaybe-photo-check.pages.dev (its earlier versions stay in the artifact's history).
+
+2026-10-25: deployed 57d394b (free Listing Photo Checklist link under the upload box and as the last to-do in every result). Checked live: link present, headers intact, no console errors at 1440px and 390px.
