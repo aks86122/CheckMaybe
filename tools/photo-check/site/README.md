@@ -8,3 +8,5 @@ Files: `index.html`, `app.js`, `style.css`, `_headers`, plus `model/v1/` (8 mode
 Tested locally 2026-10-25 with `serve-local.cjs` (applies `_headers`), headless Chromium at 390px: cross-origin isolated, C2PA check of a ChatGPT image works, pixel check runs (strong AI patterns on a mascot image), the Google Form link is pre-filled, Inter font loads, no CSP errors.
 
 Deploy repo: github.com/aks86122/checkmaybe-photo-check (private), branch main, pushed 2026-10-25 (commit 0a1cb20): index.html, app.js, style.css, _headers, model/v1/ (8 parts + manifest), THIRD-PARTY.md. Cloudflare Pages: connect this repo, no build command, output directory /.
+
+Live 2026-10-25: https://checkmaybe-photo-check.pages.dev (Cloudflare Pages, auto-deploys main). Checked live: all security headers present, model parts served with 1-year immutable cache, headless Chromium 390px: cross-origin isolated, C2PA check works, pixel check 25.5s first run including the 199MB download, form link pre-filled, no console errors. Not yet tested on a real phone.
