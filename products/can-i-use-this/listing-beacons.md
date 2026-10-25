@@ -23,3 +23,5 @@ Made it with AI? Check before you sell it.
 Button text: `Free Photo Check`
 
 Image: `images/` preview (Beacons uses the preview image).
+
+Founder 2026-10-25: Beacons updated (listing text and the Free Photo Check link block with images/free-photo-check-1080.png from tools/photo-check).
