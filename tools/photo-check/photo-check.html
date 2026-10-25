@@ -520,7 +520,15 @@ $("#revurl").addEventListener("input", e => { const v = e.target.value.trim(); c
 
 // Feedback: answers + the check's findings only (no image, file name, location or account IDs)
 const REAL = [["camera", "A straight-from-camera photo"], ["edited", "An edited photo"], ["ai_made", "Made with AI"], ["ai_edited", "A photo edited with AI"], ["screenshot", "A screenshot"], ["not_mine", "Someone else's image"], ["design", "A design or mockup (not a photo)"], ["unsure", "Not sure"]];
-let dbP = null; const getDb = () => (dbP = dbP || (window.claude && claude.use ? claude.use("db") : Promise.resolve(null)));
+// Feedback goes through a public Google Form (anonymous; the visitor presses Submit on Google's page)
+const FORM = "https://docs.google.com/forms/d/e/1FAIpQLSfg9uYwbop9UluT99vYxWx0rmEMF5z41XexQMlR6C49Fb5DYQ/viewform";
+const FORM_IDS = { right: "entry.1031372084", actual: "entry.2118168332", tool: "entry.920764767", comment: "entry.1367118987", check: "entry.1662659418" };
+const FORM_ACTUAL = { camera: "A straight-from-camera photo", edited: "An edited photo", ai_made: "Made with AI", ai_edited: "A photo edited with AI", screenshot: "A screenshot", not_mine: "Someone else\u2019s image", design: "A design or mockup (not a photo)", unsure: "Not sure" };
+function formUrl(f) {
+  const q = new URLSearchParams({ usp: "pp_url" });
+  for (const k of Object.keys(FORM_IDS)) if (f[k]) q.set(FORM_IDS[k], f[k]);
+  return FORM + "?" + q.toString();
+}
 function nameKind(n) { return /^il_(\d+x\w+|fullxfull)\./i.test(n) ? "etsy" : /^\d{13}\./.test(n) ? "chat13" : /_\d{3}\.(jpe?g|png)$/i.test(n) ? "chat_suffix" : /^[0-9a-f]{8}-[0-9a-f]{4}-/i.test(n) ? "uuid" : /^(screenshot|screen shot|螢幕|截圖)/i.test(n) ? "screenshot" : /^(IMG|PXL|DSC|P)_\d{8}/i.test(n) ? "camera_name" : "other"; }
 function features(r, j) {
   const m = r.meta || {}, s = r.s || {}, cr = r.cr && !r.cr.error && !r.cr.none ? r.cr : null;
@@ -537,19 +545,17 @@ function feedbackBlock(r, j, example) {
     '<div class="more" hidden><div class="row"><label for="' + id + 's">What is it really?</label><select id="' + id + 's">' + REAL.map(([v, t]) => '<option value="' + v + '">' + t + '</option>').join("") + '</select>' +
     '<input id="' + id + 't" type="text" maxlength="60" placeholder="App or AI tool used (optional)" aria-label="App or AI tool used"></div>' +
     '<textarea id="' + id + 'c" maxlength="500" placeholder="Anything else we should know? (optional, no personal details)" aria-label="Comment"></textarea></div>' +
-    '<div class="row send" hidden><button class="btn" type="button" data-a="send">Send feedback</button></div>' +
-    '<p class="note">We keep your answers and this check\'s findings (format, size, which markers were found). Never the photo, its file name, location or account IDs. The CheckMaybe team reads what you send, so leave out names, contact details and anything private.</p><p class="note status" aria-live="polite"></p>';
+    '<div class="row send" hidden><a class="btn" data-a="send" href="' + FORM + '" target="_blank" rel="noopener">Send feedback</a></div>' +
+    '<p class="note">Send opens a short Google Form with your answers and this check\'s findings (format, size, which markers were found) filled in. Nothing is sent until you press Submit there. Never the photo, its file name, location or account IDs. The CheckMaybe team reads what you send, so leave out names, contact details and anything private.</p><p class="note status" aria-live="polite"></p>';
   let correct = null; const more = box.querySelector(".more"), send = box.querySelector(".send"), status = box.querySelector(".status");
-  box.addEventListener("click", async e => { const a = e.target.dataset && e.target.dataset.a; if (!a) return;
+  box.addEventListener("click", e => { const a = e.target.dataset && e.target.dataset.a; if (!a) return;
     if (a === "yes" || a === "no") { correct = a === "yes"; more.hidden = correct; send.hidden = false; box.querySelectorAll('[data-a="yes"],[data-a="no"]').forEach(b => b.setAttribute("aria-pressed", String(b.dataset.a === a))); return; }
-    if (a === "send") { e.target.disabled = true; status.textContent = "Sending…";
-      try { const db = await getDb(); if (!db) { status.textContent = "Feedback can't be sent from this view. Thanks for trying."; e.target.disabled = false; return; }
-        const doc = { createdAt: new Date().toISOString(), correct, actual: correct ? null : box.querySelector("#" + id + "s").value,
-          tool: correct ? null : (box.querySelector("#" + id + "t").value || "").trim().slice(0, 60) || null,
-          comment: correct ? null : (box.querySelector("#" + id + "c").value || "").trim().slice(0, 500) || null, tool_version: "0.4", check: features(r, j) };
-        await db.collection("feedback").doc(Date.now().toString(36) + Math.random().toString(36).slice(2, 8)).set(doc);
-        status.textContent = "Thanks, sent. It goes into the next round of fixes."; send.hidden = true; more.hidden = true; box.querySelectorAll('[data-a="yes"],[data-a="no"]').forEach(b => b.disabled = true);
-      } catch (err) { const c = err && err.code; status.textContent = c === "invalid_argument" || c === "not_granted" || c === "permission_denied" ? "This page can't save feedback from your account yet. Thanks for trying." : c === "resource_exhausted" ? "Too many tries. Wait a minute and send again." : "Couldn't send (" + (c || "error") + ")."; e.target.disabled = false; } } });
+    if (a === "send") {
+      const check = Object.assign({ tool_version: "0.4" }, features(r, j));
+      e.target.href = formUrl({ right: correct ? "Yes" : "No", actual: correct ? null : FORM_ACTUAL[box.querySelector("#" + id + "s").value],
+        tool: correct ? null : (box.querySelector("#" + id + "t").value || "").trim().slice(0, 60), comment: correct ? null : (box.querySelector("#" + id + "c").value || "").trim().slice(0, 500),
+        check: JSON.stringify(check) });
+      status.textContent = "The form opened in a new tab. Press Submit there to send it. Thanks!"; } });
   return box;
 }
 

@@ -18,3 +18,6 @@ Settings: Collect email addresses = Do not collect; "Restrict to users in ..." o
 
 ## Wiring
 Founder sends the pre-filled link (⋮ menu → Get pre-filled link, fill every question with any answer, Get link). The `entry.<number>` ids in that link go into the page. Field 5 carries the same findings the database rows had (verdict, signals, format, size, flags, source types, tools, file-name pattern, tool version), as one line of JSON. The form URL is opened only when the visitor presses Send; nothing is sent in the background.
+
+## Done (2026-10-25)
+Form created by the founder (anonymous, no sign-in needed; Q1 also has "Maybe"). Entry ids read from the public form page: right 1031372084, actual 2118168332, tool 920764767, comment 1367118987, check 1662659418. "Send feedback" is now a link that opens the form pre-filled (tested: all five fields filled, URL about 800 characters); the visitor presses Submit. The page no longer writes to the artifact database; the 2 earlier rows stay there. Not submitted in testing, so the response sheet has no test row.
