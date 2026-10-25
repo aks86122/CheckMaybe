@@ -176,6 +176,7 @@ const DST = {
   compositeSynthetic: ["a composite that includes synthetic parts", "r"], trainedAlgorithmicMedia: ["made with generative AI", "r"],
   compositeWithTrainedAlgorithmicMedia: ["edited with generative AI", "r"],
 };
+const SOCIAL = { "1000x1500": "a Pinterest pin", "2000x3000": "a Pinterest pin", "1080x1350": "an Instagram post", "1080x1920": "a story or Reel cover", "1080x1080": "a square social post", "1200x630": "a link preview", "1200x628": "a link preview", "1080x566": "a landscape Instagram post", "1280x720": "a video thumbnail" };
 const AI_DST = ["trainedAlgorithmicMedia", "compositeWithTrainedAlgorithmicMedia", "compositeSynthetic"];
 const SCREENS = ["1080x2448","1080x2400","1080x2340","1080x2412","1080x2460","1080x1920","1440x3200","1440x3088","1170x2532","1179x2556","1284x2778","1290x2796","1125x2436","1242x2688","828x1792","750x1334","1920x1080","2560x1440","1366x768","1536x864","1440x900","2880x1800","3840x2160","1600x900","1280x720"];
 
@@ -273,10 +274,14 @@ function judge(r) {
   const uuidName = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(jpe?g|png|webp)$/i.test(name);
   const chatName = /^\d{13}\.(jpe?g|png|webp)$/i.test(name) || /_\d{3}\.(jpe?g|png)$/i.test(name);
   const etsyName = /^il_(\d+x\w+|fullxfull)\.\d+_[a-z0-9]+\.(jpe?g|png|webp)$/i.test(name);
+  const socialKind = r.wh ? SOCIAL[r.wh[0] + "x" + r.wh[1]] : null;
+  const graphic = stripped && !screenshot && !etsyName && !chatName && socialKind && (r.type === "PNG" || r.wh[0] !== r.wh[1]);
 
   let level, title, text;
   if (etsyName && stripped) { level = "b"; title = "Saved from an Etsy listing";
     text = "Etsy re-saves every listing photo and removes camera data and AI markers, so a downloaded listing image can't show how it was made. Read the listing description for an AI disclosure, look for buyer photos in the reviews, or ask the seller for an unedited photo."; }
+  else if (graphic) { level = "b"; title = "Looks like a designed graphic, not a photo";
+    text = "No camera data, and the size matches " + socialKind + ". Graphics made in design apps or with code often mix photos, text and AI art, and the file can't show which. If any part was made with AI, say so yourself."; }
   else if (aiMark) { level = "r"; title = "This file says AI was used";
     text = "It carries a marker that platforms are known to read (" + aiWords.join(", ") + (tools.length ? ", by " + tools.join(", ") : "") + "). Instagram and Facebook may show an AI label, and Etsy expects you to disclose AI use in the listing."; }
   else if (screenshot) { level = "b"; title = "This looks like a screenshot";
@@ -328,6 +333,7 @@ function judge(r) {
   if (screenshot) sigs.push(["b", "Screenshot", shotName ? "The file name says it's a screenshot." : "The file is marked as a screen capture."]);
   else if (stripped && screenSize) sigs.push(["b", "Screen-sized image", "No camera data and the size matches a common phone or computer screen, so it may be a screenshot."]);
   if (s.gainmap && !camera) sigs.push(["g", "Phone HDR data", "An HDR gain map survived, a sign the image came from a phone camera."]);
+  if (graphic) sigs.push(["b", "Social media size", r.wh[0] + " × " + r.wh[1] + " is the usual size for " + socialKind + "."]);
   if (etsyName && stripped) sigs.push(["b", "Etsy listing image", "The file name matches Etsy's image servers. Etsy keeps only a color profile; everything else is removed on upload."]);
   if (chatName && stripped) sigs.push(["b", "File name looks like a chat-app save", "Names like this usually come from saving an image out of a chat app such as LINE, which removes camera data. It may also be someone else's photo or screenshot."]);
   if (uuidName && stripped) sigs.push(["a", "File name looks like an app export", "Names like this usually come from design apps such as Canva, which save images without camera data. Treat it as an edited image."]);
@@ -341,7 +347,8 @@ function judge(r) {
   todo.push("For Etsy, keep at least one unedited photo of the actual item on a real background, unless your item type is an exception.");
   todo.push("Make sure every photo shows the real color, size, condition and flaws of what the buyer receives.");
   if (editors.includes("Canva") || tools.some(t => /canva/i.test(t))) todo.push('If you used Canva elements or AI tools, check that your license covers selling the result. <a href="https://checkmaybe.gumroad.com/l/baxojo?utm_source=photocheck&utm_medium=tool&utm_campaign=v01" target="_blank" rel="noopener">Can I Sell This?</a>');
-  if (stripped && !screenshot) todo.push("If you made or edited this image with AI, disclose it yourself: the file no longer says so.", "For Etsy's unedited photo, upload the original from your camera roll, not an export from a design app.");
+  if (graphic) todo.push("If the graphic uses AI art or AI-edited photos, disclose it where you post it (for example Pinterest's “AI-modified” setting or your listing description).", "A designed graphic can't be Etsy's required unedited photo; use a real photo of the item for that.");
+  else if (stripped && !screenshot) todo.push("If you made or edited this image with AI, disclose it yourself: the file no longer says so.", "For Etsy's unedited photo, upload the original from your camera roll, not an export from a design app.");
   todo.push("Keep the original file and the date you took it, in case a listing is questioned.");
   return { level, title, text, facts, sigs, todo };
 }

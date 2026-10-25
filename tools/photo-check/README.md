@@ -39,3 +39,6 @@ Founder's photos and other people's screenshots are not in this repo.
 
 ## v0.3.1 (2026-10-25): search from each result
 Every result now has "Is this image used somewhere else?": Copy image (PNG to clipboard, up to 2000 px) + Open Google Lens / TinEye / Bing, with paste/drag instructions; Etsy-named files point to the address box instead. In-site results are not possible for free: Google Lens has no official API, Bing Search APIs were retired on 2025-08-11, TinEye's API is paid per search and needs a backend for the key (Pro idea, see ROADMAP).
+
+## v0.3.2 (2026-10-25): designed graphics
+First feedback round (2 rows): Etsy image correct; a 1000 × 1500 PNG pin (Canva AI mascot, layout drawn by code) was rated wrong ("almost no data left", actually AI art). New rule: no camera data + a social-media size (Pinterest 1000×1500/2000×3000, Instagram 1080×1350/1080×1080, story 1080×1920, link preview 1200×630, landscape 1080×566, thumbnail 1280×720) on a PNG, or any non-square of those → "Looks like a designed graphic, not a photo" with a self-disclosure reminder. Still can't tell if the art inside is AI: that case goes to the AI-detector evaluation set. Suite now 25 files, all as expected.
