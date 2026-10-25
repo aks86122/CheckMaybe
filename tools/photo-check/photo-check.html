@@ -214,7 +214,7 @@ body{margin:0;padding:0 32px 100px;background:radial-gradient(ellipse 70% 35% at
   </section>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/full.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/full.umd.js" integrity="sha384-KrOocIA+lZcNUz2MDavnT/FuX+CbTREJihUi0bp8QUSwhE2AkGTNpv2b7yMbBkx5" crossorigin="anonymous"></script>
 <script>
 const TOOLKIT = "https://checkmaybe.gumroad.com/l/kzhzh?utm_source=photocheck&utm_medium=tool&utm_campaign=v01";
 const MAX = 20 * 1024 * 1024;
@@ -538,18 +538,18 @@ function feedbackBlock(r, j, example) {
     '<input id="' + id + 't" type="text" maxlength="60" placeholder="App or AI tool used (optional)" aria-label="App or AI tool used"></div>' +
     '<textarea id="' + id + 'c" maxlength="500" placeholder="Anything else we should know? (optional, no personal details)" aria-label="Comment"></textarea></div>' +
     '<div class="row send" hidden><button class="btn" type="button" data-a="send">Send feedback</button></div>' +
-    '<p class="note">We keep your answers and this check\'s findings (format, size, which markers were found). Never the photo, its file name, location or account IDs.</p><p class="note status" aria-live="polite"></p>';
+    '<p class="note">We keep your answers and this check\'s findings (format, size, which markers were found). Never the photo, its file name, location or account IDs. The CheckMaybe team reads what you send, so leave out names, contact details and anything private.</p><p class="note status" aria-live="polite"></p>';
   let correct = null; const more = box.querySelector(".more"), send = box.querySelector(".send"), status = box.querySelector(".status");
   box.addEventListener("click", async e => { const a = e.target.dataset && e.target.dataset.a; if (!a) return;
     if (a === "yes" || a === "no") { correct = a === "yes"; more.hidden = correct; send.hidden = false; box.querySelectorAll('[data-a="yes"],[data-a="no"]').forEach(b => b.setAttribute("aria-pressed", String(b.dataset.a === a))); return; }
     if (a === "send") { e.target.disabled = true; status.textContent = "Sending…";
-      try { const db = await getDb(); if (!db) { status.textContent = "Feedback isn't available in this view. Sign in to claude.ai, or tell us another way."; e.target.disabled = false; return; }
+      try { const db = await getDb(); if (!db) { status.textContent = "Feedback can't be sent from this view. Thanks for trying."; e.target.disabled = false; return; }
         const doc = { createdAt: new Date().toISOString(), correct, actual: correct ? null : box.querySelector("#" + id + "s").value,
           tool: correct ? null : (box.querySelector("#" + id + "t").value || "").trim().slice(0, 60) || null,
           comment: correct ? null : (box.querySelector("#" + id + "c").value || "").trim().slice(0, 500) || null, tool_version: "0.4", check: features(r, j) };
         await db.collection("feedback").doc(Date.now().toString(36) + Math.random().toString(36).slice(2, 8)).set(doc);
         status.textContent = "Thanks, sent. It goes into the next round of fixes."; send.hidden = true; more.hidden = true; box.querySelectorAll('[data-a="yes"],[data-a="no"]').forEach(b => b.disabled = true);
-      } catch (err) { status.textContent = "Couldn't send (" + ((err && err.code) || "error") + ")."; e.target.disabled = false; } } });
+      } catch (err) { const c = err && err.code; status.textContent = c === "invalid_argument" || c === "not_granted" || c === "permission_denied" ? "This page can't save feedback from your account yet. Thanks for trying." : c === "resource_exhausted" ? "Too many tries. Wait a minute and send again." : "Couldn't send (" + (c || "error") + ")."; e.target.disabled = false; } } });
   return box;
 }
 
