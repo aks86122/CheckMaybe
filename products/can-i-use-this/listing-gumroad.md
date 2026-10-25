@@ -46,3 +46,9 @@ Etsy and Gumroad sellers, print-on-demand shops, freelancers and small brands wh
 - Independent resource, not affiliated with, sponsored by or endorsed by OpenAI, Adobe, Midjourney, Google, Anthropic or Etsy.
 
 Format: PDF, 33 pages, A4. Instant download.
+
+---
+## Add to the description (2026-10-25), after "Who it's for"
+**Free companion tool**
+Check your listing photos with CheckMaybe Photo Check: https://checkmaybe-photo-check.pages.dev/?utm_source=gumroad&utm_medium=listing&utm_campaign=cius
+It shows what a photo's file reveals before you post: camera data, the editing app, AI markers, Content Credentials and saved location. It runs in your browser; your photos are never uploaded. Page 29 of the toolkit links to it too.

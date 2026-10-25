@@ -20,3 +20,6 @@ Changes (`products/build/ai-v1.2.json`, 33 pages):
 QA: build.sh, 0 failing pages (zoom p5 0.98, p12 0.9, p33 0.88), pages checked visually.
 Listing: `products/can-i-use-this/listing-gumroad.md`, `gumroad-fields.md` (v1.2, 33 pages); bundle listing and images 82 → 83 pages.
 Founder: upload `products/can-i-use-this/Can-I-Use-This-v1.2.pdf` on Gumroad (and Beacons), paste the listing text. The Gumroad Bundle uses the same product file.
+
+## 2026-10-25: Photo Check link
+p29 checklist: new item "I ran my listing photos through the free Photo Check (link below)" plus a FREE TOOL callout with checkmaybe-photo-check.pages.dev. The link is made clickable after the build (pymupdf `insert_link` on page 29, URL with utm_source=toolkit). Still 33 pages, QA: 0 failing. Version stays 1.2; the founder re-uploads the PDF on Gumroad.

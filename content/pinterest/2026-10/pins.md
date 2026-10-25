@@ -322,3 +322,22 @@ Board: Selling Digital Products: Licensing. Not affiliated with Etsy; no Etsy lo
 - Title: `Etsy's New Photo Rule: Keep One Unedited Photo of the Real Item`
 - Description: `Most Etsy listings now need at least one unedited photo of the actual item on a real background. Other photos can still be edited, even with AI, if they stay accurate. If a buyer opens a case because the item is materially different, you may be responsible for the refund. Can I Use This? sums up the October 2026 rules. Not legal advice; not affiliated with Etsy. #etsyseller #productphotography #etsytips`
 - Alt text: `Cartoon receipt giving a thumbs up next to a list: one unedited photo required, new background on other photos OK if accurate, hiding flaws or damage not allowed.`
+
+## v7 — free Photo Check tool (2026-10-25)
+Link: the live tool, https://checkmaybe-photo-check.pages.dev. Facts from our own tests (ChatGPT and Canva AI files carry C2PA AI markers; chat apps strip data; phone originals keep camera data and may keep location). Meta says it reads C2PA/IPTC for "AI info". Built by `build_pins_v7.py`. Mascot is Canva AI art: AI-modified ON.
+Board: Selling Digital Products: Licensing. Post one a day, after J approves.
+
+| Pin | Angle | Link |
+| --- | --- | --- |
+| pc1 "Your image file may already say 'made with AI.'" | hidden AI marker | `https://checkmaybe-photo-check.pages.dev/?utm_source=pinterest&utm_medium=social&utm_campaign=pc1` |
+| pc2 "Posting a photo of your item? Check what the file gives away." | location, camera, editing app | `https://checkmaybe-photo-check.pages.dev/?utm_source=pinterest&utm_medium=social&utm_campaign=pc2` |
+
+**pc1**
+- Title: `Does Your Image Say "Made With AI"? Check the Hidden Marker Before You Post`
+- Description: `Many AI image tools, including ChatGPT and Canva's AI tools, write a hidden marker into the file, and Instagram and Facebook say they read these markers for their AI label. CheckMaybe Photo Check is a free tool that shows what your file says: AI markers, Content Credentials, camera data and the editing app. It runs in your browser, so your photo is never uploaded. #aiart #etsyseller #instagramtips`
+- Alt text: `Cartoon checkmark mascot with a magnifying glass next to a list: image saved from ChatGPT AI marker found, photo from your camera roll camera data, photo saved from a chat app data removed.`
+
+**pc2**
+- Title: `Before You Post a Product Photo: Check What the File Gives Away`
+- Description: `A phone photo can carry the place it was taken, the camera, the date and the app you edited it in, and anyone who downloads the original file can read them. CheckMaybe Photo Check shows all of it for free, in your browser, before you list or post. Remove a saved location before you share the original. #etsyseller #smallbusinesstips #productphotography`
+- Alt text: `Surprised cartoon checkmark mascot next to a list: saved location remove before posting, editing app named check first, camera data only fine for most listings.`

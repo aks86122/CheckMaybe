@@ -983,12 +983,18 @@
     "I checked the marketplace’s own rules and made any required AI and production-partner disclosures.",
     "I know exactly what the customer will receive.",
     "My listing images show a real preview of what the buyer receives.",
+    "I ran my listing photos through the free Photo Check (link below).",
     "I considered trademark and likeness issues.",
     "I’m not presenting AI output as human-made.",
     "I saved evidence of the relevant terms.",
     "I recorded the verification date.",
     "I know when professional advice may be appropriate."
-   ]
+   ],
+   "callout": {
+    "label": "FREE TOOL",
+    "text": "CheckMaybe Photo Check shows what a listing photo’s file reveals: camera data, editing apps, AI markers, Content Credentials and saved location. It runs in your browser; photos are never uploaded. checkmaybe-photo-check.pages.dev",
+    "tone": "amber"
+   }
   },
   {
    "type": "worksheet",
