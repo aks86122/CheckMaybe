@@ -67,6 +67,7 @@ ul.todo a { color: var(--rust); }
 .srch .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .srch a.btn { text-decoration: none; display: inline-block; }
 .srch .note { color: var(--muted); font-size: 13px; margin: 0; }
+.px .pxout { color: inherit; font-size: 14px; }
 .fb { padding: 12px 18px; border-top: 1px solid var(--rule); display: grid; gap: 10px; font-size: 14px; }
 .fb .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .fb select, .fb input[type=text], .fb textarea, .rev input { font: 14px var(--f-body); color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; min-width: 0; max-width: 100%; }
@@ -350,9 +351,71 @@ function judge(r) {
   if (graphic) todo.push("If the graphic uses AI art or AI-edited photos, disclose it where you post it (for example Pinterest's “AI-modified” setting or your listing description).", "A designed graphic can't be Etsy's required unedited photo; use a real photo of the item for that.");
   else if (stripped && !screenshot) todo.push("If you made or edited this image with AI, disclose it yourself: the file no longer says so.", "For Etsy's unedited photo, upload the original from your camera roll, not an export from a design app.");
   todo.push("Keep the original file and the date you took it, in case a listing is questioned.");
-  return { level, title, text, facts, sigs, todo };
+  return { level, title, text, facts, sigs, todo, pixel: !(screenshot || graphic || aiMark) };
 }
 
+// Pixel check (opt-in): AI-image model run in the browser. The photo never leaves the device.
+const PX = { base: "model/", ort: "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/", line: 0.97, cache: "pixel-check-v1" };
+function cub(x){x=Math.abs(x);const a=-0.5;return x<1?((a+2)*x-(a+3))*x*x+1:x<2?(((x-5)*x+8)*x-4)*a:0}
+function coeffs(inS,outS){const sc=inS/outS,fs=Math.max(sc,1),sup=2*fs,W=[];
+ for(let i=0;i<outS;i++){const ctr=(i+0.5)*sc;let x0=Math.max(0,Math.floor(ctr-sup+0.5)),x1=Math.min(inS,Math.floor(ctr+sup+0.5));const w=[];let t=0;
+  for(let x=x0;x<x1;x++){const v=cub((x-ctr+0.5)/fs);w.push(v);t+=v}W.push([x0,w.map(v=>v/t)])}return W}
+function resize(src,w,h,N){const H=coeffs(w,N),V=coeffs(h,N),tmp=new Float32Array(N*h*3),out=new Float32Array(N*N*3);
+ for(let y=0;y<h;y++)for(let i=0;i<N;i++){const[x0,ws]=H[i];let r=0,g=0,b=0;for(let k=0;k<ws.length;k++){const p=(y*w+x0+k)*4;r+=src[p]*ws[k];g+=src[p+1]*ws[k];b+=src[p+2]*ws[k]}
+  const q=(y*N+i)*3;tmp[q]=Math.min(255,Math.max(0,Math.round(r)));tmp[q+1]=Math.min(255,Math.max(0,Math.round(g)));tmp[q+2]=Math.min(255,Math.max(0,Math.round(b)))}
+ for(let j=0;j<N;j++){const[y0,ws]=V[j];for(let i=0;i<N;i++){let r=0,g=0,b=0;for(let k=0;k<ws.length;k++){const q=((y0+k)*N+i)*3;r+=tmp[q]*ws[k];g+=tmp[q+1]*ws[k];b+=tmp[q+2]*ws[k]}
+  const o=(j*N+i)*3;out[o]=Math.min(255,Math.max(0,Math.round(r)));out[o+1]=Math.min(255,Math.max(0,Math.round(g)));out[o+2]=Math.min(255,Math.max(0,Math.round(b)))}}return out}
+let pxSession = null;
+function loadScript(src) { return new Promise((ok, no) => { const t = document.createElement("script"); t.src = src; t.onload = ok; t.onerror = () => no(new Error("script")); document.head.append(t); }); }
+async function sha256(buf) { const h = await crypto.subtle.digest("SHA-256", buf); return [...new Uint8Array(h)].map(b => b.toString(16).padStart(2, "0")).join(""); }
+async function getPart(cache, url, part) {
+  let res = cache ? await cache.match(url) : null;
+  if (!res) { res = await fetch(url); if (!res.ok) throw new Error("download"); if (cache) { try { await cache.put(url, res.clone()); } catch (e) {} } }
+  const buf = await res.arrayBuffer();
+  if (buf.byteLength !== part.size || await sha256(buf) !== part.sha256) { if (cache) await cache.delete(url); throw new Error("corrupt"); }
+  return buf;
+}
+function loadModel(progress) {
+  return pxSession = pxSession || (async () => {
+    if (typeof ort === "undefined") await loadScript(PX.ort + "ort.wasm.min.js");
+    ort.env.wasm.wasmPaths = PX.ort; ort.env.wasm.numThreads = self.crossOriginIsolated ? Math.min(4, navigator.hardwareConcurrency || 1) : 1;
+    const man = await (await fetch(PX.base + "manifest.json")).json();
+    let cache = null; try { cache = await caches.open(PX.cache); } catch (e) {}
+    const all = new Uint8Array(man.total); let at = 0;
+    for (const part of man.parts) { all.set(new Uint8Array(await getPart(cache, PX.base + part.name, part)), at); at += part.size; progress(Math.round(at / man.total * 100)); }
+    progress(null);
+    return ort.InferenceSession.create(all, { executionProviders: ["wasm"] });
+  })().catch(e => { pxSession = null; throw e; });
+}
+async function pixelScore(url, progress) {
+  const s = await loadModel(progress);
+  const im = new Image(); im.src = url; await im.decode();
+  const k = Math.min(1, 8192 / Math.max(im.naturalWidth, im.naturalHeight)), w = Math.round(im.naturalWidth * k), h = Math.round(im.naturalHeight * k);
+  const cv = document.createElement("canvas"); cv.width = w; cv.height = h; const g = cv.getContext("2d"); g.drawImage(im, 0, 0, w, h);
+  const d = resize(g.getImageData(0, 0, w, h).data, w, h, 256), N = 65536, x = new Float32Array(3 * N), M = [.485, .456, .406], SD = [.229, .224, .225];
+  for (let j = 0; j < N; j++) for (let c = 0; c < 3; c++) x[c * N + j] = (d[j * 3 + c] / 255 - M[c]) / SD[c];
+  const out = await s.run({ pixel_values: new ort.Tensor("float32", x, [1, 3, 256, 256]) });
+  return out.probs.data[0];
+}
+function pixelBlock(r, j, example) {
+  const box = document.createElement("div"); box.className = "srch px";
+  if (example || !r.url || !j.pixel) return box;
+  box.innerHTML = '<div class="row"><strong>Pixel check (optional)</strong><button class="btn ghost" type="button">Run pixel check</button></div>' +
+    '<p class="note">An AI-image model looks at the pixels on your device; the photo is not uploaded. First time: a 199 MB download that stays in your browser, then about 10 seconds on a computer or 30 to 40 seconds on a phone.</p>' +
+    '<p class="note pxout" aria-live="polite"></p>';
+  const btn = box.querySelector("button"), out = box.querySelector(".pxout");
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; out.textContent = "Starting…";
+    try {
+      const sc = await pixelScore(r.url, p => { out.textContent = p == null ? "Preparing the model…" : "Downloading the model: " + p + "%"; });
+      r.pixel = Math.round(sc * 1000) / 1000;
+      out.innerHTML = sc >= PX.line ? '<span class="chip a">Strong AI-like patterns</span> The pixels look like many AI-made images. Pixel checks can be wrong, especially on edited or compressed photos, so treat this as a reason to ask, not proof.'
+        : '<span class="chip b">No strong AI-like patterns</span> That does not prove the image is real: compression, edits and newer AI tools can hide the patterns.';
+      btn.hidden = true;
+    } catch (e) { out.textContent = e.message === "corrupt" ? "The download was damaged. Try again." : "The pixel check couldn't run in this browser (" + (e.message || "error") + ")."; btn.disabled = false; }
+  });
+  return box;
+}
 
 // Reverse image search links
 const ENG = { tineye: u => "https://tineye.com/search?url=" + encodeURIComponent(u), lens: u => "https://lens.google.com/uploadbyurl?url=" + encodeURIComponent(u), bing: u => "https://www.bing.com/images/search?view=detailv2&iss=sbi&q=imgurl:" + encodeURIComponent(u) };
@@ -369,7 +432,7 @@ function features(r, j) {
   return { verdict: j.title, level: j.level, signals: j.sigs.map(x => x[1]).slice(0, 14), type: r.type || null, w: r.wh ? r.wh[0] : null, h: r.wh ? r.wh[1] : null,
     sizeKB: r.file && r.file.size ? Math.round(r.file.size / 1024) : null, camera: !!(m.Make || m.Model), makerNote: !!(m.makerNote || m.MakerNote), c2pa: !!s.c2pa,
     c2paChecked: !!cr, issuer: cr && cr.issuer ? String(cr.issuer).slice(0, 80) : null, dst: [...new Set([...(cr ? cr.dst : []), ...(s.dst || [])])].slice(0, 6),
-    tools: [...new Set([...(cr ? [...cr.agents, ...cr.gen] : []), ...(s.gens || [])])].slice(0, 6).map(t => String(t).slice(0, 60)), nameKind: nameKind(r.file.name || r.name || "") };
+    tools: [...new Set([...(cr ? [...cr.agents, ...cr.gen] : []), ...(s.gens || [])])].slice(0, 6).map(t => String(t).slice(0, 60)), nameKind: nameKind(r.file.name || r.name || ""), pixel: r.pixel == null ? null : r.pixel };
 }
 function feedbackBlock(r, j, example) {
   const box = document.createElement("div"); box.className = "fb";
@@ -388,7 +451,7 @@ function feedbackBlock(r, j, example) {
       try { const db = await getDb(); if (!db) { status.textContent = "Feedback isn't available in this view. Sign in to claude.ai, or tell us another way."; e.target.disabled = false; return; }
         const doc = { createdAt: new Date().toISOString(), correct, actual: correct ? null : box.querySelector("#" + id + "s").value,
           tool: correct ? null : (box.querySelector("#" + id + "t").value || "").trim().slice(0, 60) || null,
-          comment: correct ? null : (box.querySelector("#" + id + "c").value || "").trim().slice(0, 500) || null, tool_version: "0.3", check: features(r, j) };
+          comment: correct ? null : (box.querySelector("#" + id + "c").value || "").trim().slice(0, 500) || null, tool_version: "0.4", check: features(r, j) };
         await db.collection("feedback").doc(Date.now().toString(36) + Math.random().toString(36).slice(2, 8)).set(doc);
         status.textContent = "Thanks, sent. It goes into the next round of fixes."; send.hidden = true; more.hidden = true; box.querySelectorAll('[data-a="yes"],[data-a="no"]').forEach(b => b.disabled = true);
       } catch (err) { status.textContent = "Couldn't send (" + ((err && err.code) || "error") + ")."; e.target.disabled = false; } } });
@@ -439,7 +502,7 @@ function render(r, example) {
     try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
     catch (e) { const ta = document.createElement("textarea"); ta.value = text; ta.style.cssText = "width:100%;height:200px"; el.querySelector(".foot").append(ta); ta.select(); btn.textContent = "Select and copy the text"; }
   });
-  el.querySelector(".foot").before(searchBlock(r, example));
+  el.querySelector(".foot").before(pixelBlock(r, j, example), searchBlock(r, example));
   el.append(feedbackBlock(r, j, example));
   return el;
 }

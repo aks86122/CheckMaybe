@@ -42,3 +42,8 @@ Every result now has "Is this image used somewhere else?": Copy image (PNG to cl
 
 ## v0.3.2 (2026-10-25): designed graphics
 First feedback round (2 rows): Etsy image correct; a 1000 × 1500 PNG pin (Canva AI mascot, layout drawn by code) was rated wrong ("almost no data left", actually AI art). New rule: no camera data + a social-media size (Pinterest 1000×1500/2000×3000, Instagram 1080×1350/1080×1080, story 1080×1920, link preview 1200×630, landscape 1080×566, thumbnail 1280×720) on a PNG, or any non-square of those → "Looks like a designed graphic, not a photo" with a self-disclosure reminder. Still can't tell if the art inside is AI: that case goes to the AI-detector evaluation set. Suite now 25 files, all as expected.
+
+## v0.4 (2026-10-25): optional pixel check
+"Run pixel check" under each photo result (not for screenshots, designed graphics, or files with an AI marker). Runs an AI-image model in the browser; the photo is not uploaded. Shows "Strong AI-like patterns" only at score ≥0.97, otherwise "No strong AI-like patterns" with a "doesn't prove it's real" line. Feedback rows now carry the score (`tool_version` 0.4). Model hosting: 8 parts under 25 MiB for Cloudflare Pages, see `pixel-check/README.md`; the model is not in git.
+Tested locally (headless Chromium): with and without cross-origin isolation, cache hit after reload (0 part downloads), browser scores match Python within 0.02 except one low-score AI image (0.37 → 0.27), 25-file suite unchanged, 390px layout OK.
+The claude.ai artifact stays on v0.3: it can't host the model files. Not yet tested on a real Android phone or iPhone Safari.
