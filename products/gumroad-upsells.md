@@ -18,3 +18,17 @@ Upsell 2 text
 - Offer description: `Swap this tracker for the Debt Toolkit Bundle: Hidden Cost Tracker, Debt Payoff Planner and Holiday Hidden Cost Tracker for $15. Google Sheets, also works in Excel. Estimates only, not financial advice.`
 
 Check after a few weeks: Gumroad sales for the two bundles, and whether single-product sales drop.
+
+## Beacons order bumps (2026-10-26)
+Beacons has no "replace with bundle" upsell; its Order Bump adds a second digital product at a price you set, on the checkout page. All 10 products are on Beacons (founder screenshots 2026-10-26), including both bundles and the two free PDFs. Bump prices keep "2 items" below the matching 3-item bundle.
+
+| Product bought | Bump (add) | Bump price | 2 items total | Bundle of 3 |
+| --- | --- | --- | --- | --- |
+| Can I Use This? ($15) | Can I Sell This? | $10 | $25 | $29 |
+| Can I Sell This? ($15) | Can I Use This? | $10 | $25 | $29 |
+| Can I Resell This? ($15) | Can I Sell This? | $10 | $25 | $29 |
+| Hidden Cost Tracker ($8) | Debt Payoff Planner | $5 | $13 | $15 |
+| Debt Payoff Planner ($7) | Hidden Cost Tracker | $6 | $13 | $15 |
+| Holiday Hidden Cost Tracker ($7) | Hidden Cost Tracker | $6 | $13 | $15 |
+
+No bump on the free products or the bundles.
