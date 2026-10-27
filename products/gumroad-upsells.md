@@ -32,3 +32,5 @@ Beacons has no "replace with bundle" upsell; its Order Bump adds a second digita
 | Holiday Hidden Cost Tracker ($7) | Hidden Cost Tracker | $6 | $13 | $15 |
 
 No bump on the free products or the bundles.
+
+Status 2026-10-27: founder set both Gumroad upsells and all six Beacons order bumps (live). Check results after a few weeks: Gumroad Upsells tab (Revenue, Uses) and Beacons sales.
