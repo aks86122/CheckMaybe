@@ -12,6 +12,7 @@ Format (plan): 200–300 words, real dashboard screenshots, numbers, one open qu
 ## Facts already known (can be used as is)
 - Threads audience, 30 days (checked 2026-10-24): 81.2% of viewers in Taiwan, 2.79% in the US, 2 followers out of 129.7K viewers. That's why daily Threads posting stopped.
 - Photo Check feedback form: 4 responses, all from the founder's own tests on 10/25.
+- Tue #1 (resell rights) was posted as a Substack Note, not a post: 8 impressions in the first 48 hours, 0 likes, comments, restacks or shares (J screenshot 2026-10-30). The account's average Note is about 6.
 
 ## Draft shape (fill after numbers arrive)
 ```
