@@ -359,3 +359,9 @@ Board: Selling Digital Products: Licensing. Not affiliated with Etsy; no Etsy lo
 ## v9 — handmade sellers: keep the proof (2026-11-01, test for the human-made plan)
 Plan: `planning/2026-11-human-made/01-plan.md`. Copy, link, alt text: `content/2026-11-human-made-posts.md` (pin et7). Built by `build_pins_v9.py`.
 Etsy wording verified 2026-11-01 (Listing Image Requirements pasted by J). Link to the Substack post once published.
+
+## v10, v11 (2026-11-01): Etsy DDP rule (et8) and payment reserves (et9)
+Copy, links, alt text and sources: `content/2026-11-etsy-ddp-reserve-posts.md`. Built by `build_pins_v10.py`, `build_pins_v11.py`. Each pin links to its Substack post (fill in the URL after publishing).
+et8 title: `Selling to the US From Outside It? Etsy's DDP Rule, What It Does and Doesn't Say`
+et8 description: `Since July 9, 2026, Etsy requires Delivered Duty Paid shipping on US orders to qualify for Purchase Protection. Ship with duties unpaid and you may owe the refund if the buyer opens a case. Digital listings aren't subject to tariffs. Etsy's pages don't say non-DDP listings are hidden from search. Not legal advice; not affiliated with Etsy. #etsyseller #etsytips #internationalshipping`
+et8 alt: `Startled cartoon checkmark mascot next to a list: duties unpaid, you may owe the refund; digital listings, no tariffs; hidden from search, not in Etsy's rules.`
