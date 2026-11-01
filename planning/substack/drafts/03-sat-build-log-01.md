@@ -28,3 +28,11 @@ One thing I can't answer yet: whether anyone uses the free photo check. I didn't
 
 Open question for you: [one question J actually wants answered].
 ```
+
+
+## Numbers received
+Gumroad (J screenshot 2026-11-01, Analytics → Sales, 10/1–11/1): 74 views, 0 sales, $0.
+- Referrers: Direct/email/IM 48, m.facebook.com 13, Facebook 3, lm.facebook.com 2, checkmaybe.gumroad.com 2, l.instagram.com 2, l.threads.com 2, Pinterest 2.
+- Countries: US 54, Taiwan 18, Ireland 2.
+- Daily views read off the chart: 10/3 4, 10/4 5, 10/5 13, 10/6 11, 10/7 13, 10/8 5, 10/11 4, 10/18 14, 10/20 1, 10/24 1, 10/25 2, 10/31 1 (sum 74).
+Still missing: Substack subscribers and open rate; Pinterest impressions, saves, outbound clicks.

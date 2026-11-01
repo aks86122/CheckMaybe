@@ -33,8 +33,17 @@ The free CheckMaybe photo check reads the file in your browser and flags AI mark
 https://checkmaybe-photo-check.pages.dev/?utm_source=substack&utm_medium=social&utm_campaign=note-photo-check
 ```
 
-## Sun 11/1 Note: two-week results
-Needs J's real numbers (same list as `planning/substack/drafts/03-sat-build-log-01.md`). Not drafted until the numbers arrive.
+## Sun 11/1 Note: two-week results (Gumroad numbers from J's screenshot, 2026-11-01)
+```
+I moved CheckMaybe off daily Threads posts a week ago and put the time into Pinterest and Substack.
+
+Gumroad, Oct 1 to Nov 1: 74 product views, 0 sales.
+Where they came from: direct or email 48, Facebook 18, Instagram 2, Threads 2, Pinterest 2.
+Since the switch on Oct 25: 3 views.
+
+So far the new channels haven't sent anyone to the store. Pins can take weeks to get found, so I'm giving it until Nov 8 before deciding what to cut.
+```
+Numbers: Gumroad Analytics, Sales tab, 2026-10-01 to 2026-11-01. Facebook 18 = m.facebook.com 13 + Facebook 3 + lm.facebook.com 2. "Since Oct 25: 3" is read off the daily bars (10/25 two, 10/31 one); the daily bars add up to the 74 total.
 
 ## Mon 11/2 Note: GOLD RUSH (from content/2026-10-dense/10-24-gold-rush.md)
 ```
