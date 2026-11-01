@@ -23,7 +23,7 @@ For handmade sellers and pattern makers.
 - Etsy's October 2026 photo rules: what can be edited, which photo must stay unedited (quotes from Listing Image Requirements and "Important updates to AI use on Etsy").
 - Evidence habit: original phone file, process photos, source files (chart, sketch, draft) with dates; what each one proves.
 - Why a human-made photo can read as AI: C2PA / Content Credentials markers written by some tools; platforms that read them; what our own Photo Check tests found.
-- If a listing is reported as AI: what to prepare and how to respond. **Only if Etsy publishes the process; not found yet.**
+- If a listing is reported or removed: reports "won't result in immediate enforcement action" at first; AI images detected at listing creation get tips; removed listings can be appealed via the Policy violations page in Shop Manager (Seller Handbook, 22 Oct 2026). The kit prepares the evidence for that appeal.
 - Disclosure and "made by me" wording that stays inside Etsy's rules, with the rule text.
 - Free Photo Check as the first step.
 Format: start as a free or low-price checklist (Gumroad), grow into a toolkit if the test works.
@@ -44,4 +44,7 @@ Etsy Intellectual Property Policy: how to report, what evidence, counter-notice.
 - Etsy Listing Image Requirements (last updated 22 Oct 2026): exact wording of the unedited-photo rule and the edited-photo rule.
 - Etsy "Important updates to AI use on Etsy" (22 Oct 2026): exact wording on reports and enforcement.
 2026-11-01: Listing Image Requirements pasted by founder and quoted in the post (no appeal process on that page). The "Important updates" article was not re-checked, so its enforcement line was dropped from the post.
-- Etsy's process for appealing an AI report: not found. The post says so and asks readers.
+- Appeal process: found 2026-11-01 in "Important updates to AI use on Etsy" (Policy violations page in Shop Manager). The post quotes it.
+
+## Risk
+Etsy says it is "building tools that help you demonstrate your authorship" (same article, "Looking ahead"). If Etsy ships its own authorship proof, kit A loses its edge. Keep A small and cheap until then, and re-check the Seller Handbook before each version.

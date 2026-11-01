@@ -2,7 +2,7 @@
 
 Plan: `planning/2026-11-human-made/01-plan.md`.
 Facts:
-- Etsy rules: Listing Image Requirements, "Last updated on Oct 22, 2026", full page pasted by J 2026-11-01. All quotes copied from that text. The page doesn't describe how to respond to an AI report; the "won't lead to immediate enforcement" line (from "Important updates to AI use on Etsy") was dropped because that article wasn't re-checked.
+- Etsy rules: Listing Image Requirements ("Last updated on Oct 22, 2026") and Seller Handbook "Important updates to AI use on Etsy" (October 22, 2026, by James Ossman), both full pages pasted by J 2026-11-01. All quotes copied from those texts. Appeal route: "Policy violations page in Shop Manager" (Handbook article).
 - File markers: our own Photo Check tests (`tools/photo-check/README.md`, 2026-10-24): ChatGPT PNG and Canva AI PNG carried C2PA AI markers; plain Canva edits and chat-app saves had no data; phone originals kept camera data. Meta says it reads C2PA/IPTC for its AI label (pins.md v7 note).
 - Reddit pains: public comments, paraphrased, no usernames in our posts.
 Style: Substack rules (no em dashes, no "---", no bullet lists in the body).
@@ -27,7 +27,7 @@ What Etsy asks for. Etsy's Listing Image Requirements, last updated on 22 Octobe
 
 > "For most products, you must include at least one unedited photo of the actual item against a real background."
 
-And about that photo: "Do not use photo editing software or AI tools to alter this required photo."
+Etsy's announcement of the update, "Important updates to AI use on Etsy" from the same day, explains what unedited means: the photo "must not be edited or changed in any way." So no crop, no brightness fix, no background swap on that one.
 
 Your other photos are more flexible. Etsy says you "may use photo editing software or AI-powered tools on your other listing images, provided the final result remains an accurate representation of the physical product." Its list of allowed edits even includes "Cleaning up or replacing the background, as long as the product itself is accurately represented." So a background removed in Canva is fine on Etsy, just not on the one photo that has to stay unedited.
 
@@ -39,7 +39,7 @@ Why your own photo can read as AI. Some editing tools write a small record into 
 
 What I'd keep. For every finished piece, keep the original phone photo untouched, in a folder by date, and use a copy of it as your unedited listing photo. Take one or two quick photos while you work, the half-finished piece on your table. Keep your source files, the chart, the sketch, the first draft, with their dates. And write down which app you used on your other listing photos. It takes five minutes per item, and if a listing is ever questioned, you have the answer ready instead of hoping someone believes you.
 
-What I couldn't find. I haven't found an Etsy page that explains how to respond if your listing is reported as AI. If you've been through it, I'd really like to know how it went. Reply or leave a comment.
+What happens if you're flagged. The same announcement covers three cases. Reports first: buyers get a new reason on the "Report this item to Etsy" flag, and "Initially, these reports will help us better understand potential AI misuse and won't result in immediate enforcement action." Then detection: "If we detect AI-generated images when you create a listing, we'll provide tips to help you accurately represent your item." And if a listing is actually removed: "you'll still be able to submit an appeal through the Policy violations page in Shop Manager." That appeal is where your original file, your work-in-progress photos and your dated source files earn their keep. If you've already been through one, I'd really like to hear how it went.
 
 If you want to see what your photo file says before you upload it, the free CheckMaybe Photo Check reads it in your browser. Your photo is never uploaded.
 https://checkmaybe-photo-check.pages.dev/?utm_source=substack&utm_medium=email&utm_campaign=human-made
@@ -66,5 +66,5 @@ Then keep the original phone file, a couple of work-in-progress shots and your s
 
 ## 3-reader check (step 4)
 - Handmade seller who's angry about AI: the post is on their side, opens with their own question, and gives a habit, not a lecture.
-- Skeptic: rules are attributed to Etsy's pages with dates; the file-marker part says "when I tested", and the appeal part admits we didn't find it.
-- Fast reader: the four paragraph openers ("What Etsy asks for", "Why your own photo can read as AI", "What I'd keep", "What I couldn't find") work as headings.
+- Skeptic: rules are quoted from Etsy's pages with dates; the file-marker part says "when I tested"; the appeal part quotes Etsy and asks readers for real experiences instead of guessing.
+- Fast reader: the paragraph openers ("What Etsy asks for", "Why your own photo can read as AI", "What I'd keep", "What happens if you're flagged") work as headings.
