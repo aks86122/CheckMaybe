@@ -341,3 +341,17 @@ Board: Selling Digital Products: Licensing. Post one a day, after J approves.
 - Title: `Before You Post a Product Photo: Check What the File Gives Away`
 - Description: `A phone photo can carry the place it was taken, the camera, the date and the app you edited it in, and anyone who downloads the original file can read them. CheckMaybe Photo Check shows all of it for free, in your browser, before you list or post. Remove a saved location before you share the original. #etsyseller #smallbusinesstips #productphotography`
 - Alt text: `Surprised cartoon checkmark mascot next to a list: saved location remove before posting, editing app named check first, camera data only fine for most listings.`
+
+## v8 — Etsy's new Terms and AI training (2026-11-01)
+Facts: Etsy Terms of Use §5.C (effective 16 Dec 2026), Privacy Policy and US Regional Privacy Policy (updated 26 Oct 2026), texts pasted by J 2026-11-01 (`content/2026-11-01-etsy-ai-training-note.md`). Built by `build_pins_v8.py`.
+Link: the Substack post (`planning/substack/drafts/04-etsy-ai-training-terms.md`), because Can I Use This? does not cover the training clause; the post links to the product for the October listing rules. Fill in the post URL after it is published.
+Board: Selling Digital Products: Licensing. Not affiliated with Etsy; no Etsy logo or colours.
+
+| Pin | Angle | Link |
+| --- | --- | --- |
+| et6 "Etsy's new Terms: your listings can train AI." | AI training license, opt-out by region | `<substack post URL>?utm_source=pinterest&utm_medium=social&utm_campaign=et6` |
+
+**et6**
+- Title: `Etsy's New Terms of Use (Dec 16, 2026): Your Listings Can Be Used to Train AI`
+- Description: `Etsy's updated Terms of Use take effect on 16 December 2026. Section 5.C gives Etsy and its partners an irrevocable, perpetual license to use your listing photos, descriptions and reviews to develop and train AI. Sellers in the EEA and UK can object; the US privacy policy's opt-outs don't include AI training. What the documents say, word for word. Not legal advice; not affiliated with Etsy. #etsyseller #etsytips #ai`
+- Alt text: `Startled cartoon checkmark mascot next to a list: photos, descriptions and reviews covered; sellers in the EEA or UK can object; US privacy policy opt-outs, AI not listed.`
