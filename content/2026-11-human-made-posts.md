@@ -19,7 +19,7 @@ Etsy's October photo rules in plain words, and a five-minute habit that gives yo
 ```
 A seller asked on Reddit last week: if someone reports my listing as AI and it isn't, how do I defend myself?
 
-Another said a background she removed in Canva got her post labelled as AI on Instagram. A third, who test stitches every pattern by hand, can't get buyers to notice that her work is human-made at all.
+Another said a background they removed in Canva got their post labelled as AI on Instagram. A third, who test stitches every pattern by hand, can't get buyers to notice that their work is human-made at all.
 
 Here's what Etsy actually asks for, why handmade work can still read as AI, and what I'd keep from now on.
 
@@ -39,7 +39,7 @@ Why your own photo can read as AI. Some editing tools write a small record into 
 
 What I'd keep. For every finished piece, keep the original phone photo untouched, in a folder by date, and use a copy of it as your unedited listing photo. Take one or two quick photos while you work, the half-finished piece on your table. Keep your source files, the chart, the sketch, the first draft, with their dates. And write down which app you used on your other listing photos. It takes five minutes per item, and if a listing is ever questioned, you have the answer ready instead of hoping someone believes you.
 
-What happens if you're flagged. The same announcement covers three cases. Reports first: buyers get a new reason on the "Report this item to Etsy" flag, and "Initially, these reports will help us better understand potential AI misuse and won't result in immediate enforcement action." Then detection: "If we detect AI-generated images when you create a listing, we'll provide tips to help you accurately represent your item." And if a listing is actually removed: "you'll still be able to submit an appeal through the Policy violations page in Shop Manager." That appeal is where your original file, your work-in-progress photos and your dated source files earn their keep. If you've already been through one, I'd really like to hear how it went.
+What happens if you're flagged. The same announcement covers three cases. Reports first: buyers get a new reason on the "Report this item to Etsy" flag, and "Initially, these reports will help us better understand potential AI misuse and won't result in immediate enforcement action." Then detection: "If we detect AI-generated images when you create a listing, we'll provide tips to help you accurately represent your item." And if a listing is actually removed: "you'll still be able to submit an appeal through the Policy violations page in Shop Manager." Etsy doesn't say what evidence an appeal looks at, but that's the moment I'd want my original file, my work-in-progress photos and my dated source files ready. If you've already been through one, I'd really like to hear how it went.
 
 If you want to see what your photo file says before you upload it, the free CheckMaybe Photo Check reads it in your browser. Your photo is never uploaded.
 https://checkmaybe-photo-check.pages.dev/?utm_source=substack&utm_medium=email&utm_campaign=human-made
