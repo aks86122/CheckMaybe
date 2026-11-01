@@ -6,15 +6,19 @@ Founder 2026-11-01: do both. Status: research done from secondary sources; **off
 Claim in the thread (one commenter): a non-US shop without DDP shipping gets its US traffic restricted, and US buyers may see a note that duties might be due.
 
 What secondary sources say (Value Added Resource, Shopifreaks, Nova Data; 2026-06):
-- Etsy announced on 9 June 2026 (forum post by James Ossman) that from 9 July 2026 non-US sellers shipping to US buyers are expected to use Delivered Duty Paid (DDP) and account for duties and import fees upfront. [VERIFY]
-- Quoted by VAR: "Orders shipped without duties prepaid will no longer qualify for Etsy Purchase Protection." Tariffs or collection fees charged to the buyer can be refunded and "deducted from the seller." [VERIFY]
+- VERIFIED 2026-11-01 (forum announcement "Upcoming policy changes for orders shipped to the US", James Ossman, posted Jun 9, 2026, pasted by J):
+  - "Starting July 9, you'll be expected to account for all of your costs, including duties and import fees, to US buyers upfront in your pricing by using a Delivered Duty Paid (DDP) shipping option, so they pay the full cost of their order at checkout."
+  - "Orders shipped without duties prepaid will no longer qualify for Etsy Purchase Protection. If buyers are charged tariffs or collection fees by the carrier, they're eligible to be refunded and the charges will be deducted from the seller."
+  - Reason given: "nearly two-thirds of US Etsy buyers said they'd be unlikely to make a purchase if they had to pay tariffs at the time of delivery." (footnote: survey of 833 US buyers, July 2025)
+  - Policies updated: Seller Policy, Off-Platform Transactions, Cases, Shipping, Purchase Protection Program for Sellers.
+  - The announcement says nothing about search ranking or hiding listings from US buyers.
 - Exception reported elsewhere: countries where DDP services aren't available; then the listing must disclose that duties are due on delivery. [VERIFY]
 - Tools: US tariffs estimator in Shop Manager; separate domestic / US / international pricing. [VERIFY]
 - **Search visibility: no source found.** None of the coverage says non-DDP listings are hidden or down-ranked. The post must say that plainly unless Etsy's own pages say otherwise.
 Why it matters to us: J is a Taiwan seller; check whether DDP is available for Taiwan-origin shipments in Etsy's list.
 
 Pages J needs to paste:
-1. Forum announcement: https://community.etsy.com/forum/announcements-290/topic/upcoming-policy-changes-for-orders-shipped-to-the-us-183836/
+1. ~~Forum announcement~~ done 2026-11-01
 2. Seller Handbook, "Navigating Evolving Global Tariff Policies": https://www.etsy.com/seller-handbook/article/1355662653395
 3. Help Center, DDP shipping options: https://help.etsy.com/hc/articles/360001987487 (section on DDP; note which countries/carriers)
 4. Help Center, US tariffs estimator: https://help.etsy.com/hc/articles/40309848355735
