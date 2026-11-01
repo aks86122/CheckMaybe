@@ -1,4 +1,4 @@
-# Can I Use This? — AI Content Commercial Use Toolkit (v1.2) — Gumroad fields
+# Can I Use This? — AI Content Commercial Use Toolkit (v1.3) — Gumroad fields
 
 ## Additional details (Product tab)
 | Label | Value |
@@ -15,7 +15,7 @@ Download Your Toolkit
 
 ## Custom message (Receipt tab) — 417/500 characters
 ```
-Thank you for buying Can I Use This? — AI Content Commercial Use Toolkit (v1.2).
+Thank you for buying Can I Use This? — AI Content Commercial Use Toolkit (v1.3).
 Start with the 5-Check Framework on page 4 and the quick decision map on page 5, then find your situation in the 15 scenarios. Use the two worksheets to record which tool, plan and terms you checked, and when.
 AI platform terms change often, so confirm the current official terms before you sell. Educational resource, not legal advice.
 ```

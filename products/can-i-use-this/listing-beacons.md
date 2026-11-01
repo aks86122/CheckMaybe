@@ -1,4 +1,4 @@
-# Can I Use This? — Beacons listing (v1.2, 2026-10-25: Photo Check link)
+# Can I Use This? — Beacons listing (v1.3, 2026-11-01: Etsy Terms and AI training page)
 
 Same product and facts as `listing-gumroad.md`. Price: same as Gumroad.
 
@@ -13,9 +13,10 @@ Made it with AI? Check before you sell it.
 ✔ 5-Check Framework for every AI-assisted product
 ✔ Terms snapshots: OpenAI, Adobe Firefly, Midjourney, Gemini, Claude
 ✔ Etsy's October 2026 AI rules on one page
+✔ Etsy's new Terms (Dec 16, 2026): AI training, who can object
 ✔ 15 real scenarios, checklist and 2 worksheets
 ✔ Free Photo Check tool: see what your listing photo's file reveals
-33-page PDF with official sources. Not legal advice.
+34-page PDF with official sources. Not legal advice.
 ```
 
 ## Free tool link (if Beacons allows a link block next to the product)
