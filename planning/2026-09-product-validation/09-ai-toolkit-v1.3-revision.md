@@ -17,3 +17,4 @@ Changes (`products/build/ai-v1.3.json`, 34 pages):
 QA: build.sh, 0 failing pages (zoom p5 0.98, p12 0.9, p13 0.9, p34 0.9); p13, p30, p34 checked visually.
 Listing: `products/can-i-use-this/listing-gumroad.md`, `listing-beacons.md`, `gumroad-fields.md` (v1.3, 34 pages). Bundle: 83 → 84 pages (`bundle.py`, `products/bundle/listing-gumroad.md`, images in `products/bundle/images/`).
 Founder: upload `products/can-i-use-this/Can-I-Use-This-v1.3.pdf` on Gumroad (Can I Use This? and the bundle) and Beacons; paste the updated listing text; replace bundle images.
+Listing images (2026-11-01): cover, preview (p7, p12, p13, p30), featured (p26) and Gumroad thumb regenerated for v1.3 with mk.py/thumb.py → products/can-i-use-this/images/.
