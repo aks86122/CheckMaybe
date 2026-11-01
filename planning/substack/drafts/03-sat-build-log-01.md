@@ -40,3 +40,4 @@ Beacons Link in Bio (J screenshot 2026-11-01, last 7 days): 0 views, 0 clicks, 0
 Substack (J screenshots 2026-11-01): 1 subscriber (Taiwan, 100%), 3 followers (all came 10/29–10/30), 7-day views 4, traffic 10/30–11/1: 2 views (direct to app 2, Substack app 2, 1 user each), 0 free subs from traffic.
 - Tue #1 "Bought a pack with resell rights?" published 10/31 (not 10/27): 0 views, 0 subs, 0% opened, 0 likes, 0 comments.
 - Drafts: none (Thu #1 personal-use post is not in Substack yet).
+Substack update (J screenshot 2026-11-01 23:11, Creator stats): 30-day views 55, all subscribers 1 (free 1, paid 0), gross ARR $0. Earlier same day: 7-day views 4 (16:30) → 27 (21:00). Etsy AI-training post: 2 likes; its Note: 1 like. Views rising, subscribers flat.
