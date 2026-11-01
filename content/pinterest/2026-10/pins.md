@@ -355,3 +355,7 @@ Board: Selling Digital Products: Licensing. Not affiliated with Etsy; no Etsy lo
 - Title: `Etsy's New Terms of Use (Dec 16, 2026): Your Listings Can Be Used to Train AI`
 - Description: `Etsy's updated Terms of Use take effect on 16 December 2026. Section 5.C gives Etsy and its partners an irrevocable, perpetual license to use your listing photos, descriptions and reviews to develop and train AI. Sellers in the EEA and UK can object; the US privacy policy's opt-outs don't include AI training. What the documents say, word for word. Not legal advice; not affiliated with Etsy. #etsyseller #etsytips #ai`
 - Alt text: `Startled cartoon checkmark mascot next to a list: photos, descriptions and reviews covered; sellers in the EEA or UK can object; US privacy policy opt-outs, AI not listed.`
+
+## v9 — handmade sellers: keep the proof (2026-11-01, test for the human-made plan)
+Plan: `planning/2026-11-human-made/01-plan.md`. Copy, link, alt text: `content/2026-11-human-made-posts.md` (pin et7). Built by `build_pins_v9.py`.
+**Post only after J pastes Etsy's Listing Image Requirements and the [VERIFY] lines are confirmed.** Link to the Substack post once published.
