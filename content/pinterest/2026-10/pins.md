@@ -358,4 +358,4 @@ Board: Selling Digital Products: Licensing. Not affiliated with Etsy; no Etsy lo
 
 ## v9 — handmade sellers: keep the proof (2026-11-01, test for the human-made plan)
 Plan: `planning/2026-11-human-made/01-plan.md`. Copy, link, alt text: `content/2026-11-human-made-posts.md` (pin et7). Built by `build_pins_v9.py`.
-**Post only after J pastes Etsy's Listing Image Requirements and the [VERIFY] lines are confirmed.** Link to the Substack post once published.
+Etsy wording verified 2026-11-01 (Listing Image Requirements pasted by J). Link to the Substack post once published.

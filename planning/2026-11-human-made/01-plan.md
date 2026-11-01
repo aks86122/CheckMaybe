@@ -43,5 +43,5 @@ Etsy Intellectual Property Policy: how to report, what evidence, counter-notice.
 ## Verification needed before the posts go out
 - Etsy Listing Image Requirements (last updated 22 Oct 2026): exact wording of the unedited-photo rule and the edited-photo rule.
 - Etsy "Important updates to AI use on Etsy" (22 Oct 2026): exact wording on reports and enforcement.
-Etsy blocks automated reads; the founder pastes both pages. Until then the draft paraphrases and marks the sentences to replace with quotes.
+2026-11-01: Listing Image Requirements pasted by founder and quoted in the post (no appeal process on that page). The "Important updates" article was not re-checked, so its enforcement line was dropped from the post.
 - Etsy's process for appealing an AI report: not found. The post says so and asks readers.

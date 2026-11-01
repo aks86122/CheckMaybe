@@ -2,7 +2,7 @@
 
 Plan: `planning/2026-11-human-made/01-plan.md`.
 Facts:
-- Etsy rules: Can I Use This? v1.3 p12 summary of Etsy pages pasted by J on 2026-10-24 (Listing Image Requirements, "Important updates to AI use on Etsy", both 22 Oct 2026). **[VERIFY] sentences are paraphrases; J pastes the two pages, then they become exact quotes.**
+- Etsy rules: Listing Image Requirements, "Last updated on Oct 22, 2026", full page pasted by J 2026-11-01. All quotes copied from that text. The page doesn't describe how to respond to an AI report; the "won't lead to immediate enforcement" line (from "Important updates to AI use on Etsy") was dropped because that article wasn't re-checked.
 - File markers: our own Photo Check tests (`tools/photo-check/README.md`, 2026-10-24): ChatGPT PNG and Canva AI PNG carried C2PA AI markers; plain Canva edits and chat-app saves had no data; phone originals kept camera data. Meta says it reads C2PA/IPTC for its AI label (pins.md v7 note).
 - Reddit pains: public comments, paraphrased, no usernames in our posts.
 Style: Substack rules (no em dashes, no "---", no bullet lists in the body).
@@ -23,7 +23,15 @@ Another said a background she removed in Canva got her post labelled as AI on In
 
 Here's what Etsy actually asks for, why handmade work can still read as AI, and what I'd keep from now on.
 
-What Etsy asks for. [VERIFY] Etsy's Listing Image Requirements, updated on 22 October 2026, ask most listings to include at least one unedited photo of the actual item on a real background. Your other photos can still be edited, even with AI tools, as long as they show the item accurately. Digital downloads should show a preview or excerpt of what the buyer gets. And in the same update Etsy said that new reports about AI images won't lead to immediate enforcement at first.
+What Etsy asks for. Etsy's Listing Image Requirements, last updated on 22 October 2026, say:
+
+> "For most products, you must include at least one unedited photo of the actual item against a real background."
+
+And about that photo: "Do not use photo editing software or AI tools to alter this required photo."
+
+Your other photos are more flexible. Etsy says you "may use photo editing software or AI-powered tools on your other listing images, provided the final result remains an accurate representation of the physical product." Its list of allowed edits even includes "Cleaning up or replacing the background, as long as the product itself is accurately represented." So a background removed in Canva is fine on Etsy, just not on the one photo that has to stay unedited.
+
+If you sell patterns, there's a line just for you: "If you sell craft patterns, recipes, seeds, or similar items, include at least one real, unedited photo of something made using your product." And "AI-generated images cannot be the only images used to show the finished result."
 
 That unedited photo is your best evidence. It's the one picture on the listing that says: this is the real thing, as it is.
 
@@ -43,7 +51,7 @@ Rules change, so check Etsy's current pages yourself. This is educational, not l
 ```
 "If someone reports my listing as AI and it isn't, how do I defend myself?"
 
-Etsy's own rule gives you the answer: keep at least one unedited photo of the real item on every listing. [VERIFY]
+Etsy's own rule gives you the answer. Since 22 October, "for most products, you must include at least one unedited photo of the actual item against a real background."
 
 Then keep the original phone file, a couple of work-in-progress shots and your source files, with dates. Five minutes per item.
 ```
