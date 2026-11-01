@@ -11,7 +11,7 @@ Privacy Policy checked 2026-11-01 (J pasted etsy.com/legal/privacy; Claude downl
 - Lead-in to that table: "In the EEA, UK, and other countries you have the right to object to, and seek the restriction of, this processing. To learn more, see Section 7."
 - Section 7 Right to Object: "you can object to this processing in certain circumstances. In such cases, we will stop processing your information unless we have compelling legitimate grounds to continue processing or where it is needed for legal reasons." Exercise via account settings or Section 12 contacts (e.g. dpo@etsy.com).
 - No AI-specific on/off setting found in the policy text. "Other countries" is not listed.
-- Not checked: US Regional Privacy Policy (etsy.com returned 403 to Claude).
+- US Regional Privacy Policy checked 2026-11-01 (J pasted etsy.com/legal/policy/united-states-regional-privacy-policy/1146293244010, "Last updated on Oct 26, 2026"; NOT the archived 1286798590693 "Effective until October 8, 2025"): no mention of AI or machine learning. "Opt-out rights." lists only "Opt out of certain processing for targeted advertising purposes" and "Opt out of other "sales" of personal data"; plus profiling for significant decisions ("We otherwise do not engage in profiling or automated decision-making leading to significant decisions"). Access/Correction/Deletion apply to Personal Information; don't claim deletion ends the content license (Terms §5.C is "irrevocable" and "perpetual"; §7: terminating "will not affect the availability of some of Your Content").
 Not the AI opt-out: §11.G arbitration opt-out (new users, 30 days) is a different thing; don't mix them up.
 Fits: "after something happens / before you list" positioning; links to Can I Use This? (Etsy) only if J wants a link (Notes: no link is fine).
 
@@ -22,7 +22,9 @@ Section 5.C: the license on Your Content is "irrevocable" and "perpetual", and i
 
 Your Content means "shop names, profile pictures, listing photos, listing descriptions, reviews, comments, videos, usernames, etc."
 
-The opt-out it points to: the Privacy Policy lists AI training as a "legitimate interest", and says "In the EEA, UK, and other countries you have the right to object to, and seek the restriction of, this processing." I didn't find an on/off setting.
+The opt-out it points to: the Privacy Policy lists AI training as a "legitimate interest", and says "In the EEA, UK, and other countries you have the right to object to, and seek the restriction of, this processing."
+
+For US sellers, the US Regional Privacy Policy (also updated Oct 26) lists two opt-outs: targeted advertising and "sales" of personal data. AI training isn't one of them.
 
 Meanwhile, Section 6.E: nobody else may train AI on Etsy content "without our express permission."
 
@@ -30,6 +32,6 @@ Not legal advice.
 ```
 
 Reader check (step 4):
-- Seller already on Etsy: date first, then what they agreed to and what the "opt-out" actually is, in Etsy's words.
-- Skeptic: only quotes; 6.E shows the two-way rule without commentary.
+- Seller already on Etsy: date first, then what they agreed to, then what the "opt-out" actually covers for EU/UK vs US.
+- Skeptic: only quotes and what the documents list; no outrage, no advice.
 - Fast scroller: date + "train" in the first two lines.
