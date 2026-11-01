@@ -344,12 +344,12 @@ Board: Selling Digital Products: Licensing. Post one a day, after J approves.
 
 ## v8 — Etsy's new Terms and AI training (2026-11-01)
 Facts: Etsy Terms of Use §5.C (effective 16 Dec 2026), Privacy Policy and US Regional Privacy Policy (updated 26 Oct 2026), texts pasted by J 2026-11-01 (`content/2026-11-01-etsy-ai-training-note.md`). Built by `build_pins_v8.py`.
-Link: the Substack post (`planning/substack/drafts/04-etsy-ai-training-terms.md`), because Can I Use This? does not cover the training clause; the post links to the product for the October listing rules. Fill in the post URL after it is published.
+Link: the Substack post (`planning/substack/drafts/04-etsy-ai-training-terms.md`), because Can I Use This? does not cover the training clause; the post links to the product for the October listing rules. Published 2026-11-01: https://checkmaybe.substack.com/p/etsys-new-terms-let-it-train-ai-on
 Board: Selling Digital Products: Licensing. Not affiliated with Etsy; no Etsy logo or colours.
 
 | Pin | Angle | Link |
 | --- | --- | --- |
-| et6 "Etsy's new Terms: your listings can train AI." | AI training license, opt-out by region | `<substack post URL>?utm_source=pinterest&utm_medium=social&utm_campaign=et6` |
+| et6 "Etsy's new Terms: your listings can train AI." | AI training license, opt-out by region | `https://checkmaybe.substack.com/p/etsys-new-terms-let-it-train-ai-on?utm_source=pinterest&utm_medium=social&utm_campaign=et6` |
 
 **et6**
 - Title: `Etsy's New Terms of Use (Dec 16, 2026): Your Listings Can Be Used to Train AI`
