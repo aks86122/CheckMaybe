@@ -157,7 +157,7 @@ Nothing in the announcement or the Seller Handbook article says listings get hid
 Title: `Selling to the US from outside it? What Etsy's DDP rule actually says (and what it doesn't)`
 Subtitle: `A rumor says Etsy hides non-US shops that don't prepay duties. Here's the rule, in Etsy's words.`
 ```
-A comment I keep seeing on r/EtsyCommunity: if your shop is outside the US and you don't ship Delivered Duty Paid, Etsy quietly cuts your US traffic.
+A comment on r/EtsyCommunity last week: if your shop is outside the US and you don't ship Delivered Duty Paid, Etsy quietly cuts your US traffic.
 
 I went to the two places Etsy published this rule: the June 9 forum announcement by James Ossman, its VP of Customer Operations, and the Seller Handbook article "Navigating Evolving Global Tariff Policies" from the same day.
 
