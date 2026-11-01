@@ -2,7 +2,7 @@
 
 Sources: quotes only from the texts in `content/2026-11-01-etsy-ai-training-note.md` (Terms of Use effective 16 Dec 2026, Privacy Policy and US Regional Privacy Policy, both last updated 26 Oct 2026; pasted by J / PDF downloaded 2026-11-01).
 Style: plan rules (no em dashes, no "---", no bullet lists in the body; quotes as block quotes).
-Product link: Can I Use This? does NOT cover the AI-training clause (it covers Etsy's October AI listing rules, p12). So the link is offered for that, not as the answer to this post.
+Product link: since v1.3 (2026-11-01) Can I Use This? has a page on this (p13), plus the October listing rules (p12). Ending edited on the live post after v1.3 was uploaded.
 
 ## Title
 Etsy's new Terms let it train AI on your listings. Here's what the opt-out actually covers.
@@ -44,7 +44,7 @@ If you sell on Etsy, here's what I'd do before 16 December. Read section 5 of th
 
 Rules change, so check the current pages yourself. This is educational, not legal advice, and I'm not affiliated with Etsy.
 
-Separately, if you sell anything made with AI on Etsy, the October 2026 listing rules changed too (disclosure, previews, prompt bundles, AI-written patterns and recipes). I summed those up on one page in Can I Use This?:
+I put this page, plus Etsy's October AI listing rules (disclosure, previews, prompt bundles, AI-written patterns and recipes), into Can I Use This? v1.3:
 https://checkmaybe.gumroad.com/l/kzhzh?utm_source=substack&utm_medium=email&utm_campaign=etsy-ai-terms
 ```
 
