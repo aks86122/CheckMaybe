@@ -173,7 +173,7 @@ There is one exception. "Exceptions apply only in countries where DDP services a
 
 Two more lines worth knowing. Digital listings are out of it: "Tariffs apply to physical items, so digital listings are not subject to additional tariffs." And you can opt out of the US entirely: "Sellers may choose which countries they ship to, including choosing to ship only domestically."
 
-Before you lean on that exception, check Etsy's carrier table in the Help Center article "Information for Managing International Shipments". Many countries aren't listed by name, and "Rest of the World" still gets DHL, FedEx and UPS as DDP carriers. So for most sellers DDP is available, just not always cheap.
+Before you lean on that exception, check Etsy's carrier table in the Help Center article "Information for Managing International Shipments". Many countries aren't listed by name, and "Rest of the World" still gets DHL, FedEx and UPS as DDP carriers. So for most sellers DDP is available, just not always cheap. I'm in Taiwan, which isn't listed by name either, so I'd fall under "Rest of the World" too.
 
 If you sell physical items to the US from elsewhere, here's the short version. Find your country, or "Rest of the World", in that table. Use the US tariff calculator in Shop Manager as a starting point only: its estimates "do not include additional fees your carrier may charge, such as customs clearance, brokerage, or administrative costs," it's "currently unavailable for listings with price variations," and its HTS codes come from AI, with Etsy saying it "does not guarantee the accuracy or reliability" of them. Set US-specific prices so your other markets don't pay for US duties. And if DDP truly isn't available where you are, follow the disclosure and message steps above, every time.
 
@@ -186,3 +186,7 @@ No product link (none covers this). Pin et8 links to the post.
 - Non-US seller who believes the rumor: first paragraph names it, then shows what's written; doesn't call them wrong, says what we can't prove either way.
 - Skeptic: every rule sentence is a quote with its source.
 - Fast reader: rule, penalty, missing traffic claim, exception, two extras, checklist; one idea per paragraph.
+
+
+## Topic 1 FINAL for publishing (2026-11-02)
+Changes from the draft: removed the ">" marks (they show as text when pasted; set the quote with the quote button instead); added one line on Taiwan (J is in Taiwan, Taiwan not listed by name: verified); added the CTA line above the end subscribe button. Tags: "Hype check", "etsy". Don't resend as email? No: this is a new post, send it.
