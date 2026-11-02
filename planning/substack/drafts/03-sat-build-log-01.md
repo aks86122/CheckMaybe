@@ -41,3 +41,9 @@ Substack (J screenshots 2026-11-01): 1 subscriber (Taiwan, 100%), 3 followers (a
 - Tue #1 "Bought a pack with resell rights?" published 10/31 (not 10/27): 0 views, 0 subs, 0% opened, 0 likes, 0 comments.
 - Drafts: none (Thu #1 personal-use post is not in Substack yet).
 Substack update (J screenshot 2026-11-01 23:11, Creator stats): 30-day views 55, all subscribers 1 (free 1, paid 0), gross ARR $0. Earlier same day: 7-day views 4 (16:30) → 27 (21:00). Etsy AI-training post: 2 likes; its Note: 1 like. Views rising, subscribers flat.
+
+## Stats update (J screenshots, 2026-11-02 18:50 TW)
+- Substack: 1 subscriber (free), 0 paid; 30-day views 146 (was 55 on 11/1).
+- Etsy AI-terms post: 38 views (Direct-to-app 22, Direct 15, Pinterest 1), 2 likes, 1 share.
+- Etsy AI-terms Note: 38 impressions in the first 48 hours (account average about 5): Profile page 25, Other 9, Permalinks 3, Search 1; 1 like.
+- Read: the post brought views but no new subscriber. First Pinterest visit came from pin et6.
