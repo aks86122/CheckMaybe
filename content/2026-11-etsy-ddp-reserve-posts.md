@@ -179,7 +179,7 @@ If you sell physical items to the US from elsewhere, here's the short version. F
 
 Rules change, so check Etsy's current pages yourself. This is educational, not legal advice, and I'm not affiliated with Etsy.
 ```
-Links to add: announcement (community.etsy.com/.../183836), Handbook article (etsy.com/seller-handbook/article/1355662653395), carrier table (help.etsy.com/hc/articles/360001987487), tariff calculator (help.etsy.com/hc/articles/40309848355735).
+Links to add: announcement (https://community.etsy.com/forum/announcements-290/topic/upcoming-policy-changes-for-orders-shipped-to-the-us-183836/), Handbook article (etsy.com/seller-handbook/article/1355662653395), carrier table (help.etsy.com/hc/articles/360001987487), tariff calculator (help.etsy.com/hc/articles/40309848355735).
 No product link (none covers this). Pin et8 links to the post.
 
 ### Reader check (step 4)
