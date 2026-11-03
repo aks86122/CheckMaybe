@@ -359,6 +359,7 @@ Board: Selling Digital Products: Licensing. Not affiliated with Etsy; no Etsy lo
 ## v9 — handmade sellers: keep the proof (2026-11-01, test for the human-made plan)
 Plan: `planning/2026-11-human-made/01-plan.md`. Copy, link, alt text: `content/2026-11-human-made-posts.md` (pin et7). Built by `build_pins_v9.py`.
 Etsy wording verified 2026-11-01 (Listing Image Requirements pasted by J). Link to the Substack post once published.
+et7 link: `https://checkmaybe.substack.com/p/made-it-by-hand-and-still-flagged?utm_source=pinterest&utm_medium=social&utm_campaign=et7` (post published 2026-11-03)
 
 ## v10, v11 (2026-11-01): Etsy DDP rule (et8) and payment reserves (et9)
 Copy, links, alt text and sources: `content/2026-11-etsy-ddp-reserve-posts.md`. Built by `build_pins_v10.py`, `build_pins_v11.py`. Each pin links to its Substack post (fill in the URL after publishing).

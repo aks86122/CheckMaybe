@@ -58,7 +58,7 @@ Then keep the original phone file, a couple of work-in-progress shots and your s
 
 ## Pinterest pin et7
 - Image: `content/pinterest/2026-10/pins/checkmaybe-pin-et7-keep-the-proof.png` (`build_pins_v9.py`)
-- Link: `<Substack post URL>?utm_source=pinterest&utm_medium=social&utm_campaign=et7`
+- Link: `https://checkmaybe.substack.com/p/made-it-by-hand-and-still-flagged?utm_source=pinterest- Link: `<Substack post URL>?utm_source=pinterest&utm_medium=social&utm_campaign=et7`utm_medium=social- Link: `<Substack post URL>?utm_source=pinterest&utm_medium=social&utm_campaign=et7`utm_campaign=et7` (post published 2026-11-03)
 - Title: `Handmade Seller? Keep These Photos So You Can Prove It Isn't AI (Etsy 2026)`
 - Description: `Etsy's October 2026 photo rules ask most listings for at least one unedited photo of the real item. Other photos can be edited if they stay accurate. Keep the original phone file, a work-in-progress shot and your source files with dates, so you have proof if your work is ever questioned. Not legal advice; not affiliated with Etsy. #etsyseller #handmade #etsytips`
 - Alt text: `Cartoon checkmark mascot with a magnifying glass next to a list: one unedited photo of the real item required, other photos edited OK if accurate, original file and work-in-progress shots keep them.`
