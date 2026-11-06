@@ -357,7 +357,8 @@ GAP = Side(style="medium", color=PW); GAPB = Border(left=GAP, right=GAP, top=GAP
 LINEB = Border(bottom=Side(style="thin", color="CFC9D9"))
 def box_fill(ws, rng, color):
     # Google Sheets ignores borders in conditional formats, so boxes are a soft fill with white gaps
-    ws.conditional_formatting.add(rng, FormulaRule(formula=[f'{rng.split(":")[0].replace("$", "")}<>""'], fill=fill(color)))
+    ws.conditional_formatting.add(rng, FormulaRule(formula=[f'{rng.split(":")[0].replace("$", "")}<>""'],
+                                                   fill=PatternFill(fill_type="solid", fgColor=color, bgColor=color)))  # Excel reads bgColor in conditional fills
 def heading(r, text, color):
     pr.merge_cells(f"B{r}:K{r}"); pr[f"B{r}"] = text; pr[f"B{r}"].font = FP(color, True, 9)
     pr[f"B{r}"].alignment = Alignment(vertical="bottom"); pr.row_dimensions[r].height = 22
