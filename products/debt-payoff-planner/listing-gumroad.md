@@ -135,10 +135,11 @@ English · any currency
 Get Your Planner Link
 ```
 
-## Custom message (Receipt tab) — 375/500 characters
+## Custom message (Receipt tab) — 454/500 characters
 ```
 Thank you for buying Debt Payoff Planner.
 Open the PDF and click OPEN MY PLANNER, then choose Make a copy. Your copy saves to your own Google Drive and nobody else can see it.
 Start on My Debts: replace the example rows with your debts, then set your monthly amount on Plan. Print tab = your color-in tracker.
 All figures are estimates to help you plan, not financial advice.
+Want more plain-English fine print? Free weekly notes: checkmaybe.substack.com
 ```
