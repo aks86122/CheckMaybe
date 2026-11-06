@@ -1,4 +1,4 @@
-# Debt Payoff Planner — Gumroad listing (v1, 2026-10-05)
+# Debt Payoff Planner — Gumroad listing (v1.1, 2026-11-07: Print tab added)
 
 House structure: `.claude/skills/listing-copy/SKILL.md`. Same facts as `listing-etsy.md` and `listing-beacons.md`. If one changes, update the others.
 Status: draft, not live yet. Bold the section headings by hand after pasting (the editor doesn't render **).
@@ -16,9 +16,9 @@ debt-payoff-planner
 ## Price
 US$7. "Let customers pay what they want": off.
 
-## Summary ("You'll get" line) — 128 characters
+## Summary ("You'll get" line)
 ```
-A Google Sheets planner that compares 4 debt payoff orders and accounts for early-payoff fees, lock-in periods and 0% deadlines.
+A Google Sheets planner that compares 4 debt payoff orders, checks early-payoff fees and 0% deadlines, and prints a color-in tracker.
 ```
 
 ## Description (hook → pain points → what it helps you do → what you get → how it works → FAQ → good to know)
@@ -43,6 +43,7 @@ What Debt Payoff Planner helps you do
 ✔ Put debts that are behind on payments first
 ✔ Plan a one-time extra payment (bonus, tax refund) in the month you choose
 ✔ See what you save compared with paying minimums only
+✔ Print a one-page color-in tracker made from your own plan: each box is a real amount, with the month you'll get there
 
 What you get
 ✔ PDF guide with your "Make a copy" link and setup steps
@@ -69,7 +70,9 @@ No. It only uses the numbers you type in.
 Blank means no fee, no lock, no promo and not behind. The maths still works, and blank rows anywhere are fine.
 5) My currency isn't US dollars.
 It works in any currency. Use the same one for every debt.
-6) Will anything be shipped?
+6) Can I print it?
+Yes. The Print tab is one page: your debts in payoff order, 10 boxes per debt, plus every 5% of your total with the month you'll reach it. It updates when you change your debts. File › Print, or download it as a PDF.
+7) Will anything be shipped?
 No. It's a digital download: a PDF with the link to your copy.
 
 Good to know
@@ -86,6 +89,7 @@ Good to know
 | Works in | Google Sheets (free), Excel via download |
 | Capacity | 12 debts, 30-year schedule |
 | Payoff orders | Smart, Avalanche, Snowball, Cash-flow |
+| Printable | 1-page color-in tracker (Print tab) |
 | Language | English · any currency |
 
 Paste-ready, one per row:
@@ -114,6 +118,12 @@ Payoff orders
 Smart, Avalanche, Snowball, Cash-flow
 ```
 ```
+Printable
+```
+```
+1-page color-in tracker (Print tab)
+```
+```
 Language
 ```
 ```
@@ -125,10 +135,10 @@ English · any currency
 Get Your Planner Link
 ```
 
-## Custom message (Receipt tab) — 340/500 characters
+## Custom message (Receipt tab) — 375/500 characters
 ```
 Thank you for buying Debt Payoff Planner.
 Open the PDF and click OPEN MY PLANNER, then choose Make a copy. Your copy saves to your own Google Drive and nobody else can see it.
-Start on My Debts: replace the example rows with your debts, then set your monthly amount on Plan.
+Start on My Debts: replace the example rows with your debts, then set your monthly amount on Plan. Print tab = your color-in tracker.
 All figures are estimates to help you plan, not financial advice.
 ```
