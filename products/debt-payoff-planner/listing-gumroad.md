@@ -47,6 +47,7 @@ What Debt Payoff Planner helps you do
 What you get
 ✔ PDF guide with your "Make a copy" link and setup steps
 ✔ Google Sheets planner, dark theme: Start Here, Plan, My Debts, Schedule
+✔ Print tab: a one-page color-in tracker built from your own plan (real amounts and months in every box)
 ✔ Room for 12 debts and a 30-year month-by-month schedule
 ✔ 2 charts: total left over time, and interest + fees by order
 ✔ Checks for a budget below your minimums and minimums that don't cover interest
