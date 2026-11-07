@@ -27,7 +27,7 @@ Gumroad收據、PDF、自動信 ─→ Substack ─→ 下一個商品
 | Hidden Cost Tracker | https://checkmaybe.gumroad.com/l/kofwfjf |
 | Holiday Hidden Cost Tracker | https://checkmaybe.gumroad.com/l/nhbkwx |
 | Debt Payoff Planner | https://checkmaybe.gumroad.com/l/ddktis |
-| Debt Toolkit Bundle | https://checkmaybe.gumroad.com/l/gdaiyy（J確認：這是不是債務套組） |
+| Debt Toolkit Bundle | https://checkmaybe.gumroad.com/l/gdaiyy |
 
 Substack：https://checkmaybe.substack.com · Beacons：https://beacons.ai/checkmaybe
 
