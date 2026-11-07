@@ -131,7 +131,7 @@ ol.bsteps li { display: flex; align-items: center; gap: 2.2mm; }
 .hl-t { font-size: 10.8pt; }
 
 /* sources */
-.srcs { display: flex; flex-direction: column; gap: 3mm; }
+.srcs { display: flex; flex-direction: column; gap: 2mm; }
 .src { background: var(--card); border: 0.5pt solid var(--rule); border-radius: 1.2mm; padding: 3mm 4mm; }
 .src-n { font-weight: bold; }
 .src-u { font-family: var(--sans); font-size: 8.6pt; color: var(--rust); word-break: break-all; margin-top: 0.6mm; }

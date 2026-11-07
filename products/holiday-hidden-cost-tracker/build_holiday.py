@@ -1,5 +1,6 @@
 """Holiday Hidden Cost Tracker (dark green / gold / berry): gift list and budget, holiday payment plans
-(pay-in-4, BNPL, store financing) with real APR and a month-by-month bill, and Black Friday free trials.
+(pay-in-4, BNPL, store financing) with real APR and a month-by-month bill, Black Friday free trials,
+and (v1.1, 2026-10-24) a Deal Check tab: sale price vs usual price, tax, shipping and the plan total.
 
 Builds Holiday-Hidden-Cost-Tracker.xlsx. For the Google Sheets version: import, File > Save as Google
 Sheets, then run holiday_polish.gs once (checkboxes, filter bars, native dark charts, locale)."""
@@ -254,6 +255,59 @@ ft.conditional_formatting.add(f"I{T0}:I{T1}", FormulaRule(formula=[f'AND(ISNUMBE
 ft.conditional_formatting.add(f"B{T0}:K{T1}", FormulaRule(formula=[f'$G{T0}="Yes"'], fill=fill(INPUT), font=FD("6E7A70", False, 10, True, True)))
 ft.auto_filter.ref = f"B5:L{T1}"
 
+# ---------------- Deal Check (v1.1, 2026-10-24) ----------------
+dc = sheet("Deal Check", {"A": 3, "B": 22, "C": 12, "D": 11, "E": 11, "F": 9, "G": 10, "H": 15, "I": 10, "J": 11, "K": 10,
+                          "L": 11, "M": 13, "N": 12, "O": 12, "P": 24}, rows=27, cols=17)
+title(dc, "Deal Check")
+dc["H2"] = NOTE; dc["H2"].font = F(MUTED, False, 8, True)
+dc["L4"] = "Good deal = at least"; dc["L4"].font = F(MUTED, True, 9); dc["L4"].alignment = Alignment(horizontal="right", vertical="center")
+cell(dc, "M4", 0.10, PCT, inp=True, color=GOLD, align="right")
+dc["N4"] = "below the usual price"; dc["N4"].font = F(MUTED, False, 9, True)
+DEAL = "'Deal Check'!$M$4"
+dc.row_dimensions[4].height = 28
+header(dc, 5, 2, ["Item", "Store", "Sale price", "Usual price", "Sales tax", "Shipping", "Pay with", "Number of payments",
+                  "Each payment", "Need it?"], IN_H)
+header(dc, 5, 12, ["Below usual", "Total at checkout", "Total on the plan", "Extra on the plan", "Verdict"], OUT_H)
+dsample = [("Noise-cancelling headphones", "Store A", 199, 249, 0.08, 0, "Credit card", None, None, "Yes"),
+           ("Air fryer", "Store B", 89, 89, 0.08, 0, "Cash / debit", None, None, "Maybe"),
+           ("55-inch TV", "Store A", 499, 549, 0.08, 0, "Store financing", 12, 49, "Yes"),
+           ("Smart watch", "Store C", 279, 299, 0.08, 0, "Pay-in-4", 4, 75.33, "Yes"),
+           ("Robot vacuum", "Store B", 159, 299, 0.08, 15, "Pay-in-4", 4, 46.68, "Yes"),
+           ("Electric scooter", "Store C", 349, 449, 0.08, 25, "Monthly BNPL", 6, 69, "No")]
+D0, D1 = 6, 25
+for r in range(D0, D1 + 1):
+    s = dsample[r - D0] if r - D0 < len(dsample) else (None,) * 10
+    band = (r - D0) % 2 == 1
+    for j, (col, fmt) in enumerate(zip("BCDEFGHIJK", [None, None, CUR, CUR, PCT, CUR, None, "0", CUR, None])):
+        cell(dc, f"{col}{r}", s[j], fmt, inp=True, band=band, align="left" if col == "B" else "center" if col in "CHK" else "right")
+    live = f'AND($B{r}<>"",ISNUMBER($D{r}))'
+    plan = f'AND(N($I{r})>0,N($J{r})>0)'
+    f = {"L": f'=IF(AND({live},N($E{r})>0),($E{r}-$D{r})/$E{r},"")',
+         "M": f'=IF({live},$D{r}*(1+N($F{r}))+N($G{r}),"")',
+         "N": f'=IF(AND({live},{plan}),$I{r}*$J{r},"")',
+         "O": f'=IF(ISNUMBER($N{r}),MAX(0,$N{r}-$M{r}),"")',
+         "P": (f'=IF(NOT({live}),"",IF($K{r}="No","Skip it",IF(N($E{r})=0,"Find the usual price",IF($D{r}>=$E{r},"Not a deal",'
+               f'IF(N($O{r})>0.005,"Deal, but the plan costs more",IF($L{r}<{DEAL},"Small deal","Real deal"))))))')}
+    for col, fx in f.items():
+        cell(dc, f"{col}{r}", fx, {"L": PCT, "M": CUR, "N": CUR, "O": CUR}.get(col), band=band, align="center" if col == "P" else "right")
+    dc.row_dimensions[r].height = 22
+dr = lambda c: f"'Deal Check'!${c}${D0}:${c}${D1}"
+dc["B3"] = (f'=COUNT({dr("M")})&" items checked   ·   "&COUNTIF({dr("P")},"Real deal")&" real deals   ·   "'
+            f'&COUNTIF({dr("P")},"Not a deal")&" not a deal   ·   plans add "&TEXT(SUM({dr("O")}),"$#,##0")')
+dc["B3"].font = F(TXT, True, 10)
+dc["E5"].comment = Comment("The price you saw for the same item before the sale, for example the lowest price in the last 30 days. Leave it blank if you don't know; the verdict will ask for it.", "CheckMaybe")
+dc["F5"].comment = Comment("Your local sales tax rate. 0% if prices already include tax.", "CheckMaybe")
+dc["I5"].comment = Comment("Only if you'll pay on a plan. Leave blank if you pay in full.", "CheckMaybe")
+dc["P5"].comment = Comment("Real deal: at least the 'good deal' % below the usual price, you need it, and the plan adds nothing. Not a deal: the sale price is not below the usual price.", "CheckMaybe")
+listdv(dc, PAID, f"H{D0}:H{D1}"); listdv(dc, '"Yes,Maybe,No"', f"K{D0}:K{D1}")
+chips(dc, f"H{D0}:H{D1}", {"Cash / debit": "green", "Credit card": "ice", "Pay-in-4": "gold", "Monthly BNPL": "berry",
+                            "Store financing": "berry", "Gift card": "teal", "Other": "grey"})
+chips(dc, f"K{D0}:K{D1}", {"Yes": "green", "Maybe": "gold", "No": "grey"})
+chips(dc, f"P{D0}:P{D1}", {"Real deal": "green", "Small deal": "gold", "Deal, but the plan costs more": "berry",
+                            "Not a deal": "berry", "Skip it": "grey", "Find the usual price": "ice"})
+dc.conditional_formatting.add(f"O{D0}:O{D1}", FormulaRule(formula=[f'AND(ISNUMBER($O{D0}),$O{D0}>0.005)'], font=FD(BERRY, True)))
+dc.auto_filter.ref = f"B5:P{D1}"
+
 # ---------------- Chart Data ----------------
 cd = sheet("Chart Data", {"A": 3, "B": 24, "C": 14, "D": 14, "E": 14, "F": 14}, rows=40, cols=7)
 title(cd, "Chart Data", "Feeds the Dashboard charts and lists. Nothing to edit here.")
@@ -416,7 +470,7 @@ don.legend.position = "r"; dark(don, axes=False)
 don.width, don.height = 12.9, 7.0; db.add_chart(don, "F30")
 
 # ---------------- How to use ----------------
-hw = sheet("How to Use", {"A": 3, "B": 110}, rows=26, cols=3)
+hw = sheet("How to Use", {"A": 3, "B": 110}, rows=28, cols=3)
 title(hw, "How to use", "Ten minutes to set up.")
 steps = ["1. Settings: enter your holiday budget, monthly take-home income and the first month you want to plan (usually December).",
          "2. Gift List: one row per person. Gold-header columns are yours; berry-header columns calculate themselves.",
@@ -426,6 +480,8 @@ steps = ["1. Settings: enter your holiday budget, monthly take-home income and t
          "   • First payment taken at checkout (most pay-in-4)? Set '1st paid at checkout?' to Yes.",
          "   • You get the real APR, the extra cost, and what each plan charges in each month.",
          "4. Free Trials: one row per trial you start (Black Friday deals often come with one). Tick Cancelled? once you've cancelled.",
+         "   • Deal Check: before you buy a sale item, enter the sale price and the usual price (before the sale), tax, shipping and",
+         "     the plan if you'd pay on one. The verdict tells you if it's a real deal, a small one, or not a deal at all.",
          "5. Dashboard: budget left, what your holiday plans add to January and February, the costliest plan, and trials to cancel.",
          "   • Use the filter buttons on each table's header row (or the filter bars above it in Google Sheets).",
          "",
@@ -436,9 +492,9 @@ for i, s in enumerate(steps):
     hw[f"B{5 + i}"] = s; hw[f"B{5 + i}"].font = F(TXT if s[:1].isdigit() else MUTED, s[:1].isdigit(), 10)
     hw[f"B{5 + i}"].alignment = Alignment(wrap_text=True, vertical="top")
 
-order = ["Dashboard", "How to Use", "Settings", "Gift List", "Holiday Payments", "Free Trials", "Chart Data"]
+order = ["Dashboard", "How to Use", "Settings", "Gift List", "Holiday Payments", "Free Trials", "Deal Check", "Chart Data"]
 wb._sheets = [wb[n] for n in order]
-tabs = {"Dashboard": GOLD, "How to Use": TEAL, "Chart Data": "26302A", "Gift List": BERRY, "Holiday Payments": BERRY}
+tabs = {"Dashboard": GOLD, "How to Use": TEAL, "Chart Data": "26302A", "Gift List": BERRY, "Holiday Payments": BERRY, "Deal Check": GOLD}
 for ws in wb.worksheets: ws.sheet_properties.tabColor = tabs.get(ws.title, "2F4838")
 wb.active = 0
 wb.save("Holiday-Hidden-Cost-Tracker.xlsx"); import sys, os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "build")); import excel_compat; excel_compat.fix("Holiday-Hidden-Cost-Tracker.xlsx"); print("saved", wb.sheetnames)

@@ -1,0 +1,640 @@
+<title>Photo Check — CheckMaybe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; drop zone, then one result sheet per photo (facts | platform signals | still to check). CheckMaybe toolkit palette. */
+:root {
+  --paper: #efe5cc; --sheet: #f8f2e2; --ink: #33261b; --muted: #6f5f4c; --rule: #d8c9a6;
+  --rust: #b8551b; --green: #3f6b3a; --amber: #9a7020; --red: #b33a27; --blue: #3d5a80;
+  --chip-g: #dfe8d6; --chip-a: #f1e2bd; --chip-r: #f3d7cf; --chip-b: #dbe3ee;
+  --f-display: "Source Serif 4", "Bitstream Charter", Georgia, serif;
+  --f-body: "IBM Plex Sans", "Segoe UI", Roboto, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #1f1813; --sheet: #2a211a; --ink: #f0e6d2; --muted: #b9a88f; --rule: #4a3c2f;
+  --rust: #e48a4e; --green: #8fc184; --amber: #e0b45a; --red: #ee8b78; --blue: #9db7da;
+  --chip-g: #2c3b27; --chip-a: #3e3220; --chip-r: #47271f; --chip-b: #26303e; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #1f1813; --sheet: #2a211a; --ink: #f0e6d2; --muted: #b9a88f; --rule: #4a3c2f;
+  --rust: #e48a4e; --green: #8fc184; --amber: #e0b45a; --red: #ee8b78; --blue: #9db7da;
+  --chip-g: #2c3b27; --chip-a: #3e3220; --chip-r: #47271f; --chip-b: #26303e; color-scheme: dark }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 56px; }
+.wrap { max-width: 860px; margin: 0 auto; display: grid; gap: 28px; }
+header { display: grid; gap: 10px; }
+.brand { font: 600 12px/1 var(--f-body); letter-spacing: .22em; text-transform: uppercase; color: var(--rust); }
+h1 { font: 700 clamp(30px, 5vw, 44px)/1.08 var(--f-display); margin: 0; text-wrap: balance; }
+.lede { margin: 0; max-width: 62ch; color: var(--muted); }
+.drop { border: 2px dashed var(--rule); border-radius: 10px; background: var(--sheet); padding: 26px 20px; display: grid; gap: 10px; justify-items: start; }
+.drop.over { border-color: var(--rust); }
+.drop strong { font: 600 18px/1.3 var(--f-display); }
+.drop p { margin: 0; color: var(--muted); font-size: 14px; }
+.btn { font: 600 15px var(--f-body); background: var(--ink); color: var(--paper); border: 0; border-radius: 6px; padding: 10px 16px; cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+.btn:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid var(--rust); outline-offset: 2px; }
+.privacy { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: baseline; }
+.privacy b { color: var(--green); font-weight: 600; }
+.err { color: var(--red); font-size: 14px; margin: 0; }
+.results { display: grid; gap: 22px; }
+.sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+.sheet-head { display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--rule); flex-wrap: wrap; }
+.thumb { width: 64px; height: 64px; object-fit: cover; border-radius: 6px; background: var(--rule); flex: none; }
+.sheet-head .name { font: 500 14px var(--f-mono); word-break: break-all; min-width: 0; flex: 1 1 200px; }
+.tag { font: 600 11px/1 var(--f-body); letter-spacing: .12em; text-transform: uppercase; padding: 5px 8px; border-radius: 4px; }
+.tag.example { background: var(--chip-b); color: var(--blue); }
+.verdict { padding: 14px 18px; border-bottom: 1px solid var(--rule); display: grid; gap: 4px; }
+.verdict h2 { font: 700 21px/1.25 var(--f-display); margin: 0; text-wrap: balance; }
+.verdict p { margin: 0; color: var(--muted); font-size: 15px; max-width: 64ch; }
+.cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.col { padding: 14px 18px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.col + .col { border-left: 1px solid var(--rule); }
+.col h3 { font: 600 12px/1.2 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 0; }
+dl { margin: 0; display: grid; gap: 8px; }
+dt { font-size: 12px; color: var(--muted); }
+dd { margin: 0; font: 400 14px/1.4 var(--f-mono); font-variant-numeric: tabular-nums; word-break: break-word; }
+.sig { display: grid; gap: 4px; font-size: 14px; }
+.chip { justify-self: start; font: 600 12px/1 var(--f-body); padding: 5px 8px; border-radius: 999px; }
+.g { background: var(--chip-g); color: var(--green); } .a { background: var(--chip-a); color: var(--amber); }
+.r { background: var(--chip-r); color: var(--red); } .b { background: var(--chip-b); color: var(--blue); }
+ul.todo { margin: 0; padding-left: 18px; display: grid; gap: 8px; font-size: 14px; }
+ul.todo a { color: var(--rust); }
+.foot { padding: 12px 18px; border-top: 1px solid var(--rule); display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.foot small { color: var(--muted); }
+[hidden] { display: none !important; }
+.srch { padding: 12px 18px; border-top: 1px solid var(--rule); display: grid; gap: 8px; font-size: 14px; }
+.srch .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.srch a.btn { text-decoration: none; display: inline-block; }
+.srch .note { color: var(--muted); font-size: 13px; margin: 0; }
+.px .pxout { color: inherit; font-size: 14px; }
+.fb { padding: 12px 18px; border-top: 1px solid var(--rule); display: grid; gap: 10px; font-size: 14px; }
+.fb .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.fb select, .fb input[type=text], .fb textarea, .rev input { font: 14px var(--f-body); color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; min-width: 0; max-width: 100%; }
+.fb textarea { width: 100%; min-height: 60px; }
+.fb .note, .rev .note { color: var(--muted); font-size: 13px; margin: 0; }
+.rev { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 18px 20px; display: grid; gap: 10px; }
+.rev h2 { font: 700 19px/1.3 var(--f-display); margin: 0; }
+.rev p { margin: 0; color: var(--muted); font-size: 14px; max-width: 64ch; }
+.rev .row { display: flex; gap: 8px; flex-wrap: wrap; }
+.rev input { flex: 1 1 260px; }
+.rev a.btn { text-decoration: none; display: inline-block; }
+.limits { font-size: 14px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 18px; display: grid; gap: 8px; max-width: 68ch; }
+.limits h2 { font: 700 18px var(--f-display); color: var(--ink); margin: 0; }
+.limits p { margin: 0; }
+@media (max-width: 720px) { .cols { grid-template-columns: minmax(0, 1fr); } .col + .col { border-left: 0; border-top: 1px solid var(--rule); } }
+@media (prefers-reduced-motion: no-preference) { .sheet { animation: rise .25s ease-out; } @keyframes rise { from { transform: translateY(6px); } to { transform: none; } } }
+
+/* CheckMaybe visual refresh v0.5 — presentation-only enhancements */
+:root {
+  --paper:#f5f7fb;--sheet:#ffffff;--ink:#17243b;--muted:#63718a;--rule:#e4e9f2;
+  --rust:#5366d9;--green:#247b5a;--amber:#9b6916;--red:#bb4050;--blue:#4466ad;
+  --chip-g:#e6f5ed;--chip-a:#fff3d9;--chip-r:#ffeaed;--chip-b:#eaf0ff;
+  --f-display:"IBM Plex Sans","Segoe UI",sans-serif;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --paper:#0d1422;--sheet:#172238;--ink:#f3f6ff;--muted:#b0bfd5;--rule:#2c3b55;
+ --rust:#a4b1ff;--green:#7dd8ad;--amber:#f0c77a;--red:#ffa4af;--blue:#9fbaff;
+ --chip-g:#1e433b;--chip-a:#473b24;--chip-r:#4a2938;--chip-b:#293c64;
+}}
+:root[data-theme="dark"]{--paper:#0d1422;--sheet:#172238;--ink:#f3f6ff;--muted:#b0bfd5;--rule:#2c3b55;--rust:#a4b1ff;--green:#7dd8ad;--amber:#f0c77a;--red:#ffa4af;--blue:#9fbaff;--chip-g:#1e433b;--chip-a:#473b24;--chip-r:#4a2938;--chip-b:#293c64}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding-block:44px 80px;background:radial-gradient(ellipse 70% 420px at 50% -110px,rgba(95,112,234,.12),transparent 80%),var(--paper);line-height:1.6}
+.wrap{max-width:1080px;gap:30px}
+header{position:relative;gap:16px;padding:12px 4px 2px;max-width:850px}
+.brand{display:inline-flex;align-items:center;gap:9px;width:max-content;font-size:12px;letter-spacing:.12em;color:var(--rust);background:var(--chip-b);padding:9px 12px;border-radius:999px}
+.brand::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--rust);box-shadow:0 0 0 3px rgba(91,110,221,.12)}
+h1{font-family:var(--f-display);font-weight:600;font-size:clamp(35px,5.5vw,60px);line-height:1.12;letter-spacing:-.045em;max-width:18ch}
+.lede{font-size:17px;line-height:1.7;max-width:67ch}
+.drop{position:relative;justify-items:center;text-align:center;gap:13px;border:2px dashed #aab6ee;border-radius:20px;padding:48px 24px;background:linear-gradient(135deg,rgba(87,110,224,.07),rgba(106,183,213,.025)),var(--sheet);box-shadow:0 12px 36px rgba(26,40,82,.045);transition:border-color .2s,box-shadow .2s,transform .2s}
+.drop::before{content:"↑";display:grid;place-items:center;width:58px;height:58px;border-radius:17px;background:var(--chip-b);color:var(--rust);font:500 31px var(--f-body)}
+.drop.over{border-color:var(--rust);box-shadow:0 0 0 5px rgba(94,111,222,.13);transform:translateY(-2px)}
+.drop strong{font:600 22px/1.35 var(--f-display);letter-spacing:-.02em}
+.drop p{max-width:600px;line-height:1.65}
+.btn{display:inline-flex;justify-content:center;align-items:center;min-height:43px;border-radius:10px;padding:11px 17px;background:#5265db;color:#fff;font-size:14px;line-height:1.3;box-shadow:0 3px 8px rgba(49,63,135,.1);transition:filter .15s,transform .15s,background .15s;text-align:center}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn.ghost{background:var(--sheet);color:var(--ink);border:1px solid var(--rule);box-shadow:none}
+.btn:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.privacy{margin-top:3px;justify-content:center;align-items:center;background:var(--chip-g);padding:7px 12px;border-radius:999px;font-size:12px;color:var(--green)}
+.results{gap:26px}
+.sheet,.rev{border-radius:18px;box-shadow:0 12px 34px rgba(26,40,82,.055)}
+.sheet-head{padding:19px 24px;gap:16px}
+.thumb{width:76px;height:76px;border-radius:12px}
+.sheet-head .name{font-family:var(--f-body);font-size:15px;font-weight:600;overflow-wrap:anywhere}
+.tag{border-radius:999px;letter-spacing:.07em;padding:7px 10px}
+.verdict{padding:25px 26px 27px;gap:12px;background:linear-gradient(105deg,rgba(89,107,217,.065),transparent 65%)}
+.verdict h2{font:600 clamp(21px,2.8vw,27px)/1.3 var(--f-display);letter-spacing:-.025em}
+.verdict p{max-width:75ch;line-height:1.7}
+.chip{padding:7px 11px;line-height:1.25;border-radius:8px;letter-spacing:0}
+.cols{grid-template-columns:1fr 1.25fr 1.2fr}
+.col{padding:25px 22px 28px;gap:19px}
+.col h3{font-size:11px;letter-spacing:.13em;color:var(--muted)}
+dl{gap:15px}
+dt{font-size:12px;margin-bottom:3px}
+dd{font:500 13px/1.55 var(--f-body);overflow-wrap:anywhere}
+.sig{gap:7px;line-height:1.55}
+.sig .chip{font-size:11px}
+ul.todo{gap:13px;line-height:1.65;padding-left:20px}
+.foot,.srch,.fb{padding:20px 25px;gap:13px}
+.srch .row,.fb .row,.rev .row{gap:10px}
+.srch strong{font-size:15px}
+.srch .note,.fb .note,.rev .note{line-height:1.6}
+.rev{padding:29px 28px;gap:17px}
+.rev h2{font:600 23px/1.3 var(--f-display);letter-spacing:-.02em}
+.rev input{min-height:46px;border-radius:10px;background:var(--sheet)}
+.fb select,.fb input[type=text],.fb textarea{border-radius:9px;background:var(--sheet)}
+.limits{max-width:none;gap:10px;padding:24px 4px 0}
+.limits h2{font:600 19px var(--f-display)}
+.limits p{max-width:90ch;line-height:1.7}
+@media(max-width:900px){.cols{grid-template-columns:1fr 1fr}.col:last-child{grid-column:1/-1;border-left:0;border-top:1px solid var(--rule)}}
+@media(max-width:650px){body{padding-block:25px 50px}.wrap{gap:22px}header{gap:12px}h1{font-size:clamp(32px,9vw,44px)}.lede{font-size:15px}.drop{padding:34px 17px;border-radius:16px}.drop strong{font-size:19px}.drop p{font-size:13px}.sheet,.rev{border-radius:14px}.sheet-head{padding:15px}.thumb{width:58px;height:58px}.verdict{padding:20px 17px}.cols{grid-template-columns:1fr}.col,.col:last-child{grid-column:auto;padding:20px 18px;border-left:0}.col+.col{border-top:1px solid var(--rule)}.foot,.srch,.fb{padding:17px 18px}.rev{padding:22px 18px}.rev .row .btn{flex:1 1 130px}.privacy{border-radius:10px;text-align:left}.btn{min-height:44px}}
+@media(prefers-reduced-motion:reduce){.btn,.drop{transition:none}.sheet{animation:none}}
+
+\n/* v0.6 — bespoke editorial studio redesign */
+:root{--paper:#f6f5f0;--sheet:#fff;--ink:#17231e;--muted:#66716b;--rule:#e5e7df;--rust:#e86c45;--green:#237856;--amber:#926b21;--red:#ad473c;--blue:#315c77;--chip-g:#e5f2e9;--chip-a:#faf0d7;--chip-r:#f9e7e2;--chip-b:#e9f1f3;--f-display:"Source Serif 4",Georgia,serif;--f-body:"IBM Plex Sans",Arial,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#111a17;--sheet:#1b2823;--ink:#f5f6ef;--muted:#adbcb2;--rule:#34463c;--rust:#ff9871;--green:#8cd5ab;--amber:#efd08a;--red:#f7a59a;--blue:#a1cbe2;--chip-g:#254837;--chip-a:#4b4128;--chip-r:#50342e;--chip-b:#283f49}}
+:root[data-theme="dark"]{--paper:#111a17;--sheet:#1b2823;--ink:#f5f6ef;--muted:#adbcb2;--rule:#34463c;--rust:#ff9871;--green:#8cd5ab;--amber:#efd08a;--red:#f7a59a;--blue:#a1cbe2;--chip-g:#254837;--chip-a:#4b4128;--chip-r:#50342e;--chip-b:#283f49}
+body{background:var(--paper);padding:0 22px 90px;line-height:1.55;color:var(--ink)}.wrap{max-width:1180px;gap:0}.topbar{display:flex;justify-content:space-between;align-items:center;padding:25px 0;border-bottom:1px solid var(--rule)}.wordmark{display:flex;gap:12px;align-items:center;font-weight:600;letter-spacing:.19em;font-size:12px}.mark{width:38px;height:38px;background:var(--ink);color:var(--paper);border-radius:12px;display:grid;place-items:center;font:700 23px/1 var(--f-display);letter-spacing:-.1em}.mark-dot{color:var(--rust)}.topright{font:500 10px var(--f-mono);letter-spacing:.09em;color:var(--muted)}.navdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#58aa78;margin-right:7px}.navsep{margin:0 10px;color:var(--rule)}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(360px,.94fr);gap:clamp(28px,5vw,85px);padding:80px 0 92px;align-items:center;border-bottom:1px solid var(--rule)}header{padding:0;gap:23px;max-width:none}.brand{padding:0;background:none;border-radius:0;color:var(--rust);font:600 11px var(--f-mono);letter-spacing:.12em}.brand::before{display:none}.tiny-line{width:28px;height:1px;background:var(--rust);display:inline-block;margin-right:7px;vertical-align:middle}.hero-num{color:var(--muted);margin-left:5px}h1{font:600 clamp(51px,5.8vw,81px)/1.02 var(--f-display);letter-spacing:-.055em;max-width:11.7ch;text-wrap:balance}h1 em{font-weight:600;font-style:italic;color:var(--rust)}.lede{font-size:16px;line-height:1.9;max-width:53ch}.hero-features{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:15px}.hero-features span{font-size:12px;font-weight:500;white-space:nowrap}.hero-features i{font:500 10px var(--f-mono);color:var(--rust);font-style:normal;margin-right:6px}
+.drop{border:1px solid var(--rule);background:var(--sheet);border-radius:20px;box-shadow:0 25px 60px rgba(25,40,30,.065);padding:40px 33px;gap:19px;justify-items:center;min-height:430px;align-content:center;position:relative;overflow:hidden}.drop:after{content:"";position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--rust),#f1bf81,#a4bf9b)}.drop:before{content:"↥";background:#f9eee8;color:#d46a43;width:76px;height:76px;border-radius:24px;font:400 43px var(--f-body);box-shadow:0 0 0 10px rgba(232,108,69,.05)}.drop-eyebrow{font:500 10px var(--f-mono);letter-spacing:.14em;color:var(--rust)}.drop strong{font:600 30px/1.2 var(--f-display);letter-spacing:-.035em}.drop p{font-size:13px;line-height:1.8;max-width:350px}.drop .btn{margin-top:4px;min-width:230px}.btn{border-radius:9px;background:var(--ink);color:var(--paper);font-size:13px;min-height:47px;padding:13px 18px;box-shadow:none;font-weight:600;gap:20px}.btn:hover{filter:none;background:var(--rust);color:white}.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}.btn.ghost:hover{background:var(--ink);color:var(--paper)}.privacy{justify-content:center;font-size:11px;line-height:1.4}.privacy b{color:var(--green)}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:70px 0 24px}.eyebrow{font:500 11px var(--f-mono);letter-spacing:.13em;color:var(--rust)}.section-heading h2{font:600 clamp(30px,4vw,43px)/1.2 var(--f-display);letter-spacing:-.04em;margin:10px 0 0}.section-aside{font:500 10px var(--f-mono);color:var(--muted);letter-spacing:.06em;padding-bottom:5px}.results{gap:22px}.sheet{border-radius:17px;box-shadow:0 10px 32px rgba(25,40,30,.035);border:1px solid var(--rule)}.sheet-head{padding:20px 26px;gap:18px}.thumb{width:68px;height:68px;border-radius:11px}.sheet-head .name{font-size:12px;color:var(--muted)}.tag{letter-spacing:.08em}.verdict{padding:29px 27px 31px;gap:10px}.verdict h2{font:600 clamp(25px,3vw,34px)/1.16 var(--f-display);letter-spacing:-.035em}.verdict p{font-size:14px;line-height:1.8;max-width:75ch}.chip{font-size:11px;line-height:1.2;padding:7px 10px}.cols{grid-template-columns:1fr 1fr 1fr}.col{padding:26px 25px;gap:18px}.col h3{font-size:10px;letter-spacing:.13em;color:var(--rust)}dl{gap:13px}dt{font-size:11px}dd{font-size:12px;line-height:1.6}.sig{gap:7px;line-height:1.65;font-size:12px}ul.todo{font-size:12px;line-height:1.8;gap:12px}.foot,.srch,.fb{padding:22px 26px}.srch,.fb{gap:13px}.rev{border-radius:17px;padding:32px;gap:16px;box-shadow:0 10px 30px rgba(25,40,30,.03)}.rev h2{font:600 25px var(--f-display);letter-spacing:-.025em}.rev p{line-height:1.8}.rev input{padding:14px 15px;border-radius:9px}.limits{max-width:none;margin-top:70px;padding-top:25px;border-top:1px solid var(--rule);gap:13px}.limits h2{font:600 21px var(--f-display)}.limits p{max-width:100ch;font-size:12px;line-height:1.9}.section-heading.secondary{margin-top:75px}
+@media(max-width:900px){.hero-layout{grid-template-columns:1fr;padding:60px 0;gap:40px}h1{max-width:14ch}.drop{min-height:350px}.section-heading{margin-top:52px}.cols{grid-template-columns:1fr}.col+.col{border-left:0;border-top:1px solid var(--rule)}}
+@media(max-width:550px){body{padding:0 16px 65px}.topbar{padding:16px 0}.topright{font-size:9px}.navsep{margin:0 4px}.hero-layout{padding:46px 0;gap:32px}h1{font-size:clamp(45px,11vw,64px)}.lede{font-size:14px}.hero-features{gap:12px}.hero-features span{font-size:11px}.drop{padding:34px 18px;min-height:370px}.drop strong{font-size:26px}.drop .btn{width:100%}.section-heading{align-items:start}.section-aside{display:none}.sheet-head,.verdict,.col,.foot,.srch,.fb{padding:18px}.rev{padding:22px 18px}.rev .btn{width:100%}.section-heading h2{font-size:32px}}
+
+
+/* v0.7 — Linear × Stripe inspired application shell */
+:root{--paper:#080a11;--sheet:#11141e;--ink:#f3f4fb;--muted:#9299ad;--rule:#292d3b;--rust:#9d8cff;--green:#65d6b0;--amber:#f5c47d;--red:#ff8f9d;--blue:#9eafff;--chip-g:#17352f;--chip-a:#382d21;--chip-r:#39242e;--chip-b:#242747;--f-display:Inter,"IBM Plex Sans",sans-serif;--f-body:Inter,"IBM Plex Sans",sans-serif}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--paper:#080a11;--sheet:#11141e;--ink:#f3f4fb;--muted:#9299ad;--rule:#292d3b;--rust:#9d8cff;--green:#65d6b0;--amber:#f5c47d;--red:#ff8f9d;--blue:#9eafff;--chip-g:#17352f;--chip-a:#382d21;--chip-r:#39242e;--chip-b:#242747}}
+body{margin:0;padding:0 32px 100px;background:radial-gradient(ellipse 70% 35% at 55% -12%,#30255c 0%,transparent 78%),#080a11;color:var(--ink);font-family:var(--f-body)}.wrap{max-width:1240px;gap:0}
+.topbar{height:76px;padding:0 2px;border-bottom:1px solid #292b38}.wordmark{font-size:13px;letter-spacing:-.02em;font-weight:700}.mark{height:34px;width:34px;border-radius:10px;background:linear-gradient(135deg,#aa95ff,#6755e8);color:#fff;font:700 23px Inter,sans-serif;letter-spacing:-.1em;box-shadow:0 5px 22px #7464ee55}.mark-dot{color:#d6cfff}.topright{font-size:10px;letter-spacing:.07em;color:#8d95ae}.navdot{background:#76dcb7;box-shadow:0 0 10px #6ad9ae80}.navsep{color:#4c5064}
+.hero-layout{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:68px;padding:104px 0 94px;border-bottom:1px solid #292d3b;position:relative}.hero-layout:before{content:"";position:absolute;left:-100px;top:85px;width:430px;height:300px;background:#4c38a4;filter:blur(140px);opacity:.14;pointer-events:none}header{gap:24px;position:relative;z-index:1}.brand{font:600 11px var(--f-mono);letter-spacing:.12em;color:#b5a7ff}.tiny-line{background:#a78bfa}.hero-num{color:#72778b}h1{font-family:var(--f-body);font-size:clamp(48px,5.1vw,73px);font-weight:600;line-height:1.075;letter-spacing:-.068em;max-width:12ch}h1 em{font-family:var(--f-body);font-style:normal;font-weight:600;background:linear-gradient(100deg,#d8ccff,#9a8afc 50%,#75b9ff);-webkit-background-clip:text;background-clip:text;color:transparent}.lede{color:#a8adc1;font-size:15px;line-height:1.85;max-width:52ch}.hero-features{margin-top:12px;gap:10px}.hero-features span{border:1px solid #353449;background:#1b1a2b;border-radius:99px;padding:8px 12px;font-size:11px;color:#c6c3e2}.hero-features i{color:#b8a9ff}
+.drop{min-height:450px;padding:45px 35px;gap:18px;border-radius:22px;border:1px solid #4b436d;background:linear-gradient(155deg,#1c1b31,#111520 70%);box-shadow:0 30px 90px #0007,0 0 0 1px #7565aa16,inset 0 1px #ffffff1b}.drop:after{height:1px;background:linear-gradient(90deg,transparent,#bbaaff,transparent)}.drop:before{content:"⇧";display:grid;place-items:center;width:82px;height:82px;border-radius:23px;color:#ddd4ff;font:400 43px var(--f-body);background:linear-gradient(135deg,#423970,#282743);box-shadow:0 0 0 8px #8e78ff0d,0 14px 30px #0005}.drop-eyebrow{color:#a89afa;font:600 10px var(--f-mono);letter-spacing:.14em}.drop strong{font:600 25px var(--f-body);letter-spacing:-.04em}.drop p{color:#a3a9be;font-size:12px;line-height:1.85}.drop .btn{margin-top:6px;min-width:245px}.btn{border:1px solid transparent;border-radius:10px;background:linear-gradient(125deg,#a58dfc,#7b6bf1);color:#fff;box-shadow:0 6px 18px #7463e638;font:600 13px var(--f-body);min-height:44px;transition:transform .16s,filter .16s}.btn:hover{background:linear-gradient(125deg,#b8a4ff,#8e7cf9);color:#fff;transform:translateY(-1px)}.btn.ghost{background:#1b1f2c;color:#d8dbec;border-color:#383c4d;box-shadow:none}.btn.ghost:hover{background:#2a2d42;color:#fff}.privacy{font-size:11px;color:#9da5bb}.privacy b{color:#72d8b0}
+.section-heading{margin:68px 0 23px}.eyebrow{color:#a99dff;font-size:10px}.section-heading h2{font:600 clamp(28px,3.4vw,38px) var(--f-body);letter-spacing:-.05em}.section-aside{color:#757e96}.results{gap:20px}.sheet{background:#10131d;border:1px solid #303343;border-radius:18px;box-shadow:0 12px 45px #0003}.sheet-head{padding:20px 24px;border-color:#2c3040;background:#151823}.thumb{border-radius:12px;background:#2a2b3a}.sheet-head .name{font:500 12px var(--f-mono);color:#b4b8cc}.verdict{padding:30px 28px;border-color:#303343;gap:12px;background:radial-gradient(ellipse at 100% 0%,#39305a50,transparent 60%)}.verdict h2{font:600 clamp(23px,2.7vw,32px)/1.2 var(--f-body);letter-spacing:-.045em}.verdict p{color:#a5aec2;font-size:13px;line-height:1.8}.chip{border-radius:7px;font-size:10px;padding:7px 10px}.cols{grid-template-columns:1fr 1.15fr 1.15fr}.col{padding:26px 23px;gap:17px}.col+.col{border-color:#2c3040}.col h3{color:#9b9fbc;font-size:10px;letter-spacing:.11em}.sig{font-size:12px;color:#bdc3d3}.sig .chip{line-height:1.25}dt{color:#8991a9}dd{font-size:12px;color:#e4e6ef}ul.todo{color:#c0c5d4;font-size:12px;line-height:1.75}ul.todo a{color:#c2b5ff}.foot,.srch,.fb{border-color:#2c3040;padding:20px 24px}.foot small,.srch .note,.fb .note{color:#8991a9}.fb select,.fb input[type=text],.fb textarea,.rev input{background:#171b28;color:#f4f4fb;border:1px solid #393d50;border-radius:9px}.rev{background:linear-gradient(120deg,#151724,#11141e);border:1px solid #303343;border-radius:18px;padding:32px}.rev h2{font:600 23px var(--f-body);letter-spacing:-.035em}.rev p{color:#a4acc0}.limits{border-color:#2d3040;color:#929aaf}.limits h2{font:600 18px var(--f-body);letter-spacing:-.02em}.limits p{color:#929aaf}
+@media(max-width:960px){.hero-layout{grid-template-columns:1fr;gap:45px;padding:74px 0}.drop{min-height:350px}.cols{grid-template-columns:1fr}.col+.col{border-left:0;border-top:1px solid #303343}}
+@media(max-width:600px){body{padding:0 16px 70px}.topbar{height:66px}.topright{font-size:9px}.hero-layout{padding:58px 0;gap:35px}h1{font-size:clamp(44px,11vw,61px)}.lede{font-size:14px}.drop{padding:34px 20px;min-height:370px}.drop strong{font-size:23px}.drop .btn{width:100%}.hero-features span{font-size:10px}.section-heading{margin:50px 0 20px}.sheet-head,.verdict,.col,.foot,.srch,.fb{padding:20px}.rev{padding:23px 18px}.rev .btn{width:100%}}
+.mark{display:flex;align-items:center;justify-content:center}
+.px:empty{display:none}
+.freepdf{margin:0;font-size:13px;color:var(--muted);text-align:center}.freepdf a{color:var(--rust)}
+</style>
+
+<div class="wrap">
+  <nav class="topbar"><div class="wordmark"><span class="mark">C<span class="mark-dot">.</span></span><span>CHECKMAYBE</span></div><div class="topright"><span class="navdot"></span> CREATOR TOOLS <span class="navsep">/</span> PHOTO CHECK</div></nav>
+  <main class="hero-layout"><header>
+    <div class="brand"><span class="tiny-line"></span> THE LISTING PHOTO AUDIT <span class="hero-num">/ 01</span></div>
+    <h1>Before you list it, <em>look closer.</em></h1>
+    <p class="lede">Check camera metadata, editing traces, AI-related markers and Content Credentials before you publish. Get a clear report of what the file reveals — and what it cannot prove.</p>
+    <div class="hero-features"><span><i>01</i> Metadata insights</span><span><i>02</i> AI &amp; edit signals</span><span><i>03</i> Clear next steps</span></div>
+  </header>
+
+  <section class="drop" id="drop" aria-label="Choose photos">
+    <span class="drop-eyebrow">YOUR PRIVATE WORKSPACE</span>
+    <strong>Start with a photo.</strong>
+    <p>JPEG, PNG, WebP or HEIC, up to 20 MB each. Use the original file from your camera roll: photos sent through chat apps or saved from social media lose most of their data.</p>
+    <label class="btn" for="pick">Select your photos <span aria-hidden="true">↗</span></label>
+    <input id="pick" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif" multiple hidden>
+    <div class="privacy"><b>●</b><span>Checked in your browser. Your photos are never uploaded.</span></div>
+    <p class="freepdf">New: the free <a href="https://checkmaybe.gumroad.com/l/dpipva?utm_source=photocheck&utm_medium=tool&utm_campaign=v07" target="_blank" rel="noopener">Listing Photo Checklist</a>, 5 checks before you post.</p>
+    <p class="err" id="err" hidden></p>
+  </section></main>
+
+  <div class="section-heading"><div><span class="eyebrow">THE REPORT</span><h2>Your photo, decoded.</h2></div><span class="section-aside">EXAMPLE REPORT SHOWN BELOW</span></div>
+  <section class="results" id="results" aria-live="polite"></section>
+
+  <div class="section-heading secondary"><div><span class="eyebrow">BEYOND METADATA</span><h2>Look for matches elsewhere.</h2></div></div>
+  <section class="rev" aria-labelledby="revh">
+    <h2 id="revh">Search a listing photo by its address</h2>
+    <p>Marketplaces remove file data, so for a listing photo the best check is a reverse image search. The same photo on a stock site, a wholesale site or another shop is a warning sign. Right-click the listing photo, copy the image address and paste it here.</p>
+    <div class="row"><input id="revurl" type="url" placeholder="https://i.etsystatic.com/…/il_1140xN….jpg" aria-label="Image address"></div>
+    <div class="row" id="revlinks"><a class="btn ghost" data-eng="tineye" href="https://tineye.com/" target="_blank" rel="noopener">Search TinEye</a><a class="btn ghost" data-eng="lens" href="https://lens.google.com/" target="_blank" rel="noopener">Search Google Lens</a><a class="btn ghost" data-eng="bing" href="https://www.bing.com/visualsearch" target="_blank" rel="noopener">Search Bing</a></div>
+    <p class="note">These open the search site in a new tab and send it the image address. No address yet? The buttons open each site, where you can upload a photo yourself.</p>
+  </section>
+
+  <section class="limits">
+    <h2>What this check can and can't tell you</h2>
+    <p>File data can be removed or changed by apps, so missing AI markers do not prove a photo is not AI-made, and camera data does not prove a photo was never edited. Content Credentials are checked with the official C2PA library; signer names are shown as written on the certificate and are not checked against a trust list. Platforms also use their own detection, so this check cannot predict whether a photo will be labeled or a listing removed.</p>
+    <p>Educational information, not legal advice. Not affiliated with Etsy, Meta, Canva or any app named here.</p>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/full.umd.js" integrity="sha384-KrOocIA+lZcNUz2MDavnT/FuX+CbTREJihUi0bp8QUSwhE2AkGTNpv2b7yMbBkx5" crossorigin="anonymous"></script>
+<script>
+const TOOLKIT = "https://checkmaybe.gumroad.com/l/kzhzh?utm_source=photocheck&utm_medium=tool&utm_campaign=v01";
+const MAX = 20 * 1024 * 1024;
+const EDITORS = [["Photoshop","Photoshop"],["PhotoDirector","PhotoDirector"],["PowerDirector","PowerDirector"],["YouCam","YouCam"],["BeautyPlus","BeautyPlus"],["B612","B612"],["PhotoRoom","PhotoRoom"],["Adobe Express","Adobe Express"],["Illustrator","Illustrator"],["Paint.NET","Paint.NET"],["Microsoft Photos","Microsoft Photos"],["Windows Photo","Microsoft Photos"],["Krita","Krita"],["Procreate","Procreate"],["Pixlr","Pixlr"],["Polarr","Polarr"],["Picasa","Picasa"],["ACDSee","ACDSee"],["XnView","XnView"],["IrfanView","IrfanView"],["Luminar","Luminar"],["Capture One","Capture One"],["darktable","darktable"],["Lightroom","Lightroom"],["Canva","Canva"],["Snapseed","Snapseed"],["PicsArt","PicsArt"],["GIMP","GIMP"],["Affinity","Affinity"],["Pixelmator","Pixelmator"],["VSCO","VSCO"],["Meitu","Meitu"],["Fotor","Fotor"],["CapCut","CapCut"],["Photopea","Photopea"],["Picsart","PicsArt"],["Remini","Remini"],["Lensa","Lensa"],["Facetune","Facetune"],["Instagram","Instagram"]];
+const AI_TOKENS = [["trainedAlgorithmicMedia","made with generative AI"],["compositeWithTrainedAlgorithmicMedia","edited with generative AI"],["algorithmicMedia","made by an algorithm"]];
+const GENERATORS = ["Canva AI","Adobe Firefly","Firefly","DALL-E","DALL·E","ChatGPT","OpenAI","Midjourney","Imagen","Gemini","Stable Diffusion","Canva","Microsoft Designer","Bing Image Creator","Meta AI","Leonardo"];
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const kb = n => n > 1048576 ? (n / 1048576).toFixed(1) + " MB" : Math.round(n / 1024) + " KB";
+
+function sniff(bytes) {
+  const h = Array.from(bytes.slice(0, 12)).map(b => b.toString(16).padStart(2, "0")).join("");
+  if (h.startsWith("ffd8ff")) return "JPEG";
+  if (h.startsWith("89504e47")) return "PNG";
+  if (h.startsWith("52494646") && h.slice(16, 24) === "57454250") return "WebP";
+  if (h.slice(8, 16) === "66747970") return "HEIC";
+  return null;
+}
+
+function scan(bytes) {
+  // latin1 view of the whole file: C2PA (JUMBF) labels, XMP and IPTC fields are stored as plain text
+  let txt = ""; const step = 65536;
+  for (let i = 0; i < bytes.length; i += step) txt += String.fromCharCode.apply(null, bytes.subarray(i, i + step));
+  const c2pa = /jumb/.test(txt) && /c2pa/.test(txt);
+  const ai = AI_TOKENS.filter(([t]) => new RegExp(t).test(txt)).map(([, d]) => d);
+  const aiExact = ai.length && txt.includes("compositeWithTrainedAlgorithmicMedia") ? ["edited with generative AI"] : ai.filter(d => d !== "made by an algorithm" || !txt.includes("trainedAlgorithmicMedia"));
+  const gens = GENERATORS.filter(g => txt.includes(g));
+  let cg = null;
+  const ci = txt.indexOf("claim_generator_info");
+  if (ci >= 0) { // CBOR map: ..."name" then a text string
+    const ni = txt.indexOf("name", ci);
+    if (ni > 0 && ni - ci < 40) { let k = ni + 4, h = txt.charCodeAt(k), n = 0;
+      if (h >= 0x60 && h <= 0x77) { n = h - 0x60; k += 1; } else if (h === 0x78) { n = txt.charCodeAt(k + 1); k += 2; }
+      if (n > 1 && n < 100) cg = txt.substr(k, n); }
+  }
+  if (!cg) { const m = txt.match(/claim_generator[^A-Za-z0-9_]{0,8}([A-Za-z0-9 ._/()+-]{3,60})/); if (m) cg = m[1].split(/\s+c2pa|\s+digitalSourceType|\s+trained/)[0]; }
+  const actions = [...new Set((txt.match(/c2pa\.(created|edited|converted|placed|opened|filtered|color_adjustments|cropped|resized|drawing)/g) || []))];
+  const xmp = txt.includes("<x:xmpmeta");
+  const gainmap = txt.includes("hdr-gain-map") || txt.includes("GainMap");
+  const uniq = [...new Set(gens)].filter((g, i, a) => !a.some(o => o !== g && o.includes(g)));
+  if (cg && /c2pa|contentauth/i.test(cg) && uniq.length) cg = uniq[0] + " (" + cg.trim() + ")";
+  const accountIds = /\b(doc|user|brand)=[A-Za-z0-9_-]{6,}/.test(txt);
+  const dst = [...new Set([...txt.matchAll(/digitalsourcetype\/([A-Za-z]+)/gi)].map(x => x[1]).filter(c => DST[c]))];
+  const shotText = /<[^>]*Screenshot|Screenshot<|UserComment[^<]{0,40}Screenshot/i.test(txt) || /\x00Screenshot\x00?/.test(txt);
+  return { c2pa, ai: [...new Set(aiExact)], gens: uniq, cg: cg ? cg.trim() : null, actions, xmp, gainmap, accountIds, dst, shotText };
+}
+
+// IPTC Digital Source Type vocabulary (cv.iptc.org/newscodes/digitalsourcetype)
+const DST = {
+  digitalCapture: ["a camera capture", "g"], computationalCapture: ["a phone camera capture with built-in processing", "g"],
+  negativeFilm: ["a film scan", "g"], positiveFilm: ["a film scan", "g"], print: ["a scan of a print", "g"],
+  humanEdits: ["edited by a person", "a"], minorHumanEdits: ["lightly edited by a person", "a"], compositeCapture: ["a composite of camera captures", "a"],
+  algorithmicallyEnhanced: ["enhanced by software", "a"], dataDrivenMedia: ["made from data", "a"], digitalArt: ["digital art made by a person", "a"],
+  virtualRecording: ["a recording of a virtual scene", "a"], screenCapture: ["a screenshot", "b"], algorithmicMedia: ["made by an algorithm (not trained AI)", "a"],
+  compositeSynthetic: ["a composite that includes synthetic parts", "r"], trainedAlgorithmicMedia: ["made with generative AI", "r"],
+  compositeWithTrainedAlgorithmicMedia: ["edited with generative AI", "r"],
+};
+const SOCIAL = { "1000x1500": "a Pinterest pin", "2000x3000": "a Pinterest pin", "1080x1350": "an Instagram post", "1080x1920": "a story or Reel cover", "1080x1080": "a square social post", "1200x630": "a link preview", "1200x628": "a link preview", "1080x566": "a landscape Instagram post", "1280x720": "a video thumbnail" };
+const AI_DST = ["trainedAlgorithmicMedia", "compositeWithTrainedAlgorithmicMedia", "compositeSynthetic"];
+const SCREENS = ["1080x2448","1080x2400","1080x2340","1080x2412","1080x2460","1080x1920","1440x3200","1440x3088","1170x2532","1179x2556","1284x2778","1290x2796","1125x2436","1242x2688","828x1792","750x1334","1920x1080","2560x1440","1366x768","1536x864","1440x900","2880x1800","3840x2160","1600x900","1280x720"];
+
+let c2paLib = null;
+function loadC2pa() {
+  if (!c2paLib) c2paLib = import("https://cdn.jsdelivr.net/npm/@contentauth/c2pa-web@0.15.3/inline/+esm")
+    .then(async mod => ({ mod, c2pa: await mod.createC2pa() }));
+  return c2paLib;
+}
+const VCODE = {
+  "assertion.dataHash.mismatch": "The image was changed after it was signed, so the record no longer matches the pixels.",
+  "claimSignature.mismatch": "The signature doesn't match the record.",
+  "signingCredential.invalid": "The signing certificate couldn't be validated (it may have expired).",
+  "signingCredential.revoked": "The signing certificate was revoked.",
+};
+async function readC2pa(file, mime) {
+  try {
+    const { mod, c2pa } = await loadC2pa();
+    const rd = await mod.Reader.fromBlob(c2pa, mime, file);
+    if (!rd) return { none: true };
+    const st = await rd.manifestStore(); await rd.free();
+    const man = st.manifests[st.active_manifest] || {};
+    const acts = (man.assertions || []).filter(a => /^c2pa\.actions/.test(a.label)).flatMap(a => (a.data && a.data.actions) || []);
+    const name = x => x && (x.name || (typeof x === "string" ? x : null));
+    const all = Object.values(st.manifests || {});
+    return {
+      issuer: man.signature_info && man.signature_info.issuer,
+      signedAt: man.signature_info && man.signature_info.time,
+      gen: (man.claim_generator_info || []).map(g => g.name).filter(n => n && !/^c2pa|make_test/i.test(n)),
+      agents: [...new Set(acts.map(a => name(a.softwareAgent)).filter(Boolean))],
+      actions: [...new Set(acts.map(a => a.action))],
+      dst: [...new Set(acts.map(a => (a.digitalSourceType || "").split("/").pop()).filter(Boolean))],
+      watermark: acts.some(a => /watermark/.test(a.action)),
+      state: st.validation_state || null,
+      problems: [...new Set((st.validation_status || []).map(v => v.code).filter(c => VCODE[c]))].map(c => VCODE[c]),
+      tampered: (st.validation_status || []).some(v => /dataHash\.mismatch|claimSignature\.mismatch|hash.*mismatch/.test(v.code)),
+      changed: (st.validation_status || []).some(v => /Hash\.mismatch|hash.*mismatch/i.test(v.code)),
+      ingredients: all.reduce((n, mm) => n + ((mm.ingredients || []).length), 0),
+      history: all.length,
+    };
+  } catch (e) { return { error: true }; }
+}
+
+function dims(file, url) {
+  return new Promise(res => { const im = new Image(); im.onload = () => res([im.naturalWidth, im.naturalHeight]); im.onerror = () => res(null); im.src = url; });
+}
+
+async function check(file) {
+  if (!file.size) return { error: file.name + " is empty." };
+  if (file.size > MAX) return { error: file.name + " is " + kb(file.size) + ". The limit is 20 MB." };
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  const type = sniff(bytes);
+  if (!type) return { error: file.name + " doesn't look like a JPEG, PNG, WebP or HEIC image." };
+  let meta = {};
+  try { meta = (await exifr.parse(bytes, { tiff: true, exif: true, gps: true, xmp: true, iptc: true, icc: false, makerNote: true, userComment: true, mergeOutput: true, translateValues: true })) || {}; } catch (e) { meta = {}; }
+  const url = type === "HEIC" ? null : URL.createObjectURL(file);
+  const wh = url ? await dims(file, url) : (meta.ExifImageWidth ? [meta.ExifImageWidth, meta.ExifImageHeight] : null);
+  const s = scan(bytes);
+  const mime = { JPEG: "image/jpeg", PNG: "image/png", WebP: "image/webp", HEIC: "image/heic" }[type];
+  const cr = s.c2pa ? await readC2pa(file, mime) : null;
+  return { file, type, meta, url, wh, s, cr };
+}
+
+function judge(r) {
+  const m = r.meta, s = r.s, cr = r.cr && !r.cr.error && !r.cr.none ? r.cr : null;
+  const name = r.file.name || "";
+  const camera = m.Make || m.Model ? [m.Make, m.Model].filter(Boolean).join(" ") : null;
+  const taken = m.DateTimeOriginal || m.CreateDate || null;
+  const modified = m.ModifyDate || null;
+  const sw = [m.Software, m.CreatorTool, m.HistorySoftwareAgent].filter(Boolean).map(x => String(x).replace(/\b(doc|user|brand)=[A-Za-z0-9_-]+/g, "$1=(hidden)"));
+  const editors = [...new Set(sw.flatMap(x => EDITORS.filter(([k]) => x.toLowerCase().includes(k.toLowerCase())).map(([, n]) => n)))];
+  const firmware = sw.length && !editors.length && (m.Make || m.Model) ? sw[0] : null;
+  const otherApp = sw.length && !editors.length && !firmware ? sw[0] : null;
+  const gps = m.latitude != null || m.GPSLatitude != null;
+  const exposure = m.ExposureTime ? (m.ExposureTime < 1 ? "1/" + Math.round(1 / m.ExposureTime) : m.ExposureTime) + " s" : null;
+
+  // Source type: C2PA actions first, then IPTC/XMP fields
+  const dst = [...new Set([...(cr ? cr.dst : []), ...s.dst])].filter(c => DST[c]);
+  const aiCodes = dst.filter(c => AI_DST.includes(c));
+  const aiMark = aiCodes.length > 0 || (!cr && s.ai.length > 0);
+  const aiWords = aiCodes.length ? aiCodes.map(c => DST[c][0]) : s.ai;
+  const hasCreds = s.c2pa;
+  const tools = [...new Set([...(cr ? [...cr.agents, ...cr.gen] : []), ...s.gens])].filter((g, i, a) => !a.some(o => o !== g && o.toLowerCase().includes(g.toLowerCase())));
+
+  // Consistency checks on camera data
+  const exifWH = m.ExifImageWidth && m.ExifImageHeight ? [m.ExifImageWidth, m.ExifImageHeight] : null;
+  const resized = exifWH && r.wh && !((exifWH[0] === r.wh[0] && exifWH[1] === r.wh[1]) || (exifWH[0] === r.wh[1] && exifWH[1] === r.wh[0]));
+  const gapMin = taken instanceof Date && modified instanceof Date ? Math.round((modified - taken) / 60000) : null;
+  const resaved = gapMin != null && gapMin > 2;
+  const noMakerNote = camera && !m.makerNote && !m.MakerNote;
+  const screenSize = r.wh && (SCREENS.includes(r.wh[0] + "x" + r.wh[1]) || SCREENS.includes(r.wh[1] + "x" + r.wh[0]));
+  const shotName = /^(screenshot|screen shot|螢幕|截圖|截屏|スクリーンショット)/i.test(name);
+  const screenshot = dst.includes("screenCapture") || s.shotText || shotName || (/Screenshot/i.test(String(m.UserComment || "")));
+  const stripped = !camera && !taken && !hasCreds && !aiMark && !editors.length;
+  const sq = r.wh && r.wh[0] === r.wh[1] && [1080, 1440, 540, 640, 720, 1200].includes(r.wh[0]);
+  const uuidName = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(jpe?g|png|webp)$/i.test(name);
+  const chatName = /^\d{13}\.(jpe?g|png|webp)$/i.test(name) || /_\d{3}\.(jpe?g|png)$/i.test(name);
+  const etsyName = /^il_(\d+x\w+|fullxfull)\.\d+_[a-z0-9]+\.(jpe?g|png|webp)$/i.test(name);
+  const socialKind = r.wh ? SOCIAL[r.wh[0] + "x" + r.wh[1]] : null;
+  const graphic = stripped && !screenshot && !etsyName && !chatName && socialKind && (r.type === "PNG" || r.wh[0] !== r.wh[1]);
+
+  let level, title, text;
+  if (etsyName && stripped) { level = "b"; title = "Saved from an Etsy listing";
+    text = "Etsy re-saves every listing photo and removes camera data and AI markers, so a downloaded listing image can't show how it was made. Read the listing description for an AI disclosure, look for buyer photos in the reviews, or ask the seller for an unedited photo."; }
+  else if (graphic) { level = "b"; title = "Looks like a designed graphic, not a photo";
+    text = "No camera data, and the size matches " + socialKind + ". Graphics made in design apps or with code often mix photos, text and AI art, and the file can't show which. If any part was made with AI, say so yourself."; }
+  else if (aiMark) { level = "r"; title = "This file says AI was used";
+    text = "It carries a marker that platforms are known to read (" + aiWords.join(", ") + (tools.length ? ", by " + tools.join(", ") : "") + "). Instagram and Facebook may show an AI label, and Etsy expects you to disclose AI use in the listing."; }
+  else if (screenshot) { level = "b"; title = "This looks like a screenshot";
+    text = "A screenshot isn't a photo of your item. If it shows someone else's post, product or photo, you may not have the rights to use it in a listing."; }
+  else if (hasCreds && cr && cr.tampered) { level = "r"; title = cr.changed ? "This file was changed after it was signed" : "Its Content Credentials signature is broken";
+    text = (cr.changed ? "It has a Content Credentials record, but the image no longer matches it." : "The record's signature doesn't match.") + " Platforms may treat the record as broken. Use the original file if you have it."; }
+  else if (hasCreds) { level = "a"; title = "This file has Content Credentials";
+    text = "A C2PA record is attached" + (cr && cr.issuer ? ", signed by " + cr.issuer : "") + ". It doesn't say generative AI was used, but platforms read these records, so check what it says before you post."; }
+  else if (editors.length) { level = "a"; title = "Edited in " + editors.join(", ");
+    text = "Fine for most listing photos if the item still looks the way it really is. Exporting from an editor often removes AI markers too, so this can't show whether the image started as an AI image. For Etsy's required unedited photo, use a different, straight-from-camera shot."; }
+  else if (camera && (resized || resaved)) { level = "a"; title = "A camera photo that was changed later";
+    text = "The camera data is still there, but " + (resized ? "the image size no longer matches what the camera recorded" : "the file was saved again " + gapMin + " minutes after it was taken") + ". For Etsy's unedited photo, use the original from your camera roll."; }
+  else if (camera) { level = "g"; title = "Looks like a straight-from-camera photo";
+    text = "The file still has its camera data, its original size and no editing app name. That fits Etsy's unedited-photo rule, but file data can't prove a photo was never edited."; }
+  else if (stripped) { level = "b"; title = "This file has almost no data left";
+    text = (sq ? "Its size (" + r.wh[0] + " × " + r.wh[1] + ") is typical of photos saved from social media. " : "") + "Chat apps, social media, screenshots and many design and AI tools save images without this data, so the file can't show where the image came from. If it's your own photo, check the original from your camera roll."; }
+  else { level = "b"; title = "Some data, no clear signal";
+    text = "The file has some technical data but no camera details, editing app or AI marker."; }
+
+  const facts = [
+    ["Format", r.type + (r.wh ? " · " + r.wh[0] + " × " + r.wh[1] : "")],
+    ["File size", kb(r.file.size)],
+    ["Camera", camera || "Not found"],
+    ["Taken", taken ? (taken instanceof Date ? taken.toLocaleString() : String(taken)) : "Not found"],
+    ["Settings", [exposure, m.FNumber ? "f/" + m.FNumber : null, m.ISO ? "ISO " + m.ISO : null].filter(Boolean).join(" · ") || "Not found"],
+    ["Software", sw.length ? sw.join(" · ") : "Not found"],
+  ];
+  if (exifWH && resized) facts.splice(1, 0, ["Size the camera recorded", exifWH[0] + " × " + exifWH[1]]);
+  if (dst.length) facts.push(["Source type", dst.map(c => DST[c][0]).join(" · ")]);
+
+  const sigs = [];
+  sigs.push(aiMark ? ["r", "AI marker found", (aiCodes.length ? "Source type: " : "Marker: ") + aiWords.join(", ") + "."] : ["g", "No AI marker found", "None of the standard AI fields are present. This doesn't prove the image isn't AI-made."]);
+  if (hasCreds) {
+    if (cr) {
+      let d = (cr.issuer ? "Signed by " + cr.issuer + " (name on the certificate; not checked against a trust list). " : "")
+        + (cr.actions.length ? "Steps recorded: " + cr.actions.map(a => a.replace("c2pa.", "")).join(", ") + ". " : "")
+        + (cr.ingredients ? "Made from " + cr.ingredients + " earlier file" + (cr.ingredients > 1 ? "s" : "") + ". " : "");
+      sigs.push([cr.tampered ? "r" : "a", cr.tampered ? (cr.changed ? "Changed after signing" : "Signature broken") : cr.problems.length ? "Content Credentials: certificate issue" : "Content Credentials intact", d + (cr.problems.length ? cr.problems.join(" ") : "The signature matches the file.")]);
+      if (cr.watermark) sigs.push(["a", "Invisible watermark recorded", "The record says a watermark was added to the pixels. It can survive screenshots and re-saves."]);
+    } else {
+      sigs.push(["a", "Content Credentials (C2PA)", (s.cg ? "Written by " + s.cg + ". " : "") + (r.cr && r.cr.error ? "The full check couldn't run in this browser, so the signature wasn't verified." : "")]);
+    }
+  } else sigs.push(["b", "No Content Credentials", "No C2PA record in the file."]);
+  if (tools.length) sigs.push(["a", "Tools named in the file", tools.join(", ")]);
+  sigs.push(editors.length ? ["a", "Editing app named", editors.join(", ")] : otherApp ? ["a", "App named", "The file was last saved by “" + otherApp + "”. There is no camera data, so this is not straight from a camera."] : firmware ? ["g", "Camera software only", "“" + firmware + "” looks like phone or camera firmware, not an editing app."] : ["b", "No software named", "The file doesn't say which app last saved it."]);
+  if (resized) sigs.push(["a", "Size changed after capture", "The camera recorded " + exifWH[0] + " × " + exifWH[1] + "; the file is " + r.wh[0] + " × " + r.wh[1] + ". It was cropped or resized."]);
+  if (resaved) sigs.push(["a", "Saved again later", "Last saved " + (gapMin >= 1440 ? Math.round(gapMin / 1440) + " days" : gapMin >= 60 ? Math.round(gapMin / 60) + " hours" : gapMin + " minutes") + " after it was taken."]);
+  if (noMakerNote && !editors.length) sigs.push(["b", "Camera notes missing", "Phones and cameras usually store their own notes in the file. They're missing, so an app may have re-saved it."]);
+  if (screenshot) sigs.push(["b", "Screenshot", shotName ? "The file name says it's a screenshot." : "The file is marked as a screen capture."]);
+  else if (stripped && screenSize) sigs.push(["b", "Screen-sized image", "No camera data and the size matches a common phone or computer screen, so it may be a screenshot."]);
+  if (s.gainmap && !camera) sigs.push(["g", "Phone HDR data", "An HDR gain map survived, a sign the image came from a phone camera."]);
+  if (graphic) sigs.push(["b", "Social media size", r.wh[0] + " × " + r.wh[1] + " is the usual size for " + socialKind + "."]);
+  if (etsyName && stripped) sigs.push(["b", "Etsy listing image", "The file name matches Etsy's image servers. Etsy keeps only a color profile; everything else is removed on upload."]);
+  if (chatName && stripped) sigs.push(["b", "File name looks like a chat-app save", "Names like this usually come from saving an image out of a chat app such as LINE, which removes camera data. It may also be someone else's photo or screenshot."]);
+  if (uuidName && stripped) sigs.push(["a", "File name looks like an app export", "Names like this usually come from design apps such as Canva, which save images without camera data. Treat it as an edited image."]);
+  if (s.accountIds) sigs.push(["a", "Account IDs in the file", "The file lists a design-app document, user and brand ID (hidden here). Anyone who downloads the original can read them."]);
+  if (gps) sigs.push(["r", "Location saved in the file", "Remove location before you post: anyone who downloads the original can read it."]);
+
+  const todo = [];
+  if (etsyName && stripped) todo.push("Check the listing description: Etsy requires sellers to disclose items made with AI.", "Look for review photos from other buyers; they show the real item.", "Ask the seller for an unedited photo of the actual item. Etsy now requires one on most listings.", "If the photos look misleading, use “Report this item to Etsy” and choose the misleading AI images option.");
+  if (aiMark || tools.length) todo.push('Disclose AI use in your listing description (Etsy requires it). <a href="' + TOOLKIT + '" target="_blank" rel="noopener">Can I Use This?</a> p. 12');
+  if (screenshot || chatName) todo.push('Only use images you made or have permission to use. <a href="https://checkmaybe.gumroad.com/l/baxojo?utm_source=photocheck&utm_medium=tool&utm_campaign=v01" target="_blank" rel="noopener">Can I Sell This?</a>');
+  todo.push("For Etsy, keep at least one unedited photo of the actual item on a real background, unless your item type is an exception.");
+  todo.push("Make sure every photo shows the real color, size, condition and flaws of what the buyer receives.");
+  if (editors.includes("Canva") || tools.some(t => /canva/i.test(t))) todo.push('If you used Canva elements or AI tools, check that your license covers selling the result. <a href="https://checkmaybe.gumroad.com/l/baxojo?utm_source=photocheck&utm_medium=tool&utm_campaign=v01" target="_blank" rel="noopener">Can I Sell This?</a>');
+  if (graphic) todo.push("If the graphic uses AI art or AI-edited photos, disclose it where you post it (for example Pinterest's “AI-modified” setting or your listing description).", "A designed graphic can't be Etsy's required unedited photo; use a real photo of the item for that.");
+  else if (stripped && !screenshot) todo.push("If you made or edited this image with AI, disclose it yourself: the file no longer says so.", "For Etsy's unedited photo, upload the original from your camera roll, not an export from a design app.");
+  todo.push("Keep the original file and the date you took it, in case a listing is questioned.");
+  todo.push('Before you post, run the free <a href="https://checkmaybe.gumroad.com/l/dpipva?utm_source=photocheck&utm_medium=tool&utm_campaign=v07" target="_blank" rel="noopener">Listing Photo Checklist</a> (5 checks, PDF).');
+  return { level, title, text, facts, sigs, todo, pixel: !(screenshot || graphic || aiMark) };
+}
+
+// Pixel check (opt-in): AI-image model run in the browser. The photo never leaves the device.
+const PX = { base: "model/", ort: "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/", line: 0.97, cache: "pixel-check-v1" };
+function cub(x){x=Math.abs(x);const a=-0.5;return x<1?((a+2)*x-(a+3))*x*x+1:x<2?(((x-5)*x+8)*x-4)*a:0}
+function coeffs(inS,outS){const sc=inS/outS,fs=Math.max(sc,1),sup=2*fs,W=[];
+ for(let i=0;i<outS;i++){const ctr=(i+0.5)*sc;let x0=Math.max(0,Math.floor(ctr-sup+0.5)),x1=Math.min(inS,Math.floor(ctr+sup+0.5));const w=[];let t=0;
+  for(let x=x0;x<x1;x++){const v=cub((x-ctr+0.5)/fs);w.push(v);t+=v}W.push([x0,w.map(v=>v/t)])}return W}
+function resize(src,w,h,N){const H=coeffs(w,N),V=coeffs(h,N),tmp=new Float32Array(N*h*3),out=new Float32Array(N*N*3);
+ for(let y=0;y<h;y++)for(let i=0;i<N;i++){const[x0,ws]=H[i];let r=0,g=0,b=0;for(let k=0;k<ws.length;k++){const p=(y*w+x0+k)*4;r+=src[p]*ws[k];g+=src[p+1]*ws[k];b+=src[p+2]*ws[k]}
+  const q=(y*N+i)*3;tmp[q]=Math.min(255,Math.max(0,Math.round(r)));tmp[q+1]=Math.min(255,Math.max(0,Math.round(g)));tmp[q+2]=Math.min(255,Math.max(0,Math.round(b)))}
+ for(let j=0;j<N;j++){const[y0,ws]=V[j];for(let i=0;i<N;i++){let r=0,g=0,b=0;for(let k=0;k<ws.length;k++){const q=((y0+k)*N+i)*3;r+=tmp[q]*ws[k];g+=tmp[q+1]*ws[k];b+=tmp[q+2]*ws[k]}
+  const o=(j*N+i)*3;out[o]=Math.min(255,Math.max(0,Math.round(r)));out[o+1]=Math.min(255,Math.max(0,Math.round(g)));out[o+2]=Math.min(255,Math.max(0,Math.round(b)))}}return out}
+let pxSession = null;
+function loadScript(src) { return new Promise((ok, no) => { const t = document.createElement("script"); t.src = src; t.onload = ok; t.onerror = () => no(new Error("script")); document.head.append(t); }); }
+async function sha256(buf) { const h = await crypto.subtle.digest("SHA-256", buf); return [...new Uint8Array(h)].map(b => b.toString(16).padStart(2, "0")).join(""); }
+async function getPart(cache, url, part) {
+  let res = cache ? await cache.match(url) : null;
+  if (!res) { res = await fetch(url); if (!res.ok) throw new Error("download"); if (cache) { try { await cache.put(url, res.clone()); } catch (e) {} } }
+  const buf = await res.arrayBuffer();
+  if (buf.byteLength !== part.size || await sha256(buf) !== part.sha256) { if (cache) await cache.delete(url); throw new Error("corrupt"); }
+  return buf;
+}
+function loadModel(progress) {
+  return pxSession = pxSession || (async () => {
+    if (typeof ort === "undefined") await loadScript(PX.ort + "ort.wasm.min.js");
+    ort.env.wasm.wasmPaths = PX.ort; ort.env.wasm.numThreads = self.crossOriginIsolated ? Math.min(4, navigator.hardwareConcurrency || 1) : 1;
+    const man = await (await fetch(PX.base + "manifest.json")).json();
+    let cache = null; try { cache = await caches.open(PX.cache); } catch (e) {}
+    const all = new Uint8Array(man.total); let at = 0;
+    for (const part of man.parts) { all.set(new Uint8Array(await getPart(cache, PX.base + part.name, part)), at); at += part.size; progress(Math.round(at / man.total * 100)); }
+    progress(null);
+    return ort.InferenceSession.create(all, { executionProviders: ["wasm"] });
+  })().catch(e => { pxSession = null; throw e; });
+}
+async function pixelScore(url, progress) {
+  const s = await loadModel(progress);
+  const im = new Image(); im.src = url; await im.decode();
+  const k = Math.min(1, 8192 / Math.max(im.naturalWidth, im.naturalHeight)), w = Math.round(im.naturalWidth * k), h = Math.round(im.naturalHeight * k);
+  const cv = document.createElement("canvas"); cv.width = w; cv.height = h; const g = cv.getContext("2d"); g.drawImage(im, 0, 0, w, h);
+  const d = resize(g.getImageData(0, 0, w, h).data, w, h, 256), N = 65536, x = new Float32Array(3 * N), M = [.485, .456, .406], SD = [.229, .224, .225];
+  for (let j = 0; j < N; j++) for (let c = 0; c < 3; c++) x[c * N + j] = (d[j * 3 + c] / 255 - M[c]) / SD[c];
+  const out = await s.run({ pixel_values: new ort.Tensor("float32", x, [1, 3, 256, 256]) });
+  return out.probs.data[0];
+}
+function pixelBlock(r, j, example) {
+  const box = document.createElement("div"); box.className = "srch px";
+  if (example || !r.url || !j.pixel) return box;
+  box.innerHTML = '<div class="row"><strong>Pixel check (optional)</strong><button class="btn ghost" type="button">Run pixel check</button></div>' +
+    '<p class="note">An AI-image model looks at the pixels on your device; the photo is not uploaded. First time: a 199 MB download that stays in your browser, then about 10 seconds on a computer or 30 to 40 seconds on a phone.</p>' +
+    '<p class="note pxout" aria-live="polite"></p>';
+  const btn = box.querySelector("button"), out = box.querySelector(".pxout");
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; out.textContent = "Starting…";
+    try {
+      const sc = await pixelScore(r.url, p => { out.textContent = p == null ? "Preparing the model…" : "Downloading the model: " + p + "%"; });
+      r.pixel = Math.round(sc * 1000) / 1000;
+      out.innerHTML = sc >= PX.line ? '<span class="chip a">Strong AI-like patterns</span> The pixels look like many AI-made images. Pixel checks can be wrong, especially on edited or compressed photos, so treat this as a reason to ask, not proof.'
+        : '<span class="chip b">No strong AI-like patterns</span> That does not prove the image is real: compression, edits and newer AI tools can hide the patterns.';
+      btn.hidden = true;
+    } catch (e) { out.textContent = e.message === "corrupt" ? "The download was damaged. Try again." : "The pixel check couldn't run in this browser (" + (e.message || "error") + ")."; btn.disabled = false; }
+  });
+  return box;
+}
+
+// Reverse image search links
+const ENG = { tineye: u => "https://tineye.com/search?url=" + encodeURIComponent(u), lens: u => "https://lens.google.com/uploadbyurl?url=" + encodeURIComponent(u), bing: u => "https://www.bing.com/images/search?view=detailv2&iss=sbi&q=imgurl:" + encodeURIComponent(u) };
+const HOME = { tineye: "https://tineye.com/", lens: "https://lens.google.com/", bing: "https://www.bing.com/visualsearch" };
+$("#revurl").addEventListener("input", e => { const v = e.target.value.trim(); const ok = /^https?:\/\/\S+$/i.test(v);
+  document.querySelectorAll("#revlinks a").forEach(a => { a.href = ok ? ENG[a.dataset.eng](v) : HOME[a.dataset.eng]; }); });
+
+// Feedback: answers + the check's findings only (no image, file name, location or account IDs)
+const REAL = [["camera", "A straight-from-camera photo"], ["edited", "An edited photo"], ["ai_made", "Made with AI"], ["ai_edited", "A photo edited with AI"], ["screenshot", "A screenshot"], ["not_mine", "Someone else's image"], ["design", "A design or mockup (not a photo)"], ["unsure", "Not sure"]];
+// Feedback goes through a public Google Form (anonymous; the visitor presses Submit on Google's page)
+const FORM = "https://docs.google.com/forms/d/e/1FAIpQLSfg9uYwbop9UluT99vYxWx0rmEMF5z41XexQMlR6C49Fb5DYQ/viewform";
+const FORM_IDS = { right: "entry.1031372084", actual: "entry.2118168332", tool: "entry.920764767", comment: "entry.1367118987", check: "entry.1662659418" };
+const FORM_ACTUAL = { camera: "A straight-from-camera photo", edited: "An edited photo", ai_made: "Made with AI", ai_edited: "A photo edited with AI", screenshot: "A screenshot", not_mine: "Someone else\u2019s image", design: "A design or mockup (not a photo)", unsure: "Not sure" };
+function formUrl(f) {
+  const q = new URLSearchParams({ usp: "pp_url" });
+  for (const k of Object.keys(FORM_IDS)) if (f[k]) q.set(FORM_IDS[k], f[k]);
+  return FORM + "?" + q.toString();
+}
+function nameKind(n) { return /^il_(\d+x\w+|fullxfull)\./i.test(n) ? "etsy" : /^\d{13}\./.test(n) ? "chat13" : /_\d{3}\.(jpe?g|png)$/i.test(n) ? "chat_suffix" : /^[0-9a-f]{8}-[0-9a-f]{4}-/i.test(n) ? "uuid" : /^(screenshot|screen shot|螢幕|截圖)/i.test(n) ? "screenshot" : /^(IMG|PXL|DSC|P)_\d{8}/i.test(n) ? "camera_name" : "other"; }
+function features(r, j) {
+  const m = r.meta || {}, s = r.s || {}, cr = r.cr && !r.cr.error && !r.cr.none ? r.cr : null;
+  return { verdict: j.title, level: j.level, signals: j.sigs.map(x => x[1]).slice(0, 14), type: r.type || null, w: r.wh ? r.wh[0] : null, h: r.wh ? r.wh[1] : null,
+    sizeKB: r.file && r.file.size ? Math.round(r.file.size / 1024) : null, camera: !!(m.Make || m.Model), makerNote: !!(m.makerNote || m.MakerNote), c2pa: !!s.c2pa,
+    c2paChecked: !!cr, issuer: cr && cr.issuer ? String(cr.issuer).slice(0, 80) : null, dst: [...new Set([...(cr ? cr.dst : []), ...(s.dst || [])])].slice(0, 6),
+    tools: [...new Set([...(cr ? [...cr.agents, ...cr.gen] : []), ...(s.gens || [])])].slice(0, 6).map(t => String(t).slice(0, 60)), nameKind: nameKind(r.file.name || r.name || ""), pixel: r.pixel == null ? null : r.pixel };
+}
+function feedbackBlock(r, j, example) {
+  const box = document.createElement("div"); box.className = "fb";
+  if (example) { box.innerHTML = '<p class="note">Check your own photo to rate the result.</p>'; return box; }
+  const id = "fb" + Math.random().toString(36).slice(2, 9);
+  box.innerHTML = '<div class="row"><span>Was this result right?</span><button class="btn ghost" type="button" data-a="yes">Yes</button><button class="btn ghost" type="button" data-a="no">No</button></div>' +
+    '<div class="more" hidden><div class="row"><label for="' + id + 's">What is it really?</label><select id="' + id + 's">' + REAL.map(([v, t]) => '<option value="' + v + '">' + t + '</option>').join("") + '</select>' +
+    '<input id="' + id + 't" type="text" maxlength="60" placeholder="App or AI tool used (optional)" aria-label="App or AI tool used"></div>' +
+    '<textarea id="' + id + 'c" maxlength="500" placeholder="Anything else we should know? (optional, no personal details)" aria-label="Comment"></textarea></div>' +
+    '<div class="row send" hidden><a class="btn" data-a="send" href="' + FORM + '" target="_blank" rel="noopener">Send feedback</a></div>' +
+    '<p class="note">Send opens a short Google Form with your answers and this check\'s findings (format, size, which markers were found) filled in. Nothing is sent until you press Submit there. Never the photo, its file name, location or account IDs. The CheckMaybe team reads what you send, so leave out names, contact details and anything private.</p><p class="note status" aria-live="polite"></p>';
+  let correct = null; const more = box.querySelector(".more"), send = box.querySelector(".send"), status = box.querySelector(".status");
+  // Keep the link's address current at all times: the claude.ai viewer may open a link with the address it had before the click handlers ran.
+  const link = box.querySelector('[data-a="send"]');
+  const update = () => { const check = Object.assign({ tool_version: "0.4" }, features(r, j));
+    link.href = formUrl({ right: correct === null ? null : correct ? "Yes" : "No", actual: correct === false ? FORM_ACTUAL[box.querySelector("#" + id + "s").value] : null,
+      tool: correct === false ? (box.querySelector("#" + id + "t").value || "").trim().slice(0, 60) : null, comment: correct === false ? (box.querySelector("#" + id + "c").value || "").trim().slice(0, 500) : null,
+      check: JSON.stringify(check) }); };
+  update();
+  box.addEventListener("input", update); box.addEventListener("change", update);
+  box.addEventListener("click", e => { const a = e.target.dataset && e.target.dataset.a; if (!a) return;
+    if (a === "yes" || a === "no") { correct = a === "yes"; more.hidden = correct; send.hidden = false; box.querySelectorAll('[data-a="yes"],[data-a="no"]').forEach(b => b.setAttribute("aria-pressed", String(b.dataset.a === a))); update(); return; }
+    if (a === "send") { update(); status.textContent = "The form opened in a new tab. Press Submit there to send it. Thanks!"; } });
+  return box;
+}
+
+function searchBlock(r, example) {
+  const box = document.createElement("div"); box.className = "srch";
+  const etsy = /^il_(\d+x\w+|fullxfull)\./i.test(r.file.name || r.name || "");
+  box.innerHTML = '<div class="row"><strong>Is this image used somewhere else?</strong></div>' +
+    '<div class="row">' + (r.url && !example ? '<button class="btn" type="button" data-copy>Copy image</button>' : '') +
+    '<a class="btn ghost" href="https://lens.google.com/" target="_blank" rel="noopener">Open Google Lens</a>' +
+    '<a class="btn ghost" href="https://tineye.com/" target="_blank" rel="noopener">Open TinEye</a>' +
+    '<a class="btn ghost" href="https://www.bing.com/visualsearch" target="_blank" rel="noopener">Open Bing</a></div>' +
+    '<p class="note">' + (etsy ? "For a listing photo, pasting its image address in the box at the bottom of this page searches all three at once." :
+      "Copy the image, open a search site and paste it (Ctrl+V or ⌘V), or drag the photo file onto the site. The photo goes to that site, not to us.") + '</p>' +
+    '<p class="note cstatus" aria-live="polite"></p>';
+  const btn = box.querySelector("[data-copy]");
+  if (btn) btn.addEventListener("click", async () => {
+    const st = box.querySelector(".cstatus");
+    try {
+      const img = box.closest(".sheet").querySelector("img.thumb"); const im = new Image(); im.src = img.src; await im.decode();
+      const max = 2000, k = Math.min(1, max / Math.max(im.naturalWidth, im.naturalHeight));
+      const cv = document.createElement("canvas"); cv.width = Math.round(im.naturalWidth * k); cv.height = Math.round(im.naturalHeight * k);
+      cv.getContext("2d").drawImage(im, 0, 0, cv.width, cv.height);
+      const blob = await new Promise(res => cv.toBlob(res, "image/png"));
+      await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+      st.textContent = "Copied. Open a search site and paste it.";
+    } catch (e) { st.textContent = "Copying images isn't allowed here. Open a search site and drag the photo file onto it instead."; }
+  });
+  return box;
+}
+
+function render(r, example) {
+  const j = r.j || judge(r);
+  const el = document.createElement("article"); el.className = "sheet";
+  el.innerHTML =
+    '<div class="sheet-head">' + (r.url ? '<img class="thumb" alt="" src="' + r.url + '">' : '<div class="thumb" aria-hidden="true"></div>') +
+    '<div class="name">' + esc(r.name || r.file.name) + '</div>' + (example ? '<span class="tag example">Example result</span>' : '') + '</div>' +
+    '<div class="verdict"><span class="chip ' + j.level + '">' + ({ g: "Lower concern", a: "Check first", r: "Platforms may label it", b: "Not enough data" }[j.level]) + '</span><h2>' + esc(j.title) + '</h2><p>' + esc(j.text) + '</p></div>' +
+    '<div class="cols"><div class="col"><h3>In the file</h3><dl>' + j.facts.map(([k, v]) => '<div><dt>' + k + '</dt><dd>' + esc(v) + '</dd></div>').join("") + '</dl></div>' +
+    '<div class="col"><h3>What platforms can read</h3>' + j.sigs.map(([c, t, d]) => '<div class="sig"><span class="chip ' + c + '">' + esc(t) + '</span><span>' + esc(d) + '</span></div>').join("") + '</div>' +
+    '<div class="col"><h3>Still for you to check</h3><ul class="todo">' + j.todo.map(t => '<li>' + t + '</li>').join("") + '</ul></div></div>' +
+    '<div class="foot"><button class="btn ghost" type="button">Copy report</button><small>Checked ' + new Date().toLocaleDateString() + ' · not legal advice</small></div>';
+  const btn = el.querySelector("button");
+  btn.addEventListener("click", async () => {
+    const text = ["CheckMaybe photo check", (r.name || r.file.name), j.title, j.text, "", "In the file:", ...j.facts.map(([k, v]) => "- " + k + ": " + v), "", "What platforms can read:", ...j.sigs.map(([, t, d]) => "- " + t + ": " + d), "", "Still to check:", ...j.todo.map(t => "- " + t.replace(/<[^>]+>/g, "")), "", "Missing data doesn't prove a photo isn't AI-made or was never edited. Not legal advice."].join("\n");
+    try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
+    catch (e) { const ta = document.createElement("textarea"); ta.value = text; ta.style.cssText = "width:100%;height:200px"; el.querySelector(".foot").append(ta); ta.select(); btn.textContent = "Select and copy the text"; }
+  });
+  el.querySelector(".foot").before(pixelBlock(r, j, example), searchBlock(r, example));
+  el.append(feedbackBlock(r, j, example));
+  return el;
+}
+
+async function handle(files) {
+  const err = $("#err"); err.hidden = true; const box = $("#results");
+  box.querySelectorAll(".sheet").forEach(n => { const i = n.querySelector("img.thumb"); if (i && i.src.startsWith("blob:")) URL.revokeObjectURL(i.src); });
+  box.innerHTML = ""; const errors = [];
+  if (typeof exifr === "undefined") { err.textContent = "The checker couldn't load. Reload the page and try again."; err.hidden = false; return; }
+  for (const f of files) { const r = await check(f); if (r.error) errors.push(r.error); else box.append(render(r)); }
+  if (errors.length) { err.textContent = errors.join(" "); err.hidden = false; }
+}
+
+const drop = $("#drop");
+$("#pick").addEventListener("change", e => handle([...e.target.files]));
+["dragenter", "dragover"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
+["dragleave", "drop"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove("over"); }));
+drop.addEventListener("drop", e => handle([...e.dataTransfer.files]));
+
+// Example result so the page shows what it does before a photo is chosen (made-up values)
+$("#results").append(render({ name: "example-phone-photo.jpg", file: { size: 2263007 }, j: {
+  level: "g", title: "Looks like a straight-from-camera photo",
+  text: "The file still has its camera data and no editing app name. That fits Etsy's unedited-photo rule, but file data can't prove a photo was never edited.",
+  facts: [["Format", "JPEG · 4096 × 2304"], ["File size", "2.2 MB"], ["Camera", "Example phone model"], ["Taken", "2026-10-24 23:17"], ["Settings", "1/60 s · f/1.9 · ISO 75"], ["Software", "Phone firmware build"]],
+  sigs: [["g", "No AI marker found", "None of the standard AI fields are present. This doesn't prove the image isn't AI-made."], ["b", "No Content Credentials", "No C2PA record in the file."], ["g", "Camera software only", "The software field looks like phone firmware, not an editing app."]],
+  todo: ["For Etsy, keep at least one unedited photo of the actual item on a real background, unless your item type is an exception.", "Make sure every photo shows the real color, size, condition and flaws of what the buyer receives.", "Keep the original file and the date you took it, in case a listing is questioned.", 'Before you post, run the free <a href="https://checkmaybe.gumroad.com/l/dpipva?utm_source=photocheck&utm_medium=tool&utm_campaign=v07" target="_blank" rel="noopener">Listing Photo Checklist</a> (5 checks, PDF).'] } }, true));
+</script>

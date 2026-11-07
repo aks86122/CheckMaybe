@@ -102,8 +102,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>${css}</st
       <tr><td><b>Cash-flow</b></td><td class="muted">The debt whose minimum is largest compared with its balance first, so monthly money frees up fastest.</td></tr>
     </table>
   </div>
-  <div class="grid2">
+  <div class="grid2" style="grid-template-columns:repeat(3,1fr)">
     <div class="card"><h3>On your phone</h3><p class="small muted">Install the free Google Sheets app and open the copy from your Drive. Dark mode looks washed out? Tap ⋮ › <b style="color:var(--txt)">View in light theme</b>.</p></div>
+    <div class="card"><h3>Print and color</h3><p class="small muted">The <b style="color:var(--txt)">Print</b> tab turns your plan into a one-page color-in tracker: your debts in payoff order, the real amount in every box and the month you'll reach it. Change your debts and it updates. File › Print.</p></div>
     <div class="card"><h3>Prefer Excel?</h3><p class="small muted">In your Google copy choose File › Download › Microsoft Excel (.xlsx). Everything calculates.</p></div>
   </div>
   ${foot(2)}

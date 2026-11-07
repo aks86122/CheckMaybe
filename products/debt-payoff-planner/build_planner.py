@@ -340,6 +340,100 @@ bc.y_axis.number_format = "#,##0"; dark(bc); bc.width, bc.height = 15, 6.5
 pl["H45"] = "INTEREST + FEES BY ORDER"; pl["H45"].font = F(TEAL, True, 9)
 pl.add_chart(bc, "H46")
 
+# ======================= Print (light, one page, color-in tracker built from the plan) =======================
+from openpyxl.worksheet.properties import PageSetupProperties
+PW, INK, SOFT, SAGE, LILAC, BAND = "FFFFFF", "2E2B36", "8C8798", "6E9B78", "9C82C9", "F1F6F1"
+DEBT_COLORS = [("FBEFEA", "D98C8C"), ("FDF1E3", "D9894A"), ("F1ECF8", "9C82C9"), ("EAF2FA", "5F8FC0"), ("EEF4EE", "6E9B78")]
+FP = lambda c=INK, b=False, s=10, i=False: Font(name="Arial", color=c, bold=b, size=s, italic=i)
+pr = wb.create_sheet("Print"); pr.sheet_view.showGridLines = False
+pr.column_dimensions["A"].width = 2.5
+for k in range(10): pr.column_dimensions[L(2 + k)].width = 9.6
+pr.column_dimensions["L"].width = 2.5
+for r in range(1, 70):
+    for c in range(1, 13): pr.cell(r, c).fill = fill(PW)
+cnt = S["count"]
+start_total = f"SUMPRODUCT(('My Debts'!$D${R0}:$D${RN}>0)*N(+'My Debts'!$D${R0}:$D${RN}))"
+GAP = Side(style="medium", color=PW); GAPB = Border(left=GAP, right=GAP, top=GAP, bottom=GAP)
+LINEB = Border(bottom=Side(style="thin", color="CFC9D9"))
+def box_fill(ws, rng, color):
+    # Google Sheets ignores borders in conditional formats, so boxes are a soft fill with white gaps
+    ws.conditional_formatting.add(rng, FormulaRule(formula=[f'{rng.split(":")[0].replace("$", "")}<>""'],
+                                                   fill=PatternFill(fill_type="solid", fgColor=color, bgColor=color)))  # Excel reads bgColor in conditional fills
+def heading(r, text, color):
+    pr.merge_cells(f"B{r}:K{r}"); pr[f"B{r}"] = text; pr[f"B{r}"].font = FP(color, True, 9)
+    pr[f"B{r}"].alignment = Alignment(vertical="bottom"); pr.row_dimensions[r].height = 22
+
+# title band
+for r in (2, 3, 4):
+    for c in range(2, 12): pr.cell(r, c).fill = fill(BAND)
+pr.merge_cells("B2:K2"); pr["B2"] = "  My Debt-Free Plan"; pr["B2"].font = FP(INK, True, 22)
+pr["B2"].alignment = Alignment(vertical="bottom"); pr.row_dimensions[2].height = 40
+pr.merge_cells("B3:K3")
+pr["B3"] = (f'=IF({cnt}=0,"   Add your debts on My Debts first.",'
+            f'IF(ISNUMBER(Plan!$I$5),"   Debt-free by "&TEXT(Plan!$I$5,"mmm yyyy")&"   ·   "&TEXT({start_total},"#,##0")&" to clear   ·   "&{cnt}&" debts   ·   "&Plan!$C$9,'
+            f'"   Your plan doesn\'t finish within 30 years: raise the monthly amount on Plan."))')
+pr["B3"].font = FP(SAGE, False, 10, True); pr.row_dimensions[3].height = 20; pr.row_dimensions[4].height = 8
+
+heading(6, "✦  TOTAL DEBT  ·  color one box each time you reach it (the month is when your plan gets there)", SAGE)
+for k in range(1, 21):
+    row = 7 if k <= 10 else 10; col = L(2 + (k - 1) % 10)
+    thr = f"{start_total}*(1-{k}/20)"
+    hit = f"MATCH(1,INDEX((Schedule!$D$6:$D${5 + MONTHS}<={thr}+0.005)*1,0),0)"
+    a = pr[f"{col}{row}"]; a.value = f'=IF({cnt}=0,"",TEXT({k * 5},"0")&"%")'
+    a.font = FP(SAGE, True, 12); a.alignment = Alignment(horizontal="center", vertical="bottom")
+    a.border = Border(left=GAP, right=GAP, top=GAP); a.fill = fill("EEF4EE")
+    b = pr[f"{col}{row + 1}"]
+    b.value = f'=IF({cnt}=0,"",IFERROR(TEXT(INDEX(Schedule!$B$6:$B${5 + MONTHS},{hit}),"mmm yy"),"-"))'
+    b.font = FP(SOFT, False, 8); b.alignment = Alignment(horizontal="center", vertical="top")
+    b.border = Border(left=GAP, right=GAP, bottom=GAP); b.fill = fill("EEF4EE")
+    pr.row_dimensions[row].height = 30; pr.row_dimensions[row + 1].height = 16
+pr.row_dimensions[9].height = 4
+
+heading(20, "♡  EACH DEBT, IN YOUR PAYOFF ORDER  ·  color one box for every 10% paid off", "D98C8C")
+SHOW = 8
+for k in range(1, SHOW + 1):
+    r = 21 + (k - 1) * 4; src = 30 + k; bg, acc = DEBT_COLORS[(k - 1) % len(DEBT_COLORS)]
+    pr.merge_cells(f"B{r}:G{r}")
+    pr[f"B{r}"] = f'=IF(Plan!$C${src}="","","{chr(0x2460 + k - 1)}  "&Plan!$C${src}&"   ·   "&TEXT(Plan!$D${src},"#,##0"))'
+    pr[f"B{r}"].font = FP(INK, True, 11); pr[f"B{r}"].alignment = Alignment(vertical="bottom")
+    pr.merge_cells(f"H{r}:K{r}")
+    pr[f"H{r}"] = f'=IF(Plan!$C${src}="","",IF(ISNUMBER(Plan!$F${src}),"Cleared by "&TEXT(Plan!$F${src},"mmm yyyy"),"Not cleared in 30 yrs"))'
+    pr[f"H{r}"].font = FP(acc, True, 10); pr[f"H{r}"].alignment = Alignment(horizontal="right", vertical="bottom")
+    pr.row_dimensions[r].height = 22
+    for c in range(10):
+        col = L(2 + c)
+        x = pr[f"{col}{r + 1}"]; x.value = f'=IF(Plan!$C${src}="","",TEXT(Plan!$D${src}/10,"#,##0"))'
+        x.font = FP(SOFT, False, 8); x.alignment = Alignment(horizontal="center", vertical="center"); x.border = GAPB
+    box_fill(pr, f"B{r + 1}:K{r + 1}", bg)
+    pr.row_dimensions[r + 1].height = 26
+    pr.merge_cells(f"B{r + 2}:K{r + 2}")
+    pr[f"B{r + 2}"] = f'=IF(Plan!$C${src}="","",Plan!$G${src})'
+    pr[f"B{r + 2}"].font = FP(SOFT, False, 8, True); pr.row_dimensions[r + 2].height = 15
+    pr.row_dimensions[r + 3].height = 6
+
+w = 13
+heading(w, "✎  MY WHY  ·  the reason I'm doing this", LILAC)
+for r in (w + 1, w + 2):
+    for c in range(2, 12): pr.cell(r, c).border = LINEB
+    pr.row_dimensions[r].height = 26
+pr.row_dimensions[w + 3].height = 8
+heading(w + 4, "★  WHEN I'M DEBT-FREE, I'LL CELEBRATE WITH", "D9894A")
+for c in range(2, 12): pr.cell(w + 5, c).border = LINEB
+pr.row_dimensions[w + 5].height = 26
+foot = 21 + SHOW * 4
+pr.merge_cells(f"B{foot}:K{foot}")
+pr[f"B{foot}"] = (f'=IF({cnt}>{SHOW},"+ "&({cnt}-{SHOW})&" more debts on the Plan tab.  ","")&'
+                  '"Built from your Plan tab: change My Debts or Plan and this page updates. Estimates only, not financial advice."')
+pr[f"B{foot}"].font = FP(SOFT, False, 7, True); pr[f"B{foot}"].alignment = Alignment(wrap_text=True)
+pr.merge_cells(f"B{foot + 1}:K{foot + 1}"); pr[f"B{foot + 1}"] = "✓ CheckMaybe"; pr[f"B{foot + 1}"].font = FP(SAGE, True, 8)
+pr[f"B{foot + 1}"].alignment = Alignment(horizontal="right")
+pr.print_area = f"A1:L{foot + 1}"
+pr.page_setup.orientation = "portrait"; pr.page_setup.paperSize = pr.PAPERSIZE_LETTER
+pr.sheet_properties.pageSetUpPr = PageSetupProperties(fitToPage=True)
+pr.page_setup.fitToWidth = 1; pr.page_setup.fitToHeight = 1
+pr.page_margins.left = pr.page_margins.right = 0.4; pr.page_margins.top = pr.page_margins.bottom = 0.45
+pr.print_options.horizontalCentered = True
+
 # ======================= Start Here =======================
 hw = sheet("Start Here", {"A": 3, "B": 112}, rows=30, cols=3)
 title(hw, "Start here", "10 minutes to set up. Works with any currency.")
@@ -354,6 +448,10 @@ steps = ["1. My Debts: one row per debt. Fill the blue columns. Only Name, Balan
          "3. Plan: pick a payoff order and compare all four. Smart is CheckMaybe's default:",
          "   behind-on-payments first → deferred-interest deadlines → highest APR (or, if minimums take 35%+ of income, the debt that frees up the most monthly money).",
          "4. Schedule: month by month, what's left on each debt.",
+         "5. Print: a one-page color-in tracker built from your plan. File › Print (or Download as PDF) and color a box as you go.",
+         "   • Every amount, month and note on it comes from My Debts and Plan: change those and this page updates. Print it again after big changes.",
+         "   • Shows up to 8 debts in your payoff order. Each box = 10% of that debt. Top boxes = every 5% of your total.",
+         "   • My why and the celebration line are for you to write by hand.",
          "",
          "How the extra money moves: every month all minimums get paid; whatever's left goes to the #1 debt that is allowed to take extra.",
          "When a debt is cleared, its minimum rolls into the next one. Interest is APR ÷ 12 each month.",
@@ -364,8 +462,8 @@ for i, s in enumerate(steps):
     hw[f"B{5 + i}"] = s; hw[f"B{5 + i}"].font = F(TXT if s[:1].isdigit() else MUTED, s[:1].isdigit(), 10)
     hw[f"B{5 + i}"].alignment = Alignment(wrap_text=True, vertical="top")
 wb.move_sheet("Start Here", -(len(wb.sheetnames) - 1))
-order = ["Start Here", "Plan", "My Debts", "Schedule"] + CALC
+order = ["Start Here", "Plan", "My Debts", "Schedule", "Print"] + CALC
 wb._sheets = [wb[n] for n in order]
 wb.active = 1
-for ws in wb.worksheets: ws.sheet_properties.tabColor = {"Plan": ORANGE, "Start Here": TEAL, "My Debts": BLUE}.get(ws.title, "3A3F58")
+for ws in wb.worksheets: ws.sheet_properties.tabColor = {"Plan": ORANGE, "Start Here": TEAL, "My Debts": BLUE, "Print": "6E9B78"}.get(ws.title, "3A3F58")
 wb.save("Debt-Payoff-Planner.xlsx"); import sys, os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "build")); import excel_compat; excel_compat.fix("Debt-Payoff-Planner.xlsx"); print("saved", wb.sheetnames)

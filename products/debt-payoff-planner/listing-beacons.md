@@ -1,4 +1,4 @@
-# Debt Payoff Planner — Beacons listing (v1, 2026-10-05)
+# Debt Payoff Planner — Beacons listing (v1.1, 2026-11-07)
 
 ## Title
 ```
@@ -15,8 +15,9 @@ Snowball or avalanche? Compare both, plus 2 more payoff orders.
 ✔ Early-payoff fee check: pay early only when it's worth it
 ✔ 0% and promo deadlines, with a warning if an order misses one
 ✔ Only 4 things needed per debt; any currency
+✔ Printable color-in tracker made from your own plan
 Google Sheets template (PDF with copy link). Works in Excel too.
 Estimates only, not financial advice.
 ```
 
-Image: `images/beacons/`.
+Images: `images/beacons/` (product + `-beacons-print.png` for the Print tab).

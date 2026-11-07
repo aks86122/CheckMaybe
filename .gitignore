@@ -8,3 +8,4 @@ products/build/*.html
 products/build/*.pdf
 products/build/*-report.json
 products/build/*-sheet.png
+tools/photo-check/model/

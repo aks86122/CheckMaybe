@@ -42,6 +42,12 @@ def p_cover(p, meta):
     inside = "".join(f"<li>{E(s)}</li>" for s in p.get("inside", []))
     legal = "".join(f"<div>{E(s)}</div>" for s in p.get("legal", []))
     q = f'<p class="cv-quote">{E(p["quote"])}</p>' if p.get("quote") else ""
+    key = "" if p.get("nokey") else f'''  <div class="cv-key"><div class="cv-key-h">HOW TO READ THE SIGNALS</div>
+    <div class="cv-key-row">{pill("GREEN","GREEN-LEANING")}<span>Official terms generally support it, under stated conditions</span></div>
+    <div class="cv-key-row">{pill("AMBER","AMBER")}<span>Depends on conditions you must check</span></div>
+    <div class="cv-key-row">{pill("RED","RED")}<span>Prohibited or high concern — stop</span></div>
+    <div class="cv-key-row">{pill("VERIFY","VERIFY")}<span>Not yet checked against official text</span></div>
+    <div class="cv-key-note">First-pass signals, not permission. Always confirm the current official terms.</div></div>'''
     return f'''<section class="page cover">
   <div class="cv-top">{E(p.get("topline"))}</div>
   <div class="cv-brand">CHECKMAYBE</div>
@@ -51,12 +57,7 @@ def p_cover(p, meta):
   <p class="cv-value">{E(p.get("value"))}</p>
   <div class="cv-steps">{steps}</div>
   {q}
-  <div class="cv-key"><div class="cv-key-h">HOW TO READ THE SIGNALS</div>
-    <div class="cv-key-row">{pill("GREEN","GREEN-LEANING")}<span>Official terms generally support it, under stated conditions</span></div>
-    <div class="cv-key-row">{pill("AMBER","AMBER")}<span>Depends on conditions you must check</span></div>
-    <div class="cv-key-row">{pill("RED","RED")}<span>Prohibited or high concern — stop</span></div>
-    <div class="cv-key-row">{pill("VERIFY","VERIFY")}<span>Not yet checked against official text</span></div>
-    <div class="cv-key-note">First-pass signals, not permission. Always confirm the current official terms.</div></div>
+  {key}
   <div class="cv-inside"><div class="cv-inside-h">WHAT’S INSIDE</div><ul>{inside}</ul></div>
   <div class="cv-legal">{legal}</div>
 </section>'''

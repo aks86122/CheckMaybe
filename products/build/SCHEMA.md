@@ -24,7 +24,8 @@ Every PAGE has: `"type"`, `"kicker"` (small top-left label, e.g. "02 · DECISION
  "quote":"optional short quote",
  "steps":["IDENTIFY","CLASSIFY","VERIFY","PUBLISH"],
  "inside":["DECISION PATH","QUICK MAPS","20 SCENARIOS","CHECKLIST + WORKSHEETS"],
- "legal":["VERSION 3.1 · CHECKMAYBE","EDUCATIONAL INFORMATION — NOT LEGAL ADVICE","CANVA IS A TRADEMARK OF ITS RESPECTIVE OWNER"]}
+ "legal":["VERSION 3.1 · CHECKMAYBE","EDUCATIONAL INFORMATION — NOT LEGAL ADVICE","CANVA IS A TRADEMARK OF ITS RESPECTIVE OWNER"],
+ "nokey":false}   // optional: true hides the signal key (products without signals)
 ```
 
 ## steps  (how-to-use, frameworks, decision maps, audits)

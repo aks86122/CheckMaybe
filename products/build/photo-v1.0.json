@@ -1,0 +1,150 @@
+{
+ "meta": {
+  "product": "Listing Photo Checklist",
+  "subtitle": "5 checks before you post a product photo",
+  "footer": "LISTING PHOTO CHECKLIST · CHECKMAYBE · FREE",
+  "version": "1.0"
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "kicker": "CHECKMAYBE",
+   "tag": "FREE · VERSION 1.0",
+   "topline": "CHECKMAYBE — FREE EDUCATIONAL RESOURCE, NOT LEGAL ADVICE",
+   "title": "Listing Photo Checklist",
+   "subtitle": "5 checks before you post a product photo",
+   "value": "What your photo file tells marketplaces, platforms and buyers, and what to fix before you list.",
+   "quote": "“The photo is part of the listing. So is what the file says.”",
+   "steps": [
+    "CHECK THE FILE",
+    "FIX WHAT IT SHOWS",
+    "DISCLOSE",
+    "LIST"
+   ],
+   "inside": [
+    "5 CHECKS",
+    "FREE PHOTO CHECK TOOL",
+    "ETSY PHOTO RULES, OCT 2026",
+    "OFFICIAL SOURCES"
+   ],
+   "legal": [
+    "VERSION 1.0 · CHECKMAYBE",
+    "FOR EDUCATIONAL AND INFORMATIONAL PURPOSES ONLY",
+    "NOT AFFILIATED WITH ETSY, META OR ANY APP NAMED"
+   ],
+   "nokey": true
+  },
+  {
+   "type": "steps",
+   "kicker": "01 · THE CHECKLIST",
+   "tag": "5 CHECKS",
+   "style": "numbered",
+   "title": "5 checks before you post a product photo",
+   "lead": "Run these on every listing photo, especially photos you edited or made with AI.",
+   "steps": [
+    {
+     "title": "Keep one unedited photo",
+     "text": "Most Etsy listings now need one unedited photo of the actual item on a real background. Keep the original from your camera roll."
+    },
+    {
+     "title": "Say so if AI made or edited it",
+     "text": "Many AI tools write a marker into the file that platforms read. Etsy expects AI use in the listing description; Instagram and Facebook may label it."
+    },
+    {
+     "title": "Remove a saved location",
+     "text": "Phone photos can store where they were taken, and anyone who downloads the original file can read it. Remove it before you share originals."
+    },
+    {
+     "title": "Check what else the file says",
+     "text": "The camera, the date and the editing app can stay in the file. Make sure nothing there contradicts what your listing says."
+    },
+    {
+     "title": "Show the real item",
+     "text": "Color, size, condition and flaws should match what the buyer receives. If the item is materially different, you may have to refund."
+    }
+   ],
+   "callout": {
+    "label": "KEEP THE ORIGINALS",
+    "text": "Chat apps, social media and many design tools save images without their data. Keep the original files and the date you took them, in case a listing is questioned.",
+    "tone": "amber"
+   }
+  },
+  {
+   "type": "steps",
+   "kicker": "02 · FREE TOOL",
+   "tag": "PHOTO CHECK",
+   "style": "numbered",
+   "title": "Check a photo in 30 seconds",
+   "lead": "CheckMaybe Photo Check reads the file in your browser. Your photo is never uploaded. checkmaybe-photo-check.pages.dev",
+   "steps": [
+    {
+     "title": "Open Photo Check",
+     "text": "On a computer or phone: checkmaybe-photo-check.pages.dev"
+    },
+    {
+     "title": "Choose the original file",
+     "text": "Pick it from your camera roll or folder, not a copy sent through a chat app or saved from social media."
+    },
+    {
+     "title": "Read the verdict",
+     "text": "See the camera data, editing apps, AI markers, Content Credentials and saved location the file still carries."
+    },
+    {
+     "title": "Do the to-do list",
+     "text": "Under “Still for you to check”: what to disclose, what to remove and which photo can be your unedited one."
+    }
+   ],
+   "callout": {
+    "label": "WHAT IT CAN’T PROVE",
+    "text": "Missing AI markers don’t prove an image isn’t AI-made, and camera data doesn’t prove a photo was never edited. Platforms also use their own detection.",
+    "tone": "dark"
+   }
+  },
+  {
+   "type": "sources",
+   "kicker": "03 · SOURCES",
+   "tag": "OFFICIAL SOURCES",
+   "title": "Official sources",
+   "lead": "Rules change. Check the current version before you rely on it.",
+   "sources": [
+    {
+     "name": "Etsy — Listing Image Requirements",
+     "url": "https://www.etsy.com/legal/policy/listing-image-requirements/253962679005",
+     "date": "Checked 24 October 2026",
+     "note": "Last updated October 22, 2026"
+    },
+    {
+     "name": "Etsy — What’s Etsy’s Stance on AI Creations?",
+     "url": "https://www.etsy.com/seller-handbook/article/1275449912004",
+     "date": "Checked 24 October 2026",
+     "note": "Updated October 22, 2026"
+    },
+    {
+     "name": "Etsy — Important updates to AI use on Etsy",
+     "url": "https://www.etsy.com/seller-handbook/article/1522733284810",
+     "date": "Checked 24 October 2026",
+     "note": "Published October 22, 2026"
+    },
+    {
+     "name": "Meta — Labeling AI-generated images on Facebook, Instagram and Threads",
+     "url": "https://about.fb.com/news/2024/02/labeling-ai-generated-images-on-facebook-instagram-and-threads/",
+     "date": "Published February 6, 2024",
+     "note": "Says Meta reads C2PA and IPTC metadata"
+    },
+    {
+     "name": "C2PA — Content Credentials",
+     "url": "https://c2pa.org/",
+     "date": "Standard used by Photo Check",
+     "note": "How AI tools sign and label images"
+    }
+   ],
+   "notes": [
+    "Photo Check facts come from CheckMaybe’s own tests in October 2026: ChatGPT and Canva AI images carried AI markers; photos saved from chat apps and Etsy listings had their data removed."
+   ],
+   "closing": {
+    "label": "VERSION 1.0 · CHECKMAYBE",
+    "text": "Free educational resource, not legal advice. Independent; not affiliated with Etsy, Meta or any app named. Want the full rules for AI-made products? Can I Use This? covers AI tool terms, Etsy’s AI rules and 15 scenarios."
+   }
+  }
+ ]
+}

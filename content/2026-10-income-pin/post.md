@@ -1,5 +1,7 @@
 # The $9,000/month pin vs. the post it links to (draft, 2026-10)
 
+Status: published (founder, 2026-10-17; exact date to fill in).
+
 Source checked 2026-10-10: a Pinterest pin ("How I make over $9,000 from home online every month", stock photo of a woman holding cash) linking to a 2018 blog income report titled $5,532.13. Prior months in the same series: $703.57, $2,797.64, $4,509.50, $4,798.01. Income: blog ads, hosting affiliate commissions, a free email course leading to sign-ups. The author writes she was "making ~$0 and struggling for many months" and that traffic and earnings were "quite volatile".
 Not naming the blog and not calling the author a liar: the teardown is about the pin headline vs. the post. Slide 1 recreates the pin's text only (no original image).
 Slides: `income-pin-01..06.png` (864×1080 @1.25), built by `build.py`.

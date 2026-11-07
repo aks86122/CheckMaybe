@@ -14,6 +14,10 @@ Every product description (Gumroad, Etsy, Beacons) follows the `listing-copy` sk
 
 Posts live in `content/`. Instagram captions stay short: one pain-point line, one action line (e.g. "→ link in bio"), one disclaimer line, about 5 hashtags. The carousel slides carry the detail. Facebook and Threads versions can be full length. Quotes must match the saved official source word for word.
 
+One post when it fits (founder decision 2026-10-27): a Threads post that fits in one post stays one post, no thread replies. Links and the disclosure go at the end of the main post. Split only when the text is over Threads' length limit. Substack Notes follow the same rule.
+
+Comic format (founder decision 2026-10-17): from now on, carousels are comics with the CheckMaybe mascots (checkbox for teardowns, receipt for money/debt posts). See `content/mascots.md`; template `content/2026-10-comic-01/build.py`. Posts made before this date stay as they are.
+
 ## J AI Agency v1.1
 
 This repo uses the J AI Agency operating pack in `.agents/j-ai-agency/`. Its rules apply to every task:
@@ -41,3 +45,6 @@ Hard limits:
 - Default to handling a task yourself or with one subagent; never launch the whole team without explicit approval.
 - Auth, payments, database, API, secrets, uploads or production → Engineering + Security + QA, then stop for human approval.
 - Never deploy, publish, create paid infrastructure, change production data, or expose credentials without explicit approval.
+
+## Drafting workflow (founder 2026-10-17)
+Every post follows the 6 steps in `docs/content-workflow.md`. Step 4 (the 3-reader check) runs before any draft goes to J.
