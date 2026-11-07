@@ -367,3 +367,4 @@ et8 link: `https://checkmaybe.substack.com/p/selling-to-the-us-from-outside-it?u
 et8 title: `Selling to the US From Outside It? Etsy's DDP Rule, What It Does and Doesn't Say`
 et8 description: `Since July 9, 2026, Etsy requires Delivered Duty Paid shipping on US orders to qualify for Purchase Protection. Ship with duties unpaid and you may owe the refund if the buyer opens a case. Digital listings aren't subject to tariffs. Etsy's pages don't say non-DDP listings are hidden from search. Not legal advice; not affiliated with Etsy. #etsyseller #etsytips #internationalshipping`
 et8 alt: `Startled cartoon checkmark mascot next to a list: duties unpaid, you may owe the refund; digital listings, no tariffs; hidden from search, not in Etsy's rules.`
+et9 link: `https://checkmaybe.substack.com/p/etsy-is-holding-part-of-your-money?utm_source=pinterest&utm_medium=social&utm_campaign=et9` (s1 published 2026-11-07)
