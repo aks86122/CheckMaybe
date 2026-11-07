@@ -1,10 +1,10 @@
-# Substack上傳內容：s1到s4（2026-11-10～11-19）
+# Substack上傳內容：s1到s4（2026-11-07～11-11）
 
 每篇照這個順序：Continue → 受眾Everyone、寄email → Send test email給自己，點一次連結 → Schedule（台灣時間22:00，美東早上9:00）。
 文章裡的網址貼上後會自動變連結。「要加的連結」是把那幾個字反白，按連結按鈕貼上網址。
 Note（短貼文）在發文當天手動發，發的時候附上這篇文章的連結。
 
-## s1｜排程：11/10（二） 22:00（台灣）
+## s1｜排程：11/7（六） 22:00（台灣）
 
 **Title**
 ```
@@ -52,7 +52,7 @@ Etsy holding part of your sales? Two lines from Etsy's own pages that most selle
 The fastest release is per order: add tracking Etsy can verify as in transit.
 ```
 
-## s2｜排程：11/12（四） 22:00（台灣）
+## s2｜排程：11/8（日） 22:00（台灣）
 
 **Title**
 ```
@@ -70,11 +70,11 @@ Here's a made-up example from the sheet I use. Four holiday purchases go on paym
 
 Not every plan is 0%, either. In the same example, a $499 console paid as 6 × $89.50 comes to $537. That works out to about 25.7% APR. A $649 TV as 12 × $59 comes to $708, about 16.4% APR. The monthly price looked fine in both cases. The total didn't.
 
-So before you click "pay later" this week, run five quick checks. What will I pay in total? Roughly what yearly rate is that? What happens if I'm late, or don't finish on time? When does the first payment leave? And what else is due that month?
+So before you click "pay later" this season, run five quick checks. What will I pay in total? Roughly what yearly rate is that? What happens if I'm late, or don't finish on time? When does the first payment leave? And what else is due that month?
 
 The fourth one catches people more than you'd think. Some plans take the first payment at checkout, some two weeks later, and they don't line up with payday.
 
-The last one is the reason this post exists. Write every plan you start this week on one list, with its dates, and look at January as a single number.
+The last one is the reason this post exists. Write every plan you start between now and Christmas on one list, with its dates, and look at January as a single number.
 
 I made a free 12-page guide with these five checks, a one-page summary and a fill-in list for your plans: https://checkmaybe.gumroad.com/l/cbmfye?utm_source=substack&utm_medium=email&utm_campaign=s2
 
@@ -91,7 +91,7 @@ Made-up example: December's payments $498.00, January's $428.25, and February to
 None of that is on the checkout page. Add your plans up before Black Friday, not after.
 ```
 
-## s3｜排程：11/17（二） 22:00（台灣）
+## s3｜排程：11/9（一） 22:00（台灣）
 
 **Title**
 ```
@@ -128,7 +128,7 @@ $49.08 more for the same TV. Check the plan total, not the monthly price.
 (Made-up example.)
 ```
 
-## s4｜排程：11/19（四） 22:00（台灣）
+## s4｜排程：11/11（三） 22:00（台灣）
 
 **Title**
 ```

@@ -9,10 +9,10 @@ UTM for links in posts: `?utm_source=substack&utm_medium=email&utm_campaign=<pos
 
 | Date | Section | Post | Ends with | Status |
 | --- | --- | --- | --- | --- |
-| Tue 11/10 | Can I sell it? | s1 Etsy payment reserve | Free 5-Minute Pre-Publish Audit | Ready (quotes verified 11/1) |
-| Thu 11/12 | Before you pay | s2 Black Friday on pay-in-4 | Free guide Before You Click "Pay Later" | Ready |
-| Tue 11/17 | Before you pay | s3 Is that Black Friday deal real? | Holiday Hidden Cost Tracker | Ready |
-| Thu 11/19 | Before you pay | s4 Snowball or avalanche: check your 0% end dates first | Debt Payoff Planner (Print tab) | Ready |
+| Sat 11/7 (moved up, J 11/7) | Can I sell it? | s1 Etsy payment reserve | Free 5-Minute Pre-Publish Audit | Ready (quotes verified 11/1) |
+| Sun 11/8 (moved up) | Before you pay | s2 Black Friday on pay-in-4 | Free guide Before You Click "Pay Later" | Ready |
+| Mon 11/9 (moved up) | Before you pay | s3 Is that Black Friday deal real? | Holiday Hidden Cost Tracker | Ready |
+| Wed 11/11 (moved up) | Before you pay | s4 Snowball or avalanche: check your 0% end dates first | Debt Payoff Planner (Print tab) | Ready |
 | Tue 11/24 | Can I sell it? | s5 topic from that week's seller threads | per topic | Draft that week (needs J to paste the official pages) |
 | Thu 11/26 | none | Thanksgiving: no post | | |
 | Sat 11/28 | Build log | s6 Month 1 numbers | none | Needs J's numbers (Substack subs, views, Gumroad sales/sources) |
@@ -23,13 +23,13 @@ Before publishing each one: J reads, checks the link works, adds the pin (pt/et 
 
 ---
 
-## s1 · Tue 11/10 · Can I sell it?
+## s1 · Sat 11/7 · Can I sell it?
 Use the draft in `content/2026-11-etsy-ddp-reserve-posts.md` → "Topic 2 drafts" (title, subtitle, body, links, Note, pin et9). Add this last paragraph before the disclaimer:
 ```
 If you'd rather catch problems before Etsy does, the free 5-Minute Pre-Publish Audit is the checklist I run before a listing goes live: https://checkmaybe.gumroad.com/l/zqjszy?utm_source=substack&utm_medium=email&utm_campaign=s1
 ```
 
-## s2 · Thu 11/12 · Before you pay
+## s2 · Sun 11/8 · Before you pay
 Title: `Black Friday on pay-in-4? Add up January before you check out`
 Subtitle: `Each plan looks small on its own. The bill that matters is the month they all land.`
 ```
@@ -39,11 +39,11 @@ Here's a made-up example from the sheet I use. Four holiday purchases go on paym
 
 Not every plan is 0%, either. In the same example, a $499 console paid as 6 × $89.50 comes to $537. That works out to about 25.7% APR. A $649 TV as 12 × $59 comes to $708, about 16.4% APR. The monthly price looked fine in both cases. The total didn't.
 
-So before you click "pay later" this week, run five quick checks. What will I pay in total? Roughly what yearly rate is that? What happens if I'm late, or don't finish on time? When does the first payment leave? And what else is due that month?
+So before you click "pay later" this season, run five quick checks. What will I pay in total? Roughly what yearly rate is that? What happens if I'm late, or don't finish on time? When does the first payment leave? And what else is due that month?
 
 The fourth one catches people more than you'd think. Some plans take the first payment at checkout, some two weeks later, and they don't line up with payday.
 
-The last one is the reason this post exists. Write every plan you start this week on one list, with its dates, and look at January as a single number.
+The last one is the reason this post exists. Write every plan you start between now and Christmas on one list, with its dates, and look at January as a single number.
 
 I made a free 12-page guide with these five checks, a one-page summary and a fill-in list for your plans: https://checkmaybe.gumroad.com/l/cbmfye?utm_source=substack&utm_medium=email&utm_campaign=s2
 
@@ -59,7 +59,7 @@ None of that is on the checkout page. Add your plans up before Black Friday, not
 ```
 Pin: tg2b or r2 (already built), link to this post with utm_campaign=s2.
 
-## s3 · Tue 11/17 · Before you pay
+## s3 · Mon 11/9 · Before you pay
 Title: `Is that Black Friday deal real? Three numbers to check first`
 Subtitle: `The usual price, the price at checkout, and the price on a payment plan.`
 ```
@@ -87,7 +87,7 @@ $49.08 more for the same TV. Check the plan total, not the monthly price.
 ```
 Pin: bf3 (already built), link to this post with utm_campaign=s3.
 
-## s4 · Thu 11/19 · Before you pay
+## s4 · Wed 11/11 · Before you pay
 Title: `Snowball or avalanche? Check your 0% end dates first`
 Subtitle: `The cheapest payoff order on paper can cost more when a promo deal ends.`
 ```
