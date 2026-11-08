@@ -26,7 +26,7 @@ Full post with the five checks (and a free fill-in list for your plans): https:/
 
 ## FB2 · Tue 11/10 · is the deal real (pin bf3, post s3)
 Post after s3 is live; swap in its real URL.
-Image: `content/pinterest/2026-10/pins/` bf3 image.
+Image: `content/pinterest/2026-10/pins/checkmaybe-pin-bf3-deal-on-a-plan.png`
 ```
 A $499 Black Friday TV is $538.92 at checkout.
 On 12 payments of $49, it's $588.
