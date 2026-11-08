@@ -58,6 +58,7 @@ Made-up example: December's payments $498.00, January's $428.25, and February to
 None of that is on the checkout page. Add your plans up before Black Friday, not after.
 ```
 Pin: tg2b or r2 (already built), link to this post with utm_campaign=s2.
+Published 2026-11-08: https://checkmaybe.substack.com/p/black-friday-on-pay-in-4-add-up-january . Pin tg2b links here: `https://checkmaybe.substack.com/p/black-friday-on-pay-in-4-add-up-january?utm_source=pinterest&utm_medium=social&utm_campaign=tg2b`
 
 ## s3 · Mon 11/9 · Before you pay
 Title: `Is that Black Friday deal real? Three numbers to check first`
