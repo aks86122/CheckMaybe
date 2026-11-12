@@ -87,7 +87,7 @@ $49.08 more for the same TV. Check the plan total, not the monthly price.
 (Made-up example.)
 ```
 Pin: bf3 (already built), link to this post with utm_campaign=s3.
-New pin bf4 (v13, `content/pinterest/2026-11/pins-v13.md`) links to this post.
+Published: https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three . New pin bf4 (v13, `content/pinterest/2026-11/pins-v13.md`) links here: `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=pinterest&utm_medium=social&utm_campaign=bf4`
 
 ## s4 · Wed 11/11 · Before you pay
 Title: `Snowball or avalanche? Check your 0% end dates first`

@@ -6,16 +6,16 @@ Advanced settings: Allow comments ON · Show similar products OFF · Mark as AI-
 
 | Pin | Post | Board | Post on | Link |
 | --- | --- | --- | --- | --- |
-| bf4 "Is that deal real? Check 3 numbers first." | s3 | Christmas Budget & Gift Planning (+ Pay Later & Budgeting Tips) | 11/12 | `<s3 URL>?utm_source=pinterest&utm_medium=social&utm_campaign=bf4` |
+| bf4 "Is that deal real? Check 3 numbers first." | s3 | Christmas Budget & Gift Planning (+ Pay Later & Budgeting Tips) | 11/12 | `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=pinterest&utm_medium=social&utm_campaign=bf4` |
 | di1 "Snowball or avalanche? Check your 0% end dates first." | s4 | Debt Payoff Planning | 11/14 | `<s4 URL>?utm_source=pinterest&utm_medium=social&utm_campaign=di1` |
 
-J: replace `<s3 URL>` and `<s4 URL>` with the post addresses (`https://checkmaybe.substack.com/p/...`). The Note links (substack.com/@checkmaybe/note/p-223902456 and p-223902110) open the posts too, but use the checkmaybe.substack.com address on the pin so the UTM tag stays.
+J: replace `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three` and `<s4 URL>` with the post addresses (`https://checkmaybe.substack.com/p/...`). The Note links (substack.com/@checkmaybe/note/p-223902456 and p-223902110) open the posts too, but use the checkmaybe.substack.com address on the pin so the UTM tag stays.
 
 ### bf4: Is that deal real? Check 3 numbers first
 - **Title:** Is That Black Friday Deal Real? 3 Numbers to Check Before You Buy
 - **Description:** A crossed-out price isn't the usual price. Check three numbers before you buy on Black Friday: the usual price, the price at checkout with tax and shipping, and the total on a payment plan. Made-up example: headphones at $199, usually $249, are 20.1% below; a $159 vacuum is $186.72 at checkout; a $499 TV on 12 × $49 costs $49.08 more than paying in full. Made-up example, not financial advice. #blackfriday #blackfridaydeals #budgeting
 - **Alt text:** Cartoon receipt holding a checklist next to three checks: usual price 20.1% below, real deal; checkout price $186.72; payment-plan total $49.08 more.
-- **Link:** `<s3 URL>?utm_source=pinterest&utm_medium=social&utm_campaign=bf4`
+- **Link:** `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=pinterest&utm_medium=social&utm_campaign=bf4`
 
 ### di1: Snowball or avalanche? Check your 0% end dates first
 - **Title:** Snowball or Avalanche? Check Your 0% End Dates Before You Pick
