@@ -87,6 +87,7 @@ $49.08 more for the same TV. Check the plan total, not the monthly price.
 (Made-up example.)
 ```
 Pin: bf3 (already built), link to this post with utm_campaign=s3.
+New pin bf4 (v13, `content/pinterest/2026-11/pins-v13.md`) links to this post.
 
 ## s4 · Wed 11/11 · Before you pay
 Title: `Snowball or avalanche? Check your 0% end dates first`
@@ -116,6 +117,7 @@ If that card has deferred interest and the promo ends before you clear it, inter
 Check your 0% end dates before you pick an order.
 ```
 Pin: pt3 or r4, link to this post with utm_campaign=s4.
+New pin di1 (v13) links to this post.
 
 ## Reader check (step 4, all four)
 - Someone already on 2 to 3 pay-later plans: s2 opens on their exact situation and gives them one thing to do this week (list the plans, look at January).
