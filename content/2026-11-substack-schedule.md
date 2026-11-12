@@ -117,7 +117,7 @@ If that card has deferred interest and the promo ends before you clear it, inter
 Check your 0% end dates before you pick an order.
 ```
 Pin: pt3 or r4, link to this post with utm_campaign=s4.
-New pin di1 (v13) links to this post.
+Published: https://checkmaybe.substack.com/p/snowball-or-avalanche-check-your . New pin di1 (v13) links here: `https://checkmaybe.substack.com/p/snowball-or-avalanche-check-your?utm_source=pinterest&utm_medium=social&utm_campaign=di1`
 
 ## Reader check (step 4, all four)
 - Someone already on 2 to 3 pay-later plans: s2 opens on their exact situation and gives them one thing to do this week (list the plans, look at January).

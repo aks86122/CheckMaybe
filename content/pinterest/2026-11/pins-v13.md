@@ -7,9 +7,9 @@ Advanced settings: Allow comments ON · Show similar products OFF · Mark as AI-
 | Pin | Post | Board | Post on | Link |
 | --- | --- | --- | --- | --- |
 | bf4 "Is that deal real? Check 3 numbers first." | s3 | Christmas Budget & Gift Planning (+ Pay Later & Budgeting Tips) | 11/12 | `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=pinterest&utm_medium=social&utm_campaign=bf4` |
-| di1 "Snowball or avalanche? Check your 0% end dates first." | s4 | Debt Payoff Planning | 11/14 | `<s4 URL>?utm_source=pinterest&utm_medium=social&utm_campaign=di1` |
+| di1 "Snowball or avalanche? Check your 0% end dates first." | s4 | Debt Payoff Planning | 11/14 | `https://checkmaybe.substack.com/p/snowball-or-avalanche-check-your?utm_source=pinterest&utm_medium=social&utm_campaign=di1` |
 
-J: s3 URL filled in (2026-11-12). Still to fill: `<s4 URL>` (the `https://checkmaybe.substack.com/p/...` address, not the Note link, so the UTM tag stays).
+Both post URLs filled in (2026-11-12).
 
 ### bf4: Is that deal real? Check 3 numbers first
 - **Title:** Is That Black Friday Deal Real? 3 Numbers to Check Before You Buy
@@ -21,7 +21,7 @@ J: s3 URL filled in (2026-11-12). Still to fill: `<s4 URL>` (the `https://checkm
 - **Title:** Snowball or Avalanche? Check Your 0% End Dates Before You Pick
 - **Description:** Snowball pays the smallest balance first, avalanche the highest rate. Both can go wrong if a 0% deal has deferred interest: if any promo balance is left when it ends, interest can go back to the day you bought it. Before you pick a debt payoff order, write down for each debt when any 0% deal ends, whether it has deferred interest, and whether paying it early costs a fee. Educational, not financial advice. #debtpayoff #debtsnowball #debtfreejourney
 - **Alt text:** Cartoon receipt with a calculator next to a three-step checklist: when the 0% deal ends, deferred interest, and early payoff fees.
-- **Link:** `<s4 URL>?utm_source=pinterest&utm_medium=social&utm_campaign=di1`
+- **Link:** `https://checkmaybe.substack.com/p/snowball-or-avalanche-check-your?utm_source=pinterest&utm_medium=social&utm_campaign=di1`
 
 ## Reader check
 - Black Friday shopper in a hurry: the headline is the whole idea; the three checks fit in one glance.
