@@ -9,7 +9,7 @@ Advanced settings: Allow comments ON · Show similar products OFF · Mark as AI-
 | bf4 "Is that deal real? Check 3 numbers first." | s3 | Christmas Budget & Gift Planning (+ Pay Later & Budgeting Tips) | 11/12 | `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=pinterest&utm_medium=social&utm_campaign=bf4` |
 | di1 "Snowball or avalanche? Check your 0% end dates first." | s4 | Debt Payoff Planning | 11/14 | `<s4 URL>?utm_source=pinterest&utm_medium=social&utm_campaign=di1` |
 
-J: replace `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three` and `<s4 URL>` with the post addresses (`https://checkmaybe.substack.com/p/...`). The Note links (substack.com/@checkmaybe/note/p-223902456 and p-223902110) open the posts too, but use the checkmaybe.substack.com address on the pin so the UTM tag stays.
+J: s3 URL filled in (2026-11-12). Still to fill: `<s4 URL>` (the `https://checkmaybe.substack.com/p/...` address, not the Note link, so the UTM tag stays).
 
 ### bf4: Is that deal real? Check 3 numbers first
 - **Title:** Is That Black Friday Deal Real? 3 Numbers to Check Before You Buy
