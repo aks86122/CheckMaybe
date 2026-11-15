@@ -60,12 +60,41 @@ Free checklist. Link in bio.
 - Music: a calm trending track from IG's library, low volume. Turn on IG auto captions only if there's a voice.
 - Cover frame: the 13.5 to 18 s frame ($588 vs $538.92) with title "Is that deal real?"
 
-## IG caption (short rule: pain line, action line, disclaimer, about 5 hashtags)
+## Two hooks (J 2026-11-15): post A first, B as a second reel 3 to 4 days later, or A/B test with IG Trial Reels
+
+Only the first 5 seconds change; 5 to 23 s stay the same as the script above.
+
+**Hook A: the twist** (the script above)
+| Time | Caption | Card | Mascot |
+| --- | --- | --- | --- |
+| 0 to 2.5 s | This TV is **$50 off** | ~~$549~~ → $499 | tag.jpg |
+| 2.5 to 5 s | and costs **$49.08 more** | card flips red | unroll.jpg |
+
+**Hook B: the quiz** (viewer guesses before the answer, which keeps them watching)
+| Time | Caption | Card | Mascot |
+| --- | --- | --- | --- |
+| 0 to 2.5 s | Which costs **less**? | Two cards side by side: "Pay $538.92 today" vs "12 easy payments of $49" | magnify (asterisk pose) |
+| 2.5 to 5 s | The "easy" one: **$588** | 12 × $49 counter rolls to $588; red tag "+$49.08" on it | unroll.jpg |
+With hook B, beat 3 (13.5 to 18 s) is a quick callback: same card, 2 s instead of 4.5 s, so the reel ends around 21 s.
+
+## IG captions (short rule: pain line, action line, disclaimer, about 5 hashtags)
+
+For hook A:
 ```
 A $50-off TV can cost $49.08 more on a payment plan.
-3 checks before you buy → free read, link in bio
+Before you check out this Black Friday, look at 3 numbers: the usual price, the checkout price and the plan total.
+Free read with the full checklist → link in bio
 Made-up example. Not financial advice.
 #blackfriday #blackfridaydeals #budgeting #moneytips #buynowpaylater
+```
+
+For hook B:
+```
+$538.92 today or 12 easy payments of $49? The easy one adds up to $588.
+Small monthly payments hide the total. Check it before you click "pay later".
+3 checks for any Black Friday deal → link in bio
+Made-up example. Not financial advice.
+#blackfriday #christmasbudget #budgetingtips #paylater #moneytips
 ```
 Link in bio: add a Beacons button for s3 while the reel runs (Beacons has no Substack post link now): `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=instagram&utm_medium=social&utm_campaign=reel01`
 
