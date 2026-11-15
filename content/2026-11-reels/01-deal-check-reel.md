@@ -103,3 +103,6 @@ Link in bio: add a Beacons button for s3 while the reel runs (Beacons has no Sub
 - Skeptic ("everyone knows to compare prices"): the hook isn't "compare prices", it's that a discount can cost more; the number lands in 6 seconds.
 - Fast scroller: the first caption has the twist ($50 off, $49.08 more) inside 6 seconds; no logo intro.
 - Changed after the check: first version opened with "3 numbers to check" (same as the carousel). Moved the $50 off / $49.08 more contrast to the first 5 seconds, because the reference wins on a surprising first line, not on the list.
+
+## Built (2026-11-15)
+`build_reel01.py` renders both hooks: `out/checkmaybe-reel01-hook-a.mp4` (23 s) and `out/checkmaybe-reel01-hook-b.mp4` (20.5 s), 1080×1920, 30 fps, no audio. Add music in IG. Cover: pick the plan-total frame (A about 16 s, B about 4.5 s).
