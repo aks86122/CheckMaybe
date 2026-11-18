@@ -16,3 +16,13 @@ Pinterest app › Analytics › Audience. Audience size and date range not in th
 3. Design test: next pins in a light, warmer look (like pt1–pt3) vs dark; compare outbound clicks and the US share after 2 weeks.
 4. Keep US-only words in titles/descriptions (Black Friday, paycheck, US dollars) and US boards.
 5. Option for J to decide (paid, needs approval): a small Pinterest ad test targeted to the US only, to buy US views of the best 2 pins and see if US viewers click.
+
+## Overall, last 30 days (J screenshot 2026-11-18 03:17, 10/19–11/18, updated 1 day ago)
+Impressions 1.9k · engagements 16 · outbound clicks 3 · saves 3 · total audience 106 · engaged audience 1.
+Top pins by impressions: "Only $67 a month" receipt pin 59, "Christmas Budget: Four small holiday plans. One big January" 49, "Can You Sell AI Prompt…" (prompt bundles on Etsy) 48.
+
+Read:
+- Total audience is 106 people, so "4.3% US" is about 4 to 5 people and the gender/country split is noise. The real finding: Pinterest has barely started showing the account (about 18 impressions per person, best pin 59 impressions).
+- Outbound clicks fell from 7 (10/8–10/18, 365 impressions) to 3 in 30 days with 1.9k impressions. Engaged audience 1 (could even be J). No market signal yet, positive or negative.
+- The 3 top pins share one thing: a single concrete line in the first words ("Only $67 a month", "One big January", "can't be sold on Etsy").
+- Conclusion: Pinterest data can't tell us what the US market wants for weeks. Use demand evidence that doesn't depend on our reach (Etsy best sellers and reviews, Pinterest Trends, Reddit), and keep pinning consistently so reach grows.
