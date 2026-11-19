@@ -77,9 +77,9 @@ const CARDS={
    <div class="small">${k?`payment ${k} of 12`:'&nbsp;'}</div>
    ${pop(lt,b+0.25*speed,'<span class="pill b">+$49.08 for the same TV</span>')}</div>`},
  question:(lt)=>fade(lt,0.05,'<div class="q">Wanted it <em>before</em> the sale?</div>'),
- cta:(lt)=>`<div class="card"><div class="lab">Before you buy</div>
+ cta:(lt)=>`<div class="card"><div class="lab">Deal Check tab · Google Sheets</div>
    ${['Usual price','Checkout price','Plan total'].map((x,i)=>pop(lt,0.15+i*0.18,`<div class="ck"><b>✓</b>${x}</div>`)).join('')}
-   ${fade(lt,0.8,'<div class="small">Free read with all 3 checks</div>')}</div>`,
+   ${fade(lt,0.8,'<div class="small">Holiday Hidden Cost Tracker</div>')}</div>`,
  quiz:(lt)=>`<div class="split"><div class="card"><div class="lab">Pay today</div><div class="big" style="font-size:96px">$538.92</div></div>
    ${fade(lt,0.35,'<div class="card"><div class="lab">12 easy payments</div><div class="big" style="font-size:96px">$49<span style="font-size:48px">/mo</span></div></div>')}</div>`,
  quiz2:(lt)=>{const k=Math.min(12,1+Math.floor(clamp((lt-0.15)/1.3)*11.999));return `<div class="split"><div class="card"><div class="lab">Pay today</div><div class="big" style="font-size:96px">$538.92</div></div>
@@ -126,7 +126,7 @@ def scenes(kind):
         plan = dict(d=2.0, cap=[["3. The ", ""], ["plan total", "o"]], card="plan2", mas=m(3, "calc"))
     tail = [
         dict(d=2.0, cap=[], card="question", mas=None),
-        dict(d=3.0, cap=[["Free checklist: ", ""], ["link in bio", "o"]], card="cta", mas=m(2, "happy")),
+        dict(d=3.0, cap=[["Every deal, ", ""], ["one sheet", "o"]], card="cta", mas=m(2, "happy")),
     ]
     out, t = [], 0.0
     for s in head + body + [plan] + tail:

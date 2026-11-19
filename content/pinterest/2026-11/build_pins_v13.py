@@ -1,7 +1,7 @@
 """Pinterest pins v13 (1000x1500, 2:3): pins that link to Substack posts s3 and s4.
 
-bf4 -> s3 "Is that Black Friday deal real? Three numbers to check first"
-di1 -> s4 "Snowball or avalanche? Check your 0% end dates first"
+bf4 -> Holiday Hidden Cost Tracker (topic of s3) "Is that Black Friday deal real? Three numbers to check first"
+di1 -> Debt Payoff Planner (topic of s4) "Snowball or avalanche? Check your 0% end dates first"
 Numbers and wording come from the published posts (content/2026-11-substack-schedule.md).
 Copy and links: pins-v13.md.
 Usage: python3 content/pinterest/2026-11/build_pins_v13.py
@@ -58,7 +58,7 @@ PINS = {
             ("The payment-plan total", "$499 TV: $538.92 in full, 12 × $49 = $588", "$49.08 more on the plan", "b"),
         ], 640),
         f"{ART2}/check.jpg", "right:0px;top:980px;width:330px",
-        "FREE READ ON SUBSTACK", "Made-up example · not financial advice"),
+        "HOLIDAY HIDDEN COST TRACKER", "Made-up example · not financial advice"),
     "di1-zero-percent-end-dates": pin(
         "Debt payoff · before you pick",
         '<span style="font-size:84px">Snowball or avalanche?</span><br><em style="font-size:66px">Check your 0% end dates first.</em>',
@@ -69,7 +69,7 @@ PINS = {
             ("Fee for paying it off early?", "Some loans charge one", "Put extra money elsewhere first", "g"),
         ], 770),
         f"{ART3}/calc.jpg", "right:0px;top:1030px;width:320px",
-        "FREE READ ON SUBSTACK", "Checklist · not financial advice"),
+        "DEBT PAYOFF PLANNER", "Checklist · not financial advice"),
 }
 
 jobs = []

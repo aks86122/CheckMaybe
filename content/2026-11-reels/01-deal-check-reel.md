@@ -83,7 +83,7 @@ For hook A:
 ```
 A $50-off TV can cost $49.08 more on a payment plan.
 Before you check out this Black Friday, look at 3 numbers: the usual price, the checkout price and the plan total.
-Free read with the full checklist → link in bio
+All 3 checks for every item on your list, in one Google Sheet → link in bio
 Made-up example. Not financial advice.
 #blackfriday #blackfridaydeals #budgeting #moneytips #buynowpaylater
 ```
@@ -92,11 +92,11 @@ For hook B:
 ```
 $538.92 today or 12 easy payments of $49? The easy one adds up to $588.
 Small monthly payments hide the total. Check it before you click "pay later".
-3 checks for any Black Friday deal → link in bio
+The Deal Check tab does all 3 for every item on your list → link in bio
 Made-up example. Not financial advice.
 #blackfriday #christmasbudget #budgetingtips #paylater #moneytips
 ```
-Link in bio: add a Beacons button for s3 while the reel runs (Beacons has no Substack post link now): `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=instagram&utm_medium=social&utm_campaign=reel01`
+Link in bio (changed 2026-11-19): add Holiday Hidden Cost Tracker to Beacons, top position while the reel runs (it isn't on Beacons now): `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=instagram&utm_medium=social&utm_campaign=reel01`. The last scene now says "Every deal, one sheet" with the product name.
 
 ## Reader check (step 4)
 - Someone on 2 to 3 pay-later plans: beat 6 (the plan total) is their situation; it's the freeze-frame.
