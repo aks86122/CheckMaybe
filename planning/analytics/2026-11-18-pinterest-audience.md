@@ -26,3 +26,11 @@ Read:
 - Outbound clicks fell from 7 (10/8–10/18, 365 impressions) to 3 in 30 days with 1.9k impressions. Engaged audience 1 (could even be J). No market signal yet, positive or negative.
 - The 3 top pins share one thing: a single concrete line in the first words ("Only $67 a month", "One big January", "can't be sold on Etsy").
 - Conclusion: Pinterest data can't tell us what the US market wants for weeks. Use demand evidence that doesn't depend on our reach (Etsy best sellers and reviews, Pinterest Trends, Reddit), and keep pinning consistently so reach grows.
+
+## Top categories of the total audience (J screenshot 2026-11-19, 10/17–11/16)
+Affinity / audience share: Vehicles 1.96x 52.8% · Architecture 1.91x 56.7% · Men's Fashion 1.9x 37.0% · Electronics 1.54x 63.0% · Sport 1.45x 58.3% · Design 1.32x 70.9% · Travel 1.29x 58.3% · Education 1.28x 69.3% · Entertainment 1.22x 71.7% · Quotes 1.2x 55.9% · Food and Drinks 1.2x 52.0% · Art 1.19x 72.4% · Home Decor 1.17x 69.3%. No finance category in the visible list (ask J to scroll).
+
+Read (106 people, so directional):
+- Pinterest is matching the pins to a male, gadget/car/sport audience, not to budgeters. It fits the 61% male split.
+- Likely cause in our own pins: the Black Friday series names gadgets (TV, headphones, robot vacuum, smart watch) and the debt pins name a car loan; the image text is mostly prices. Pinterest reads image text and descriptions, so "electronics deal" may be how it files them. Plus the dark tech look.
+- Fix to test: lead with money words (budget, debt payoff, save money, Christmas budget, paycheck), keep items generic ("a $499 gift"), name boards and first description words in finance terms, and try the lighter planner look. Compare category and gender split again in 3 to 4 weeks.
