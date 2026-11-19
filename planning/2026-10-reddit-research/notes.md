@@ -40,3 +40,23 @@ Policy is 2 days old and affects digital sellers, CheckMaybe's buyers. Cheapest 
 
 ### Tested 2026-10-24: Etsy strips listing images
 Etsy re-encodes listing photos (1140 px) and keeps only an ICC profile: no camera data, AI markers or Content Credentials survive. Buyer-side value is a checklist plus asking the seller for originals, not file analysis of listing images.
+
+## CM-RD-006 · r/EtsyCommunity "My first purchase on Etsy will probably be the last." (J screenshots 2026-11-19, post about 1 h old, 13 upvotes, 11 comments)
+What people said (their own claims, not verified; no shop is named anywhere in CheckMaybe content):
+- OP (Europe): wanted handmade Christmas gifts for the kids. "Made in EU" search gave mostly Asian products. Bought a listing "dispatched from UK" at double the price of similar items; it shipped from Asia. About 12 support agents over 2 hours; the shop's refund came as shop credit; had to contact Etsy again for money back to the account. "80% of what I see is Temu, Amazon and vintage combined."
+- superspud31 (9 upvotes): "Drop shippers lie about where they ship from." OP: "Then why isn't Etsy doing something about it?"
+- stephfos: same thing twice in a year (listed as made and dispatched in UK, hundreds of good reviews, shipped from China); reported both, both still selling; one shop offered a refund for changing a 1-star review; "make sure you leave a review before escalating."
+- Striking_Stage_9001: "Canada" seller was in the US and charged "tariff" fees; reported, got a warning.
+- AggretsuKelly (Australia): search still shows US shops.
+- Handmade sellers: no Etsy sale in 2 months, "can't compete with the prices" (No-Tomatillo7459); UK seller with customers mostly in the US, Canada, Germany (Wolfdreama, 11); "We definitely need a new marketplace" (4); vintage vendor: European artisans hard to find.
+
+Pain points, in their words:
+1. Buyers: "dispatched from" / "made in" isn't what arrives; can't tell before paying.
+2. Buyers: refund as shop credit; long support loop.
+3. Handmade sellers: undercut by resellers, buried in search.
+
+Fit for CheckMaybe (check the claim before you pay):
+- Content first: a buyer checklist "Bought 'handmade' on Etsy? What to check before you pay this Christmas" (claim vs receipt, checkbox mascot). Seasonal now, buyer audience is much bigger than sellers. Needs J to save Etsy's pages on Purchase Protection / cases and refunds, the Creativity Standards (production partners, reselling) and how "dispatched from" / shop location are defined; nothing about Etsy's rules is stated until those are saved.
+- Seller side already covered by et7 / human-made plan (keep proof you made it).
+- Paying signal: none for a product (people want Etsy to fix it). Use as free content and a pin; no product build.
+- No promotional replies in the thread.
