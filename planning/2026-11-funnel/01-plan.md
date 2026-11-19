@@ -29,7 +29,7 @@ Gumroad收據、PDF、自動信 ─→ Substack ─→ 下一個商品
 | Debt Payoff Planner | https://checkmaybe.gumroad.com/l/ddktis |
 | Debt Toolkit Bundle | https://checkmaybe.gumroad.com/l/gdaiyy |
 
-Substack：https://checkmaybe.substack.com · Beacons：https://beacons.ai/checkmaybe
+Substack：https://checkmaybe.substack.com · Beacons：https://beacons.ai/checkmaybe · Pinterest：https://www.pinterest.com/checkmaybetw/
 
 ## 每個平台要做的事
 
