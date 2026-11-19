@@ -6,22 +6,22 @@ Advanced settings: Allow comments ON · Show similar products OFF · Mark as AI-
 
 | Pin | Post | Board | Post on | Link |
 | --- | --- | --- | --- | --- |
-| bf4 "Is that deal real? Check 3 numbers first." | s3 | Christmas Budget & Gift Planning (+ Pay Later & Budgeting Tips) | 11/12 | `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=bf4` |
-| di1 "Snowball or avalanche? Check your 0% end dates first." | s4 | Debt Payoff Planning | 11/14 | `https://checkmaybe.gumroad.com/l/ddktis?utm_source=pinterest&utm_medium=social&utm_campaign=di1` |
+| bf4 "Is that deal real? Check 3 numbers first." | s3 | Christmas Budget & Gift Planning (+ Pay Later & Budgeting Tips) | 11/12 | `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=pinterest&utm_medium=social&utm_campaign=bf4` |
+| di1 "Snowball or avalanche? Check your 0% end dates first." | s4 | Debt Payoff Planning | 11/14 | `https://checkmaybe.substack.com/p/snowball-or-avalanche-check-your?utm_source=pinterest&utm_medium=social&utm_campaign=di1` |
 
-2026-11-19 (J): links moved from the Substack posts to the Gumroad product pages, per the funnel plan (Pinterest → Gumroad directly). Image tags now name the product. On Pinterest: open each pin › Edit › Website, paste the new link, re-upload the image if you want the new tag.
+Both post URLs filled in (2026-11-12).
 
 ### bf4: Is that deal real? Check 3 numbers first
 - **Title:** Is That Black Friday Deal Real? 3 Numbers to Check Before You Buy
-- **Description:** A crossed-out price isn't the usual price. Check three numbers before you buy on Black Friday: the usual price, the price at checkout with tax and shipping, and the total on a payment plan. The Deal Check tab in the Holiday Hidden Cost Tracker (Google Sheets) gives every item on your list a verdict. Made-up example: headphones at $199, usually $249, are 20.1% below; a $159 vacuum is $186.72 at checkout; a $499 TV on 12 × $49 costs $49.08 more than paying in full. Made-up example, not financial advice. #blackfriday #blackfridaydeals #budgeting
+- **Description:** A crossed-out price isn't the usual price. Check three numbers before you buy on Black Friday: the usual price, the price at checkout with tax and shipping, and the total on a payment plan. Made-up example: headphones at $199, usually $249, are 20.1% below; a $159 vacuum is $186.72 at checkout; a $499 TV on 12 × $49 costs $49.08 more than paying in full. Made-up example, not financial advice. #blackfriday #blackfridaydeals #budgeting
 - **Alt text:** Cartoon receipt holding a checklist next to three checks: usual price 20.1% below, real deal; checkout price $186.72; payment-plan total $49.08 more.
-- **Link:** `https://checkmaybe.gumroad.com/l/nhbkwx?utm_source=pinterest&utm_medium=social&utm_campaign=bf4`
+- **Link:** `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=pinterest&utm_medium=social&utm_campaign=bf4`
 
 ### di1: Snowball or avalanche? Check your 0% end dates first
 - **Title:** Snowball or Avalanche? Check Your 0% End Dates Before You Pick
-- **Description:** Snowball pays the smallest balance first, avalanche the highest rate. Both can go wrong if a 0% deal has deferred interest: if any promo balance is left when it ends, interest can go back to the day you bought it. Before you pick a debt payoff order, write down for each debt when any 0% deal ends, whether it has deferred interest, and whether paying it early costs a fee. The Debt Payoff Planner (Google Sheets) checks all three and compares 4 payoff orders. Educational, not financial advice. #debtpayoff #debtsnowball #debtfreejourney
+- **Description:** Snowball pays the smallest balance first, avalanche the highest rate. Both can go wrong if a 0% deal has deferred interest: if any promo balance is left when it ends, interest can go back to the day you bought it. Before you pick a debt payoff order, write down for each debt when any 0% deal ends, whether it has deferred interest, and whether paying it early costs a fee. Educational, not financial advice. #debtpayoff #debtsnowball #debtfreejourney
 - **Alt text:** Cartoon receipt with a calculator next to a three-step checklist: when the 0% deal ends, deferred interest, and early payoff fees.
-- **Link:** `https://checkmaybe.gumroad.com/l/ddktis?utm_source=pinterest&utm_medium=social&utm_campaign=di1`
+- **Link:** `https://checkmaybe.substack.com/p/snowball-or-avalanche-check-your?utm_source=pinterest&utm_medium=social&utm_campaign=di1`
 
 ## Reader check
 - Black Friday shopper in a hurry: the headline is the whole idea; the three checks fit in one glance.
