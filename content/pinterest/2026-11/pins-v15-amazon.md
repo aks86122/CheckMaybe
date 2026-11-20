@@ -13,7 +13,7 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | az4 | Payday routine, 4 steps | Nefeeko Budget Binder with calculator (J's pick 2026-11-20: 4.6 stars, 3,219 ratings, Amazon's Choice, 100+ bought past month, $13.59 Prime) | `https://link.amazon/B028pfZbg` |
 | az5 | Envelope empty, category done | Ginmlyda https://www.amazon.com/dp/B09D9KLNGL | `<amzn.to>` |
 | az6 | 100 envelopes = $5,050 | APMFHO 100 Days Money Saving Challenge (J's pick 2026-11-20: 4.5 stars, 912 ratings, Amazon's Choice, 500+ bought past month, $7.99) | `https://link.amazon/B03V55wCK` |
-| az7 | Do 50 envelopes ($1,275) | RONMONG https://www.amazon.com/dp/B0CT2GF177 | `<amzn.to>` |
+| az7 | Do 50 envelopes ($1,275) | RONMONG 100 Envelopes Challenge Binder with cash envelopes, tracker and budget sheets (J checked 2026-11-20: 4.7 stars, 907 ratings, Amazon's Choice, $7.99 Prime) | `https://link.amazon/B00pAkp7u` |
 | az8 | One envelope a day, 100 days | GINTBN https://www.amazon.com/dp/B0FD3C5PTF | `<amzn.to>` |
 | az9 | Start Jan 1, done by Apr 10 | APMFHO (same as az6) | same as az6 |
 | az10 | Tight week, small envelope | RONMONG (same as az7) | same as az7 |
