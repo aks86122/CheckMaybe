@@ -45,6 +45,11 @@ Disclosure line (end of every description): `As an Amazon Associate I earn from 
 - **Description:** Starting cash stuffing? Check four things before you buy a budget binder: zipper envelopes so coins and bills stay put, expense sheets to write down what you spend, one envelope per category, and a size you'll actually carry. Example pick: SKYDUE Budget Binder with zipper envelopes, cash envelopes and expense sheets. Example amounts. As an Amazon Associate I earn from qualifying purchases. #cashstuffing #budgetbinder #cashenvelopes
 - **Alt text:** Illustrated budget binder with zipper envelopes for groceries, gas and fun money, next to a checklist: zipper envelopes, expense sheets, one envelope per category, small enough to carry.
 
+### az1 dark (own copy, so the two az1 pins don't share a title and description)
+- **Title:** Budget Binder Checklist: 4 Things to Check Before You Buy
+- **Description:** Before you buy a budget binder for cash stuffing, check for zipper envelopes, expense sheets, room for one envelope per category, and a size small enough to carry every day. The one in the example has the first two: SKYDUE Budget Binder with zipper envelopes, cash envelopes and expense sheets. Example amounts. As an Amazon Associate I earn from qualifying purchases. #budgetbinder #cashstuffing #budgetingtips
+- **Alt text:** Dark illustrated budget binder with groceries, gas and fun money envelopes, next to a four-point checklist for choosing a budget binder.
+
 ### az2
 - **Title:** New to Cash Stuffing? Start With Just 3 Envelopes
 - **Description:** You don't need 12 categories on day one. Pick the 3 where card spending gets away from you, set one amount for each before the month starts, and only spend what's inside. Add more envelopes once three feel easy. Binder used in the example: NICOOTH Budget Binder A6 with zipper cash envelopes. Example amounts. As an Amazon Associate I earn from qualifying purchases. #cashstuffing #cashenvelopesystem #budgetingforbeginners
