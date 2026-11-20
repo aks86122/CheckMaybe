@@ -80,7 +80,7 @@ PINS = [
          rows=[("Empty means done", "No borrowing from next month's envelope"),
                ("Moving money is a decision", "Take from fun money, not from rent"),
                ("Leftovers go somewhere on purpose", "Roll over or move to savings, and write it down")],
-         pick='Zipper envelopes with sheets: <b>Ginmlyda Budget Binder</b> (zipper envelopes, money saving sheets, stickers and pen)'),
+         pick='Zipper pockets with sheets: <b>Ginmlyda Budget Binder</b> (zipper PVC pockets, budget sheets, stickers and pen)'),
     # Savings challenge books (100 envelopes). Sums: 1..100 = 5,050; 1..50 = 1,275. Jan 1 + 99 days = Apr 10, 2027.
     dict(id="az6", slug="savings-challenge", themes=["light"], art=f"{A2}/unroll.jpg", kicker="100 envelope challenge",
          h1="100 envelopes,<br><em>$5,050 saved</em>",

@@ -11,7 +11,7 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | az2 | Start with 3 envelopes | NICOOTH Budget Binder A6 with zipper cash envelopes (J checked 2026-11-20: 4.6 stars, 9,201 ratings, Amazon's Choice, 200+ bought past month, $7.98, ships from Amazon) | `https://link.amazon/B04isozsT` |
 | az3 | Card bill higher than expected? | Antner https://www.amazon.com/dp/B08LSKL338 (J's pick, 2026-11-20) | `https://www.amazon.com/dp/B08LSKL338?th=1&linkCode=ll2&tag=checkmaybe-20&linkId=61de726983dc13a6ada8f241097170b2` |
 | az4 | Payday routine, 4 steps | Nefeeko Budget Binder with calculator (J's pick 2026-11-20: 4.6 stars, 3,219 ratings, Amazon's Choice, 100+ bought past month, $13.59 Prime) | `https://link.amazon/B028pfZbg` |
-| az5 | Envelope empty, category done | Ginmlyda https://www.amazon.com/dp/B09D9KLNGL | `<amzn.to>` |
+| az5 | Envelope empty, category done | Ginmlyda Cash Envelopes Budget Binder with zipper PVC pockets, budget sheets, stickers and pen (J checked 2026-11-20: 4.5 stars, 1,047 ratings, Overall Pick, $8.49 Prime, ships from Amazon) | `https://link.amazon/B04y3ebeZ` |
 | az6 | 100 envelopes = $5,050 | APMFHO 100 Days Money Saving Challenge (J's pick 2026-11-20: 4.5 stars, 912 ratings, Amazon's Choice, 500+ bought past month, $7.99) | `https://link.amazon/B03V55wCK` |
 | az7 | Do 50 envelopes ($1,275) | RONMONG 100 Envelopes Challenge Binder with cash envelopes, tracker and budget sheets (J checked 2026-11-20: 4.7 stars, 907 ratings, Amazon's Choice, $7.99 Prime) | `https://link.amazon/B00pAkp7u` |
 | az8 | One envelope a day, 100 days | APMFHO (same as az6; GINTBN dropped 2026-11-20: 4.2 stars, 132 ratings, no Prime, ships Dec 7) | same as az6 |
@@ -62,7 +62,7 @@ Disclosure line (end of every description): `As an Amazon Associate I earn from 
 
 ### az5
 - **Title:** Cash Envelope Rules: When It's Empty, That Category Is Done
-- **Description:** Three rules that make cash envelopes work: an empty envelope means that category is done for the month, moving money between envelopes is a decision you make on purpose, and leftovers roll over or go to savings, written down. Binder in the example: Ginmlyda Budget Binder with zipper envelopes, money saving sheets, stickers and pen. Example amounts. As an Amazon Associate I earn from qualifying purchases. #cashenvelopes #cashstuffing #budgetingtips
+- **Description:** Three rules that make cash envelopes work: an empty envelope means that category is done for the month, moving money between envelopes is a decision you make on purpose, and leftovers roll over or go to savings, written down. Binder in the example: Ginmlyda Budget Binder with zipper PVC pockets, budget sheets, stickers and pen. Example amounts. As an Amazon Associate I earn from qualifying purchases. #cashenvelopes #cashstuffing #budgetingtips
 - **Alt text:** Envelopes showing groceries $12 left, gas $0 left and fun money $25 left, with three cash envelope rules.
 
 ### az6
