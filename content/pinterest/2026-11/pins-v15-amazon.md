@@ -7,9 +7,9 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 
 | Pin | Angle | Product page (check, then get the amzn.to link) | Link |
 | --- | --- | --- | --- |
-| az1 (dark + light) | What your binder needs | SKYDUE https://www.amazon.com/dp/B0C7VFYKKP | `<amzn.to>` |
+| az1 (dark + light) | What your binder needs | SKYDUE https://www.amazon.com/dp/B0C7VFYKKP | `https://www.amazon.com/dp/B0C7VFYKKP?th=1&linkCode=ll2&tag=checkmaybe-20&linkId=6ed44b33d79014950726d4cdcb9ed727` |
 | az2 | Start with 3 envelopes | NICOOTH https://www.amazon.com/dp/B09GK8BGRT | `<amzn.to>` |
-| az3 | Card bill higher than expected? | Antner https://www.amazon.com/dp/B08LSMSG38 | `<amzn.to>` |
+| az3 | Card bill higher than expected? | Antner https://www.amazon.com/dp/B08LSKL338 (J's pick, 2026-11-20) | `https://www.amazon.com/dp/B08LSKL338?th=1&linkCode=ll2&tag=checkmaybe-20&linkId=61de726983dc13a6ada8f241097170b2` |
 | az4 | Payday routine, 4 steps | Rnivvi https://www.amazon.com/dp/B0BTM72R34 | `<amzn.to>` |
 | az5 | Envelope empty, category done | Ginmlyda https://www.amazon.com/dp/B09D9KLNGL | `<amzn.to>` |
 | az6 | 100 envelopes = $5,050 | AASLOB https://www.amazon.com/dp/B0CL1VGX3V | `<amzn.to>` |
