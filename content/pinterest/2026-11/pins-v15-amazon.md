@@ -12,10 +12,10 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | az3 | Card bill higher than expected? | Antner https://www.amazon.com/dp/B08LSKL338 (J's pick, 2026-11-20) | `https://www.amazon.com/dp/B08LSKL338?th=1&linkCode=ll2&tag=checkmaybe-20&linkId=61de726983dc13a6ada8f241097170b2` |
 | az4 | Payday routine, 4 steps | Rnivvi https://www.amazon.com/dp/B0BTM72R34 | `<amzn.to>` |
 | az5 | Envelope empty, category done | Ginmlyda https://www.amazon.com/dp/B09D9KLNGL | `<amzn.to>` |
-| az6 | 100 envelopes = $5,050 | AASLOB https://www.amazon.com/dp/B0CL1VGX3V | `<amzn.to>` |
+| az6 | 100 envelopes = $5,050 | APMFHO 100 Days Money Saving Challenge (J's pick 2026-11-20: 4.5 stars, 912 ratings, Amazon's Choice, 500+ bought past month, $7.99) | `https://link.amazon/B03V55wCK` |
 | az7 | Do 50 envelopes ($1,275) | RONMONG https://www.amazon.com/dp/B0CT2GF177 | `<amzn.to>` |
 | az8 | One envelope a day, 100 days | GINTBN https://www.amazon.com/dp/B0FD3C5PTF | `<amzn.to>` |
-| az9 | Start Jan 1, done by Apr 10 | AASLOB (same as az6) | same as az6 |
+| az9 | Start Jan 1, done by Apr 10 | APMFHO (same as az6) | same as az6 |
 | az10 | Tight week, small envelope | RONMONG (same as az7) | same as az7 |
 | az11 | Planner that starts any month | Taja https://www.amazon.com/dp/B0C33RXLR6 | `<amzn.to>` |
 | az12 | Bills on one page | SOLIGT https://www.amazon.com/dp/B091DLSFMY | `<amzn.to>` |
@@ -23,7 +23,7 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | az14 | One pocket a month | SOLIGT (same as az12) | same as az12 |
 | az15 | 10-minute weekly check | Taja (same as az11) | same as az11 |
 
-10 links needed in total (SKYDUE, NICOOTH, Antner, Rnivvi, Ginmlyda, AASLOB, RONMONG, GINTBN, Taja, SOLIGT).
+10 links needed in total (SKYDUE, NICOOTH, Antner, Rnivvi, Ginmlyda, APMFHO, RONMONG, GINTBN, Taja, SOLIGT).
 Math on the savings pins: 1 + 2 + ... + 100 = 5,050; 1 + ... + 50 = 1,275; Jan 1, 2027 is day 1, Feb 28 day 59, Apr 10 day 100.
 
 ## Schedule (2 to 3 a day)
@@ -66,7 +66,7 @@ Disclosure line (end of every description): `As an Amazon Associate I earn from 
 
 ### az6
 - **Title:** 100 Envelope Challenge: How 100 Envelopes Add Up to $5,050
-- **Description:** Number 100 envelopes from 1 to 100 and put that many dollars in each one, in any order. Fill a small one on tight weeks and a big one on payday. When all 100 are filled you've saved $5,050 (1 + 2 + 3 ... + 100). Binder used in the example: AASLOB 100 Envelopes Money Saving Challenge binder. As an Amazon Associate I earn from qualifying purchases. #100envelopechallenge #savingschallenge #cashstuffing
+- **Description:** Number 100 envelopes from 1 to 100 and put that many dollars in each one, in any order. Fill a small one on tight weeks and a big one on payday. When all 100 are filled you've saved $5,050 (1 + 2 + 3 ... + 100). Book used in the example: APMFHO 100 Days Money Saving Challenge, 100 envelopes to save $5,050 or $10,000. As an Amazon Associate I earn from qualifying purchases. #100envelopechallenge #savingschallenge #cashstuffing
 - **Alt text:** Envelopes numbered 1, 37 and 100 with $1, $37 and $100, and how 100 envelopes add up to $5,050.
 
 ### az7
@@ -81,7 +81,7 @@ Disclosure line (end of every description): `As an Amazon Associate I earn from 
 
 ### az9
 - **Title:** New Year Savings Challenge: Start January 1, Done by April 10
-- **Description:** One envelope a day from January 1, 2027 means envelope 100 lands on April 10. Missed a day? Keep going and finish a little later. All 100 filled is $5,050. Binder in the example: AASLOB 100 Envelopes Money Saving Challenge binder. As an Amazon Associate I earn from qualifying purchases. #newyearsavings #100envelopechallenge #savingschallenge
+- **Description:** One envelope a day from January 1, 2027 means envelope 100 lands on April 10. Missed a day? Keep going and finish a little later. All 100 filled is $5,050. Book in the example: APMFHO 100 Days Money Saving Challenge, 100 envelopes to save $5,050 or $10,000. As an Amazon Associate I earn from qualifying purchases. #newyearsavings #100envelopechallenge #savingschallenge
 - **Alt text:** Timeline: January 1 day 1, February 28 day 59, April 10 day 100, with notes on the 100 envelope challenge.
 
 ### az10
