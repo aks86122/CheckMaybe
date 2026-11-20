@@ -1,6 +1,7 @@
 # v15 Amazon pins: A6 budget binders (2026-11-20)
 
 Built by `build_pins_v15_amazon.py` (images in `pins/`). Light look (J 2026-11-20); az1 also has a dark version for an A/B test.
+Advanced settings: Allow comments ON · Show similar products OFF · Mark as AI-modified ON (receipt mascot is Canva AI art; founder rule 2026-10-24 in content/pinterest/2026-10/pins.md) · Features AI-generated person OFF.
 Rules: no Amazon product photos; each product line uses only features from that listing's title; checklists are general tips; disclosure on the image and in every description. Board: a new board "Cash Stuffing & Budget Binders" (or Pay Later & Budgeting Tips).
 Before posting each pin, J opens the product page (US delivery address, e.g. ZIP 10001), checks 4.5+ stars, 1,000+ ratings, $15 to $40, Prime, and that the features named on the pin are on the page; then SiteStripe › Get Link › Short Link, and pastes the amzn.to link here. If a product fails the check, tell Claude to swap it (about 1 minute to re-render).
 Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types each day; never two pins with the same link back to back. az1 dark and light go up the same week to compare outbound clicks.

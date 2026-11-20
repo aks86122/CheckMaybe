@@ -1,7 +1,7 @@
 # v14 video pins: Reel 01 on Pinterest (2026-11-18)
 
 Videos: `content/2026-11-reels/out/checkmaybe-reel01-hook-a.mp4` (23 s) and `-hook-b.mp4` (20.5 s), 1080×1920 MP4, no audio. Pinterest plays video muted in the feed, so the caption-only edit works as is. No music needed.
-Upload: Create › Create Pin › upload the MP4 › pick the cover frame › title, description, link, board. Advanced settings same as the image pins (Mark as AI-modified OFF: no AI video, rendered from our own HTML and mascot art).
+Upload: Create › Create Pin › upload the MP4 › pick the cover frame › title, description, link, board. Advanced settings same as the image pins (Mark as AI-modified ON (receipt mascot is Canva AI art; founder rule 2026-10-24 in content/pinterest/2026-10/pins.md); Features AI-generated person OFF).
 Both link to Substack s3 (the post with all 3 checks). Post A now, B 3 days later, both before Black Friday 11/27. They don't break the repin rule: different hooks, different first frames.
 
 | Pin | Video | Cover frame | Board | Post on | Link |

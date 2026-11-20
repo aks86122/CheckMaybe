@@ -2,7 +2,7 @@
 
 Built by `build_pins_v13.py` (images in `pins/`). Receipt mascot, dark look like the bf and et series. New images: per the repin rule, bf3 and pt1 to pt3 stay linked to Gumroad. These two link to the posts.
 Numbers and wording are from the published posts (`content/2026-11-substack-schedule.md`, s3 and s4). No lender or card brand names.
-Advanced settings: Allow comments ON · Show similar products OFF · Mark as AI-modified OFF · Features AI-generated person OFF.
+Advanced settings: Allow comments ON · Show similar products OFF · Mark as AI-modified ON (receipt mascot is Canva AI art; founder rule 2026-10-24 in content/pinterest/2026-10/pins.md) · Features AI-generated person OFF.
 
 | Pin | Post | Board | Post on | Link |
 | --- | --- | --- | --- | --- |
