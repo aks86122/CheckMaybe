@@ -18,7 +18,7 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | az9 | Start Jan 1, done by Apr 10 | APMFHO (same as az6) | same as az6 |
 | az10 | Tight week, small envelope | RONMONG (same as az7) | same as az7 |
 | az11 | Planner that starts any month | Taja Budget Planner, undated, with expense tracker (J checked 2026-11-20: 4.6 stars, 4,846 ratings, Amazon's Choice, 2K+ bought past month, $7.59 Prime) | `https://link.amazon/B0awgKY70` |
-| az12 | Bills on one page | SOLIGT https://www.amazon.com/dp/B091DLSFMY | `<amzn.to>` |
+| az12 | Bills on one page | SOLIGT Budget Planner Monthly Bill Organizer, undated, 12 pockets (J checked 2026-11-20: 4.5 stars, 3,656 ratings, Amazon's Choice, 600+ bought past month, $11.19 Prime) | `https://link.amazon/B0arw3bz8` |
 | az13 | January reset, 4 numbers | Taja (same as az11) | same as az11 |
 | az14 | One pocket a month | SOLIGT (same as az12) | same as az12 |
 | az15 | 10-minute weekly check | Taja (same as az11) | same as az11 |
@@ -35,6 +35,7 @@ Math on the savings pins: 1 + 2 + ... + 100 = 5,050; 1 + ... + 50 = 1,275; Jan 1
 | 4 | az3, az9, az14 |
 | 5 | az4, az10, az15 |
 | 6 | az5 |
+Spare (checked, not used yet): snootion Budget Planner, undated monthly finance organizer with expense tracker, A5 (4.5 stars, 2,711 ratings, Amazon's Choice, 300+ bought past month, $8.49) `https://link.amazon/B07E4KTb4`.
 Then: Claude makes the next batch from the pins with the most outbound clicks (new images, same links).
 
 Disclosure line (end of every description): `As an Amazon Associate I earn from qualifying purchases.`
