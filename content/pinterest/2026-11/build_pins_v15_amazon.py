@@ -72,7 +72,7 @@ PINS = [
                ("Write an amount next to each", "Add them up before you go to the bank"),
                ("Withdraw that total in cash", "Ask for small bills"),
                ("Fill each envelope and note it", "Amount in, date, what's left last time")],
-         pick='A binder for it: <b>Rnivvi Budget Binder</b> (zipper envelopes, A6, for cash stuffing)'),
+         pick='A binder with a calculator: <b>Nefeeko Budget Binder</b> (zipper envelopes, cash envelopes, calculator)'),
     dict(id="az5", themes=["light"], art=f"{A2}/happy.jpg", kicker="Cash envelope rules",
          h1="Envelope empty?<br><em>That category is done</em>",
          envs=[("Groceries", "$12 left"), ("Gas", "$0 left"), ("Fun money", "$25 left")],

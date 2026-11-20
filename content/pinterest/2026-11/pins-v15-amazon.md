@@ -10,7 +10,7 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | az1 (dark + light) | What your binder needs | SKYDUE https://www.amazon.com/dp/B0C7VFYKKP | `https://www.amazon.com/dp/B0C7VFYKKP?th=1&linkCode=ll2&tag=checkmaybe-20&linkId=6ed44b33d79014950726d4cdcb9ed727` |
 | az2 | Start with 3 envelopes | NICOOTH https://www.amazon.com/dp/B09GK8BGRT | `<amzn.to>` |
 | az3 | Card bill higher than expected? | Antner https://www.amazon.com/dp/B08LSKL338 (J's pick, 2026-11-20) | `https://www.amazon.com/dp/B08LSKL338?th=1&linkCode=ll2&tag=checkmaybe-20&linkId=61de726983dc13a6ada8f241097170b2` |
-| az4 | Payday routine, 4 steps | Rnivvi https://www.amazon.com/dp/B0BTM72R34 | `<amzn.to>` |
+| az4 | Payday routine, 4 steps | Nefeeko Budget Binder with calculator (J's pick 2026-11-20: 4.6 stars, 3,219 ratings, Amazon's Choice, 100+ bought past month, $13.59 Prime) | `https://link.amazon/B028pfZbg` |
 | az5 | Envelope empty, category done | Ginmlyda https://www.amazon.com/dp/B09D9KLNGL | `<amzn.to>` |
 | az6 | 100 envelopes = $5,050 | APMFHO 100 Days Money Saving Challenge (J's pick 2026-11-20: 4.5 stars, 912 ratings, Amazon's Choice, 500+ bought past month, $7.99) | `https://link.amazon/B03V55wCK` |
 | az7 | Do 50 envelopes ($1,275) | RONMONG https://www.amazon.com/dp/B0CT2GF177 | `<amzn.to>` |
@@ -23,7 +23,7 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | az14 | One pocket a month | SOLIGT (same as az12) | same as az12 |
 | az15 | 10-minute weekly check | Taja (same as az11) | same as az11 |
 
-10 links needed in total (SKYDUE, NICOOTH, Antner, Rnivvi, Ginmlyda, APMFHO, RONMONG, GINTBN, Taja, SOLIGT).
+10 links needed in total (SKYDUE, NICOOTH, Antner, Nefeeko, Ginmlyda, APMFHO, RONMONG, GINTBN, Taja, SOLIGT).
 Math on the savings pins: 1 + 2 + ... + 100 = 5,050; 1 + ... + 50 = 1,275; Jan 1, 2027 is day 1, Feb 28 day 59, Apr 10 day 100.
 
 ## Schedule (2 to 3 a day)
@@ -56,7 +56,7 @@ Disclosure line (end of every description): `As an Amazon Associate I earn from 
 
 ### az4
 - **Title:** Payday Routine: Fill Your Cash Envelopes in 4 Steps
-- **Description:** Every payday: list the categories you'll pay in cash, write an amount next to each, withdraw the total in small bills, then fill each envelope and note the amount and date. Binder used in the example: Rnivvi Budget Binder, A6, with zipper envelopes for cash stuffing. Example amounts. As an Amazon Associate I earn from qualifying purchases. #cashstuffing #paycheckbudget #budgetbinder
+- **Description:** Every payday: list the categories you'll pay in cash, write an amount next to each, withdraw the total in small bills, then fill each envelope and note the amount and date. Binder used in the example: Nefeeko Budget Binder with zipper envelopes, cash envelopes and a calculator for adding up the amounts. Example amounts. As an Amazon Associate I earn from qualifying purchases. #cashstuffing #paycheckbudget #budgetbinder
 - **Alt text:** Envelopes for groceries $200, gas $80 and fun money $40, with a numbered four-step payday routine.
 
 ### az5
