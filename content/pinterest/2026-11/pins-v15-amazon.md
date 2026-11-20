@@ -17,7 +17,7 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | az8 | One envelope a day, 100 days | GINTBN https://www.amazon.com/dp/B0FD3C5PTF | `<amzn.to>` |
 | az9 | Start Jan 1, done by Apr 10 | APMFHO (same as az6) | same as az6 |
 | az10 | Tight week, small envelope | RONMONG (same as az7) | same as az7 |
-| az11 | Planner that starts any month | Taja https://www.amazon.com/dp/B0C33RXLR6 | `<amzn.to>` |
+| az11 | Planner that starts any month | Taja Budget Planner, undated, with expense tracker (J checked 2026-11-20: 4.6 stars, 4,846 ratings, Amazon's Choice, 2K+ bought past month, $7.59 Prime) | `https://link.amazon/B0awgKY70` |
 | az12 | Bills on one page | SOLIGT https://www.amazon.com/dp/B091DLSFMY | `<amzn.to>` |
 | az13 | January reset, 4 numbers | Taja (same as az11) | same as az11 |
 | az14 | One pocket a month | SOLIGT (same as az12) | same as az12 |
