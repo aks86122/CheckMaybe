@@ -105,7 +105,7 @@ PINS = [
          rows=[("Pick a number you haven't filled", "Big on payday, small at month end"),
                ("Put in that many dollars", "Cash goes straight into the envelope"),
                ("Cross it off the tracker", "So you can see what's left")],
-         pick='A book for it: <b>GINTBN 100 Envelopes Money Saving Challenge Book</b> (with password lock)'),
+         pick='A book for it: <b>APMFHO 100 Days Money Saving Challenge</b> (100 envelopes, save $5,050 or $10,000)'),
     dict(id="az9", slug="savings-challenge", themes=["light"], art=f"{A3}/happy.jpg", kicker="New year savings",
          h1="Start January 1,<br><em>done by April 10</em>",
          envs=[("Jan 1", "Day 1"), ("Feb 28", "Day 59"), ("Apr 10", "Day 100")],

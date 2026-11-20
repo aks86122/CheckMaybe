@@ -14,7 +14,7 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | az5 | Envelope empty, category done | Ginmlyda https://www.amazon.com/dp/B09D9KLNGL | `<amzn.to>` |
 | az6 | 100 envelopes = $5,050 | APMFHO 100 Days Money Saving Challenge (J's pick 2026-11-20: 4.5 stars, 912 ratings, Amazon's Choice, 500+ bought past month, $7.99) | `https://link.amazon/B03V55wCK` |
 | az7 | Do 50 envelopes ($1,275) | RONMONG 100 Envelopes Challenge Binder with cash envelopes, tracker and budget sheets (J checked 2026-11-20: 4.7 stars, 907 ratings, Amazon's Choice, $7.99 Prime) | `https://link.amazon/B00pAkp7u` |
-| az8 | One envelope a day, 100 days | GINTBN https://www.amazon.com/dp/B0FD3C5PTF | `<amzn.to>` |
+| az8 | One envelope a day, 100 days | APMFHO (same as az6; GINTBN dropped 2026-11-20: 4.2 stars, 132 ratings, no Prime, ships Dec 7) | same as az6 |
 | az9 | Start Jan 1, done by Apr 10 | APMFHO (same as az6) | same as az6 |
 | az10 | Tight week, small envelope | RONMONG (same as az7) | same as az7 |
 | az11 | Planner that starts any month | Taja Budget Planner, undated, with expense tracker (J checked 2026-11-20: 4.6 stars, 4,846 ratings, Amazon's Choice, 2K+ bought past month, $7.59 Prime) | `https://link.amazon/B0awgKY70` |
@@ -23,7 +23,7 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | az14 | One pocket a month | SOLIGT (same as az12) | same as az12 |
 | az15 | 10-minute weekly check | Taja (same as az11) | same as az11 |
 
-10 links needed in total (SKYDUE, NICOOTH, Antner, Nefeeko, Ginmlyda, APMFHO, RONMONG, GINTBN, Taja, SOLIGT).
+10 links needed in total (SKYDUE, NICOOTH, Antner, Nefeeko, Ginmlyda, APMFHO, RONMONG, Taja, SOLIGT).
 Math on the savings pins: 1 + 2 + ... + 100 = 5,050; 1 + ... + 50 = 1,275; Jan 1, 2027 is day 1, Feb 28 day 59, Apr 10 day 100.
 
 ## Schedule (2 to 3 a day)
@@ -77,7 +77,7 @@ Disclosure line (end of every description): `As an Amazon Associate I earn from 
 
 ### az8
 - **Title:** 100 Envelope Challenge: One Envelope a Day for 100 Days
-- **Description:** Each day pick a number you haven't filled yet, put in that many dollars and cross it off. Big numbers on payday, small ones at the end of the month. Book in the example: GINTBN 100 Envelopes Money Saving Challenge Book with password lock. As an Amazon Associate I earn from qualifying purchases. #100envelopechallenge #savingschallenge #cashstuffing
+- **Description:** Each day pick a number you haven't filled yet, put in that many dollars and cross it off. Big numbers on payday, small ones at the end of the month. Book in the example: APMFHO 100 Days Money Saving Challenge, 100 envelopes to save $5,050 or $10,000. As an Amazon Associate I earn from qualifying purchases. #100envelopechallenge #savingschallenge #cashstuffing
 - **Alt text:** Day 1 envelope 63, day 2 envelope 8, day 3 envelope 21, with three steps to run the challenge.
 
 ### az9
