@@ -8,7 +8,7 @@ Posting (J 2026-11-20): 2 to 3 pins a day to build volume. Mix product types eac
 | Pin | Angle | Product page (check, then get the amzn.to link) | Link |
 | --- | --- | --- | --- |
 | az1 (dark + light) | What your binder needs | SKYDUE https://www.amazon.com/dp/B0C7VFYKKP | `https://www.amazon.com/dp/B0C7VFYKKP?th=1&linkCode=ll2&tag=checkmaybe-20&linkId=6ed44b33d79014950726d4cdcb9ed727` |
-| az2 | Start with 3 envelopes | NICOOTH https://www.amazon.com/dp/B09GK8BGRT | `<amzn.to>` |
+| az2 | Start with 3 envelopes | NICOOTH Budget Binder A6 with zipper cash envelopes (J checked 2026-11-20: 4.6 stars, 9,201 ratings, Amazon's Choice, 200+ bought past month, $7.98, ships from Amazon) | `https://link.amazon/B04isozsT` |
 | az3 | Card bill higher than expected? | Antner https://www.amazon.com/dp/B08LSKL338 (J's pick, 2026-11-20) | `https://www.amazon.com/dp/B08LSKL338?th=1&linkCode=ll2&tag=checkmaybe-20&linkId=61de726983dc13a6ada8f241097170b2` |
 | az4 | Payday routine, 4 steps | Nefeeko Budget Binder with calculator (J's pick 2026-11-20: 4.6 stars, 3,219 ratings, Amazon's Choice, 100+ bought past month, $13.59 Prime) | `https://link.amazon/B028pfZbg` |
 | az5 | Envelope empty, category done | Ginmlyda https://www.amazon.com/dp/B09D9KLNGL | `<amzn.to>` |
