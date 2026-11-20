@@ -10,3 +10,10 @@ Picks from web-search snapshots of Amazon pages (badges and counts change; J che
 Backups: NICOOTH A6 binder (Amazon's Choice) https://www.amazon.com/dp/B09GK8BGRT ; Antner A6 binder https://www.amazon.com/dp/B08LSMSG38
 
 Pin order: 1 now (holiday gift + January reset), 2 and 3 from mid December (New Year).
+
+## Checked by J on the live page (2026-11-20, delivery set to New York 10001)
+| Product | Rating | Badge / sales | Prime price (regular) | Commission | Features on page |
+| --- | --- | --- | --- | --- | --- |
+| SKYDUE Budget Binder B0C7VFYKKP (Black Gold) | 4.7, 20,063 ratings | Amazon's Choice, 300+ bought past month | $11.03 ($13.98) | 4.00% (Office & School Supplies) | Zipper envelopes, cash envelopes, expense budget sheets in title; highlights: A6, budget sheets and sticker labels |
+| Antner A6 Budget Binder B08LSKL338 (Black) | 4.7, 6,421 ratings | Amazon's Choice, 50+ bought past month | $8.37 ($12.49) | 4.00% | Zipper cash envelopes and labels in title; highlights: 12 zipper pockets |
+Read: quality signals are strong, but the whole budget-binder category sells at about $8 to $14, so the $15 floor doesn't fit it. Commission is about $0.33 to $0.56 per binder (cart items bought in the same visit also count). Fine for the first 3 qualifying sales and for learning which pins get clicks; for real earnings, later pins should add higher-priced items in the same theme.
