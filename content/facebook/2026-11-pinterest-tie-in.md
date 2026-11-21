@@ -25,7 +25,7 @@ Full post with the five checks (and a free fill-in list for your plans): https:/
 ```
 
 ## FB2 · Tue 11/10 · is the deal real (pin bf3, post s3)
-Post after s3 is live; swap in its real URL.
+s3 published: https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three
 Image: `content/pinterest/2026-10/pins/checkmaybe-pin-bf3-deal-on-a-plan.png`
 ```
 A $499 Black Friday TV is $538.92 at checkout.
@@ -43,11 +43,11 @@ Made-up example numbers. Educational, not financial advice.
 ```
 First comment:
 ```
-Three numbers to check before you buy: <s3 URL>?utm_source=facebook&utm_medium=social&utm_campaign=fb-s3
+Three numbers to check before you buy: https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=facebook&utm_medium=social&utm_campaign=fb-s3
 ```
 
 ## FB3 · Thu 11/12 · printable debt tracker (pins pt1 to pt3, post s4)
-Post after s4 is live (11/11); swap in its real URL.
+s4 published: https://checkmaybe.substack.com/p/snowball-or-avalanche-check-your
 Image: `content/pinterest/2026-11/pins/checkmaybe-pin-pt2-color-a-box.png` (or pt1).
 ```
 Most debt payoff printables give every box the same $100.
@@ -64,7 +64,7 @@ Made-up example. Educational, not financial advice.
 ```
 First comment:
 ```
-Snowball or avalanche? Check your 0% end dates first: <s4 URL>?utm_source=facebook&utm_medium=social&utm_campaign=fb-s4
+Snowball or avalanche? Check your 0% end dates first: https://checkmaybe.substack.com/p/snowball-or-avalanche-check-your?utm_source=facebook&utm_medium=social&utm_campaign=fb-s4
 ```
 
 ## Reader check

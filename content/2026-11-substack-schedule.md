@@ -13,11 +13,11 @@ UTM for links in posts: `?utm_source=substack&utm_medium=email&utm_campaign=<pos
 | Sun 11/8 (moved up) | Before you pay | s2 Black Friday on pay-in-4 | Free guide Before You Click "Pay Later" | Ready |
 | Mon 11/9 (moved up) | Before you pay | s3 Is that Black Friday deal real? | Holiday Hidden Cost Tracker | Ready |
 | Wed 11/11 (moved up) | Before you pay | s4 Snowball or avalanche: check your 0% end dates first | Debt Payoff Planner (Print tab) | Ready |
-| Tue 11/24 | Can I sell it? | s5 topic from that week's seller threads | per topic | Draft that week (needs J to paste the official pages) |
+| Tue 11/24 | Can I sell it? | s5 Selling a 2027 digital planner? What you can't put on it | Can I Sell This? | Draft with quote slots (`content/2026-11-substack-s5-s8.md`), needs J to save 3 pages |
 | Thu 11/26 | none | Thanksgiving: no post | | |
-| Sat 11/28 | Build log | s6 Month 1 numbers | none | Needs J's numbers (Substack subs, views, Gumroad sales/sources) |
-| Tue 12/1 | Before you pay | s7 Gift cards: expiry dates and fees | Holiday Hidden Cost Tracker | Needs verified rules (CFPB / FTC pages, J pastes) |
-| Thu 12/3 | Before you pay | s8 A debt-free plan you can print | Debt Payoff Planner | Draft that week (reuses s4 example) |
+| Sat 11/28 | Build log | s6 Month 1 numbers | none | Skeleton (same file), needs J's numbers |
+| Tue 12/1 | Before you pay | s7 Gift cards: expiry dates and fees | Holiday Hidden Cost Tracker | Draft (same file), rules marked [verify], needs J to save CFPB + 12 CFR 1005.20 |
+| Thu 12/3 | Before you pay | s8 A debt-free plan you can print | Debt Payoff Planner | Ready (same file), numbers recalculated 11/12 |
 
 Before publishing each one: J reads, checks the link works, adds the pin (pt/et series) the same day.
 
@@ -87,6 +87,7 @@ $49.08 more for the same TV. Check the plan total, not the monthly price.
 (Made-up example.)
 ```
 Pin: bf3 (already built), link to this post with utm_campaign=s3.
+Published: https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three . New pin bf4 (v13, `content/pinterest/2026-11/pins-v13.md`) links here: `https://checkmaybe.substack.com/p/is-that-black-friday-deal-real-three?utm_source=pinterest&utm_medium=social&utm_campaign=bf4`
 
 ## s4 · Wed 11/11 · Before you pay
 Title: `Snowball or avalanche? Check your 0% end dates first`
@@ -116,6 +117,7 @@ If that card has deferred interest and the promo ends before you clear it, inter
 Check your 0% end dates before you pick an order.
 ```
 Pin: pt3 or r4, link to this post with utm_campaign=s4.
+Published: https://checkmaybe.substack.com/p/snowball-or-avalanche-check-your . New pin di1 (v13) links here: `https://checkmaybe.substack.com/p/snowball-or-avalanche-check-your?utm_source=pinterest&utm_medium=social&utm_campaign=di1`
 
 ## Reader check (step 4, all four)
 - Someone already on 2 to 3 pay-later plans: s2 opens on their exact situation and gives them one thing to do this week (list the plans, look at January).

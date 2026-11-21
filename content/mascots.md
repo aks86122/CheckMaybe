@@ -9,3 +9,15 @@ Both are flat vector, bold dark outlines, on the dark background #15171F with or
 
 Rules for both: made-up examples labelled as made-up, no lender or BNPL brand names, no savings promises, no founder story.
 First comic: `content/2026-10-comic-01/`.
+
+## New mascots (J approved 2026-11-20): hand-built SVG, no AI
+Built by `content/mascots-v2/build_poses.py` (concept sheet `concepts.png`, poses `poses/<name>-<pose>.png|svg`, transparent). Same look as the receipt: bold dark outline, orange arms and feet, big eyes.
+
+| Mascot | What | Used for |
+| --- | --- | --- |
+| Stash | Cash envelope with a zipper and a bill peeking out | Cash stuffing, budget binders, envelope rules |
+| Penny | Coin with a $ stamp | Savings challenges, sinking funds, money kept |
+| Dot | Calendar page with a circled due date | Bills and due dates, pay-later dates, budget planners |
+
+Poses: happy, thumbs, surprised, worried, sign (blank card to put a number or short word on).
+AI disclosure: these are not AI art. A pin that uses only Stash, Penny or Dot (plus our own text and screens) can leave "Mark as AI-modified" OFF. Any pin with the receipt or checkbox mascot (Canva AI) keeps it ON.
