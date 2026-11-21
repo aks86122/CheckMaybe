@@ -12,12 +12,15 @@ from PIL import Image, ImageDraw
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 A2, A3 = f"{ROOT}/content/2026-10-comic-02/art", f"{ROOT}/content/2026-10-comic-03/art"
+NEW = f"{ROOT}/content/mascots-v2/poses"  # Stash, Penny, Dot (SVG, no AI); used from 2026-11-21 for pins not yet posted
 TMP = tempfile.mkdtemp(prefix="cm-pins-v15-")
 OUT = f"{HERE}/pins"; os.makedirs(OUT, exist_ok=True)
 
 
 def cutout(src, name):
     """Key out the dark background connected to the edges, for the light pins."""
+    if src.endswith(".png"):
+        return src
     im = Image.open(src).convert("RGB"); key = im.copy()
     for xy in [(0, 0), (im.width - 1, 0), (0, im.height - 1), (im.width - 1, im.height - 1)]:
         ImageDraw.floodfill(key, xy, (255, 0, 255), thresh=70)
@@ -46,7 +49,7 @@ PINS = [
                ("One envelope per category", "Groceries, gas, fun money: decide before you spend"),
                ("Small enough to carry", "If it stays home, you'll pay by card instead")],
          pick='One that has the first two: <b>SKYDUE Budget Binder</b> (zipper envelopes, cash envelopes, expense sheets)'),
-    dict(id="az2", themes=["light"], art=f"{A3}/check.jpg", kicker="Cash stuffing for beginners",
+    dict(id="az2", themes=["light"], art=f"{NEW}/stash-happy.png", kicker="Cash stuffing for beginners",
          h1="New to cash stuffing?<br><em>Start with 3 envelopes</em>",
          envs=[("Groceries", "$350"), ("Gas", "$120"), ("Eating out", "$60")],
          label="START SMALL", steps=False,
@@ -55,7 +58,7 @@ PINS = [
                ("Only spend what's inside", "Empty envelope means wait until next month"),
                ("Add more later", "Once three feel easy, add gifts or personal care")],
          pick='A binder for it: <b>NICOOTH Budget Binder A6</b> (zipper cash envelopes)'),
-    dict(id="az3", themes=["light"], art=f"{A2}/asterisk.jpg", kicker="Card spending",
+    dict(id="az3", themes=["light"], art=f"{NEW}/stash-surprised.png", kicker="Card spending",
          h1="Card bill higher<br><em>than you expected?</em>",
          envs=[("Groceries", "$400"), ("Takeout", "$80"), ("Shopping", "$100")],
          label="TRY ONE MONTH OF CASH", steps=False,
@@ -64,7 +67,7 @@ PINS = [
                ("Pay that category with cash only", "You can see what's left without an app"),
                ("Compare at the end of the month", "Same month on a card vs in cash")],
          pick='Envelopes with labels: <b>Antner A6 Budget Binder</b> (zipper cash envelopes and labels)'),
-    dict(id="az4", themes=["light"], art=f"{A3}/calc.jpg", kicker="Payday routine",
+    dict(id="az4", themes=["light"], art=f"{NEW}/stash-thumbs.png", kicker="Payday routine",
          h1="Payday routine:<br><em>fill your envelopes</em>",
          envs=[("Groceries", "$200"), ("Gas", "$80"), ("Fun money", "$40")],
          label="EVERY PAYDAY, 4 STEPS", steps=True,
@@ -73,7 +76,7 @@ PINS = [
                ("Withdraw that total in cash", "Ask for small bills"),
                ("Fill each envelope and note it", "Amount in, date, what's left last time")],
          pick='A binder with a calculator: <b>Nefeeko Budget Binder</b> (zipper envelopes, cash envelopes, calculator)'),
-    dict(id="az5", themes=["light"], art=f"{A2}/happy.jpg", kicker="Cash envelope rules",
+    dict(id="az5", themes=["light"], art=f"{NEW}/stash-worried.png", kicker="Cash envelope rules",
          h1="Envelope empty?<br><em>That category is done</em>",
          envs=[("Groceries", "$12 left"), ("Gas", "$0 left"), ("Fun money", "$25 left")],
          label="3 RULES THAT MAKE IT WORK", steps=False,
@@ -98,7 +101,7 @@ PINS = [
                ("Envelopes 1 to 100", "$5,050 when they're all filled"),
                ("Pick the one you'll finish", "A finished small challenge beats a dropped big one")],
          pick='One with a tracker: <b>RONMONG 100 Envelopes Challenge Binder</b> (cash envelopes, tracker and budget sheets)'),
-    dict(id="az8", slug="savings-challenge", themes=["light"], art=f"{A2}/check.jpg", kicker="100 envelope challenge",
+    dict(id="az8", slug="savings-challenge", themes=["light"], art=f"{NEW}/penny-happy.png", kicker="100 envelope challenge",
          h1="One envelope a day,<br><em>100 days</em>",
          envs=[("Day 1 · #63", "$63"), ("Day 2 · #8", "$8"), ("Day 3 · #21", "$21")],
          label="HOW TO RUN IT", steps=True,
@@ -106,7 +109,7 @@ PINS = [
                ("Put in that many dollars", "Cash goes straight into the envelope"),
                ("Cross it off the tracker", "So you can see what's left")],
          pick='A book for it: <b>APMFHO 100 Days Money Saving Challenge</b> (100 envelopes, save $5,050 or $10,000)'),
-    dict(id="az9", slug="savings-challenge", themes=["light"], art=f"{A3}/happy.jpg", kicker="New year savings",
+    dict(id="az9", slug="savings-challenge", themes=["light"], art=f"{NEW}/penny-thumbs.png", kicker="New year savings",
          h1="Start January 1,<br><em>done by April 10</em>",
          envs=[("Jan 1", "Day 1"), ("Feb 28", "Day 59"), ("Apr 10", "Day 100")],
          label="100 DAYS IN 2027", steps=False,
@@ -114,7 +117,7 @@ PINS = [
                ("Miss a day? Keep going", "Just finish later than April 10"),
                ("$5,050 at the end", "If all 100 are filled")],
          pick='A book for it: <b>APMFHO 100 Days Money Saving Challenge</b> (100 envelopes, save $5,050 or $10,000)'),
-    dict(id="az10", slug="savings-challenge", themes=["light"], art=f"{A2}/asterisk.jpg", kicker="Savings challenge",
+    dict(id="az10", slug="savings-challenge", themes=["light"], art=f"{NEW}/penny-worried.png", kicker="Savings challenge",
          h1="Tight week?<br><em>Pick a small envelope</em>",
          envs=[("Payday week", "#88"), ("Normal week", "#40"), ("Tight week", "#3")],
          label="MATCH THE ENVELOPE TO THE WEEK", steps=False,
@@ -139,7 +142,7 @@ PINS = [
                ("Mark the paydays too", "See which bills land before payday"),
                ("Check it every Sunday", "So a due date never sneaks up on you")],
          pick='One with bill pockets: <b>SOLIGT Budget Planner Monthly Bill Organizer</b> (undated, 12 pockets)'),
-    dict(id="az13", slug="budget-planner", themes=["light"], art=f"{A3}/calc.jpg", kicker="January budget reset",
+    dict(id="az13", slug="budget-planner", themes=["light"], art=f"{NEW}/dot-happy.png", kicker="January budget reset",
          h1="January budget reset:<br><em>4 numbers first</em>",
          envs=[("Take-home pay", "$3,800"), ("Fixed bills", "$1,950"), ("Debt minimums", "$680")],
          label="WRITE THESE BEFORE ANYTHING ELSE", steps=True,
@@ -148,7 +151,7 @@ PINS = [
                ("Debt minimums", "Every card and loan"),
                ("What's left", "That's the budget for everything else")],
          pick='An undated one: <b>Taja Budget Planner</b> (undated budget book with expense tracker)'),
-    dict(id="az14", slug="budget-planner", themes=["light"], art=f"{A2}/tag.jpg", kicker="Bill organizer",
+    dict(id="az14", slug="budget-planner", themes=["light"], art=f"{NEW}/dot-surprised.png", kicker="Bill organizer",
          h1="Paper bills piling up?<br><em>One pocket a month</em>",
          envs=[("January", "pocket 1"), ("February", "pocket 2"), ("March", "pocket 3")],
          label="KEEP IT SIMPLE", steps=False,
@@ -156,7 +159,7 @@ PINS = [
                ("Need it later? It's by month", "Taxes, returns, disputes"),
                ("New year, empty pockets", "Box last year's and start again")],
          pick='One with 12 pockets: <b>SOLIGT Budget Planner Monthly Bill Organizer</b> (undated, 12 pockets)'),
-    dict(id="az15", slug="budget-planner", themes=["light"], art=f"{A3}/gifts.jpg", kicker="Weekly money check",
+    dict(id="az15", slug="budget-planner", themes=["light"], art=f"{NEW}/dot-thumbs.png", kicker="Weekly money check",
          h1="A 10-minute<br><em>weekly money check</em>",
          envs=[("Spent this week", "$412"), ("Left this month", "$860"), ("Bills next week", "$185")],
          label="EVERY SUNDAY", steps=True,
@@ -196,7 +199,7 @@ h1{{position:absolute;left:64px;right:64px;top:118px;font-size:72px;font-weight:
         f'<div class="row"><div class="c">{i + 1 if p["steps"] else "✓"}</div><div><div class="q">{q}</div><div class="s">{s}</div></div></div>'
         for i, (q, s) in enumerate(p["rows"]))
     body = (f'<div class="k"><b>CheckMaybe</b> · {p["kicker"]}</div><h1>{p["h1"]}</h1>'
-            f'<div class="binder">{rings}{env_html}</div><img class="pose" src="file://{mascot}">'
+            f'<div class="binder">{rings}{env_html}</div><img class="pose" src="file://{mascot}"' + (' style="right:10px;top:300px;width:400px"' if mascot.endswith(".png") and "/mascots-v2/" in mascot else "") + '>'
             f'<div class="card"><div class="lab">{p["label"]}</div>{rows_html}</div>'
             f'<div class="pick">{p["pick"]}<br><span class="tag">See it on Amazon</span></div>'
             f'<div class="foot"><span>As an Amazon Associate I earn from qualifying purchases. Example amounts.</span><span>checkmaybe</span></div>')
